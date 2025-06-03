@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tunnel Digital Twin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style_subpage.css"/>
+</head>
+
+<body>
+  <header class="sub-header">
+    <div class="nav-icons">
+      <a href="javascript:history.back()" class="nav-icon" title="Back">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <a href="index.html" class="nav-icon" title="Home">
+        <i class="fas fa-house"></i>
+      </a>
+    </div>
+    <h1>Tunnel Digital Twin.</h1>
+  </header>
+
+  <!-- === Content Blocks === -->
+  <section class="section">
+    <div class="section-text">
+      <h2>Background</h2>
+      <p>
+        At Nicander, I was employed as part of a team developing software solutions to monitor tunnel infrastructure. My primary role focused on creating 3D visualisations of tunnel systems, using BIM models and other data sources, as well as automating schematic map creation from geographic coordinates. The company’s software was originally 2D mapped, allowing users to monitor tunnel states, control equipment, and undertake emergency activities. With the construction of a new tunnel section, the client requested more advanced 3D visualisation to support simulation and decision-making processes, aligning perfectly with the skills I brought to the team.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="images/nicander_logo.png" alt="Nicander Logo"/>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-text">
+      <h2>Approach and Tools</h2>
+      <p>
+        I was hired at Nicander to work on developing 3D visualisations of tunnel infrastructure, using existing BIM drawings from MicroStation and Civil 3D. I coordinated these models in Navisworks and then exported them via Datasmith to Unreal Engine. Additionally, I used Dynamo to convert some 2D drawings into 3D, ensuring all equipment and structures were properly represented for visualization.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="images/Tunnel_Equipment_States.png" alt="Tools and Approach"/>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-text">
+      <h2>3D Asset Creation and Interface Design</h2>
+      <p>
+        For equipment that wasn't available in the BIM models (such as phone boxes, barriers, sprinklers, gantries, cameras, and signs), I created additional 3D assets using 3ds Max and then imported and animated them in Unreal Engine where required. I also designed interface icons in Illustrator to enhance the usability of the virtual environment.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="images/Tunnel_Barriers.png" alt="3D Assets and Design"/>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-text">
+      <h2>Impact and Outcomes</h2>
+      <p>
+        After completing my work, I handed over the project to other staff members I had trained with relevant skills, ensuring they could continue development and support. The prototypes and simulations I produced were very successful and helped Nicander secure additional business.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="images/Tunnel_Camera_covarage.png" alt="Project Impact"/>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-text">
+      <h2>Addressing Schematic Challenges</h2>
+      <p>
+        Tunnels are huge, multi-layered structures, which makes it difficult for users to navigate IoT icons, interfaces, and adit groups effectively. To solve this, schematic maps are typically used alongside geographic maps. However, before I joined the project, the process of creating schematic maps and placing equipment was manual and time-consuming. I was tasked with automating the generation of schematic equipment maps based on real-world geographic coordinates. This work included developing a formula to recalculate equipment positions from their real-world locations to their positions on schematic maps, streamlining the process and improving efficiency. The provided image outlines the solution concept, forming the basis for a formula that recalculates equipment positions from their real-world locations to schematic views.
+      </p>
+    </div>
+    <div class="section-image">
+      <img src="images/Tunnel_Schematic_Map3.png" alt="Schematic Maps Solution"/>
+    </div>
+  </section>
+</body>
+</html>

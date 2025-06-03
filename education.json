@@ -1,0 +1,50 @@
+[
+  {
+    "level": "PhD",
+    "institutions": [
+      {
+        "name": "Teesside University \u2014 Construction Data Science",
+        "description": "Thesis: Platform-Based Design and Immersive Technologies for Offsite Construction using XR and Game Engines."
+      }
+    ]
+  },
+  {
+    "level": "MA",
+    "institutions": [
+      {
+        "name": "Caledonian University \u2014 3D Design",
+        "description": "Focused on virtual environments, 3D workflows, and design for immersive media."
+      }
+    ]
+  },
+  {
+    "level": "Bachelors",
+    "institutions": [
+      {
+        "name": "Khabarovsk State Academy \u2014 Economics & Management",
+        "description": "Studied economic systems, organizational management, and analytical reasoning."
+      }
+    ]
+  },
+  {
+    "level": "Recent Short Courses",
+    "institutions": [
+      {
+        "name": "Google Coursera \u2014 UX Design",
+        "description": "User research, prototyping, accessibility, and responsive interfaces."
+      },
+      {
+        "name": "App Brewery \u2014 Python & Web Dev",
+        "description": "Backend and frontend integration using Flask and full stack toolkits."
+      },
+      {
+        "name": "Math for ML",
+        "description": "Linear algebra, calculus, and probability foundations for machine learning."
+      },
+      {
+        "name": "Unreal Engine + C++",
+        "description": "Blueprint scripting and native C++ code for real-time 3D applications."
+      }
+    ]
+  }
+]

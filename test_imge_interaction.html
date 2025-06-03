@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Text Highlight Images</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2em;
+      display: flex;
+    }
+    .text-content {
+      width: 60%;
+    }
+    .image-display {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-display img {
+      max-width: 80%;
+      opacity: 0.4;
+      margin: 1em 0;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      transition: opacity 0.4s ease, border 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+    }
+    .image-display img.active {
+      opacity: 1;
+      border: 2px solid #e9008c;
+      box-shadow: 0 0 10px #e9008c;
+      transform: scale(1.05);
+    }
+    .hover-text {
+      margin-bottom: 2em;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .active-text {
+      color: #e9008c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="text-content">
+  <p class="hover-text" data-image="bbc">BBC Interview VR Project</p>
+  <p class="hover-text" data-image="mountains">Mountain Adventures VR Concept</p>
+</div>
+
+<div class="image-display">
+  <img src="images/bbc.png" id="bbc" data-text="bbc" alt="BBC Interview">
+  <img src="images/mountains.png" id="mountains" data-text="mountains" alt="Mountains">
+</div>
+
+<script>
+  const hoverTexts = document.querySelectorAll('.hover-text');
+  const images = document.querySelectorAll('.image-display img');
+
+  function clearActive() {
+    images.forEach(img => img.classList.remove('active'));
+    hoverTexts.forEach(text => text.classList.remove('active-text'));
+  }
+
+  hoverTexts.forEach(text => {
+    text.addEventListener('mouseover', () => {
+      clearActive();
+      const relatedImg = document.getElementById(text.dataset.image);
+      relatedImg.classList.add('active');
+      text.classList.add('active-text');
+    });
+
+    text.addEventListener('mouseout', clearActive);
+  });
+
+  images.forEach(img => {
+    img.addEventListener('mouseover', () => {
+      clearActive();
+      img.classList.add('active');
+      const relatedText = document.querySelector(`.hover-text[data-image="${img.dataset.text}"]`);
+      relatedText.classList.add('active-text');
+    });
+
+    img.addEventListener('mouseout', clearActive);
+  });
+</script>
+
+</body>
+</html>
