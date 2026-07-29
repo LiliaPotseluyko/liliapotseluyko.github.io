@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Lilia AI | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Cloud search widget -->
+  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB"></script>
+</head>
+
+<body class="ask-portfolio-page">
+
+  <header>
+    <nav class="top-nav">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="under-construction.html">All Projects</a></li>
+        <li><a href="under-construction.html">Academic</a></li>
+        <li>
+          <a href="ask-portfolio.html" class="active">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ask-portfolio-main">
+    <a href="index.html" class="page-back-link">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i>
+      Back to main page
+    </a>
+
+    <section class="ask-portfolio-intro">
+      <p class="beta-label">Beta preview</p>
+
+      <h1>Ask Lilia AI</h1>
+
+      <p class="ask-portfolio-lead">
+        Explore my professional experience, projects, research and technical skills
+        through an AI-powered portfolio assistant.
+      </p>
+
+      <div class="beta-notice">
+        <i class="fas fa-flask" aria-hidden="true"></i>
+        <div>
+          <h2>This is a beta version</h2>
+          <p>
+            This assistant is powered by Google Cloud and searches a growing portfolio
+            knowledge base. More CVs, project evidence, publications and technical
+            documents will be added as the portfolio develops.
+          </p>
+          <p>
+            Some answers may therefore be incomplete. When evidence is unavailable,
+            the assistant should say that it could not find supporting information in
+            the current portfolio knowledge base.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-search-panel" aria-labelledby="portfolio-search-heading">
+      <div class="portfolio-search-heading">
+        <div>
+          <p class="panel-kicker">Google Cloud portfolio search</p>
+          <h2 id="portfolio-search-heading">What would you like to know?</h2>
+        </div>
+        <i class="fas fa-sparkles panel-icon" aria-hidden="true"></i>
+      </div>
+
+      <label for="searchWidgetTrigger" class="search-label">
+        Ask about my skills, projects, research or professional experience
+      </label>
+
+      <div class="search-trigger-wrap">
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        <input
+          type="search"
+          id="searchWidgetTrigger"
+          placeholder="For example: What experience does Lilia have with digital twins?"
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="suggested-questions" aria-label="Suggested questions">
+        <span>Try asking:</span>
+        <button type="button" data-question="What experience does Lilia have with digital twins?">
+          Digital twins
+        </button>
+        <button type="button" data-question="What software engineering skills does Lilia have?">
+          Software engineering
+        </button>
+        <button type="button" data-question="Which projects demonstrate user research and product design?">
+          Product &amp; UX
+        </button>
+      </div>
+
+      <gen-search-widget
+        configId="bb1693e2-0ab3-484c-a561-78e4211c022e"
+        triggerId="searchWidgetTrigger">
+      </gen-search-widget>
+    </section>
+
+    <p class="powered-by">
+      Powered by Google Cloud AI Applications and a structured portfolio knowledge base.
+    </p>
+  </main>
+
+  <script>
+    const searchInput = document.getElementById("searchWidgetTrigger");
+    const suggestedQuestions = document.querySelectorAll("[data-question]");
+
+    suggestedQuestions.forEach((button) => {
+      button.addEventListener("click", () => {
+        searchInput.value = button.dataset.question;
+        searchInput.focus();
+        searchInput.click();
+      });
+    });
+  </script>
+
+</body>
+</html>>

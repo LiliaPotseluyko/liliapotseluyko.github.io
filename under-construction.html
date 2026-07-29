@@ -3,92 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Website Under Renovation | Lilia Potseluyko</title>
+    <title>Portfolio in Active Development | Lilia Potseluyko</title>
 
     <style>
-        * {
-            box-sizing: border-box;
+        * { box-sizing:border-box; }
+
+        body{
+            margin:0;
+            min-height:100vh;
+            background:#000;
+            color:#fff;
+            font-family:Arial,sans-serif;
         }
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: #000000;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .back-link{
+            position:absolute;
+            top:30px;
+            left:30px;
+            color:#1DCD9F;
+            text-decoration:none;
+            font-weight:bold;
+            transition:.2s;
         }
 
-        .back-link {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-            color: #1DCD9F;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.3s;
+        .back-link:hover{
+            color:#169976;
+            transform:translateX(-4px);
         }
 
-        .back-link:hover {
-            color: #169976;
-            transform: translateX(-4px);
+        .container{
+            max-width:900px;
+            margin:70px auto;
+            padding:30px;
         }
 
-        .renovation-container {
-            text-align: center;
-            max-width: 650px;
-            padding: 40px;
+        h1{
+            color:#1DCD9F;
+            font-size:clamp(36px,6vw,60px);
+            margin-bottom:25px;
         }
 
-        .icon {
-            font-size: 50px;
-            margin-bottom: 25px;
+        p{
+            color:#cccccc;
+            line-height:1.7;
+            font-size:18px;
         }
 
-        h1 {
-            color: #1DCD9F;
-            font-size: clamp(36px, 6vw, 64px);
-            margin: 0 0 20px;
+        .date{
+            color:#e9008c;
+            font-weight:bold;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #cccccc;
-            margin: 0 auto;
+        .board{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+            margin-top:45px;
         }
 
-        .date {
-            color: #e9008c;
-            font-weight: bold;
+        .card{
+            background:#171717;
+            border-radius:12px;
+            padding:22px;
+            border-top:4px solid #333;
+        }
+
+        .completed{border-color:#1DCD9F;}
+        .progress{border-color:#e9008c;}
+        .todo{border-color:#888;}
+
+        h2{
+            margin-top:0;
+            margin-bottom:18px;
+        }
+
+        ul{
+            padding-left:18px;
+            line-height:1.8;
+            color:#ccc;
         }
     </style>
 </head>
 
 <body>
 
-    <a href="index.html" class="back-link">
-        ← Back to main page
-    </a>
+<a href="index.html" class="back-link">← Back to main page</a>
 
-    <main class="renovation-container">
+<div class="container">
 
-        <div class="icon">⚒️</div>
+<h1>🚧 Portfolio in Active Development</h1>
 
-        <h1>Website under renovation</h1>
+<p>
+Thank you for visiting my portfolio.
+</p>
 
-        <p>
-            I'm currently updating my portfolio with new projects,
-            research and case studies.
-            <br><br>
-            The completed website will be available by
-            <span class="date">mid-August 2026</span>.
-        </p>
+<p>
+This website is being expanded with detailed project case studies,
+research outputs, publications and an AI-powered portfolio assistant.
+</p>
 
-    </main>
+<p>
+Rather than waiting until every page is complete, I've decided to publish
+the portfolio as it grows so visitors can already explore my work and
+follow its development.
+</p>
+
+<p>
+The next major update is planned for
+<span class="date">mid-August 2026</span>.
+</p>
+
+<div class="board">
+
+<div class="card completed">
+<h2>✅ Completed</h2>
+<ul>
+<li>Main portfolio homepage</li>
+<li>Contact information</li>
+<li>Professional profile</li>
+<li>External links</li>
+</ul>
+</div>
+
+<div class="card progress">
+<h2>🚧 In Progress</h2>
+<ul>
+<li>Ask Portfolio AI</li>
+<li>AI knowledge base expansion</li>
+
+</ul>
+</div>
+
+<div class="card todo">
+<h2>📋 Coming Next</h2>
+<ul>
+<li>Project case studies</li>
+<li>Academic</li>
+
+<li>Downloadable CV</li>
+</ul>
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
