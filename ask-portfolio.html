@@ -9,6 +9,19 @@
 
   <!-- Google Cloud search widget -->
   <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB"></script>
+  <style>
+  /* Only the Ask Portfolio page trigger input */
+  .ask-portfolio-page #searchWidgetTrigger {
+    color: #ffffff;
+    background-color: transparent;
+    caret-color: #1DCD9F;
+  }
+
+  .ask-portfolio-page #searchWidgetTrigger::placeholder {
+    color: #cccccc;
+    opacity: 1;
+  }
+</style>
 </head>
 
 <body class="ask-portfolio-page">
@@ -103,7 +116,7 @@
       </div>
 
       <gen-search-widget
-        configId="bb1693e2-0ab3-484c-a561-78e4211c022e"
+        configId="6b5cb41b-3ded-47ec-a2bb-b4af28dd8ac3"
         triggerId="searchWidgetTrigger">
       </gen-search-widget>
     </section>
