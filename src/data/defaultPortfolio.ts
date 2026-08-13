@@ -175,18 +175,56 @@ def evaluate_defect_diagnosis():
       ]
     }
   ],
+  publications: [
+    {
+      title: "Enhancing Road Digital Twins With Adaptive 3D Pavement Model",
+      status: "Development Completed, Writing in Progress",
+      coAuthors: "Leonardo Binni, Varun Kumar Reja, Tom Kelly, Hamidreza Alavi",
+      description: "Presents a semi-automatic workflow for enhancing road Digital Twins with dynamically adaptive pavement textured meshes from high-fidelity 3D pavement mesh reconstruction."
+    },
+    {
+      title: "Enhancing Road Digital Twins with High-Fidelity 3D Traffic Sign Reconstruction",
+      status: "Under Review",
+      coAuthors: "Varun Kumar Reja, Xiaofang Wen, Hamidreza Alavi, Guangming Wang",
+      description: "Proposes a hybrid approach utilizing mobile mapping and image-based data to enhance the fidelity and level of detail of 3D traffic sign reconstruction for automated inspection and maintenance."
+    },
+    {
+      title: "CAMHighways: The Cambridge Highways dataset",
+      status: "Published (ScienceDirect, 2024)",
+      link: "https://www.sciencedirect.com/science/article/pii/S1474034624006876",
+      description: "Surveyed over 40 km of UK Highways using Trimble MX9 mobile mapping. Dataset includes textured meshes for road assets, segmented point clouds, orthomosaics, defect label annotations, and ground penetrating radar (GPR) point clouds to streamline Digital Twin creation."
+    },
+    {
+      title: "Review of multimodal data and their applications for road maintenance",
+      status: "Published (Cambridge Repository, 2024)",
+      link: "https://www.repository.cam.ac.uk/items/f6e068b1-71c0-4530-a682-e82e19b01b09",
+      description: "Comprehensive review analyzing multimodal data modalities (LiDAR, RGB imagery, thermal imaging, GPR, text, audio) to improve decision-making and infrastructure resilience in automated road maintenance."
+    },
+    {
+      title: "Game-like interactive environment using BIM-based virtual reality for the timber frame self-build housing sector",
+      status: "Published (ScienceDirect, 2022)",
+      link: "https://www.sciencedirect.com/science/article/pii/S0926580522003697#f0025",
+      description: "Exploits BIM, gamification, and Virtual Reality for Design for Manufacture and Assembly (DfMA) in small/medium timber kit housing practices, drastically lowering visualization creation overhead."
+    }
+  ],
   rawUnstructuredText: `Dr Lilia Potseluyko - Cambridge-based Researcher & Digital Engineer
 Email: lilia.potseluyko@gmail.com | lp625@cam.ac.uk | Phone: 078 69 78 1897
 GitHub: https://github.com/liliapotseluyko | LinkedIn: https://linkedin.com/in/lilia-potseluyko
 
-SUMMARY:
-I am Dr Lilia Potseluyko, a Cambridge-based researcher and digital engineer working at the intersection of spatial data, digital twins, computer graphics, AI and user experience. I turn complex technical information into practical, interactive tools that help people understand real-world systems, explore evidence and make better decisions.
+SUMMARY & ACADEMIC BACKGROUND:
+Dr Lilia Potseluyko is a Cambridge-based researcher and digital engineer working at the intersection of spatial data, digital twins, computer graphics, AI and user experience. Lead of the Mobile Mapping Group at the University of Cambridge (since 2023). PhD in BIM and VR gamification from Univ. of Strathclyde.
 
-KEY PROJECTS & RESEARCH:
-1. RoadGP Decision Support Interface (National Highways): Designed AI-assisted decision-support platform using machine learning models, historical maintenance records, and national standards. Created Figma design systems, Python Dash prototypes, and Dovetail UX research repositories.
-2. Trafikverket 12km Tunnel Schematic Mapping (Nicander): Automated schematic map generation for a 12km Swedish tunnel containing 20,000 IoT assets using mathematical coordinate transformations. Built Unreal Engine digital twin prototypes.
-3. CAMHighways Dataset & Immersive Digital Twin: Processed Trimble MX9 scanner data (LiDAR, 360 imagery, GPR) and built interactive Unreal Engine VR/desktop environments. Featured on BBC News (International Pothole Day 2023).
-4. DfT Cyclist Safety Simulation: Designed immersive cyclist safety simulation for nationwide stated-preference study with over 4,000 UK participants for Department for Transport.
-5. Norscot Joinery KTP (Univ of Strathclyde): Developed BIM and WebVR workflows, reducing visualization prep time from 80h to 4.5h. Finalist for Scottish Innovator of the Future Award 2020.
-6. National Highways & iRAP Proposal: Led technical discovery for road safety fellowship proposal integrating computer vision and AI decision support.`
+PUBLICATIONS & SCIENTIFIC WORK:
+1. CAMHighways: The Cambridge Highways dataset (ScienceDirect 2024): Surveyed 40+ km of UK Highways with Trimble MX9 mobile mapping scanners (LiDAR, 360 images, GPR).
+2. Review of multimodal data and their applications for road maintenance (Cambridge Repository 2024): Review of LiDAR, RGB, thermal, GPR, audio data for infrastructure resilience.
+3. Game-like interactive environment using BIM-based virtual reality for timber frame self-build housing (ScienceDirect 2022): BIM + VR for DfMA offsite construction.
+4. Enhancing Road Digital Twins With Adaptive 3D Pavement Model (Writing in Progress): Semi-automated adaptive 3D pavement mesh reconstruction.
+5. Enhancing Road Digital Twins with High-Fidelity 3D Traffic Sign Reconstruction (Under Review): Hybrid mobile mapping + image reconstruction for 3D traffic signs.
+
+KEY PROJECTS:
+1. RoadGP Decision Support Interface (National Highways): AI-assisted decision-support platform using ML models, standards, Dovetail UX research, Python Dash.
+2. Trafikverket 12km Tunnel Schematic Mapping (Nicander): Automated schematic map generation for 20,000 IoT assets in 12km Swedish tunnel via mathematical transformations + Unreal Engine Digital Twin.
+3. CAMHighways Dataset & Immersive Digital Twin: Processed Trimble MX9 scanner data in Unreal Engine VR/desktop. Featured on BBC News.
+4. DfT Cyclist Safety Simulation: Immersive video simulation for stated-preference study with 4,000+ UK participants.
+5. Norscot Joinery KTP (Univ of Strathclyde): BIM and WebVR workflows, 80h -> 4.5h prep reduction. Finalist Scottish Innovator of the Future 2020.`
 };

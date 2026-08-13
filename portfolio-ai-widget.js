@@ -181,7 +181,9 @@
   // Local KB search fallback when backend API is unreachable on static hosting
   function getLocalAnswer(query) {
     const q = query.toLowerCase();
-    if (q.includes("digital twin") || q.includes("unreal") || q.includes("lidar") || q.includes("tunnel") || q.includes("camhighways") || q.includes("3d")) {
+    if (q.includes("publication") || q.includes("academic") || q.includes("paper") || q.includes("journal") || q.includes("sciencedirect")) {
+      return "Dr Lilia Potseluyko's key publications include: 1) CAMHighways Dataset (ScienceDirect, 2024), 2) Review of Multimodal Data for Road Maintenance (Cambridge Repository, 2024), 3) BIM-based VR for Timber Kit Housing (ScienceDirect, 2022), 4) Adaptive 3D Pavement Model (In Progress), and 5) 3D Traffic Sign Reconstruction (Under Review).";
+    } else if (q.includes("digital twin") || q.includes("unreal") || q.includes("lidar") || q.includes("tunnel") || q.includes("camhighways") || q.includes("3d")) {
       return "Dr Lilia Potseluyko has 8+ years of experience in Digital Twins & Spatial Data. Key projects include the Trafikverket 12km Tunnel Digital Twin (20,000 IoT assets), CAMHighways Unreal Engine digital twin (featured on BBC News), and Norscot Joinery KTP BIM/WebVR workflows.";
     } else if (q.includes("skill") || q.includes("software") || q.includes("code") || q.includes("python") || q.includes("react") || q.includes("c++")) {
       return "Dr Lilia Potseluyko's software skills include React, TypeScript, Python (Dash, FastAPI, REST APIs), C++, Unreal Engine C++, PyTorch, OpenCV, Git, and Docker.";

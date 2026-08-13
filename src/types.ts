@@ -39,6 +39,13 @@ export interface PortfolioData {
   workExperience: WorkExperience[];
   rawUnstructuredText?: string;
   keyAchievements: string[];
+  publications?: {
+    title: string;
+    status: string;
+    coAuthors?: string;
+    description: string;
+    link?: string;
+  }[];
 }
 
 export type ChatMode = 'recruiter' | 'tech_deepdive' | 'job_match' | 'general';

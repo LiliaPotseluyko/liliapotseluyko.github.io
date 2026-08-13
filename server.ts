@@ -115,6 +115,14 @@ async function startServer() {
         ? pData.keyAchievements.join('\n- ')
         : '';
 
+      const publications = pData.publications || defaultPortfolioData.publications || [];
+      const publicationsStr = publications
+        .map(
+          (pub) =>
+            `- "${pub.title}" (${pub.status}): ${pub.description} ${pub.coAuthors ? `[Co-authors: ${pub.coAuthors}]` : ''} ${pub.link ? `[Link: ${pub.link}]` : ''}`
+        )
+        .join('\n');
+
       const rawKnowledgeBase = pData.rawUnstructuredText || '';
 
       let modePersonaPrompt = '';
@@ -143,6 +151,9 @@ PORTFOLIO CANDIDATE KNOWLEDGE BASE CONTEXT (Dr Lilia Potseluyko):
 
 KEY ACHIEVEMENTS & RESEARCH FELLOWSHIPS:
 - ${keyAchievements}
+
+PUBLICATIONS & SCIENTIFIC WORK:
+${publicationsStr}
 
 TECHNICAL SKILLS & EXPERTISE:
 ${skillsStr}

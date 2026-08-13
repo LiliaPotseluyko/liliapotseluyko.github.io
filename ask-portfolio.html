@@ -323,6 +323,12 @@
 - **Architecture & Systems:** Microservices architecture, RESTful API design, Agile/DevOps, mathematical coordinate transformations, database integrations.
 - **Computer Vision & AI:** 3D Reconstruction, Photogrammetry, PyTorch, OpenCV, LLM & Agent workflows, decision support platforms (RoadGP).
 - **Tools & Workflows:** Git/GitHub, Docker, Linux, Dovetail, Figma Design Systems, QGIS.`,
+      publications: `Dr Lilia Potseluyko's **Academic Achievements & Scientific Publications**:
+1. **CAMHighways: The Cambridge Highways Dataset** (*ScienceDirect, 2024*): Surveyed 40+ km of UK Highways with Trimble MX9 mobile mapping (LiDAR, 360° imagery, GPR) to automate Digital Twin creation.
+2. **Review of Multimodal Data for Road Maintenance** (*Cambridge Repository, 2024*): Comprehensive review of LiDAR, RGB, thermal, GPR, text, and audio data for infrastructure resilience.
+3. **BIM-based VR Game-like Environment for Timber Kit Housing** (*ScienceDirect, 2022*): BIM, VR, and gamification for Design for Manufacture and Assembly (DfMA) in timber housing.
+4. **Enhancing Road Digital Twins with Adaptive 3D Pavement Model** (*Writing in Progress*): Semi-automatic workflow for adaptive 3D pavement mesh reconstruction.
+5. **High-Fidelity 3D Traffic Sign Reconstruction** (*Under Review*): Hybrid mobile mapping + image reconstruction for 3D traffic sign inspection.`,
       productUX: `Dr Lilia Potseluyko's **UX Research & Product Design** expertise:
 - **RoadGP (National Highways):** Lead UX Researcher & Product Designer. Conducted stakeholder interviews, analyzed qualitative data in Dovetail, created Figma design systems, and built interactive Python Dash/React prototypes for AI-assisted road defect diagnosis.
 - **DfT Cyclist Safety Simulation:** Lead Simulation Developer & UX Researcher. Designed immersive simulation study tested with **4,000+ UK participants** for Department for Transport policy evaluation.
@@ -338,7 +344,12 @@
     function searchLocalKB(query) {
       const q = query.toLowerCase();
 
-      if (q.includes("digital twin") || q.includes("unreal") || q.includes("lidar") || q.includes("tunnel") || q.includes("camhighways") || q.includes("3d")) {
+      if (q.includes("publication") || q.includes("academic") || q.includes("paper") || q.includes("journal") || q.includes("research") || q.includes("sciencedirect")) {
+        return {
+          text: portfolioFallbackKB.publications,
+          followups: ["What experience does Lilia have with digital twins?", "What software engineering skills does she have?", "Tell me about the RoadGP project."]
+        };
+      } else if (q.includes("digital twin") || q.includes("unreal") || q.includes("lidar") || q.includes("tunnel") || q.includes("camhighways") || q.includes("3d")) {
         return {
           text: portfolioFallbackKB.digitalTwins,
           followups: ["What software engineering skills does Lilia have?", "Tell me about the RoadGP project.", "How can I contact Dr Lilia Potseluyko?"]
