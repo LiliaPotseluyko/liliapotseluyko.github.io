@@ -1,0 +1,156 @@
+ 
+    /* === GLOBAL === */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* === HEADER === */
+    .sub-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #111;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-icon {
+      font-size: 1.5rem;
+      color: #1DCD9F;
+    }
+
+    .nav-icon:hover {
+      color: #169976;
+    }
+
+    .sub-header h1 {
+      color: #1DCD9F;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    /* === SECTION BLOCKS === */
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      margin: 1rem;
+      border-bottom: 1px solid #333;
+      transition: all 0.3s ease;
+    }
+
+    .section:hover .section-text {
+      color: #e9008c;
+    }
+
+    .section:hover .section-image img {
+      border-color: #e9008c;
+      transform: scale(1.02);
+      opacity: 1;
+    }
+
+    .section-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 1rem;
+      flex-basis: 33.33%;
+      box-sizing: border-box;
+      transition: color 0.3s ease;
+    }
+
+    .section-text h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .section-text p {
+      line-height: 1.5;
+    }
+
+    .section-image {
+      flex: 2;
+      flex-basis: 66.66%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .section-image img {
+      max-width: 70%;
+      border-radius: 10px;
+      border: 3px solid transparent;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section-text,
+      .section-image {
+        flex: 1 1 100%;
+      }
+    
+    }
+
+.section-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-images a {
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.section-images img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.section-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.section {
+  display: flex;              /* Allows side-by-side layout if you want */
+  flex-wrap: wrap;            /* Allows wrapping on small screens */
+  gap: 20px;                  /* Adds spacing between elements */
+  align-items: flex-start;    /* Aligns text and image to the top */
+}
+
+.section-text {
+  flex: 1 1 300px;            /* Text takes flexible width but doesn't shrink below 300px */
+}
+
+.section-image img {
+  max-width: 100%;            /* Image can't exceed the container width */
+  height: auto;               /* Maintain aspect ratio */
+  display: block;             /* Remove any inline gaps or floats */
+  border-radius: 8px;         /* Optional: adds a soft edge */
+}
+
+
