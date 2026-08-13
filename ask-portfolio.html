@@ -304,7 +304,72 @@
   </main>
 
   <script>
-    const BACKEND_URL = "https://ais-dev-kh6i6fvoruoczpnz5b3kvd-794039124315.europe-west2.run.app";
+    // Embedded Portfolio Knowledge Base Fallback for GitHub Pages static hosting
+    const portfolioFallbackKB = {
+      name: "Dr Lilia Potseluyko",
+      title: "Cambridge-based Researcher & Digital Engineer",
+      location: "Cambridge, UK",
+      email: "lilia.potseluyko@gmail.com",
+      github: "https://github.com/liliapotseluyko",
+      linkedin: "https://linkedin.com/in/lilia-potseluyko",
+      years: 8,
+      digitalTwins: `Dr Lilia Potseluyko has 8+ years of hands-on research and engineering experience in **Digital Twins & Spatial Data**:
+- **Trafikverket 12km Tunnel Digital Twin (Nicander):** Computational & Digital Twin Lead. Developed mathematical coordinate transformation algorithms in Python/C++ to automate 2D schematic layouts for ~20,000 IoT tunnel assets and built interactive Unreal Engine digital twin monitoring prototypes.
+- **CAMHighways Immersive Digital Twin (Univ. of Cambridge):** Spatial Data Lead. Processed Trimble MX9 mobile mapping data (LiDAR, 360° imagery, GPR) and built interactive Unreal Engine VR/desktop environments with REST API tile streaming. Featured on **BBC News** (International Pothole Day 2023).
+- **Norscot Joinery KTP (Univ. of Strathclyde):** Built BIM & WebVR digital twin workflows for offsite timber homes, reducing visualization prep time from 80 hours to 4.5 hours (Finalist, Scottish Innovator of the Future Award 2020).
+- **Core Stack:** Unreal Engine (VR & Desktop), WebVR, LiDAR Point Clouds, QGIS, Trimble MX9, Geospatial REST APIs, BIM (Revit), Python, C++.`,
+      softwareEngineering: `Dr Lilia Potseluyko's **Software Engineering & Architecture** skills include:
+- **Languages & Frameworks:** React, TypeScript, Python (Dash, FastAPI, REST APIs), C++, Unreal Engine C++, HTML5/CSS3/Tailwind.
+- **Architecture & Systems:** Microservices architecture, RESTful API design, Agile/DevOps, mathematical coordinate transformations, database integrations.
+- **Computer Vision & AI:** 3D Reconstruction, Photogrammetry, PyTorch, OpenCV, LLM & Agent workflows, decision support platforms (RoadGP).
+- **Tools & Workflows:** Git/GitHub, Docker, Linux, Dovetail, Figma Design Systems, QGIS.`,
+      productUX: `Dr Lilia Potseluyko's **UX Research & Product Design** expertise:
+- **RoadGP (National Highways):** Lead UX Researcher & Product Designer. Conducted stakeholder interviews, analyzed qualitative data in Dovetail, created Figma design systems, and built interactive Python Dash/React prototypes for AI-assisted road defect diagnosis.
+- **DfT Cyclist Safety Simulation:** Lead Simulation Developer & UX Researcher. Designed immersive simulation study tested with **4,000+ UK participants** for Department for Transport policy evaluation.
+- **Certifications & Methods:** Google UX Design Certificate, Continuous Discovery / Opportunity Solution Trees, Usability Testing, Information Architecture.`,
+      projectsOverview: `Dr Lilia Potseluyko's key featured projects:
+1. **RoadGP (National Highways):** AI-assisted decision support platform for defect diagnosis and treatment recommendations.
+2. **Trafikverket 12km Tunnel (Nicander):** Automated schematic mapping & Unreal Engine digital twin for 20,000 IoT assets.
+3. **CAMHighways (Univ. of Cambridge):** Multimodal Trimble MX9 LiDAR/GPR processing & Unreal VR digital twin (Featured on BBC News).
+4. **DfT Cyclist Safety Simulation:** Immersive simulation study with 4,000+ UK participants.
+5. **Norscot Joinery KTP:** BIM & WebVR offsite construction workflows (80h -> 4.5h prep reduction).`
+    };
+
+    function searchLocalKB(query) {
+      const q = query.toLowerCase();
+
+      if (q.includes("digital twin") || q.includes("unreal") || q.includes("lidar") || q.includes("tunnel") || q.includes("camhighways") || q.includes("3d")) {
+        return {
+          text: portfolioFallbackKB.digitalTwins,
+          followups: ["What software engineering skills does Lilia have?", "Tell me about the RoadGP project.", "How can I contact Dr Lilia Potseluyko?"]
+        };
+      } else if (q.includes("skill") || q.includes("software") || q.includes("code") || q.includes("python") || q.includes("react") || q.includes("c++") || q.includes("engineering")) {
+        return {
+          text: portfolioFallbackKB.softwareEngineering,
+          followups: ["What experience does Lilia have with digital twins?", "Which projects demonstrate user research and product design?", "Where is Dr Lilia Potseluyko based?"]
+        };
+      } else if (q.includes("product") || q.includes("ux") || q.includes("user") || q.includes("figma") || q.includes("dft") || q.includes("roadgp")) {
+        return {
+          text: portfolioFallbackKB.productUX,
+          followups: ["What experience does Lilia have with digital twins?", "What are her key technical skills?", "Tell me about her research at Cambridge."]
+        };
+      } else if (q.includes("project") || q.includes("work") || q.includes("experience") || q.includes("research") || q.includes("cambridge")) {
+        return {
+          text: portfolioFallbackKB.projectsOverview,
+          followups: ["Tell me more about digital twins.", "What software skills does she use?", "How can I contact her?"]
+        };
+      } else {
+        return {
+          text: `**Dr Lilia Potseluyko** is a Cambridge-based Researcher & Digital Engineer (8+ years experience) working at the intersection of **spatial data, digital twins, computer graphics, AI, and user experience**.
+
+### Core Highlights:
+- **Mobile Mapping Group Lead** at University of Cambridge.
+- **Projects:** RoadGP (National Highways AI decision support), Trafikverket 12km Tunnel Digital Twin (20,000 IoT assets), CAMHighways (Featured on BBC News), DfT Cyclist Safety Study (4,000+ participants).
+- **Contact:** ${portfolioFallbackKB.email} | [GitHub](${portfolioFallbackKB.github}) | [LinkedIn](${portfolioFallbackKB.linkedin})`,
+          followups: ["What experience does Lilia have with digital twins?", "What software engineering skills does Lilia have?", "Which projects demonstrate user research and product design?"]
+        };
+      }
+    }
 
     const searchInput = document.getElementById("searchWidgetTrigger");
     const searchSubmitBtn = document.getElementById("searchSubmitBtn");
@@ -317,7 +382,7 @@
     const aiFollowupChips = document.getElementById("aiFollowupChips");
     const aiClearBtn = document.getElementById("aiClearBtn");
 
-    // Simple markdown formatting helper
+    // Format markdown helper
     function formatMarkdown(text) {
       if (!text) return "";
       let html = text
@@ -346,45 +411,49 @@
       aiFollowupArea.style.display = "none";
       aiFollowupChips.innerHTML = "";
 
+      let answerText = "";
+      let followups = [];
+
       try {
-        const response = await fetch(`${BACKEND_URL}/api/chat`, {
+        // Try calling server endpoint first
+        const apiEndpoint = window.location.hostname.includes("github.io")
+          ? "/api/chat"
+          : "/api/chat";
+
+        const response = await fetch(apiEndpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message: prompt,
-            mode: "general"
-          })
+          body: JSON.stringify({ message: prompt, mode: "general" })
         });
 
-        if (!response.ok) {
-          throw new Error(`Server returned status ${response.status}`);
-        }
-
-        const data = await response.json();
-        
-        aiLoadingBox.style.display = "none";
-        aiContentBody.innerHTML = formatMarkdown(data.text || "No response received.");
-
-        if (data.suggestedFollowups && data.suggestedFollowups.length > 0) {
-          aiFollowupArea.style.display = "block";
-          data.suggestedFollowups.forEach(q => {
-            const chip = document.createElement("button");
-            chip.type = "button";
-            chip.className = "ai-followup-chip";
-            chip.textContent = q;
-            chip.addEventListener("click", () => submitAIQuery(q));
-            aiFollowupChips.appendChild(chip);
-          });
+        if (response.ok) {
+          const data = await response.json();
+          answerText = data.text;
+          followups = data.suggestedFollowups || [];
+        } else {
+          throw new Error("Backend server unavailable");
         }
       } catch (err) {
-        console.error("AI Error:", err);
-        aiLoadingBox.style.display = "none";
-        aiContentBody.innerHTML = `
-          <div style="color: #f87171;">
-            <p><strong>Unable to query Portfolio AI:</strong> ${err.message || "Network error"}</p>
-            <p style="font-size: 0.9rem; color: #a1a1aa;">Please check your connection or try again shortly.</p>
-          </div>
-        `;
+        // Fallback to embedded local knowledge search engine
+        console.log("Using static portfolio knowledge base fallback:", err);
+        const fallbackResult = searchLocalKB(prompt);
+        answerText = fallbackResult.text;
+        followups = fallbackResult.followups;
+      }
+
+      aiLoadingBox.style.display = "none";
+      aiContentBody.innerHTML = formatMarkdown(answerText);
+
+      if (followups && followups.length > 0) {
+        aiFollowupArea.style.display = "block";
+        followups.forEach(q => {
+          const chip = document.createElement("button");
+          chip.type = "button";
+          chip.className = "ai-followup-chip";
+          chip.textContent = q;
+          chip.addEventListener("click", () => submitAIQuery(q));
+          aiFollowupChips.appendChild(chip);
+        });
       }
     }
 

@@ -178,6 +178,20 @@
 
   closeBtn.addEventListener('click', () => win.classList.remove('open'));
 
+  // Local KB search fallback when backend API is unreachable on static hosting
+  function getLocalAnswer(query) {
+    const q = query.toLowerCase();
+    if (q.includes("digital twin") || q.includes("unreal") || q.includes("lidar") || q.includes("tunnel") || q.includes("camhighways") || q.includes("3d")) {
+      return "Dr Lilia Potseluyko has 8+ years of experience in Digital Twins & Spatial Data. Key projects include the Trafikverket 12km Tunnel Digital Twin (20,000 IoT assets), CAMHighways Unreal Engine digital twin (featured on BBC News), and Norscot Joinery KTP BIM/WebVR workflows.";
+    } else if (q.includes("skill") || q.includes("software") || q.includes("code") || q.includes("python") || q.includes("react") || q.includes("c++")) {
+      return "Dr Lilia Potseluyko's software skills include React, TypeScript, Python (Dash, FastAPI, REST APIs), C++, Unreal Engine C++, PyTorch, OpenCV, Git, and Docker.";
+    } else if (q.includes("product") || q.includes("ux") || q.includes("user") || q.includes("figma") || q.includes("roadgp")) {
+      return "Dr Lilia Potseluyko's UX/Product work includes RoadGP (National Highways AI decision support platform with Figma design system and Dovetail research) and DfT Cyclist Safety Simulation (tested with 4,000+ UK participants).";
+    } else {
+      return "Dr Lilia Potseluyko is a Cambridge-based Researcher & Digital Engineer specializing in Spatial Data, Digital Twins, AI, and User Experience. Contact: lilia.potseluyko@gmail.com";
+    }
+  }
+
   async function handleSend() {
     const text = input.value.trim();
     if (!text) return;
@@ -198,15 +212,20 @@
     msgBody.scrollTop = msgBody.scrollHeight;
 
     try {
-      const res = await fetch(`${apiUrl}/api/chat`, {
+      const endpoint = window.location.hostname.includes("github.io") ? '/api/chat' : `${apiUrl}/api/chat`;
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text, mode: 'general' })
       });
-      const data = await res.json();
-      botMsg.textContent = data.text || 'No response received.';
+      if (res.ok) {
+        const data = await res.json();
+        botMsg.textContent = data.text || 'No response received.';
+      } else {
+        botMsg.textContent = getLocalAnswer(text);
+      }
     } catch (e) {
-      botMsg.textContent = 'Error connecting to AI service.';
+      botMsg.textContent = getLocalAnswer(text);
     }
     msgBody.scrollTop = msgBody.scrollHeight;
   }

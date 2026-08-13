@@ -4,6 +4,7 @@ import cors from 'cors';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, Type } from '@google/genai';
 import { PortfolioData, ChatMode } from './src/types';
+import { defaultPortfolioData } from './src/data/defaultPortfolio';
 
 // Initialize Gemini Client
 const ai = new GoogleGenAI({
@@ -58,8 +59,32 @@ async function startServer() {
         return;
       }
 
-      const pData: PortfolioData = portfolioData || {};
-      const devName = pData.developerName || 'Dr Lilia Potseluyko';
+      const incoming = portfolioData || {};
+      const pData: PortfolioData = {
+        developerName: incoming.developerName || defaultPortfolioData.developerName,
+        title: incoming.title || defaultPortfolioData.title,
+        bio: incoming.bio || defaultPortfolioData.bio,
+        location: incoming.location || defaultPortfolioData.location,
+        yearsOfExperience: incoming.yearsOfExperience || defaultPortfolioData.yearsOfExperience,
+        contactEmail: incoming.contactEmail || defaultPortfolioData.contactEmail,
+        githubUrl: incoming.githubUrl || defaultPortfolioData.githubUrl,
+        linkedinUrl: incoming.linkedinUrl || defaultPortfolioData.linkedinUrl,
+        keyAchievements: (incoming.keyAchievements && incoming.keyAchievements.length > 0)
+          ? incoming.keyAchievements
+          : defaultPortfolioData.keyAchievements,
+        skills: (incoming.skills && incoming.skills.length > 0)
+          ? incoming.skills
+          : defaultPortfolioData.skills,
+        projects: (incoming.projects && incoming.projects.length > 0)
+          ? incoming.projects
+          : defaultPortfolioData.projects,
+        workExperience: (incoming.workExperience && incoming.workExperience.length > 0)
+          ? incoming.workExperience
+          : defaultPortfolioData.workExperience,
+        rawUnstructuredText: incoming.rawUnstructuredText || defaultPortfolioData.rawUnstructuredText,
+      };
+
+      const devName = pData.developerName;
 
       // Build context summary string
       const skillsStr = pData.skills
@@ -357,15 +382,13 @@ ${rawText}`;
   // --- API ROUTE 3: Synthesize AI Insights & Pitch Variants ---
   app.post('/api/insights', async (req, res) => {
     try {
-      const { portfolioData } = req.body;
-      if (!portfolioData) {
-        res.status(400).json({ error: 'Portfolio data is required.' });
-        return;
-      }
+      const pData = (req.body.portfolioData && req.body.portfolioData.skills?.length)
+        ? req.body.portfolioData
+        : defaultPortfolioData;
 
       const prompt = `Synthesize candidate insights, unique value proposition (UVP), elevator pitches, and behavioral interview Q&As based on this developer portfolio:
 
-${JSON.stringify(portfolioData, null, 2)}`;
+${JSON.stringify(pData, null, 2)}`;
 
       const response = await ai.models.generateContent({
         model: 'gemini-3.6-flash',
@@ -448,13 +471,15 @@ ${JSON.stringify(portfolioData, null, 2)}`;
         return;
       }
 
+      const pData = (portfolioData && portfolioData.skills?.length) ? portfolioData : defaultPortfolioData;
+
       const prompt = `Evaluate the candidate match against the target Job Description.
 
 JOB DESCRIPTION:
 ${jobDescription}
 
 CANDIDATE PORTFOLIO DATA:
-${JSON.stringify(portfolioData || {}, null, 2)}`;
+${JSON.stringify(pData, null, 2)}`;
 
       const response = await ai.models.generateContent({
         model: 'gemini-3.6-flash',
