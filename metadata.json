@@ -1,0 +1,6 @@
+{
+  "name": "Dr Lilia Potseluyko - Portfolio AI Assistant",
+  "description": "Interactive AI portfolio assistant grounded strictly in Dr Lilia Potseluyko's portfolio knowledge base, research evidence, and CSV documents with GitHub Pages integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
