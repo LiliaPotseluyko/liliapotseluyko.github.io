@@ -1,0 +1,39 @@
+/your-portfolio
+├── index.html
+├── projects.html
+├── education.html
+├── style.css
+├── images/
+│   ├── project1-thumb.jpg
+│   └── my-face-in-vr.jpg
+
+
+<img src="images/demo-screenshot.png" alt="Demo">
+
+
+responsive wrapper class
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+embedded youtube
+
+<div class="sub-media">
+  <iframe width="100%" height="315" 
+    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+    title="YouTube video player" frameborder="0" 
+    allowfullscreen></iframe>
+</div>

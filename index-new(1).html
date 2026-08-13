@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lilia Potseluyko | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body id="home" class="home">
+
+  <header>
+    <nav class="top-nav">
+      <a href="index-new.html" class="logo-link">
+        <img src="images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="index-new.html" class="active">Home</a></li>
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="academic.html">Academic</a></li>
+        <li>
+          <a href="ask-portfolio.html">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <aside class="sidebar portfolio-sidebar">
+      <section class="sidebar-section">
+        <h3>Contact</h3>
+        <p>
+          <i class="fas fa-phone pink-icon"></i>
+          <a href="tel:+447869781897">078 69 78 1897</a>
+        </p>
+        <p>
+          <i class="fas fa-envelope pink-icon"></i>
+          <a href="mailto:lp625@cam.ac.uk">lp625@cam.ac.uk</a>
+        </p>
+        <p>
+          <i class="fas fa-envelope pink-icon"></i>
+          <a href="mailto:lilia.potseluyko@gmail.com">lilia.potseluyko@gmail.com</a>
+        </p>
+      </section>
+
+      <section class="sidebar-section">
+        <h3>External Links</h3>
+        <ul class="sidebar-external-links">
+          <li>
+            <a href="https://www.linkedin.com/in/liliaamobi/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin pink-icon"></i> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/LiliaPotseluyko" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github pink-icon"></i> GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://drf.eng.cam.ac.uk/staff/dr-lilia-potseluyko" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-university pink-icon"></i> Cambridge Profile
+            </a>
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0003-4135-8108" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-id-badge pink-icon"></i> ORCID
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=AiCRbtUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-graduation-cap pink-icon"></i> Google Scholar
+            </a>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="content">
+
+      <section class="portfolio-hero">
+        <div class="portfolio-hero-image">
+          <img src="images/hero3.png" alt="Digital twins, immersive environments, road infrastructure research and UX projects">
+        </div>
+        <div class="portfolio-hero-text">
+          <h1>Hi, I’m Lilia.</h1>
+          <p class="portfolio-tagline">I transform complex spatial data into intuitive digital experiences.</p>
+        </div>
+      </section>
+
+      <section id="about" class="portfolio-about">
+        
+        <p>
+          I’m Dr Lilia Potseluyko, a Cambridge-based researcher and digital engineer working at the intersection of spatial data, digital twins, computer graphics, AI and user experience. I turn complex technical information into practical, interactive tools that help people understand real-world systems, explore evidence and make better decisions.
+        </p>
+      </section>
+
+      <section id="featured-projects" class="featured-projects">
+        <div class="featured-projects-heading">
+          <h2>Featured Projects</h2>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-button" id="featured-projects-prev" aria-label="Show previous featured project">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button type="button" class="carousel-button" id="featured-projects-next" aria-label="Show next featured project">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="featured-projects-carousel" id="featured-projects-carousel">
+
+          <!-- REUSABLE PROJECT TILE COMPONENT:
+               Copy one article block, then change image, title, text and link. -->
+
+            <article class="featured-project-card">
+              <a href="projects/roadgp.html" class="featured-project-card-link">
+                <div class="featured-project-image">
+                  <img src="images/RoadGP.png" alt="RoadGP product and user experience project">
+                </div>
+                <div class="featured-project-content">
+                  <h3>RoadGP — Product &amp; UX</h3>
+                </div>
+              </a>
+            </article>
+
+            <article class="featured-project-card">
+              <a href="projects/mapping-engineering.html" class="featured-project-card-link">
+                <div class="featured-project-image">
+                  <img src="images/MappingEngineering.png" alt="Mapping engineering project">
+                </div>
+                <div class="featured-project-content">
+                  <h3>Mapping Engineering</h3>
+                </div>
+              </a>
+            </article>
+
+            <article class="featured-project-card">
+              <a href="projects/immersive-cycling-safety.html" class="featured-project-card-link">
+                <div class="featured-project-image">
+                  <img src="images/Cyclist_Icon.png" alt="Immersive cycling safety project">
+                </div>
+                <div class="featured-project-content">
+                  <h3>Immersive Cycling Safety Project</h3>
+                </div>
+              </a>
+            </article>
+
+            <article class="featured-project-card">
+              <a href="projects/national-highways-digital-twin.html" class="featured-project-card-link">
+                <div class="featured-project-image">
+                  <img src="images/Strategy3.png" alt="National Highways digital twin prototyping project">
+                </div>
+                <div class="featured-project-content">
+                  <h3>Technical Discovery and Strategy</h3>
+                </div>
+              </a>
+            </article>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    const featuredCarousel = document.getElementById("featured-projects-carousel");
+    const featuredPreviousButton = document.getElementById("featured-projects-prev");
+    const featuredNextButton = document.getElementById("featured-projects-next");
+
+    function scrollFeaturedProjects(direction) {
+      const firstCard = featuredCarousel.querySelector(".featured-project-card");
+      if (!firstCard) return;
+
+      const cardWidth = firstCard.getBoundingClientRect().width;
+      const gap = 24;
+
+      featuredCarousel.scrollBy({
+        left: direction * (cardWidth + gap),
+        behavior: "smooth"
+      });
+    }
+
+    featuredPreviousButton.addEventListener("click", () => scrollFeaturedProjects(-1));
+    featuredNextButton.addEventListener("click", () => scrollFeaturedProjects(1));
+  </script>
+
+</body>
+</html>

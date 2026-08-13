@@ -1,0 +1,194 @@
+[
+  {
+    "category": "BIM",
+    "skills": [
+      {
+        "name": "Autodesk Revit",
+        "description": "Editing construction models, families, and metadata to prepare them for interactive applications."
+      },
+      {
+        "name": "Autodesk Navisworks",
+        "description": "Coordinating BIM drawings, modifying data, and importing into Unreal Engine 5."
+      },
+      {
+        "name": "AutoDdesk Civil 3D",
+        "description": "Using Civil 3D with Dynamo to convert 2D drawings into 3D environments."
+      }
+    ]
+  },
+  {
+    "category": "CGI",
+    "skills": [
+      {
+        "name": "Autodesk 3ds Max",
+        "description": "Hard- and soft-surface modeling and rendering of road assets and environments."
+      },
+      {
+        "name": "Adobe Photoshop",
+        "description": "Image editing, enhancement, and texture creation for 3D models."
+      },
+      {
+        "name": "Illustrator",
+        "description": "Creating UI icons, schematic maps, and infographics."
+      }
+    ]
+  },
+  {
+    "category": "Machine Learning",
+    "skills": [
+      {
+        "name": "Math for ML",
+        "description": "Currently studying linear algebra, calculus, and ML foundations."
+      },
+      {
+        "name": "Computer Vision",
+        "description": "Using OpenCV and Segment Anything for visual processing tasks."
+      }
+    ]
+  },
+  {
+    "category": "Management and teamwork",
+    "skills": [
+      {
+        "name": "Agile + DevOps",
+        "description": "Team planning, retrospectives, and sprint execution."
+      },
+      {
+        "name": "Project Leadership",
+        "description": "Led tunnel development in EU digital twin project and BIM adoption transitions."
+      },
+      {
+        "name": "Team Collaboration",
+        "description": "Worked with cross-functional teams to deliver complex projects."
+      }
+    ]
+  },
+  {
+    "category": "Reality & Geospatial",
+    "skills": [
+      {
+        "name": "RealityCapture",
+        "description": "Converting low-cost road scans to high-quality textured meshes."
+      },
+      {
+        "name": "CloudCompare",
+        "description": "Quick segmentation and editing of point cloud data."
+      },
+      {
+        "name": "QGIS",
+        "description": "Working with point clouds and GIS to automate geometric twin generation."
+      }
+    ]
+  },
+  {
+    "category": "Research",
+    "skills": [
+      {
+        "name": "Literature Review",
+        "description": "Conducting comprehensive reviews of academic literature."
+      },
+      {
+        "name": "Process Mapping",
+        "description": "Wrote Information Delivery Manual and mapped infrastructure workflows."
+      },
+      {
+        "name": "Technology review",
+        "description": "Evaluated emerging technologies and proposed pathways for integration."
+      }
+    ]
+  },
+  {
+    "category": "Sales",
+    "skills": [
+      {
+        "name": "Client and Stakeholder Engagement",
+        "description": "Engaging with clients and stakeholders to understand needs and present solutions."
+      },
+      {
+        "name": "Customer interaction and sales",
+        "description": "Experienced technical support adviser and customer sales by phone and in person."
+      }
+    ]
+  },
+  {
+    "category": "Training",
+    "skills": [
+      {
+        "name": "Workshops",
+        "description": "Delivered custom training sessions to technical and design teams."
+      },
+      {
+        "name": "Individual Coaching",
+        "description": "Tailored one-on-one mentoring for software tools and pipelines."
+      }
+    ]
+  },
+  {
+    "category": "Unreal Engine",
+    "skills": [
+      {
+        "name": "Environment Design",
+        "description": "Building interactive spaces using modular components."
+      },
+      {
+        "name": "C++ + Blueprints",
+        "description": "Combining scripting and C++ for performant interaction logic."
+      },
+      {
+        "name": "Datasmith",
+        "description": "Importing and optimizing BIM models for real-time visualization."
+      },
+      {
+        "name": "Geometry Tools",
+        "description": "Used modeling, geometry scripting, and procedural content tools for automation."
+      },
+      {
+        "name": "VR Demonstrations",
+        "description": "Preparing interactive VR experiences for client presentations."
+      }
+    ]
+  },
+  {
+    "category": "UI/UX",
+    "skills": [
+      {
+        "name": "Figma",
+        "description": "Mockups, wireframes, and responsive interface design."
+      },
+      {
+        "name": "Storyboarding",
+        "description": "User journey mapping and low-fidelity prototypes."
+      }
+    ]
+  },
+  {
+    "category": "Web Development",
+    "skills": [
+      {
+        "name": "Python",
+        "description": "Used in backend, scripting, and data processing pipelines."
+      },
+      {
+        "name": "Dash / Flask",
+        "description": "Building interactive dashboards and web apps."
+      }
+    ]
+  },
+  {
+    "category": "Writing",
+    "skills": [
+      {
+        "name": "Academic Writing",
+        "description": "Published academic writer."
+      },
+      {
+        "name": "Grant Writing",
+        "description": "Wrote several proposals and collaborated with various teams on successful grants."
+      },
+      {
+        "name": "Documentation",
+        "description": "Technical writing for colleagues to describe novel frameworks."
+      }
+    ]
+  }
+]

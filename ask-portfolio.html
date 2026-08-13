@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Lilia AI | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Custom styling for Dr Lilia AI search & interactive panel */
+    .ask-portfolio-page #searchWidgetTrigger {
+        color: #ffffff;
+        -webkit-text-fill-color: #ffffff;
+        background-color: transparent;
+        caret-color: #1DCD9F;
+        width: 100%;
+        padding-right: 120px;
+    }
+
+    .ask-portfolio-page #searchWidgetTrigger::placeholder {
+        color: #888888;
+        -webkit-text-fill-color: #888888;
+        opacity: 1;
+    }
+
+    .search-trigger-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-ask-btn {
+        position: absolute;
+        right: 8px;
+        background: #1DCD9F;
+        color: #000000;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+    }
+
+    .search-ask-btn:hover {
+        background: #169976;
+        transform: translateY(-1px);
+    }
+
+    /* Live AI Response Panel */
+    .ai-response-panel {
+        margin-top: 24px;
+        background: #121214;
+        border: 1px solid #27272a;
+        border-left: 4px solid #1DCD9F;
+        border-radius: 12px;
+        padding: 24px;
+        display: none;
+        animation: slideUp 0.3s ease-out;
+    }
+
+    .ai-response-panel.active {
+        display: block;
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ai-panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #27272a;
+    }
+
+    .ai-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #1DCD9F;
+        font-weight: 700;
+        font-size: 0.95rem;
+    }
+
+    .ai-clear-btn {
+        background: transparent;
+        color: #888888;
+        border: none;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: color 0.2s ease;
+    }
+
+    .ai-clear-btn:hover {
+        color: #ffffff;
+    }
+
+    .ai-loading-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #1DCD9F;
+        font-weight: 600;
+        padding: 16px 0;
+    }
+
+    .ai-loading-spinner {
+        animation: spin 1s linear infinite;
+        font-size: 1.2rem;
+    }
+
+    @keyframes spin {
+        100% { transform: rotate(360deg); }
+    }
+
+    .ai-content-body {
+        color: #e4e4e7;
+        font-size: 1.02rem;
+        line-height: 1.7;
+    }
+
+    .ai-content-body p {
+        margin-bottom: 12px;
+    }
+
+    .ai-content-body ul, .ai-content-body ol {
+        margin: 12px 0 16px 20px;
+    }
+
+    .ai-content-body li {
+        margin-bottom: 6px;
+    }
+
+    .ai-content-body strong {
+        color: #ffffff;
+    }
+
+    .ai-followup-area {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px dashed #27272a;
+    }
+
+    .ai-followup-label {
+        font-size: 0.8rem;
+        color: #e9008c;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 800;
+    }
+
+    .ai-followup-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .ai-followup-chip {
+        background: #18181b;
+        color: #1DCD9F;
+        border: 1px solid #333333;
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .ai-followup-chip:hover {
+        background: #1DCD9F;
+        color: #000000;
+        border-color: #1DCD9F;
+    }
+  </style>
+</head>
+
+<body class="ask-portfolio-page">
+
+  <header>
+    <nav class="top-nav">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="under-construction.html">All Projects</a></li>
+        <li><a href="under-construction.html">Academic</a></li>
+        <li>
+          <a href="ask-portfolio.html" class="active">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="ask-portfolio-main">
+    <a href="index.html" class="page-back-link">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i>
+      Back to main page
+    </a>
+
+    <section class="ask-portfolio-intro">
+      <p class="beta-label">AI Assistant Grounded in Portfolio Data</p>
+
+      <h1>Ask Lilia AI</h1>
+
+      <p class="ask-portfolio-lead">
+        Explore my professional experience, projects, research and technical skills
+        through an AI-powered portfolio assistant.
+      </p>
+
+      <div class="beta-notice">
+        <i class="fas fa-flask" aria-hidden="true"></i>
+        <div>
+          <h2>Interactive Portfolio Assistant</h2>
+          <p>
+            This assistant is grounded in Dr Lilia Potseluyko's technical research,
+            industry projects (Digital Twins, XR, Civil Infrastructure), academic publications,
+            and software engineering background.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-search-panel" aria-labelledby="portfolio-search-heading">
+      <div class="portfolio-search-heading">
+        <div>
+          <p class="panel-kicker">Gemini AI portfolio assistant</p>
+          <h2 id="portfolio-search-heading">What would you like to know?</h2>
+        </div>
+        <i class="fas fa-sparkles panel-icon" aria-hidden="true"></i>
+      </div>
+
+      <label for="searchWidgetTrigger" class="search-label">
+        Ask about my skills, projects, research or professional experience
+      </label>
+
+      <div class="search-trigger-wrap">
+        <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        <input
+          type="search"
+          id="searchWidgetTrigger"
+          placeholder="For example: What experience does Lilia have with digital twins?"
+          autocomplete="off"
+        >
+        <button type="button" id="searchSubmitBtn" class="search-ask-btn">
+          Ask AI <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+
+      <div class="suggested-questions" aria-label="Suggested questions">
+        <span>Try asking:</span>
+        <button type="button" data-question="What experience does Lilia have with digital twins?">
+          Digital twins
+        </button>
+        <button type="button" data-question="What software engineering skills does Lilia have?">
+          Software engineering
+        </button>
+        <button type="button" data-question="Which projects demonstrate user research and product design?">
+          Product &amp; UX
+        </button>
+      </div>
+
+      <!-- Live AI Answer Panel -->
+      <div id="aiResponsePanel" class="ai-response-panel">
+        <div class="ai-panel-header">
+          <div class="ai-badge">
+            <i class="fas fa-robot"></i> Lilia AI Answer
+          </div>
+          <button type="button" id="aiClearBtn" class="ai-clear-btn">
+            <i class="fas fa-xmark"></i> Clear
+          </button>
+        </div>
+
+        <div id="aiLoadingBox" class="ai-loading-box" style="display: none;">
+          <i class="fas fa-circle-notch ai-loading-spinner"></i>
+          <span>Searching Dr Lilia Potseluyko's portfolio knowledge base...</span>
+        </div>
+
+        <div id="aiContentBody" class="ai-content-body"></div>
+
+        <div id="aiFollowupArea" class="ai-followup-area" style="display: none;">
+          <div class="ai-followup-label">Suggested Follow-ups</div>
+          <div id="aiFollowupChips" class="ai-followup-chips"></div>
+        </div>
+      </div>
+    </section>
+
+    <p class="powered-by">
+      Powered by Google Gemini AI &amp; Dr Lilia Potseluyko's Portfolio Engine.
+    </p>
+  </main>
+
+  <script>
+    const BACKEND_URL = "https://ais-dev-kh6i6fvoruoczpnz5b3kvd-794039124315.europe-west2.run.app";
+
+    const searchInput = document.getElementById("searchWidgetTrigger");
+    const searchSubmitBtn = document.getElementById("searchSubmitBtn");
+    const suggestedQuestions = document.querySelectorAll("[data-question]");
+    
+    const aiResponsePanel = document.getElementById("aiResponsePanel");
+    const aiLoadingBox = document.getElementById("aiLoadingBox");
+    const aiContentBody = document.getElementById("aiContentBody");
+    const aiFollowupArea = document.getElementById("aiFollowupArea");
+    const aiFollowupChips = document.getElementById("aiFollowupChips");
+    const aiClearBtn = document.getElementById("aiClearBtn");
+
+    // Simple markdown formatting helper
+    function formatMarkdown(text) {
+      if (!text) return "";
+      let html = text
+        .replace(/\n\n/g, "</p><p>")
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*(.*?)\*/g, "<em>$1</em>")
+        .replace(/`([^`]+)`/g, "<code>$1</code>")
+        .replace(/^- (.*$)/gim, "<li>$1</li>");
+      
+      if (html.includes("<li>")) {
+        html = html.replace(/(<li>.*<\/li>)/s, "<ul>$1</ul>");
+      }
+      return "<p>" + html + "</p>";
+    }
+
+    async function submitAIQuery(queryText) {
+      const prompt = queryText || searchInput.value;
+      if (!prompt || !prompt.trim()) return;
+
+      searchInput.value = prompt;
+      
+      // Show panel and loading
+      aiResponsePanel.classList.add("active");
+      aiLoadingBox.style.display = "flex";
+      aiContentBody.innerHTML = "";
+      aiFollowupArea.style.display = "none";
+      aiFollowupChips.innerHTML = "";
+
+      try {
+        const response = await fetch(`${BACKEND_URL}/api/chat`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: prompt,
+            mode: "general"
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`Server returned status ${response.status}`);
+        }
+
+        const data = await response.json();
+        
+        aiLoadingBox.style.display = "none";
+        aiContentBody.innerHTML = formatMarkdown(data.text || "No response received.");
+
+        if (data.suggestedFollowups && data.suggestedFollowups.length > 0) {
+          aiFollowupArea.style.display = "block";
+          data.suggestedFollowups.forEach(q => {
+            const chip = document.createElement("button");
+            chip.type = "button";
+            chip.className = "ai-followup-chip";
+            chip.textContent = q;
+            chip.addEventListener("click", () => submitAIQuery(q));
+            aiFollowupChips.appendChild(chip);
+          });
+        }
+      } catch (err) {
+        console.error("AI Error:", err);
+        aiLoadingBox.style.display = "none";
+        aiContentBody.innerHTML = `
+          <div style="color: #f87171;">
+            <p><strong>Unable to query Portfolio AI:</strong> ${err.message || "Network error"}</p>
+            <p style="font-size: 0.9rem; color: #a1a1aa;">Please check your connection or try again shortly.</p>
+          </div>
+        `;
+      }
+    }
+
+    // Trigger listeners
+    searchSubmitBtn.addEventListener("click", () => submitAIQuery());
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        submitAIQuery();
+      }
+    });
+
+    suggestedQuestions.forEach((button) => {
+      button.addEventListener("click", () => {
+        submitAIQuery(button.dataset.question);
+      });
+    });
+
+    aiClearBtn.addEventListener("click", () => {
+      aiResponsePanel.classList.remove("active");
+      aiContentBody.innerHTML = "";
+      searchInput.value = "";
+    });
+  </script>
+
+  <!-- Embed Floating Chatbot Widget on bottom right -->
+  <script 
+    src="portfolio-ai-widget.js"
+    data-api-url="https://ais-dev-kh6i6fvoruoczpnz5b3kvd-794039124315.europe-west2.run.app"
+    data-dev-name="Dr Lilia Potseluyko"
+    data-color="#1DCD9F"
+  ></script>
+
+</body>
+</html>>

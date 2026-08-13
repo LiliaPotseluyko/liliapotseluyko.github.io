@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education and Skills</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* CSS copied from your original file */
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      padding: 20px;
+      font-size: 2rem;
+      color: #1DCD9F;
+    }
+
+    .dropdowns-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .skills-dropdown-container {
+      flex: 1 1 300px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .dropdown {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      background-color: #333333;
+      color: #1DCD9F;
+      font-weight: bold;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+      border: none;
+      padding: 14px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-btn:hover {
+      background-color: #444444;
+    }
+
+    .dropdown-content {
+      background-color: #333333;
+      border-radius: 6px;
+      margin-top: 5px;
+      padding: 10px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .dropdown.open .dropdown-content {
+      display: flex;
+    }
+
+    .skill-item {
+      background-color: #0e7a60;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .skill-item:hover {
+      background-color: #169976;
+    }
+
+    .skill-description {
+      display: none;
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #ffffff;
+      background-color: #333333;
+      padding: 10px;
+      border-radius: 6px;
+      border-left: 4px solid #e9008c;
+      line-height: 1.4;
+    }
+
+    .skill-item.active .skill-description {
+      display: block;
+    }
+
+    .fold-btn {
+      background-color: #1DCD9F;
+      color: #000000;
+      font-weight: bold;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px 20px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .fold-btn:hover {
+      background-color: #0e7a60;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="top-nav">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo2.png" alt="Lilia's Logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="academic.html">Academic Work</a></li>
+        <li><a href="education.html" class="active">Education and Skills</a></li>
+        <li><a href="https://www.linkedin.com/in/liliaamobi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://drf.eng.cam.ac.uk/staff/dr-lilia-potseluyko" target="_blank" title="Cambridge Profile"><i class="fas fa-university"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Education & Skills</h1>
+  <button class="fold-btn" onclick="foldAllDropdowns()">Fold All</button>
+
+  <div class="dropdowns-row">
+    <div id="skillsContainer" class="skills-dropdown-container"></div>
+    <div id="educationContainer" class="skills-dropdown-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

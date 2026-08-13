@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Twin Puzzle Pieces</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body.subpage {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sub-header {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #333;
+      background-color: #111;
+    }
+
+    .sub-nav {
+      margin-right: 2rem;
+    }
+
+    .nav-icon {
+      margin-right: 1rem;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #1DCD9F;
+    }
+
+    .nav-icon:hover {
+      color: #169976;
+    }
+
+    .sub-header h1 {
+      font-size: 1.8rem;
+      color: #169976;
+      margin: 0;
+    }
+
+    .sub-container {
+      display: flex;
+      padding: 2rem;
+    }
+
+    .text-content {
+      width: 60%;
+    }
+
+    .hover-text {
+      margin-bottom: 2em;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .active-text {
+      color: #e9008c;
+      font-weight: italic;
+    }
+
+    .image-display {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-display img {
+      max-width: 80%;
+      opacity: 0.4;
+      margin: 1em 0;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      transition: opacity 0.4s ease, border 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+    }
+
+    .image-display img.active {
+      opacity: 1;
+      border: 2px solid #e9008c;
+      box-shadow: 0 0 10px #e9008c;
+      transform: scale(1.05);
+    }
+    .sub-description {
+  display: block;
+  margin-top: 5px;
+}
+
+  </style>
+</head>
+
+<body class="subpage">
+  <header class="sub-header">
+    <div class="sub-nav">
+      <a href="javascript:history.back()" class="nav-icon" title="Back">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <a href="index.html" class="nav-icon" title="Home">
+        <i class="fas fa-house"></i>
+      </a>
+    </div>
+    <h1>Digital Twin Puzzle Pieces</h1>
+  </header>
+
+  <!-- Text and headings  -->
+
+  <div class="sub-container">
+    <div class="text-content">
+
+    <h2>Project Name:</h2>
+
+    <p class="hover-text" data-image="puzzle1">
+        <span class = "sub-description"> Digital Roads of the Future</span>
+    </p>
+    
+    <h2>Project Partners:</h2>
+
+    <p class="hover-text" data-image="puzzle1">
+      <strong></strong> 
+      <span class = "sub-description"> Costain, National Highways, University of Cambridge</span>
+    </p>
+
+    <h2>Project Dates:</h2>
+
+      <p >
+      <strong></strong> 
+      <span class = "sub-description">April 2022 – March 2027</span>
+
+    <h2>Description:</h2>
+
+    </p>
+      <p class="hover-text" data-image="puzzle3">
+      <strong></strong>
+      <span class = "sub-description"> text3</span> 
+
+    <h2>Tools and Technologies Used:</h2>
+
+    </p>
+      <p class="hover-text" data-image="puzzle4">
+      <strong></strong> 
+      <span class = "sub-description"> text4</span>
+    </p>
+
+      <p class="hover-text" data-image="puzzle6"><strong>Special Highlights:</strong> Developed dynamic snapping algorithms for modular assembly.</p>
+    </div>
+
+    <div class="image-display">
+      <img src="images/puzzle1.png" id="puzzle1" data-text="puzzle1" alt="Puzzle Piece Image 1">
+      
+      <img src="images/puzzle3.png" id="puzzle3" data-text="puzzle3" alt="Puzzle Piece Image 3">
+      <img src="images/puzzle4.png" id="puzzle4" data-text="puzzle4" alt="Puzzle Piece Image 4">
+      
+      <img src="images/puzzle6.png" id="puzzle6" data-text="puzzle6" alt="Puzzle Piece Image 6">
+    </div>
+  </div>
+
+  <script>
+    const hoverTexts = document.querySelectorAll('.hover-text');
+    const images = document.querySelectorAll('.image-display img');
+
+    function clearActive() {
+      images.forEach(img => img.classList.remove('active'));
+      hoverTexts.forEach(text => text.classList.remove('active-text'));
+    }
+
+    hoverTexts.forEach(text => {
+      text.addEventListener('mouseover', () => {
+        clearActive();
+        const relatedImg = document.getElementById(text.dataset.image);
+        relatedImg.classList.add('active');
+        text.classList.add('active-text');
+      });
+
+      text.addEventListener('mouseout', clearActive);
+    });
+
+    images.forEach(img => {
+      img.addEventListener('mouseover', () => {
+        clearActive();
+        img.classList.add('active');
+        const relatedText = document.querySelector(`.hover-text[data-image="${img.dataset.text}"]`);
+        relatedText.classList.add('active-text');
+      });
+
+      img.addEventListener('mouseout', clearActive);
+    });
+  </script>
+</body>
+</html>
