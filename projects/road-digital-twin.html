@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Digital Twin 3D Reconstructions | Dr Lilia Potseluyko</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="home">
+
+  <header>
+    <nav class="top-nav">
+      <a href="../index.html" class="logo-link">
+        <img src="../images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html" class="active">All Projects</a></li>
+        <li><a href="../academic.html">Academic</a></li>
+        <li>
+          <a href="../ask-portfolio.html">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case-study-main">
+    <a href="../projects.html" class="page-back-link">
+      <i class="fas fa-arrow-left"></i> Back to All Projects
+    </a>
+
+    <section class="case-study-hero" style="margin-top: 25px;">
+      <p class="case-study-kicker">Cambridge Digital Roads &bull; National Highways &bull; UK Dept for Transport</p>
+      <h1>Road Digital Twin 3D Reconstructions &amp; Synthetic Simulation</h1>
+      <p class="case-study-tagline">
+        Building automated procedural pipelines that transform raw mobile LiDAR surveys and point clouds into centimeter-accurate real-time 3D environments for infrastructure asset updating and large-scale behavioral safety studies.
+      </p>
+
+      <div class="case-study-meta-grid">
+        <div class="meta-box">
+          <h4>My Role</h4>
+          <p>Computer Vision Pipelines &bull; Engineering &bull; Collaboration</p>
+        </div>
+        <div class="meta-box">
+          <h4>Timeline</h4>
+          <p>2022 &ndash; 2024</p>
+        </div>
+        <div class="meta-box">
+          <h4>Core Tech</h4>
+          <p>Unreal Engine 5, Houdini, Mobile LiDAR, Python, C++, Blender</p>
+        </div>
+        <div class="meta-box">
+          <h4>Key Stakeholders</h4>
+          <p>National Highways, Costain, UK Department for Transport</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: PROBLEM -->
+    <section class="case-study-section">
+      <h2>1. The Problem: Disconnected Reality Data</h2>
+      <p>
+        Traditional highway maintenance relies on static GIS layers and fragmented CAD surveys. When survey vans collect millions of LiDAR points and gigabytes of 360-degree imagery, existing civil engineering CAD packages struggle with file sizes and real-time visualization.
+      </p>
+      <p>
+        Engineers were unable to "enter" and interact with their asset data in real time, and transport policy researchers lacked controlled, reproducible synthetic urban road environments to test vulnerable road user safety (such as cyclists and pedestrians) in diverse weather and traffic conditions.
+      </p>
+    </section>
+
+    <!-- SECTION 2: SYSTEM ARCHITECTURE -->
+    <section class="case-study-section">
+      <h2>2. Architecture &amp; Procedural Generation Pipelines</h2>
+      <p>
+        As technical lead for 3D reconstruction, I engineered automated workflows linking point clouds to Unreal Engine 5:
+      </p>
+      <ul>
+        <li><strong>Dataset Engineering &amp; Segmentation:</strong> Automated parsing and semantic classification of mobile mapping LiDAR across 40+ km of UK motorways (the CAMHighways open benchmark).</li>
+        <li><strong>Procedural Road Reconstruction:</strong> Built custom procedural algorithms in Houdini and Unreal Engine to dynamically reconstruct continuous pavement surfaces, curbs, and traffic signs from vector alignments.</li>
+        <li><strong>Dynamic Twin Updating:</strong> Created automated scripts that ingest newly surveyed road patches and seamlessly update the existing 3D twin without rebuilding entire corridor environments.</li>
+      </ul>
+
+      <div class="case-study-gallery">
+        <figure>
+          <img src="../images/Dataset.png" alt="Point cloud segmentation and textured mesh extraction">
+          <figcaption><strong>CAMHighways Pipeline:</strong> Point cloud segmentation, orthomosaic projection, and procedural textured mesh generation.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/MappingEngineering.png" alt="Mapping Engineering workflow and corridor reconstruction">
+          <figcaption><strong>High-Fidelity Corridor:</strong> Centimeter-level accurate 3D highway corridor reconstructed from mobile mapping telemetry.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CYCLIST STUDY (DFT) -->
+    <section class="case-study-section" id="cyclists">
+      <h2>3. Immersive Cycling Safety Research (UK Department for Transport)</h2>
+      <p>
+        In collaboration with transport researchers, I directed the development of a high-fidelity London cycling Virtual Reality Environment (VRE) built in Unreal Engine to test cyclist risk perception:
+      </p>
+      <ul>
+        <li><strong>24 Dynamic Urban Scenarios:</strong> Engineered custom vehicle AI, realistic weather transitions (rain, glare, fog), and road configurations (segregated bike lanes vs shared bus lanes).</li>
+        <li><strong>Large-Scale Crowdsourced Study:</strong> Deployed simulation videos across a nationwide UK study with over <strong>3,000 active participants</strong>, collecting empirical behavioral data on cycle safety infrastructure.</li>
+        <li><strong>High-Fidelity Assets:</strong> Modeled bespoke London street furniture, double-decker buses, and dynamic pedestrian crowds to ensure high visual validity.</li>
+      </ul>
+
+      <div class="case-study-gallery">
+        <figure>
+          <img src="../images/cyclist.png" alt="London cyclist VR scenario in Unreal Engine">
+          <figcaption><strong>Virtual Reality Simulation:</strong> Recreating high-density London traffic encounters to measure cyclist cognitive load.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/cyclists_overview.png" alt="Overview of road environment variations">
+          <figcaption><strong>Scenario Matrix:</strong> Controlled variations in road markings, barrier separations, and lighting conditions.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DEMO VIDEOS -->
+    <section class="case-study-section">
+      <h2>4. Video Walkthroughs &amp; Demonstrations</h2>
+      <p>
+        Explore video demonstrations of the procedural dataset engineering and the cyclist simulation:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+        <div>
+          <h4 style="color: #1DCD9F; margin-bottom: 8px;">CAMHighways Procedural Dataset Generation</h4>
+          <div class="video-responsive-wrapper">
+            <iframe src="https://www.youtube.com/embed/5Fp3U_bFj9Q" title="CAMHighways Dataset Preparation" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div>
+          <h4 style="color: #1DCD9F; margin-bottom: 8px;">London Cycling Safety Simulation</h4>
+          <div class="video-responsive-wrapper">
+            <iframe src="https://www.youtube.com/embed/BvH_m365D0I" title="Cycling Safety Simulation Demo" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: OUTCOMES -->
+    <section class="case-study-section">
+      <h2>5. Measurable Outcomes &amp; Strategic Impact</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <h3>3,000+ Study Participants</h3>
+          <p>The cyclist VR simulation yielded the largest empirical cycling safety dataset for the UK Department for Transport.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Open Benchmark Published</h3>
+          <p>Published the open-access CAMHighways dataset on ScienceDirect, serving international robotics and AV researchers.</p>
+        </div>
+        <div class="outcome-card accent">
+          <h3>90% Pipeline Automation</h3>
+          <p>Replaced weeks of manual CAD tracing with an automated point cloud to textured Unreal Engine procedural mesh pipeline.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+      <a href="roadgp-interface.html" class="academic-action-link"><i class="fas fa-arrow-left"></i> Previous: RoadGP Interface</a>
+      <a href="tunnel-digital-twin.html" class="academic-action-link">Next: Tunnel Digital Twin &amp; UI <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </main>
+
+</body>
+</html>

@@ -1,127 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Portfolio | Dr Lilia Potseluyko</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body id="projects" class="home">
 
-  <link rel="icon" type="image/logo2.png" sizes="16x16" href="favicon-16x16.png">
-
-<body>
   <header>
     <nav class="top-nav">
-        <a href="index.html" class="logo-link">
-            <img src="images/logo2.png" alt="Lilia's Logo" class="logo">
-          </a>
+      <a href="index.html" class="logo-link">
+        <img src="images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="academic.html">Academic Work</a></li>
-        <li><a href="education.html">Education and Skills</a></li>
+        <li><a href="projects.html" class="active">All Projects</a></li>
+        <li><a href="academic.html">Academic</a></li>
         <li>
-            <a href="https://www.linkedin.com/in/liliaamobi/" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://drf.eng.cam.ac.uk/staff/dr-lilia-potseluyko" target="_blank" title="Cambridge Profile">
-              <i class="fas fa-university"></i>
-            </a>
+          <a href="ask-portfolio.html">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
   <div class="container">
-    <aside class="sidebar">
-      <h3>Projects</h3>
-      <ul>
-        <li>Digital Twin Puzzle Pieces</li>
-        <li>Digital Twin Integration Interface</li>
-        <li>Cyclists VR Scenarios</li>
-        <li>Tunnel Digital Replica</li>
-        <li>Offsite Construction VR</li>
-        <li>3D Modelling Portfolio</li>
-      </ul>
+
+    <aside class="sidebar portfolio-sidebar">
+      <section class="sidebar-section">
+        <h3>Contact</h3>
+        <p>
+          <i class="fas fa-phone pink-icon"></i>
+          <a href="tel:+447869781897">078 69 78 1897</a>
+        </p>
+        <p>
+          <i class="fas fa-envelope pink-icon"></i>
+          <a href="mailto:lp625@cam.ac.uk">lp625@cam.ac.uk</a>
+        </p>
+        <p>
+          <i class="fas fa-envelope pink-icon"></i>
+          <a href="mailto:lilia.potseluyko@gmail.com">lilia.potseluyko@gmail.com</a>
+        </p>
+      </section>
+
+      <section class="sidebar-section">
+        <h3>External Links</h3>
+        <ul class="sidebar-external-links">
+          <li>
+            <a href="https://www.linkedin.com/in/liliaamobi/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin pink-icon"></i> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/LiliaPotseluyko" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github pink-icon"></i> GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://drf.eng.cam.ac.uk/staff/dr-lilia-potseluyko" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-university pink-icon"></i> Cambridge Profile
+            </a>
+          </li>
+          <li>
+            <a href="https://orcid.org/0000-0003-4135-8108" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-id-badge pink-icon"></i> ORCID
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=AiCRbtUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-graduation-cap pink-icon"></i> Google Scholar
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sidebar-section sidebar-cv-section">
+        <a href="images/Final_Version_FAR3.pdf" class="sidebar-cv-btn" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-arrow-down"></i> Download CV (PDF)
+        </a>
+      </section>
     </aside>
 
-    <main class="content">
+    <main class="content projects-hub-content">
 
-      <h1>Projects</h1>
-
-      <p>Select a project from the sidebar to learn more.</p>
-
-      <a href="projects_sub_puzzles.html" class="card-button">
-        <div class="card-text">
-          <h3>Digital Twin Puzzle Pieces</h3>
-          <p>Building the future Digital Twins  for National Highways with — procedural models, dataset engineering and Digital Twin updating.</p>
-        </div>
-        <div class="card-image">
-          <img src="images/Dataset.png" alt="Thumbnail">
-        </div>
-      </a>
-      
-      <a href="projects_sub_interface.html" class="card-button">
-        <div class="card-text">
-          <h3>Digital Twin Integration Interface</h3>
-          <p>
-            Developing an intuitive interface that merges machine learning insights and real-time digital twins of road defects — empowering assessors, contractors, and autonomous vehicles to respond faster and smarter.
-          </p>
-        </div>
-        <div class="card-image">
-          <img src="images/interface.png" alt="Thumbnail">
-        </div>
-      </a>
-
-      <a href="projects_sub_cyclists.html" class="card-button">
-        <div class="card-text">
-          <h3>Cyclists VR Scenarios</h3>
-          <p>Building London cycling simulations in Unreal Engine — 24 dynamic videos created for a 3000+ participant study on how road environments affect cyclists.
-          </p>
-        </div>
-        <div class="card-image">
-          <img src="images/cyclist.png" alt="Thumbnail">
-        </div>
-      </a>
-
-      <a href="projects_sub_tunnel.html" class="card-button">
-        <div class="card-text">
-          <h3>Tunnel Digital Replica</h3>
-          <p>
-            Created a VR-ready tunnel replica from BIM data — enhancing spatial awareness and decision-making with interactive 3D environments.
-          </p>
-        </div>
-        <div class="card-image">
-          <img src="images/VRTunnel.png" alt="Thumbnail">
-        </div>
-      </a>
-
-      <a href="projects_sub_houses.html" class="card-button">
-        <div class="card-text">
-          <h3>Offsite Construction VR</h3>
-          <p>
-            Created VR environments were clients can preview and make amendments to their future home designs.        </p>
+      <section class="projects-intro-section">
+        <p class="case-study-kicker">Core Engineering &amp; Product Portfolio</p>
+        <h1>Featured Projects &amp; Case Studies</h1>
+        <p class="lead">
+          Explore five key project pillars spanning enterprise digital twins, machine learning UX, mission-critical infrastructure control systems, and mass-customization platforms.
         </p>
-        </div>
-        <div class="card-image">
-          <img src="images/housekits.png" alt="Thumbnail">
-        </div>
-      </a>
-     
-      <a href="projects_sub_3D.html" class="card-button">
-        <div class="card-text">
-          <h3>3D Modelling Portfolio</h3>
-          <p>
-            A cross-project showcase of my 3D modeling work — from Subsea ROVs to traffic systems and architectural visualizations.
-        </p>
-        </div>
-        <div class="card-image">
-          <img src="images/SubseaROV.jpg" alt="Thumbnail">
-        </div>
-      </a>
-      
-      
+      </section>
+
+      <div class="projects-pillars-grid">
+
+        <!-- PILLAR 1: RoadGP Interface -->
+        <article class="pillar-card">
+          <div class="pillar-card-img-wrap">
+            <img src="images/RoadGP.png" alt="RoadGP Product and UX interface">
+            <span class="pillar-role-pill">Forward Deployed Engineer &bull; Product Owner</span>
+          </div>
+          <div class="pillar-card-body">
+            <h2>RoadGP Interface: AI Defect Triage &amp; Workflow UX</h2>
+            <p>
+              Designing and rapidly prototyping an operational interface that bridges raw machine learning detections directly with road maintenance contractors and regional inspectors.
+            </p>
+            <div class="pillar-stack-tags">
+              <span class="stack-tag">Python Dash</span>
+              <span class="stack-tag">User Research</span>
+              <span class="stack-tag">Human-in-the-Loop AI</span>
+              <span class="stack-tag">Product Ownership</span>
+            </div>
+            <a href="projects/roadgp-interface.html" class="pillar-cta-btn">
+              Explore Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- PILLAR 2: Road DT 3D Reconstructions -->
+        <article class="pillar-card">
+          <div class="pillar-card-img-wrap">
+            <img src="images/Dataset.png" alt="Road Digital Twin 3D reconstructions">
+            <span class="pillar-role-pill">Computer Vision Pipelines &bull; Engineering &bull; Collaboration</span>
+          </div>
+          <div class="pillar-card-body">
+            <h2>Road Digital Twin 3D Reconstructions &amp; Simulation</h2>
+            <p>
+              Transferable core engineering: procedural 3D environments, mobile LiDAR computer vision pipelines, and multidisciplinary research collaboration across 40+ km of UK motorways.
+            </p>
+            <div class="pillar-stack-tags">
+              <span class="stack-tag">Unreal Engine</span>
+              <span class="stack-tag">Mobile LiDAR</span>
+              <span class="stack-tag">Procedural 3D</span>
+              <span class="stack-tag">Data Engineering</span>
+            </div>
+            <a href="projects/road-digital-twin.html" class="pillar-cta-btn">
+              Explore Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- PILLAR 3: Nicander Tunnel DT & UI -->
+        <article class="pillar-card">
+          <div class="pillar-card-img-wrap">
+            <img src="images/VRTunnel.png" alt="Nicander Tunnel Digital Twin and Control Room">
+            <span class="pillar-role-pill">Service Design &bull; UX Automation</span>
+          </div>
+          <div class="pillar-card-body">
+            <h2>Tunnel Digital Twin &amp; Control Room Operator UI</h2>
+            <p>
+              Transforming complex BIM geometry and SCADA sensor telemetry into an ergonomic 3D spatial interface for high-stakes tunnel incident response and operational service automation.
+            </p>
+            <div class="pillar-stack-tags">
+              <span class="stack-tag">BIM to Real-Time</span>
+              <span class="stack-tag">Service Design</span>
+              <span class="stack-tag">SCADA Integration</span>
+              <span class="stack-tag">UX Automation</span>
+            </div>
+            <a href="projects/tunnel-digital-twin.html" class="pillar-cta-btn">
+              Explore Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- PILLAR 4: Norscot BIM & Immersive -->
+        <article class="pillar-card">
+          <div class="pillar-card-img-wrap">
+            <img src="images/housekits.png" alt="Norscot BIM and Immersive VR Configurator">
+            <span class="pillar-role-pill">Product Management &bull; Technical Discovery &bull; Change Management</span>
+          </div>
+          <div class="pillar-card-body">
+            <h2>BIM &amp; Immersive VR Mass-Customization Configurator</h2>
+            <p>
+              Leading digital transformation and customer discovery: connecting prospective home buyers to timber-frame manufacturing lines via real-time 3D VR configuration.
+            </p>
+            <div class="pillar-stack-tags">
+              <span class="stack-tag">Product Management</span>
+              <span class="stack-tag">Technical Discovery</span>
+              <span class="stack-tag">Change Management</span>
+              <span class="stack-tag">BIM Automation</span>
+            </div>
+            <a href="projects/bim-immersive-simulation.html" class="pillar-cta-btn">
+              Explore Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- PILLAR 5: Creative Spatial & 3D Systems -->
+        <article class="pillar-card">
+          <div class="pillar-card-img-wrap">
+            <img src="images/SubseaROV.jpg" alt="Creative Spatial Systems and 3D modeling showcase">
+            <span class="pillar-role-pill">Spatial Computing Specialist</span>
+          </div>
+          <div class="pillar-card-body">
+            <h2>Creative Spatial Systems &amp; 3D Modeling Portfolio</h2>
+            <p>
+              A cross-domain technical showcase featuring subsea ROV robotics, UAV aerial sensor arrays, marine mooring simulations, and architectural environmental modeling.
+            </p>
+            <div class="pillar-stack-tags">
+              <span class="stack-tag">Subsea Robotics</span>
+              <span class="stack-tag">UAV Payloads</span>
+              <span class="stack-tag">3ds Max / Blender</span>
+              <span class="stack-tag">Real-Time Lighting</span>
+            </div>
+            <a href="projects/creative-spatial-3d.html" class="pillar-cta-btn">
+              Explore Case Study <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
     </main>
   </div>
+
 </body>
 </html>

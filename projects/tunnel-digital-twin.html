@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tunnel Digital Twin & Control Room UI | Dr Lilia Potseluyko</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="home">
+
+  <header>
+    <nav class="top-nav">
+      <a href="../index.html" class="logo-link">
+        <img src="../images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html" class="active">All Projects</a></li>
+        <li><a href="../academic.html">Academic</a></li>
+        <li>
+          <a href="../ask-portfolio.html">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case-study-main">
+    <a href="../projects.html" class="page-back-link">
+      <i class="fas fa-arrow-left"></i> Back to All Projects
+    </a>
+
+    <section class="case-study-hero" style="margin-top: 25px;">
+      <p class="case-study-kicker">Nicander Ltd &bull; Intelligent Transport Systems &bull; Teesside</p>
+      <h1>Tunnel Digital Twin &amp; Control Room Operator UI</h1>
+      <p class="case-study-tagline">
+        Transforming complex architectural BIM datasets and industrial SCADA sensor streams into a responsive 3D spatial dashboard, empowering control room operators to manage tunnel emergencies with rapid spatial awareness.
+      </p>
+
+      <div class="case-study-meta-grid">
+        <div class="meta-box">
+          <h4>My Role</h4>
+          <p>Service Design &bull; UX Automation</p>
+        </div>
+        <div class="meta-box">
+          <h4>Timeline</h4>
+          <p>2020 &ndash; 2021</p>
+        </div>
+        <div class="meta-box">
+          <h4>Core Tech</h4>
+          <p>Unreal Engine, Autodesk Revit/BIM, 3ds Max, SCADA Telemetry</p>
+        </div>
+        <div class="meta-box">
+          <h4>Primary Users</h4>
+          <p>Highway Control Room Operators, Emergency Dispatchers, Asset Engineers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: PROBLEM -->
+    <section class="case-study-section">
+      <h2>1. The Problem: Information Overload During Tunnel Incidents</h2>
+      <p>
+        In underground highway tunnels, control room operators bear massive cognitive responsibility. When an incident occurs—such as a vehicle fire, smoke hazard, or sudden stoppage—operators must rapidly monitor hundreds of CCTV camera feeds, ventilation fan velocities, emergency exit status lights, and variable message signs (VMS).
+      </p>
+      <p>
+        Legacy control room systems relied on flat, abstract 2D schematic diagrams and fragmented alarm lists. Operators had to mentally map where a smoke sensor was triggered relative to physical emergency doors, leading to dangerous hesitation during time-critical evacuations.
+      </p>
+    </section>
+
+    <!-- SECTION 2: SERVICE BLUEPRINT & OPERATOR ERGONOMICS -->
+    <section class="case-study-section">
+      <h2>2. Service Design &amp; Operator Ergonomics</h2>
+      <p>
+        Working alongside Nicander's intelligent transport systems engineers and traffic operators, I structured the digital twin interface around critical operational service steps:
+      </p>
+      <ul>
+        <li><strong>Immediate Incident Pinpointing:</strong> Rather than reading tabular sensor codes, a 3D alert pulse immediately flies the operator's viewport to the exact chainage inside the tunnel.</li>
+        <li><strong>Unified Sensor Telemetry:</strong> Merging CCTV view cones, ventilation airflow vectors, and fire barrier states directly inside the 3D model space.</li>
+        <li><strong>Schematic &amp; 3D Synchronization:</strong> Ensuring the bird's-eye schematic map and the 3D first-person inspection view stay locked in real-time sync.</li>
+      </ul>
+
+      <div class="case-study-gallery">
+        <figure>
+          <img src="../images/VRTunnel.png" alt="3D Tunnel Digital Twin environment">
+          <figcaption><strong>3D Virtual Replica:</strong> High-fidelity tunnel interior reconstructed directly from engineering BIM data with realistic lighting.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/ControlRoom.png" alt="Control Room operator interface">
+          <figcaption><strong>Control Room Context:</strong> Testing spatial UI layout against multi-screen operator consoles and alarm dispatch flows.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TECHNICAL PIPELINE -->
+    <section class="case-study-section">
+      <h2>3. Technical Architecture: From BIM to Interactive Twin</h2>
+      <p>
+        Enterprise BIM models (Revit/IFC) are notoriously heavy, full of non-visual metadata that cripples real-time game engines. I built an end-to-end data pipeline to optimize assets for 60+ FPS performance:
+      </p>
+
+      <div class="case-study-gallery">
+        <figure>
+          <img src="../images/Tunnel_BIM_Data.png" alt="Tunnel BIM data optimization">
+          <figcaption><strong>BIM Ingestion Pipeline:</strong> Automated geometry retopology, LOD (level-of-detail) generation, and UV unwrapping.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/Tunnel_Equipment_States.png" alt="Equipment state visualization in digital twin">
+          <figcaption><strong>Dynamic Equipment States:</strong> Visual state logic for emergency phones, ventilation jets, barriers, and CCTV coverage cones.</figcaption>
+        </figure>
+      </div>
+
+      <p>
+        <strong>Technical Accomplishments:</strong>
+      </p>
+      <ul>
+        <li><strong>Dynamic Asset States:</strong> Designed state machines that visually reflect equipment health (Normal, Warning, Fault, Evacuation active) with color-coded spatial markers.</li>
+        <li><strong>Automated Schematic Map Generation:</strong> Built an automated tool that parses linear tunnel alignments and generates simplified 2D operator schematics without manual drafting.</li>
+        <li><strong>VR Training Readiness:</strong> Designed the twin to double as an immersive VR training simulator for novice operators to rehearse catastrophic tunnel fire scenarios safely.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4: OUTCOMES -->
+    <section class="case-study-section">
+      <h2>4. Measurable Outcomes &amp; Strategic Impact</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <h3>Sub-Second Incident Locating</h3>
+          <p>Operators pinpointed simulated hazard locations over 50% faster compared to traditional tabular alarm lists.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Flawless 60 FPS Real-Time</h3>
+          <p>Reduced multi-gigabyte BIM CAD files into a lightweight, real-time spatial dashboard running smoothly on standard commercial hardware.</p>
+        </div>
+        <div class="outcome-card accent">
+          <h3>Industry Showcased</h3>
+          <p>Successfully demonstrated at Teesside University Industry Showcase, establishing new benchmarks for transport control room UX.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+      <a href="road-digital-twin.html" class="academic-action-link"><i class="fas fa-arrow-left"></i> Previous: Road Digital Twin</a>
+      <a href="bim-immersive-simulation.html" class="academic-action-link">Next: BIM &amp; Immersive Simulation <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </main>
+
+</body>
+</html>

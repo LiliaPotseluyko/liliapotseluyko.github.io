@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadGP Interface | Product & UX Case Study | Dr Lilia Potseluyko</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="home">
+
+  <header>
+    <nav class="top-nav">
+      <a href="../index.html" class="logo-link">
+        <img src="../images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html" class="active">All Projects</a></li>
+        <li><a href="../academic.html">Academic</a></li>
+        <li>
+          <a href="../ask-portfolio.html">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case-study-main">
+    <a href="../projects.html" class="page-back-link">
+      <i class="fas fa-arrow-left"></i> Back to All Projects
+    </a>
+
+    <section class="case-study-hero" style="margin-top: 25px;">
+      <p class="case-study-kicker">University of Cambridge &bull; Costain Group &bull; National Highways</p>
+      <h1>RoadGP: AI Defect Triage &amp; Human-in-the-Loop Workflow UX</h1>
+      <p class="case-study-tagline">
+        Designing an operational digital twin interface that translates complex machine learning pavement analysis into rapid, trusted decision workflows for road maintenance contractors and regional inspectors.
+      </p>
+
+      <div class="case-study-meta-grid">
+        <div class="meta-box">
+          <h4>My Role</h4>
+          <p>Forward Deployed Engineer &bull; Product Owner</p>
+        </div>
+        <div class="meta-box">
+          <h4>Timeline</h4>
+          <p>2023 &ndash; 2024</p>
+        </div>
+        <div class="meta-box">
+          <h4>Tech &amp; Methods</h4>
+          <p>Python Dash, Flask, OpenCV, Figma, User Story Mapping</p>
+        </div>
+        <div class="meta-box">
+          <h4>Primary Users</h4>
+          <p>Highway Asset Assessors, Field Contractors, Autonomous Fleets</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: PROBLEM -->
+    <section class="case-study-section">
+      <h2>1. The Problem &amp; Operational Friction</h2>
+      <p>
+        Highway agencies capture terabytes of mobile survey footage, LiDAR, and computer vision defect telemetry. However, raw algorithm outputs (e.g., bounding boxes with 85% confidence scores) overwhelmed civil engineers and maintenance dispatchers. 
+      </p>
+      <p>
+        Asset managers were trapped in manual, spreadsheet-heavy verification processes taking up to three weeks per survey stretch. Because field workers lacked spatial context and historical defect trends, false positives were common, and contractor repair crews were frequently dispatched with incomplete defect severity data.
+      </p>
+    </section>
+
+    <!-- SECTION 2: DISCOVERY & SERVICE MAPPING -->
+    <section class="case-study-section">
+      <h2>2. Service Discovery &amp; Stakeholder Mapping</h2>
+      <p>
+        To align machine learning capabilities with real field constraints, I initiated a user research sprint interviewing regional road inspectors, asset contractors, and computer vision researchers:
+      </p>
+      <ul>
+        <li><strong>Need for Trust &amp; Explainability:</strong> Inspectors refused automated "black box" decisions; they demanded visual before/after evidence alongside AI confidence scores.</li>
+        <li><strong>Contextual Spatial Map:</strong> Triage requires spatial clustering (e.g., understanding if 5 micro-cracks form a high-risk cluster near a bridge expansion joint).</li>
+        <li><strong>Contractor Actionability:</strong> Work orders need precise GPS coordinates, lane identification, and recommended repair material estimates rather than raw pixel coordinates.</li>
+      </ul>
+      <p>
+        We translated these insights into an end-to-end service blueprint detailing how sensor data flows from camera trucks through automated AI classification into verified contractor work packages.
+      </p>
+    </section>
+
+    <!-- STORYBOARD & UI SKETCH -->
+    <section class="case-study-section">
+      <h2>3. Wireframing, Prototyping &amp; Architecture</h2>
+      <p>
+        Using Python Dash and Flask, I rapidly built interactive, working prototypes rather than static Figma mockups, enabling live stakeholder usability testing against real highway datasets:
+      </p>
+
+      <div class="case-study-gallery">
+        <figure>
+          <img src="../images/Interface_storyboard.png" alt="RoadGP Interface user story and storyboard">
+          <figcaption><strong>Service Storyboard:</strong> Visualizing how an inspector filters by defect severity, validates bounding boxes, and exports repair instructions.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/interface_big.png" alt="RoadGP high-fidelity dashboard layout">
+          <figcaption><strong>Interactive Dashboard:</strong> Dual-view pane integrating high-res pavement imagery, localized 3D surface mesh, and time-series degradation tracking.</figcaption>
+        </figure>
+      </div>
+
+      <p>
+        <strong>Technical Architecture Highlights:</strong>
+      </p>
+      <ul>
+        <li><strong>Human-in-the-Loop Validation:</strong> One-click accept/reject/re-classify buttons that feed operator corrections back to retrain ML models.</li>
+        <li><strong>Dual-Screen GIS Alignment:</strong> Synchronized geographic map view with high-speed video frames and localized 3D surface mesh elevation profiles.</li>
+        <li><strong>Role-Based Views:</strong> Tailored dashboard toggles for executive reporting (aggregate budget forecasts) versus field dispatch (contractor repair coordinates).</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4: DEMO VIDEO -->
+    <section class="case-study-section">
+      <h2>4. Live Interaction Demo</h2>
+      <p>
+        Watch the interactive interface prototype demonstrating defect browsing, bounding box validation, and real-time 3D telemetry rendering:
+      </p>
+
+      <div class="video-responsive-wrapper">
+        <iframe src="https://www.youtube.com/embed/P6aYv9tIew0" title="RoadGP Interface Prototype Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION 5: OUTCOMES -->
+    <section class="case-study-section">
+      <h2>5. Measurable Outcomes &amp; Leadership Impact</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <h3>70% Time Reduction</h3>
+          <p>Reduced defect review and triage cycle from 15 days to under 4 days per survey section during pilot testing.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Zero Training Curve</h3>
+          <p>Non-technical civil engineering assessors completed accurate verifications within 10 minutes of initial onboarding.</p>
+        </div>
+        <div class="outcome-card accent">
+          <h3>National Highways Buy-In</h3>
+          <p>Presented prototype to National Highways and tier-1 contractors, securing further R&amp;D adoption for Cambridge Digital Roads.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+      <a href="../projects.html" class="academic-action-link"><i class="fas fa-arrow-left"></i> All Projects</a>
+      <a href="road-digital-twin.html" class="academic-action-link">Next: Road Digital Twin 3D Reconstructions <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </main>
+
+</body>
+</html>

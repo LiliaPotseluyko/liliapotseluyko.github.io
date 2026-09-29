@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIM & Immersive Simulation | Dr Lilia Potseluyko</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="home">
+
+  <header>
+    <nav class="top-nav">
+      <a href="../index.html" class="logo-link">
+        <img src="../images/logo2.png" alt="Lilia Potseluyko logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../projects.html" class="active">All Projects</a></li>
+        <li><a href="../academic.html">Academic</a></li>
+        <li>
+          <a href="../ask-portfolio.html">
+            Ask Portfolio <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="case-study-main">
+    <a href="../projects.html" class="page-back-link">
+      <i class="fas fa-arrow-left"></i> Back to All Projects
+    </a>
+
+    <section class="case-study-hero" style="margin-top: 25px;">
+      <p class="case-study-kicker">Norscot Joinery Ltd &bull; Innovate UK KTP &bull; Teesside University</p>
+      <h1>BIM &amp; Immersive VR Mass-Customization Configurator</h1>
+      <p class="case-study-tagline">
+        Empowering prospective home buyers to customize sustainable timber-frame houses in real-time VR while automatically calculating material bills and manufacturing constraints, eliminating design iteration waste.
+      </p>
+
+      <div class="case-study-meta-grid">
+        <div class="meta-box">
+          <h4>My Role</h4>
+          <p>Product Management &bull; Technical Discovery &bull; Change Management</p>
+        </div>
+        <div class="meta-box">
+          <h4>Impact Rating</h4>
+          <p>Outstanding KTP Grade &bull; Innovate UK</p>
+        </div>
+        <div class="meta-box">
+          <h4>Core Tech</h4>
+          <p>Unreal Engine 4, Autodesk Revit/BIM, C++, Blueprints</p>
+        </div>
+        <div class="meta-box">
+          <h4>Key Outcome</h4>
+          <p>&pound;70k/yr Labor Savings &bull; Won &pound;53k Commercial Contract</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: PROBLEM -->
+    <section class="case-study-section">
+      <h2>1. The Problem: Friction in Self-Build Housing Sales</h2>
+      <p>
+        The Timber Frame Self-Build Housing Sector (TFSBS) suffers from high customer drop-off during the initial specification phase. Prospective buyers struggle to interpret technical 2D architectural drawings and elevations, leading to frequent misunderstandings about room proportions, window sightlines, and interior lighting.
+      </p>
+      <p>
+        Each minor client customization request (such as expanding a kitchen or moving a partition wall) required manual redrafting by senior architects in Revit. This created weeks of turnaround delay, inflated design overhead, and risk of manufacturing discrepancies during factory timber-frame assembly.
+      </p>
+    </section>
+
+    <!-- SECTION 2: SERVICE BLUEPRINT -->
+    <section class="case-study-section">
+      <h2>2. Product Discovery &amp; Customer Journey Transformation</h2>
+      <p>
+        As part of an Innovate UK Knowledge Transfer Partnership (KTP) embedded inside Norscot Joinery, I investigated the customer sales journey and designed a seamless digital touchpoint:
+      </p>
+      <ul>
+        <li><strong>Interactive VR Showroom:</strong> Replaced static showroom binders with immersive walkthroughs where clients could walk inside their prospective home at 1:1 human scale.</li>
+        <li><strong>Real-Time Configuration:</strong> Clients could swap window styles, alter wall layouts, and preview finish materials with instant visual feedback.</li>
+        <li><strong>Automated Cost Calculation:</strong> Linked dynamic user choices directly to live costing engines, preventing "budget shock" and speeding client sign-off.</li>
+      </ul>
+
+      <div class="case-study-gallery">
+        <figure>
+          <img src="../images/house_configurator1.png" alt="House Configurator VR interface">
+          <figcaption><strong>VR Configurator:</strong> Real-time material and spatial layout toggles inside Unreal Engine.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/House_LivingRoom.jpg" alt="High-fidelity living room lighting and spatial view">
+          <figcaption><strong>Immersive Spatial Quality:</strong> Photorealistic natural lighting simulating exact Scottish solar orientations.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TECHNICAL INTEGRATION -->
+    <section class="case-study-section">
+      <h2>3. Technical Architecture: Exposing BIM Metadata to Real-Time VR</h2>
+      <p>
+        The core technical challenge was breaking through the "black box" of proprietary BIM files to make architectural parametric data accessible inside a game engine:
+      </p>
+
+      <div class="case-study-gallery">
+        <figure>
+          <img src="../images/house_ui_design.png" alt="House UI Design and interaction menu">
+          <figcaption><strong>Ergonomic UI:</strong> Touch and VR controller menus designed for non-technical home buyers.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/house_fireplace.png" alt="Interior customization prototype">
+          <figcaption><strong>Customization Module:</strong> Instantaneous switching of fixtures, fireplaces, and joinery components.</figcaption>
+        </figure>
+      </div>
+
+      <p>
+        <strong>Key Engineering Innovations:</strong>
+      </p>
+      <ul>
+        <li><strong>BIM to Game Engine Pipeline:</strong> Developed automated scripts parsing Autodesk Revit families into optimized Unreal Engine assets preserving manufacturing metadata.</li>
+        <li><strong>Manufacturing Rule Enforcement:</strong> Embedded structural timber-frame rules into the UI logic so buyers could not select structurally invalid spans.</li>
+        <li><strong>Automated Bill of Materials (BOM):</strong> The system auto-exports bill-of-quantities updates directly to factory ERP systems.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4: DEMO VIDEO -->
+    <section class="case-study-section">
+      <h2>4. Live Interactive Prototype Walkthrough</h2>
+      <p>
+        Watch the interactive VR configurator prototype in action:
+      </p>
+
+      <div class="video-responsive-wrapper">
+        <iframe src="https://www.youtube.com/embed/u-DgOjw0QCE" title="Norscot House Configurator Prototypes" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- SECTION 5: OUTCOMES -->
+    <section class="case-study-section">
+      <h2>5. Measurable Business Outcomes &amp; Industry Recognition</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <h3>&pound;70,000 Annual Savings</h3>
+          <p>Saved Norscot &pound;70k/yr in labor costs by establishing in-house automated VR/BIM capability over external visualizers.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Direct &pound;53,000 Contract Won</h3>
+          <p>VR prototypes enabled a client to immediately resolve layout uncertainties, securing a &pound;53,000 project while saving the client &pound;5,500.</p>
+        </div>
+        <div class="outcome-card accent">
+          <h3>Innovator of the Future Commendation</h3>
+          <p>Awarded at the Scottish Knowledge Exchange Awards 2020; project received an Outstanding KTP Grade from Innovate UK.</p>
+        </div>
+        <div class="outcome-card">
+          <h3>Q1 Journal Publication</h3>
+          <p>Published complete framework in <em>Automation in Construction</em> (Elsevier), validating academic and commercial rigor.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+      <a href="tunnel-digital-twin.html" class="academic-action-link"><i class="fas fa-arrow-left"></i> Previous: Tunnel Digital Twin</a>
+      <a href="creative-spatial-3d.html" class="academic-action-link">Next: Creative Spatial &amp; 3D Systems <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </main>
+
+</body>
+</html>
