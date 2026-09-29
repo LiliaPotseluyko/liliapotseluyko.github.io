@@ -7,30 +7,181 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Google Cloud search widget -->
-  <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_GB"></script>
-    <style>
-    /* Input visible on your dark Ask Portfolio page */
+  <style>
+    /* Custom styling for Dr Lilia AI search & interactive panel */
     .ask-portfolio-page #searchWidgetTrigger {
         color: #ffffff;
         -webkit-text-fill-color: #ffffff;
         background-color: transparent;
         caret-color: #1DCD9F;
+        width: 100%;
+        padding-right: 120px;
     }
 
     .ask-portfolio-page #searchWidgetTrigger::placeholder {
-        color: #cccccc;
-        -webkit-text-fill-color: #cccccc;
+        color: #888888;
+        -webkit-text-fill-color: #888888;
         opacity: 1;
     }
 
-    /* Text inherited by Google's light widget */
-    .ask-portfolio-page gen-search-widget {
-        color: #202124 !important;
-        -webkit-text-fill-color: #202124 !important;
-        color-scheme: light !important;
+    .search-trigger-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
     }
-    </style>
+
+    .search-ask-btn {
+        position: absolute;
+        right: 8px;
+        background: #1DCD9F;
+        color: #000000;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+    }
+
+    .search-ask-btn:hover {
+        background: #169976;
+        transform: translateY(-1px);
+    }
+
+    /* Live AI Response Panel */
+    .ai-response-panel {
+        margin-top: 24px;
+        background: #121214;
+        border: 1px solid #27272a;
+        border-left: 4px solid #1DCD9F;
+        border-radius: 12px;
+        padding: 24px;
+        display: none;
+        animation: slideUp 0.3s ease-out;
+    }
+
+    .ai-response-panel.active {
+        display: block;
+    }
+
+    @keyframes slideUp {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ai-panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #27272a;
+    }
+
+    .ai-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #1DCD9F;
+        font-weight: 700;
+        font-size: 0.95rem;
+    }
+
+    .ai-clear-btn {
+        background: transparent;
+        color: #888888;
+        border: none;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: color 0.2s ease;
+    }
+
+    .ai-clear-btn:hover {
+        color: #ffffff;
+    }
+
+    .ai-loading-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #1DCD9F;
+        font-weight: 600;
+        padding: 16px 0;
+    }
+
+    .ai-loading-spinner {
+        animation: spin 1s linear infinite;
+        font-size: 1.2rem;
+    }
+
+    @keyframes spin {
+        100% { transform: rotate(360deg); }
+    }
+
+    .ai-content-body {
+        color: #e4e4e7;
+        font-size: 1.02rem;
+        line-height: 1.7;
+    }
+
+    .ai-content-body p {
+        margin-bottom: 12px;
+    }
+
+    .ai-content-body ul, .ai-content-body ol {
+        margin: 12px 0 16px 20px;
+    }
+
+    .ai-content-body li {
+        margin-bottom: 6px;
+    }
+
+    .ai-content-body strong {
+        color: #ffffff;
+    }
+
+    .ai-followup-area {
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px dashed #27272a;
+    }
+
+    .ai-followup-label {
+        font-size: 0.8rem;
+        color: #e9008c;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 800;
+    }
+
+    .ai-followup-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .ai-followup-chip {
+        background: #18181b;
+        color: #1DCD9F;
+        border: 1px solid #333333;
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-size: 0.88rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .ai-followup-chip:hover {
+        background: #1DCD9F;
+        color: #000000;
+        border-color: #1DCD9F;
+    }
+  </style>
 </head>
 
 <body class="ask-portfolio-page">
@@ -61,7 +212,7 @@
     </a>
 
     <section class="ask-portfolio-intro">
-      <p class="beta-label">Beta preview</p>
+      <p class="beta-label">AI Assistant Grounded in Portfolio Data</p>
 
       <h1>Ask Lilia AI</h1>
 
@@ -73,16 +224,11 @@
       <div class="beta-notice">
         <i class="fas fa-flask" aria-hidden="true"></i>
         <div>
-          <h2>This is a beta version</h2>
+          <h2>Interactive Portfolio Assistant</h2>
           <p>
-            This assistant is powered by Google Cloud and searches a growing portfolio
-            knowledge base. More CVs, project evidence, publications and technical
-            documents will be added as the portfolio develops.
-          </p>
-          <p>
-            Some answers may therefore be incomplete. When evidence is unavailable,
-            the assistant should say that it could not find supporting information in
-            the current portfolio knowledge base.
+            This assistant is grounded in Dr Lilia Potseluyko's technical research,
+            industry projects (Digital Twins, XR, Civil Infrastructure), academic publications,
+            and software engineering background.
           </p>
         </div>
       </div>
@@ -91,7 +237,7 @@
     <section class="portfolio-search-panel" aria-labelledby="portfolio-search-heading">
       <div class="portfolio-search-heading">
         <div>
-          <p class="panel-kicker">Google Cloud portfolio search</p>
+          <p class="panel-kicker">Gemini AI portfolio assistant</p>
           <h2 id="portfolio-search-heading">What would you like to know?</h2>
         </div>
         <i class="fas fa-sparkles panel-icon" aria-hidden="true"></i>
@@ -109,6 +255,9 @@
           placeholder="For example: What experience does Lilia have with digital twins?"
           autocomplete="off"
         >
+        <button type="button" id="searchSubmitBtn" class="search-ask-btn">
+          Ask AI <i class="fas fa-paper-plane"></i>
+        </button>
       </div>
 
       <div class="suggested-questions" aria-label="Suggested questions">
@@ -124,30 +273,230 @@
         </button>
       </div>
 
-      <gen-search-widget
-        configId="6b5cb41b-3ded-47ec-a2bb-b4af28dd8ac3"
-        triggerId="searchWidgetTrigger"
-        style="color:#202124; -webkit-text-fill-color:#202124; color-scheme:light;">
-      </gen-search-widget>
+      <!-- Live AI Answer Panel -->
+      <div id="aiResponsePanel" class="ai-response-panel">
+        <div class="ai-panel-header">
+          <div class="ai-badge">
+            <i class="fas fa-robot"></i> Lilia AI Answer
+          </div>
+          <button type="button" id="aiClearBtn" class="ai-clear-btn">
+            <i class="fas fa-xmark"></i> Clear
+          </button>
+        </div>
+
+        <div id="aiLoadingBox" class="ai-loading-box" style="display: none;">
+          <i class="fas fa-circle-notch ai-loading-spinner"></i>
+          <span>Searching Dr Lilia Potseluyko's portfolio knowledge base...</span>
+        </div>
+
+        <div id="aiContentBody" class="ai-content-body"></div>
+
+        <div id="aiFollowupArea" class="ai-followup-area" style="display: none;">
+          <div class="ai-followup-label">Suggested Follow-ups</div>
+          <div id="aiFollowupChips" class="ai-followup-chips"></div>
+        </div>
+      </div>
     </section>
 
     <p class="powered-by">
-      Powered by Google Cloud AI Applications and a structured portfolio knowledge base.
+      Powered by Google Gemini AI &amp; Dr Lilia Potseluyko's Portfolio Engine.
     </p>
   </main>
 
   <script>
+    // Embedded Portfolio Knowledge Base Fallback for GitHub Pages static hosting
+    const portfolioFallbackKB = {
+      name: "Dr Lilia Potseluyko",
+      title: "Cambridge-based Researcher & Digital Engineer",
+      location: "Cambridge, UK",
+      email: "lilia.potseluyko@gmail.com",
+      github: "https://github.com/liliapotseluyko",
+      linkedin: "https://linkedin.com/in/lilia-potseluyko",
+      years: 8,
+      digitalTwins: `Dr Lilia Potseluyko has 8+ years of hands-on research and engineering experience in **Digital Twins & Spatial Data**:
+- **Trafikverket 12km Tunnel Digital Twin (Nicander):** Computational & Digital Twin Lead. Developed mathematical coordinate transformation algorithms in Python/C++ to automate 2D schematic layouts for ~20,000 IoT tunnel assets and built interactive Unreal Engine digital twin monitoring prototypes.
+- **CAMHighways Immersive Digital Twin (Univ. of Cambridge):** Spatial Data Lead. Processed Trimble MX9 mobile mapping data (LiDAR, 360° imagery, GPR) and built interactive Unreal Engine VR/desktop environments with REST API tile streaming. Featured on **BBC News** (International Pothole Day 2023).
+- **Norscot Joinery KTP (Univ. of Strathclyde):** Built BIM & WebVR digital twin workflows for offsite timber homes, reducing visualization prep time from 80 hours to 4.5 hours (Finalist, Scottish Innovator of the Future Award 2020).
+- **Core Stack:** Unreal Engine (VR & Desktop), WebVR, LiDAR Point Clouds, QGIS, Trimble MX9, Geospatial REST APIs, BIM (Revit), Python, C++.`,
+      softwareEngineering: `Dr Lilia Potseluyko's **Software Engineering & Architecture** skills include:
+- **Languages & Frameworks:** React, TypeScript, Python (Dash, FastAPI, REST APIs), C++, Unreal Engine C++, HTML5/CSS3/Tailwind.
+- **Architecture & Systems:** Microservices architecture, RESTful API design, Agile/DevOps, mathematical coordinate transformations, database integrations.
+- **Computer Vision & AI:** 3D Reconstruction, Photogrammetry, PyTorch, OpenCV, LLM & Agent workflows, decision support platforms (RoadGP).
+- **Tools & Workflows:** Git/GitHub, Docker, Linux, Dovetail, Figma Design Systems, QGIS.`,
+      publications: `Dr Lilia Potseluyko's **Academic Achievements & Scientific Publications**:
+1. **CAMHighways: The Cambridge Highways Dataset** (*ScienceDirect, 2024*): Surveyed 40+ km of UK Highways with Trimble MX9 mobile mapping (LiDAR, 360° imagery, GPR) to automate Digital Twin creation.
+2. **Review of Multimodal Data for Road Maintenance** (*Cambridge Repository, 2024*): Comprehensive review of LiDAR, RGB, thermal, GPR, text, and audio data for infrastructure resilience.
+3. **BIM-based VR Game-like Environment for Timber Kit Housing** (*ScienceDirect, 2022*): BIM, VR, and gamification for Design for Manufacture and Assembly (DfMA) in timber housing.
+4. **Enhancing Road Digital Twins with Adaptive 3D Pavement Model** (*Writing in Progress*): Semi-automatic workflow for adaptive 3D pavement mesh reconstruction.
+5. **High-Fidelity 3D Traffic Sign Reconstruction** (*Under Review*): Hybrid mobile mapping + image reconstruction for 3D traffic sign inspection.`,
+      productUX: `Dr Lilia Potseluyko's **UX Research & Product Design** expertise:
+- **RoadGP (National Highways):** Lead UX Researcher & Product Designer. Conducted stakeholder interviews, analyzed qualitative data in Dovetail, created Figma design systems, and built interactive Python Dash/React prototypes for AI-assisted road defect diagnosis.
+- **DfT Cyclist Safety Simulation:** Lead Simulation Developer & UX Researcher. Designed immersive simulation study tested with **4,000+ UK participants** for Department for Transport policy evaluation.
+- **Certifications & Methods:** Google UX Design Certificate, Continuous Discovery / Opportunity Solution Trees, Usability Testing, Information Architecture.`,
+      projectsOverview: `Dr Lilia Potseluyko's key featured projects:
+1. **RoadGP (National Highways):** AI-assisted decision support platform for defect diagnosis and treatment recommendations.
+2. **Trafikverket 12km Tunnel (Nicander):** Automated schematic mapping & Unreal Engine digital twin for 20,000 IoT assets.
+3. **CAMHighways (Univ. of Cambridge):** Multimodal Trimble MX9 LiDAR/GPR processing & Unreal VR digital twin (Featured on BBC News).
+4. **DfT Cyclist Safety Simulation:** Immersive simulation study with 4,000+ UK participants.
+5. **Norscot Joinery KTP:** BIM & WebVR offsite construction workflows (80h -> 4.5h prep reduction).`
+    };
+
+    function searchLocalKB(query) {
+      const q = query.toLowerCase();
+
+      if (q.includes("publication") || q.includes("academic") || q.includes("paper") || q.includes("journal") || q.includes("research") || q.includes("sciencedirect")) {
+        return {
+          text: portfolioFallbackKB.publications,
+          followups: ["What experience does Lilia have with digital twins?", "What software engineering skills does she have?", "Tell me about the RoadGP project."]
+        };
+      } else if (q.includes("digital twin") || q.includes("unreal") || q.includes("lidar") || q.includes("tunnel") || q.includes("camhighways") || q.includes("3d")) {
+        return {
+          text: portfolioFallbackKB.digitalTwins,
+          followups: ["What software engineering skills does Lilia have?", "Tell me about the RoadGP project.", "How can I contact Dr Lilia Potseluyko?"]
+        };
+      } else if (q.includes("skill") || q.includes("software") || q.includes("code") || q.includes("python") || q.includes("react") || q.includes("c++") || q.includes("engineering")) {
+        return {
+          text: portfolioFallbackKB.softwareEngineering,
+          followups: ["What experience does Lilia have with digital twins?", "Which projects demonstrate user research and product design?", "Where is Dr Lilia Potseluyko based?"]
+        };
+      } else if (q.includes("product") || q.includes("ux") || q.includes("user") || q.includes("figma") || q.includes("dft") || q.includes("roadgp")) {
+        return {
+          text: portfolioFallbackKB.productUX,
+          followups: ["What experience does Lilia have with digital twins?", "What are her key technical skills?", "Tell me about her research at Cambridge."]
+        };
+      } else if (q.includes("project") || q.includes("work") || q.includes("experience") || q.includes("research") || q.includes("cambridge")) {
+        return {
+          text: portfolioFallbackKB.projectsOverview,
+          followups: ["Tell me more about digital twins.", "What software skills does she use?", "How can I contact her?"]
+        };
+      } else {
+        return {
+          text: `**Dr Lilia Potseluyko** is a Cambridge-based Researcher & Digital Engineer (8+ years experience) working at the intersection of **spatial data, digital twins, computer graphics, AI, and user experience**.
+
+### Core Highlights:
+- **Mobile Mapping Group Lead** at University of Cambridge.
+- **Projects:** RoadGP (National Highways AI decision support), Trafikverket 12km Tunnel Digital Twin (20,000 IoT assets), CAMHighways (Featured on BBC News), DfT Cyclist Safety Study (4,000+ participants).
+- **Contact:** ${portfolioFallbackKB.email} | [GitHub](${portfolioFallbackKB.github}) | [LinkedIn](${portfolioFallbackKB.linkedin})`,
+          followups: ["What experience does Lilia have with digital twins?", "What software engineering skills does Lilia have?", "Which projects demonstrate user research and product design?"]
+        };
+      }
+    }
+
     const searchInput = document.getElementById("searchWidgetTrigger");
+    const searchSubmitBtn = document.getElementById("searchSubmitBtn");
     const suggestedQuestions = document.querySelectorAll("[data-question]");
+    
+    const aiResponsePanel = document.getElementById("aiResponsePanel");
+    const aiLoadingBox = document.getElementById("aiLoadingBox");
+    const aiContentBody = document.getElementById("aiContentBody");
+    const aiFollowupArea = document.getElementById("aiFollowupArea");
+    const aiFollowupChips = document.getElementById("aiFollowupChips");
+    const aiClearBtn = document.getElementById("aiClearBtn");
+
+    // Format markdown helper
+    function formatMarkdown(text) {
+      if (!text) return "";
+      let html = text
+        .replace(/\n\n/g, "</p><p>")
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*(.*?)\*/g, "<em>$1</em>")
+        .replace(/`([^`]+)`/g, "<code>$1</code>")
+        .replace(/^- (.*$)/gim, "<li>$1</li>");
+      
+      if (html.includes("<li>")) {
+        html = html.replace(/(<li>.*<\/li>)/s, "<ul>$1</ul>");
+      }
+      return "<p>" + html + "</p>";
+    }
+
+    async function submitAIQuery(queryText) {
+      const prompt = queryText || searchInput.value;
+      if (!prompt || !prompt.trim()) return;
+
+      searchInput.value = prompt;
+      
+      // Show panel and loading
+      aiResponsePanel.classList.add("active");
+      aiLoadingBox.style.display = "flex";
+      aiContentBody.innerHTML = "";
+      aiFollowupArea.style.display = "none";
+      aiFollowupChips.innerHTML = "";
+
+      let answerText = "";
+      let followups = [];
+
+      try {
+        // Try calling server endpoint first
+        const apiEndpoint = window.location.hostname.includes("github.io")
+          ? "/api/chat"
+          : "/api/chat";
+
+        const response = await fetch(apiEndpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: prompt, mode: "general" })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          answerText = data.text;
+          followups = data.suggestedFollowups || [];
+        } else {
+          throw new Error("Backend server unavailable");
+        }
+      } catch (err) {
+        // Fallback to embedded local knowledge search engine
+        console.log("Using static portfolio knowledge base fallback:", err);
+        const fallbackResult = searchLocalKB(prompt);
+        answerText = fallbackResult.text;
+        followups = fallbackResult.followups;
+      }
+
+      aiLoadingBox.style.display = "none";
+      aiContentBody.innerHTML = formatMarkdown(answerText);
+
+      if (followups && followups.length > 0) {
+        aiFollowupArea.style.display = "block";
+        followups.forEach(q => {
+          const chip = document.createElement("button");
+          chip.type = "button";
+          chip.className = "ai-followup-chip";
+          chip.textContent = q;
+          chip.addEventListener("click", () => submitAIQuery(q));
+          aiFollowupChips.appendChild(chip);
+        });
+      }
+    }
+
+    // Trigger listeners
+    searchSubmitBtn.addEventListener("click", () => submitAIQuery());
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        submitAIQuery();
+      }
+    });
 
     suggestedQuestions.forEach((button) => {
       button.addEventListener("click", () => {
-        searchInput.value = button.dataset.question;
-        searchInput.focus();
-        searchInput.click();
+        submitAIQuery(button.dataset.question);
       });
     });
+
+    aiClearBtn.addEventListener("click", () => {
+      aiResponsePanel.classList.remove("active");
+      aiContentBody.innerHTML = "";
+      searchInput.value = "";
+    });
   </script>
+
+  <!-- Embed Floating Chatbot Widget on bottom right -->
+  <script 
+    src="portfolio-ai-widget.js"
+    data-api-url="https://ais-dev-kh6i6fvoruoczpnz5b3kvd-794039124315.europe-west2.run.app"
+    data-dev-name="Dr Lilia Potseluyko"
+    data-color="#1DCD9F"
+  ></script>
 
 </body>
 </html>
