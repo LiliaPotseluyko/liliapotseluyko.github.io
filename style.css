@@ -2630,64 +2630,181 @@ header {
    ROADGP A4 LANDSCAPE SUB-PAGES & MULTIDISCIPLINARY DIAGRAM
    ========================================================================== */
 .roadgp-case-study-main {
-  max-width: 1400px;
+  max-width: 1560px;
   margin: 0 auto;
   padding: 24px 30px 100px;
 }
 
-/* Sticky Sub-Page Navigation Index */
-.roadgp-subpage-nav {
+/* Two-Column Layout Container with Persistent Navigation Sidebar */
+.roadgp-layout-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 25px;
+  position: relative;
+}
+
+/* RoadGP Dedicated Sub-Page Navigation Sidebar */
+.roadgp-subpage-sidebar {
+  width: 270px;
+  flex-shrink: 0;
   position: sticky;
-  top: 55px;
-  z-index: 900;
-  background: rgba(14, 14, 17, 0.92);
-  backdrop-filter: blur(8px);
-  border: 1px solid #27272f;
-  border-radius: 10px;
-  padding: 10px 16px;
-  margin: 20px 0 35px;
+  top: 70px;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  background: #111116;
+  border: 1px solid #23232c;
+  border-radius: 12px;
+  padding: 18px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  scrollbar-width: thin;
+  scrollbar-color: #33333e transparent;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.roadgp-subpage-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+.roadgp-subpage-sidebar::-webkit-scrollbar-thumb {
+  background: #33333e;
+  border-radius: 4px;
+}
+
+.subpage-sidebar-header {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #202028;
+}
+
+.subpage-sidebar-kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888888;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.subpage-sidebar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Current Section Indicator Card */
+.subpage-current-indicator {
+  background: rgba(29, 205, 159, 0.08);
+  border: 1px solid rgba(29, 205, 159, 0.3);
+  border-left: 3.5px solid #1DCD9F;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.current-indicator-label {
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1DCD9F;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.current-indicator-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* Sections Nav List */
+.subpage-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.subpage-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subpage-nav-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-
-.roadgp-nav-label {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #1DCD9F;
-  flex-shrink: 0;
-  margin-right: 6px;
-}
-
-.roadgp-nav-pills {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: nowrap;
-}
-
-.roadgp-nav-pill {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #999999;
+  padding: 7px 10px;
+  border-radius: 8px;
+  color: #9ca3af;
   text-decoration: none;
-  padding: 5px 12px;
-  border-radius: 9999px;
-  background: #18181c;
-  border: 1px solid #2b2b34;
-  white-space: nowrap;
+  font-size: 0.79rem;
+  font-weight: 500;
   transition: all 0.2s ease;
+  border-left: 3px solid transparent;
 }
 
-.roadgp-nav-pill:hover,
-.roadgp-nav-pill.active {
+.subpage-nav-item .nav-item-num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #6b7280;
+  background: #18181f;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.subpage-nav-item .nav-item-text {
+  flex: 1;
+  line-height: 1.25;
+}
+
+.subpage-nav-item:hover {
   color: #ffffff;
-  background: rgba(29, 205, 159, 0.15);
-  border-color: #1DCD9F;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.subpage-nav-item:hover .nav-item-num {
+  color: #1DCD9F;
+  background: rgba(29, 205, 159, 0.12);
+}
+
+.subpage-nav-item.active {
+  color: #ffffff;
+  background: rgba(29, 205, 159, 0.12);
+  border-left: 3px solid #1DCD9F;
+  font-weight: 600;
+}
+
+.subpage-nav-item.active .nav-item-num {
+  color: #000000;
+  background: #1DCD9F;
+  font-weight: 800;
+}
+
+.roadgp-case-study-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 1080px) {
+  .roadgp-layout-container {
+    flex-direction: column;
+  }
+  .roadgp-subpage-sidebar {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
 }
 
 /* A4 Landscape Sub-Page Card Container */
@@ -2699,11 +2816,29 @@ header {
   margin-bottom: 55px;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
   position: relative;
+  scroll-margin-top: 75px;
 }
 
 /* Subtitle and Green Line Underneath */
 .roadgp-subpage-header {
-  margin-bottom: 28px;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.roadgp-subpage-title-right {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: right;
+  margin: 0 0 8px 0;
+}
+
+.roadgp-subpage-title-right .subpage-num {
+  color: #1DCD9F;
+  margin-right: 4px;
 }
 
 .roadgp-subpage-number {
@@ -2728,7 +2863,7 @@ header {
   height: 2px;
   background-color: #1DCD9F; /* Green line underneath subtitle */
   width: 100%;
-  margin: 12px 0 28px 0;
+  margin: 4px 0 28px 0;
   border: none;
 }
 
@@ -2748,30 +2883,43 @@ header {
   grid-column: 2;
   grid-row: 1 / span 2;
   background: #141418;
-  border: 2px solid #33333e;
+  border: 2px solid #8b5cf6; /* Matching violet box stroke */
   border-radius: 14px;
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 24px rgba(139, 92, 246, 0.18);
   z-index: 3;
   align-self: center;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.diagram-hub-center:hover {
+  border-color: #a78bfa;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 30px rgba(139, 92, 246, 0.28);
 }
 
 .hub-core-pill {
   display: inline-block;
-  background: rgba(239, 68, 68, 0.15);
-  border: 2px solid #ef4444;
+  background: rgba(139, 92, 246, 0.14);
+  border: 2.5px solid #8b5cf6; /* Matching violet short description stroke */
   color: #ffffff;
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 9999px;
   margin-bottom: 14px;
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.hub-core-pill:hover {
+  border-color: #a78bfa;
+  transform: translateY(-1px);
 }
 
 .hub-defects-strip {
@@ -2813,8 +2961,9 @@ header {
 }
 
 .hub-dilemma-box {
-  background: #1a1a20;
-  border-left: 3px solid #f5b838;
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-left: 3.5px solid #8b5cf6; /* Matching violet accent */
   padding: 10px 12px;
   border-radius: 0 6px 6px 0;
   margin: 10px 0;
@@ -2823,17 +2972,22 @@ header {
 }
 
 .hub-dilemma-title {
-  color: #f5b838;
-  font-size: 0.8rem;
+  color: #a78bfa; /* Matching violet core maintenance dilemma text */
+  font-size: 0.82rem;
   font-weight: 700;
   margin: 0 0 4px 0;
+  letter-spacing: 0.02em;
 }
 
 .hub-dilemma-box p {
-  color: #bbb;
+  color: #c4b5fd; /* Soft violet dilemma body text */
   font-size: 0.74rem;
   line-height: 1.35;
   margin: 0;
+}
+
+.hub-dilemma-box strong {
+  color: #ffffff;
 }
 
 .hub-tradeoffs-list {
@@ -2845,9 +2999,9 @@ header {
 }
 
 .hub-tradeoff-tag {
-  background: #1f1f26;
-  border: 1px solid #333;
-  color: #ccc;
+  background: #181724;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: #d8b4fe;
   font-size: 0.68rem;
   padding: 3px 8px;
   border-radius: 4px;

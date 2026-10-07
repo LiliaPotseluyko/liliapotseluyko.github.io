@@ -58,30 +58,104 @@
       </div>
     </section>
 
-    <!-- STICKY SUB-PAGE INDEX NAVIGATION -->
-    <nav class="roadgp-subpage-nav" aria-label="RoadGP Sub-pages Navigation">
-      <span class="roadgp-nav-label">Sections:</span>
-      <div class="roadgp-nav-pills">
-        <a href="#subpage-1" class="roadgp-nav-pill active">1. Problems</a>
-        <a href="#subpage-2" class="roadgp-nav-pill">2. Users</a>
-        <a href="#subpage-3" class="roadgp-nav-pill">3. Storyboard</a>
-        <a href="#subpage-4" class="roadgp-nav-pill">4. Concept Architecture</a>
-        <a href="#subpage-5" class="roadgp-nav-pill">5. Early Prototyping</a>
-        <a href="#subpage-6" class="roadgp-nav-pill">6. Opportunity/Solution Tree</a>
-        <a href="#subpage-7" class="roadgp-nav-pill">7. Desktop Prototyping</a>
-        <a href="#subpage-8" class="roadgp-nav-pill">8. Interface Current</a>
-        <a href="#subpage-10" class="roadgp-nav-pill">9. Backend Implementation</a>
-        <a href="#subpage-11" class="roadgp-nav-pill">10. Future Roadmap</a>
-      </div>
-    </nav>
+    <!-- ROADGP TWO-COLUMN LAYOUT: SIDEBAR + SUB-PAGES -->
+    <div class="roadgp-layout-container">
+
+      <!-- LEFT SIDEBAR: SECTIONS LIST & ACTIVE SECTION INDICATOR -->
+      <aside class="roadgp-subpage-sidebar" aria-label="RoadGP Sub-Pages Navigation">
+        <div class="subpage-sidebar-header">
+          <span class="subpage-sidebar-kicker">Case Study Index</span>
+          <h3 class="subpage-sidebar-title">RoadGP Sub-Pages</h3>
+        </div>
+
+        <!-- CURRENT SECTION DISPLAY (DYNAMICALLY UPDATED) -->
+        <div class="subpage-current-indicator">
+          <span class="current-indicator-label">CURRENT SECTION</span>
+          <div class="current-indicator-title" id="currentSectionDisplay">1. Problems</div>
+        </div>
+
+        <!-- SECTIONS NAV LIST -->
+        <nav class="subpage-sidebar-nav" aria-label="RoadGP Sections">
+          <ul class="subpage-nav-list">
+            <li>
+              <a href="#subpage-1" class="subpage-nav-item active" data-id="subpage-1">
+                <span class="nav-item-num">01</span>
+                <span class="nav-item-text">Problems</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-2" class="subpage-nav-item" data-id="subpage-2">
+                <span class="nav-item-num">02</span>
+                <span class="nav-item-text">Low-Fidelity Testing</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-3" class="subpage-nav-item" data-id="subpage-3">
+                <span class="nav-item-num">03</span>
+                <span class="nav-item-text">User Needs &amp; Models</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-4" class="subpage-nav-item" data-id="subpage-4">
+                <span class="nav-item-num">04</span>
+                <span class="nav-item-text">Information Architecture</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-5" class="subpage-nav-item" data-id="subpage-5">
+                <span class="nav-item-num">05</span>
+                <span class="nav-item-text">System Architecture</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-6" class="subpage-nav-item" data-id="subpage-6">
+                <span class="nav-item-num">06</span>
+                <span class="nav-item-text">High-Fidelity UI</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-7" class="subpage-nav-item" data-id="subpage-7">
+                <span class="nav-item-num">07</span>
+                <span class="nav-item-text">Design System</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-8" class="subpage-nav-item" data-id="subpage-8">
+                <span class="nav-item-num">08</span>
+                <span class="nav-item-text">Field Usability Testing</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-9" class="subpage-nav-item" data-id="subpage-9">
+                <span class="nav-item-num">09</span>
+                <span class="nav-item-text">Decision Matrix</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-10" class="subpage-nav-item" data-id="subpage-10">
+                <span class="nav-item-num">10</span>
+                <span class="nav-item-text">Measurable Outcomes</span>
+              </a>
+            </li>
+            <li>
+              <a href="#subpage-11" class="subpage-nav-item" data-id="subpage-11">
+                <span class="nav-item-num">11</span>
+                <span class="nav-item-text">Future Roadmap</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- RIGHT COLUMN: CASE STUDY CONTENT -->
+      <div class="roadgp-case-study-content">
 
     <!-- ======================================================================
          SUB-PAGE 1: THE PROBLEM & MULTIDISCIPLINARY DISCOVERY
          ====================================================================== -->
     <article class="roadgp-subpage" id="subpage-1">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 1</span>
-        <h2 class="roadgp-subpage-title">Problems </h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 1</span> &ndash; Problems</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
 
@@ -365,8 +439,7 @@
     <!-- SUB-PAGE 2 -->
     <article class="roadgp-subpage" id="subpage-2">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 2</span>
-        <h2 class="roadgp-subpage-title">Low-Fidelity Testing &amp; Operational Constraints</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 2</span> &ndash; Low-Fidelity Testing &amp; Operational Constraints</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -381,8 +454,7 @@
     <!-- SUB-PAGE 3 -->
     <article class="roadgp-subpage" id="subpage-3">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 3</span>
-        <h2 class="roadgp-subpage-title">Understanding Complex User Needs &amp; Mental Models</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 3</span> &ndash; Understanding Complex User Needs &amp; Mental Models</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -397,8 +469,7 @@
     <!-- SUB-PAGE 4 -->
     <article class="roadgp-subpage" id="subpage-4">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 4</span>
-        <h2 class="roadgp-subpage-title">Information Architecture &amp; BPMN Process Workflows</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 4</span> &ndash; Information Architecture &amp; BPMN Process Workflows</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -413,8 +484,7 @@
     <!-- SUB-PAGE 5 -->
     <article class="roadgp-subpage" id="subpage-5">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 5</span>
-        <h2 class="roadgp-subpage-title">System Architecture &amp; Modular Microservices</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 5</span> &ndash; System Architecture &amp; Modular Microservices</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -429,8 +499,7 @@
     <!-- SUB-PAGE 6 -->
     <article class="roadgp-subpage" id="subpage-6">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 6</span>
-        <h2 class="roadgp-subpage-title">High-Fidelity UI &amp; Working Interactive Prototypes</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 6</span> &ndash; High-Fidelity UI &amp; Working Interactive Prototypes</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -445,8 +514,7 @@
     <!-- SUB-PAGE 7 -->
     <article class="roadgp-subpage" id="subpage-7">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 7</span>
-        <h2 class="roadgp-subpage-title">Improving the Design System: Components &amp; Variants</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 7</span> &ndash; Improving the Design System: Components &amp; Variants</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -461,8 +529,7 @@
     <!-- SUB-PAGE 8 -->
     <article class="roadgp-subpage" id="subpage-8">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 8</span>
-        <h2 class="roadgp-subpage-title">Testing &amp; Documentation: Field Usability Sessions</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 8</span> &ndash; Testing &amp; Documentation: Field Usability Sessions</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -477,8 +544,7 @@
     <!-- SUB-PAGE 9 -->
     <article class="roadgp-subpage" id="subpage-9">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 9</span>
-        <h2 class="roadgp-subpage-title">Decision Matrix &amp; Multi-Criteria Prioritisation</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 9</span> &ndash; Decision Matrix &amp; Multi-Criteria Prioritisation</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -493,8 +559,7 @@
     <!-- SUB-PAGE 10 -->
     <article class="roadgp-subpage" id="subpage-10">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 10</span>
-        <h2 class="roadgp-subpage-title">Measurable Outcomes, Value &amp; Stakeholder Buy-In</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 10</span> &ndash; Measurable Outcomes, Value &amp; Stakeholder Buy-In</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -509,8 +574,7 @@
     <!-- SUB-PAGE 11 -->
     <article class="roadgp-subpage" id="subpage-11">
       <header class="roadgp-subpage-header">
-        <span class="roadgp-subpage-number">Sub-Page 11</span>
-        <h2 class="roadgp-subpage-title">Future Roadmap &amp; Connected Delivery Methods</h2>
+        <h2 class="roadgp-subpage-title-right"><span class="subpage-num">SUB-PAGE 11</span> &ndash; Future Roadmap &amp; Connected Delivery Methods</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
@@ -522,6 +586,9 @@
       </div>
     </article>
 
+      </div> <!-- /.roadgp-case-study-content -->
+    </div> <!-- /.roadgp-layout-container -->
+
     <!-- BOTTOM CASE STUDY NAVIGATION -->
     <div style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
       <a href="../projects.html" class="academic-action-link"><i class="fas fa-arrow-left"></i> All Projects</a>
@@ -530,32 +597,62 @@
 
   </main>
 
-  <!-- Script for Smooth Active State on Sub-Page Nav -->
+  <!-- Script for Sidebar Active State & Dynamic Current Section Tracking -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const navPills = document.querySelectorAll('.roadgp-nav-pill');
+      const navItems = document.querySelectorAll('.subpage-nav-item');
       const subpages = document.querySelectorAll('.roadgp-subpage');
+      const currentDisplay = document.getElementById('currentSectionDisplay');
 
-      // Update active nav pill on scroll
-      window.addEventListener('scroll', () => {
+      function updateActiveSection() {
         let currentId = '';
+        let currentTitle = '';
+
         subpages.forEach(subpage => {
           const rect = subpage.getBoundingClientRect();
-          if (rect.top <= 140 && rect.bottom >= 140) {
+          if (rect.top <= 200 && rect.bottom >= 150) {
             currentId = subpage.getAttribute('id');
           }
         });
 
+        // Fallback to first if at top of page
+        if (!currentId && subpages.length > 0) {
+          const firstRect = subpages[0].getBoundingClientRect();
+          if (firstRect.top > 200) {
+            currentId = subpages[0].getAttribute('id');
+          } else {
+            // Pick the last visible one if scrolled far down
+            subpages.forEach(subpage => {
+              const rect = subpage.getBoundingClientRect();
+              if (rect.top <= window.innerHeight * 0.7) {
+                currentId = subpage.getAttribute('id');
+              }
+            });
+          }
+        }
+
         if (currentId) {
-          navPills.forEach(pill => {
-            if (pill.getAttribute('href') === '#' + currentId) {
-              pill.classList.add('active');
+          navItems.forEach(item => {
+            if (item.getAttribute('data-id') === currentId || item.getAttribute('href') === '#' + currentId) {
+              item.classList.add('active');
+              const textEl = item.querySelector('.nav-item-text');
+              const numEl = item.querySelector('.nav-item-num');
+              const num = numEl ? parseInt(numEl.textContent, 10) : '';
+              const title = textEl ? textEl.textContent.trim() : '';
+              currentTitle = (num ? num + '. ' : '') + title;
             } else {
-              pill.classList.remove('active');
+              item.classList.remove('active');
             }
           });
+
+          if (currentDisplay && currentTitle) {
+            currentDisplay.textContent = currentTitle;
+          }
         }
-      });
+      }
+
+      window.addEventListener('scroll', updateActiveSection, { passive: true });
+      updateActiveSection();
     });
   </script>
 
