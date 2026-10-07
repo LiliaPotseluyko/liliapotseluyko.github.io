@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RoadGP Interface | Product & UX Case Study | Dr Lilia Potseluyko</title>
+  <title>RoadGP: AI Defect Triage &amp; Decision Support Platform | Dr Lilia Potseluyko</title>
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -27,17 +27,16 @@
     </nav>
   </header>
 
-  <main class="case-study-main">
+  <main class="roadgp-case-study-main">
     <a href="../projects.html" class="page-back-link">
       <i class="fas fa-arrow-left"></i> Back to All Projects
     </a>
 
-    <section class="case-study-hero" style="margin-top: 25px;">
+    <!-- CASE STUDY HERO -->
+    <section class="case-study-hero" style="margin-top: 20px; margin-bottom: 30px;">
       <p class="case-study-kicker">University of Cambridge &bull; Costain Group &bull; National Highways</p>
-      <h1>RoadGP: AI Defect Triage &amp; Human-in-the-Loop Workflow UX</h1>
-      <p class="case-study-tagline">
-        Designing an operational digital twin interface that translates complex machine learning pavement analysis into rapid, trusted decision workflows for road maintenance contractors and regional inspectors.
-      </p>
+      <h1>RoadGP Interface and Decision Support</h1>
+
 
       <div class="case-study-meta-grid">
         <div class="meta-box">
@@ -45,112 +44,574 @@
           <p>Forward Deployed Engineer &bull; Product Owner</p>
         </div>
         <div class="meta-box">
-          <h4>Timeline</h4>
-          <p>2023 &ndash; 2024</p>
+          <h4>Collaborators</h4>
+          <p>Costain, National Highways, Cambridge DRF Cluster</p>
         </div>
         <div class="meta-box">
-          <h4>Tech &amp; Methods</h4>
-          <p>Python Dash, Flask, OpenCV, Figma, User Story Mapping</p>
+          <h4>Methods</h4>
+          <p>Continuous Discovery, Iterative Prototyping</p>
         </div>
         <div class="meta-box">
           <h4>Primary Users</h4>
-          <p>Highway Asset Assessors, Field Contractors, Autonomous Fleets</p>
+          <p>Asset Managers, Service Providers</p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 1: PROBLEM -->
-    <section class="case-study-section">
-      <h2>1. The Problem &amp; Operational Friction</h2>
-      <p>
-        Highway agencies capture terabytes of mobile survey footage, LiDAR, and computer vision defect telemetry. However, raw algorithm outputs (e.g., bounding boxes with 85% confidence scores) overwhelmed civil engineers and maintenance dispatchers. 
-      </p>
-      <p>
-        Asset managers were trapped in manual, spreadsheet-heavy verification processes taking up to three weeks per survey stretch. Because field workers lacked spatial context and historical defect trends, false positives were common, and contractor repair crews were frequently dispatched with incomplete defect severity data.
-      </p>
-    </section>
-
-    <!-- SECTION 2: DISCOVERY & SERVICE MAPPING -->
-    <section class="case-study-section">
-      <h2>2. Service Discovery &amp; Stakeholder Mapping</h2>
-      <p>
-        To align machine learning capabilities with real field constraints, I initiated a user research sprint interviewing regional road inspectors, asset contractors, and computer vision researchers:
-      </p>
-      <ul>
-        <li><strong>Need for Trust &amp; Explainability:</strong> Inspectors refused automated "black box" decisions; they demanded visual before/after evidence alongside AI confidence scores.</li>
-        <li><strong>Contextual Spatial Map:</strong> Triage requires spatial clustering (e.g., understanding if 5 micro-cracks form a high-risk cluster near a bridge expansion joint).</li>
-        <li><strong>Contractor Actionability:</strong> Work orders need precise GPS coordinates, lane identification, and recommended repair material estimates rather than raw pixel coordinates.</li>
-      </ul>
-      <p>
-        We translated these insights into an end-to-end service blueprint detailing how sensor data flows from camera trucks through automated AI classification into verified contractor work packages.
-      </p>
-    </section>
-
-    <!-- STORYBOARD & UI SKETCH -->
-    <section class="case-study-section">
-      <h2>3. Wireframing, Prototyping &amp; Architecture</h2>
-      <p>
-        Using Python Dash and Flask, I rapidly built interactive, working prototypes rather than static Figma mockups, enabling live stakeholder usability testing against real highway datasets:
-      </p>
-
-      <div class="case-study-gallery">
-        <figure>
-          <img src="../images/Interface_storyboard.png" alt="RoadGP Interface user story and storyboard">
-          <figcaption><strong>Service Storyboard:</strong> Visualizing how an inspector filters by defect severity, validates bounding boxes, and exports repair instructions.</figcaption>
-        </figure>
-        <figure>
-          <img src="../images/interface_big.png" alt="RoadGP high-fidelity dashboard layout">
-          <figcaption><strong>Interactive Dashboard:</strong> Dual-view pane integrating high-res pavement imagery, localized 3D surface mesh, and time-series degradation tracking.</figcaption>
-        </figure>
+    <!-- STICKY SUB-PAGE INDEX NAVIGATION -->
+    <nav class="roadgp-subpage-nav" aria-label="RoadGP Sub-pages Navigation">
+      <span class="roadgp-nav-label">Sections:</span>
+      <div class="roadgp-nav-pills">
+        <a href="#subpage-1" class="roadgp-nav-pill active">1. Problems</a>
+        <a href="#subpage-2" class="roadgp-nav-pill">2. Users</a>
+        <a href="#subpage-3" class="roadgp-nav-pill">3. Storyboard</a>
+        <a href="#subpage-4" class="roadgp-nav-pill">4. Concept Architecture</a>
+        <a href="#subpage-5" class="roadgp-nav-pill">5. Early Prototyping</a>
+        <a href="#subpage-6" class="roadgp-nav-pill">6. Opportunity/Solution Tree</a>
+        <a href="#subpage-7" class="roadgp-nav-pill">7. Desktop Prototyping</a>
+        <a href="#subpage-8" class="roadgp-nav-pill">8. Interface Current</a>
+        <a href="#subpage-10" class="roadgp-nav-pill">9. Backend Implementation</a>
+        <a href="#subpage-11" class="roadgp-nav-pill">10. Future Roadmap</a>
       </div>
+    </nav>
 
-      <p>
-        <strong>Technical Architecture Highlights:</strong>
-      </p>
-      <ul>
-        <li><strong>Human-in-the-Loop Validation:</strong> One-click accept/reject/re-classify buttons that feed operator corrections back to retrain ML models.</li>
-        <li><strong>Dual-Screen GIS Alignment:</strong> Synchronized geographic map view with high-speed video frames and localized 3D surface mesh elevation profiles.</li>
-        <li><strong>Role-Based Views:</strong> Tailored dashboard toggles for executive reporting (aggregate budget forecasts) versus field dispatch (contractor repair coordinates).</li>
-      </ul>
-    </section>
+    <!-- ======================================================================
+         SUB-PAGE 1: THE PROBLEM & MULTIDISCIPLINARY DISCOVERY
+         ====================================================================== -->
+    <article class="roadgp-subpage" id="subpage-1">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 1</span>
+        <h2 class="roadgp-subpage-title">Problems </h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
 
-    <!-- SECTION 4: DEMO VIDEO -->
-    <section class="case-study-section">
-      <h2>4. Live Interaction Demo</h2>
-      <p>
-        Watch the interactive interface prototype demonstrating defect browsing, bounding box validation, and real-time 3D telemetry rendering:
-      </p>
+      <!-- Section Context Intro -->
+     
+      <!-- 1. PERSONA COMPONENT: TEAM COLLABORATORS -->
+      <section style="margin-bottom: 35px;">
+        <h3 style="color: #ffffff; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px;">
+          <i class="fas fa-users" style="color: #1DCD9F; margin-right: 8px;"></i>
+          Multidisciplinary Research Team &amp; Knowledge Areas
+        </h3>
+        <p style="color: #888888; font-size: 0.85rem; margin: 0 0 18px;">
+          Cross-functional specialists collaborating on the RoadGP intelligent highway maintenance initiative:
+        </p>
 
-      <div class="video-responsive-wrapper">
-        <iframe src="https://www.youtube.com/embed/P6aYv9tIew0" title="RoadGP Interface Prototype Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="ds-persona-group">
+          <!-- Stephen (Data Science) -->
+          <div class="ds-persona blue">
+            <div class="ds-persona-avatar">
+              <img src="../images/RoadGP/Problems/Stephen.png" alt="Stephen - Data Scientist">
+            </div>
+            <div class="ds-persona-name">Stephen</div>
+            <div class="ds-persona-role">Data Science</div>
+          </div>
+
+          <!-- Alix (Data Science) -->
+          <div class="ds-persona blue">
+            <div class="ds-persona-avatar">
+              <img src="../images/RoadGP/Problems/Alix.png" alt="Alix - Data Scientist">
+            </div>
+            <div class="ds-persona-name">Alix</div>
+            <div class="ds-persona-role">Data Science</div>
+          </div>
+
+          <!-- Damian (Smart Materials) -->
+          <div class="ds-persona orange">
+            <div class="ds-persona-avatar">
+              <img src="../images/RoadGP/Problems/Damian.png" alt="Damian - Smart Materials Scientist">
+            </div>
+            <div class="ds-persona-name">Damian</div>
+            <div class="ds-persona-role">Smart Materials</div>
+          </div>
+
+          <!-- Richard (Robotics) -->
+          <div class="ds-persona pink">
+            <div class="ds-persona-avatar">
+              <img src="../images/RoadGP/Problems/Richard.png" alt="Richard - Robotics Scientist">
+            </div>
+            <div class="ds-persona-name">Richard</div>
+            <div class="ds-persona-role">Robotics</div>
+          </div>
+
+          <!-- Jerry Xu (Robotics) -->
+          <div class="ds-persona pink">
+            <div class="ds-persona-avatar">
+              <img src="../images/RoadGP/Problems/Jerry.png" alt="Jerry Xu - Robotics Scientist">
+            </div>
+            <div class="ds-persona-name">Jerry</div>
+            <div class="ds-persona-role">Robotics</div>
+          </div>
+
+          <!-- Dr Lilia Potseluyko (Digital Twin & UX Lead) -->
+          <div class="ds-persona green">
+            <div class="ds-persona-avatar">
+              <img src="../images/RoadGP/Problems/Lilia.png" alt="Dr Lilia Potseluyko - Digital Twin & UX Lead">
+            </div>
+            <div class="ds-persona-name">Lilia</div>
+            <div class="ds-persona-role">Digital Twin &amp; UX Lead</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. MULTIDISCIPLINARY PROBLEM ECOSYSTEM DIAGRAM -->
+      <section style="margin-bottom: 30px;">
+        <h3 style="color: #ffffff; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px;">
+          <i class="fas fa-diagram-project" style="color: #1DCD9F; margin-right: 8px;"></i>
+          Road Maintenance Problem &amp; Discovery
+        </h3>
+        <p style="color: #888888; font-size: 0.85rem; margin: 0 0 16px;">
+          Research areas and multidisciplianry teams:
+        </p>
+
+        <div class="roadgp-diagram-board">
+          
+          <!-- TOP-LEFT: DIGITAL TWIN & UX (GREEN - LILIA) -->
+          <div class="diagram-quadrant digital-twin">
+            <div class="quadrant-header">
+              <h4 class="quadrant-title">Digital Twin &amp; Interface and Backend</h4>
+              <span class="quadrant-owner">Lilia</span>
+            </div>
+            <div class="quadrant-body">
+              <!-- What Digital Twin means in this instance -->
+              <p style="color: #aaaaaa; font-size: 0.76rem; margin: 0 0 6px; font-weight: 600;">Core Pillars in This Instance:</p>
+              <div class="ds-short-notes-group" style="margin: 0 0 10px; gap: 6px;">
+                <span class="ds-short-note green" style="font-size: 0.72rem; padding: 4px 10px;">User Experience</span>
+                <span class="ds-short-note green" style="font-size: 0.72rem; padding: 4px 10px;">Service Design</span>
+                <span class="ds-short-note green" style="font-size: 0.72rem; padding: 4px 10px;">Defect clustering for RoadGP</span>
+                <span class="ds-short-note green" style="font-size: 0.72rem; padding: 4px 10px;">Visualisation</span>
+              </div>
+              
+              <div class="quadrant-tasks-list">
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Accelerate time from survey inspection to evidence-based treatment</span>
+                </div>
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Remote &amp; targeted assessment to eliminate unnecessary site visits</span>
+                </div>
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Integration with Enterprise Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOP-RIGHT: DATA SCIENCE (BLUE - STEPHEN & ALIX) -->
+          <div class="diagram-quadrant data-science">
+            <div class="quadrant-header">
+              <h4 class="quadrant-title">Data Science &amp; AI Algorithms</h4>
+              <span class="quadrant-owner">Stephen &bull; Alix</span>
+            </div>
+            <div class="quadrant-body">
+              <p style="color: #aaaaaa; font-size: 0.76rem; margin: 0 0 6px; font-weight: 600;">Treatment Strategies:</p>
+              <div class="ds-short-notes-group" style="margin: 0 0 10px; gap: 6px;">
+                <span class="ds-short-note blue" style="font-size: 0.72rem; padding: 4px 10px;">RoadGP Tool</span>
+                <span class="ds-short-note blue" style="font-size: 0.72rem; padding: 4px 10px;">Predictive Treatment Advice</span>
+                <span class="ds-short-note blue" style="font-size: 0.72rem; padding: 4px 10px;">Historical Data Analysis</span>
+                <span class="ds-short-note blue" style="font-size: 0.72rem; padding: 4px 10px;">Repair Failure Causes</span>
+              </div>
+              
+              <div class="quadrant-tasks-list">
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Deterioration Curves</span>
+                </div>
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Recommend cost effective treatment based on data</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- CENTER: PROBLEMS IN ROAD MAINTENANCE (CORE DILEMMA) -->
+          <div class="diagram-hub-center">
+            <span class="hub-core-pill">Problems in Road Maintenance</span>
+
+            <!-- Real Defect Photographs -->
+            <div class="hub-defects-strip">
+              <div class="hub-defect-thumb" title="Pothole Structural Failure">
+                <img src="../images/RoadGP/Problems/Pothole.png" alt="Pothole road defect">
+                <span class="hub-defect-label">Pothole</span>
+              </div>
+              <div class="hub-defect-thumb" title="Longitudinal & Alligator Cracking">
+                <img src="../images/RoadGP/Problems/Crack.png" alt="Crack road defect">
+                <span class="hub-defect-label">Cracking</span>
+              </div>
+              <div class="hub-defect-thumb" title="Traffic Wheel-Path Rutting">
+                <img src="../images/RoadGP/Problems/Rutting.png" alt="Rutting road defect">
+                <span class="hub-defect-label">Rutting</span>
+              </div>
+            </div>
+
+            <!-- Central Dilemma Box -->
+            <div class="hub-dilemma-box">
+              <h5 class="hub-dilemma-title">Core Maintenance Dilemma:</h5>
+              <p>
+                <strong>Repair Now?</strong> &bull; <strong>Monitor?</strong> &bull; <strong>Treat Later?</strong><br>
+                Reactive vs Proactive &amp; maintenance
+              </p>
+            </div>
+
+            <p style="color: #888; font-size: 0.72rem; margin: 6px 0 4px; font-weight: 600;">Operational Trade-Offs:</p>
+            <div class="hub-tradeoffs-list">
+              <span class="hub-tradeoff-tag">Safety Risk</span>
+              <span class="hub-tradeoff-tag">Asset Condition</span>
+              <span class="hub-tradeoff-tag">Budget Limits</span>
+              <span class="hub-tradeoff-tag">Traffic Disruption</span>
+              <span class="hub-tradeoff-tag">Future Deterioration</span>
+            </div>
+          </div>
+
+          <!-- BOTTOM-LEFT: ROBOTICS (PINK - RICHARD & JERRY XU) -->
+          <div class="diagram-quadrant robotics">
+            <div class="quadrant-header">
+              <h4 class="quadrant-title">Robotics &amp; Autonomous Delivery</h4>
+              <span class="quadrant-owner">Richard &bull; Jerry</span>
+            </div>
+            <div class="quadrant-body">
+              <div class="quadrant-media-preview" title="Robotic Crack Sealing Lane Simulation">
+                <img src="../images/RoadGP/Problems/Robotic Crack Sealing.png" alt="Robotic Crack Sealing system">
+              </div>
+
+              <div class="ds-short-notes-group" style="margin: 6px 0; gap: 6px;">
+                <span class="ds-short-note pink" style="font-size: 0.72rem; padding: 4px 10px;">Robotic Crack Sealing</span>
+                <span class="ds-short-note pink" style="font-size: 0.72rem; padding: 4px 10px;">Crew Safety</span>
+                <span class="ds-short-note pink" style="font-size: 0.72rem; padding: 4px 10px;">Autonomous Delivery</span>
+              </div>
+
+              <div class="quadrant-tasks-list">
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Reduce roadside exposure for inspectors &amp; maintenance workers</span>
+                </div>
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Autonomous crack sealing with smart materials and 3D printing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM-RIGHT: SMART MATERIALS (ORANGE - DAMIAN) -->
+          <div class="diagram-quadrant smart-materials">
+            <div class="quadrant-header">
+              <h4 class="quadrant-title">Smart Materials &amp; Self-Healing</h4>
+              <span class="quadrant-owner">Damian</span>
+            </div>
+            <div class="quadrant-body">
+              <div class="quadrant-media-preview" title="Smart Material Flow Rate & Infill Analysis">
+                <img src="../images/RoadGP/Problems/SmartMaterials.png" alt="Smart materials infill test">
+              </div>
+
+              <div class="ds-short-notes-group" style="margin: 6px 0; gap: 6px;">
+                <span class="ds-short-note orange" style="font-size: 0.72rem; padding: 4px 10px;">Self-Healing Materials</span>
+                <span class="ds-short-note orange" style="font-size: 0.72rem; padding: 4px 10px;">Flow Rate Analysis</span>
+              </div>
+
+              <div class="quadrant-tasks-list">
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Prevent micro-cracks from propagating into catastrophic potholes</span>
+                </div>
+                <div class="quadrant-task-item">
+                  <i class="fas fa-arrow-right"></i>
+                  <span>Durable self-healing compounds to stop repeat maintenance visits</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. SYSTEM AIMS & SOLUTION SUMMARY (LONG DESCRIPTION COMPONENT) -->
+      <section style="margin-top: 30px;">
+        <div class="ds-long-description" style="max-width: 100%; margin: 0; background: #131316; border: 1px solid #272732;">
+          <div class="ds-long-desc-header" style="background: #f5b838; color: #111;">
+            Goal &amp; Hypothesis
+          </div>
+          <div class="ds-long-desc-body" style="background: #131316; padding: 22px 28px;">
+            
+            <div class="ds-long-desc-section">
+              <div class="ds-long-desc-title" style="color: #f5b838;">Goal</div>
+              <p class="ds-long-desc-text" style="color: #e2e8f0 !important;">
+                To design an integrated, user-friendly interface integrating proposed inovations with existing systems.
+              </p>
+            </div>
+
+            <div class="ds-long-desc-divider" style="background: #282834;"></div>
+
+            <div class="ds-long-desc-section">
+              <div class="ds-long-desc-title" style="color: #f5b838;">Hypothesis</div>
+              <p class="ds-long-desc-text" style="color: #e2e8f0 !important;">
+               By enabling automated treatment recommendations, automating repair tasks and streamlining communication across stakeholders, we believe maintenance teams will make higher-quality repair decisions, reduce delays and information gaps between reactive and proactive maintenance, and deliver more effective interventions.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- ======================================================================
+         STAGED SUB-PAGES (2 TO 11) - CLEAN A4 SECTIONS WITH DIVIDERS
+         ====================================================================== -->
+
+    <!-- SUB-PAGE 2 -->
+    <article class="roadgp-subpage" id="subpage-2">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 2</span>
+        <h2 class="roadgp-subpage-title">Low-Fidelity Testing &amp; Operational Constraints</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-pencil-ruler" style="font-size: 2rem; color: #1DCD9F; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 2 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Exploring paper sketches, initial layout options, operational constraints, and early inspector feedback.
+        </p>
       </div>
-    </section>
+    </article>
 
-    <!-- SECTION 5: OUTCOMES -->
-    <section class="case-study-section">
-      <h2>5. Measurable Outcomes &amp; Leadership Impact</h2>
-      <div class="outcomes-grid">
-        <div class="outcome-card">
-          <h3>70% Time Reduction</h3>
-          <p>Reduced defect review and triage cycle from 15 days to under 4 days per survey section during pilot testing.</p>
-        </div>
-        <div class="outcome-card">
-          <h3>Zero Training Curve</h3>
-          <p>Non-technical civil engineering assessors completed accurate verifications within 10 minutes of initial onboarding.</p>
-        </div>
-        <div class="outcome-card accent">
-          <h3>National Highways Buy-In</h3>
-          <p>Presented prototype to National Highways and tier-1 contractors, securing further R&amp;D adoption for Cambridge Digital Roads.</p>
-        </div>
+    <!-- SUB-PAGE 3 -->
+    <article class="roadgp-subpage" id="subpage-3">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 3</span>
+        <h2 class="roadgp-subpage-title">Understanding Complex User Needs &amp; Mental Models</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-brain" style="font-size: 2rem; color: #f5b838; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 3 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Inspector mental models, cognitive triage friction, user journeys, and pain point mapping.
+        </p>
       </div>
-    </section>
+    </article>
 
+    <!-- SUB-PAGE 4 -->
+    <article class="roadgp-subpage" id="subpage-4">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 4</span>
+        <h2 class="roadgp-subpage-title">Information Architecture &amp; BPMN Process Workflows</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-sitemap" style="font-size: 2rem; color: #0099ff; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 4 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Information Delivery Manual (IDM), BPMN swimlane workflows, and data handoff specifications.
+        </p>
+      </div>
+    </article>
+
+    <!-- SUB-PAGE 5 -->
+    <article class="roadgp-subpage" id="subpage-5">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 5</span>
+        <h2 class="roadgp-subpage-title">System Architecture &amp; Modular Microservices</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-network-wired" style="font-size: 2rem; color: #8b5cf6; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 5 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          C4 container model, backend APIs, sensor telemetry ingestion, and microservices integration.
+        </p>
+      </div>
+    </article>
+
+    <!-- SUB-PAGE 6 -->
+    <article class="roadgp-subpage" id="subpage-6">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 6</span>
+        <h2 class="roadgp-subpage-title">High-Fidelity UI &amp; Working Interactive Prototypes</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-desktop" style="font-size: 2rem; color: #1DCD9F; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 6 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Python Dash/Flask live triage dashboard, dual-view map sync, and bounding box validation.
+        </p>
+      </div>
+    </article>
+
+    <!-- SUB-PAGE 7 -->
+    <article class="roadgp-subpage" id="subpage-7">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 7</span>
+        <h2 class="roadgp-subpage-title">Improving the Design System: Components &amp; Variants</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-cubes" style="font-size: 2rem; color: #f97316; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 7 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Design tokens, button variants, data visualization cards, and ergonomic interaction states.
+        </p>
+      </div>
+    </article>
+
+    <!-- SUB-PAGE 8 -->
+    <article class="roadgp-subpage" id="subpage-8">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 8</span>
+        <h2 class="roadgp-subpage-title">Testing &amp; Documentation: Field Usability Sessions</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-clipboard-check" style="font-size: 2rem; color: #e9008c; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 8 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Think-aloud protocol findings, inspector usability tests, error rates, and documentation logs.
+        </p>
+      </div>
+    </article>
+
+    <!-- SUB-PAGE 9 -->
+    <article class="roadgp-subpage" id="subpage-9">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 9</span>
+        <h2 class="roadgp-subpage-title">Decision Matrix &amp; Multi-Criteria Prioritisation</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-table-cells" style="font-size: 2rem; color: #f5b838; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 9 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Multi-criteria decision analysis (MCDA), trade-off scoring, and treatment timing rules.
+        </p>
+      </div>
+    </article>
+
+    <!-- SUB-PAGE 10 -->
+    <article class="roadgp-subpage" id="subpage-10">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 10</span>
+        <h2 class="roadgp-subpage-title">Measurable Outcomes, Value &amp; Stakeholder Buy-In</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-chart-line" style="font-size: 2rem; color: #1DCD9F; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 10 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Triage cycle reduction from 15 days to under 4 days, Costain &amp; National Highways adoption.
+        </p>
+      </div>
+    </article>
+
+    <!-- SUB-PAGE 11 -->
+    <article class="roadgp-subpage" id="subpage-11">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 11</span>
+        <h2 class="roadgp-subpage-title">Future Roadmap &amp; Connected Delivery Methods</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
+        <i class="fas fa-road" style="font-size: 2rem; color: #0099ff; margin-bottom: 12px; display: inline-block;"></i>
+        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 11 Staged &bull; Ready for Content</h4>
+        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
+          Autonomous repair trucks, self-sealing materials integration, and live digital twin feedback loops.
+        </p>
+      </div>
+    </article>
+
+    <!-- BOTTOM CASE STUDY NAVIGATION -->
     <div style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
       <a href="../projects.html" class="academic-action-link"><i class="fas fa-arrow-left"></i> All Projects</a>
-      <a href="road-digital-twin.html" class="academic-action-link">Next: Road Digital Twin 3D Reconstructions <i class="fas fa-arrow-right"></i></a>
+      <a href="road-digital-twin.html" class="academic-action-link">Next Project: Road Digital Twin 3D Reconstructions <i class="fas fa-arrow-right"></i></a>
     </div>
 
   </main>
+
+  <!-- Script for Smooth Active State on Sub-Page Nav -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navPills = document.querySelectorAll('.roadgp-nav-pill');
+      const subpages = document.querySelectorAll('.roadgp-subpage');
+
+      // Update active nav pill on scroll
+      window.addEventListener('scroll', () => {
+        let currentId = '';
+        subpages.forEach(subpage => {
+          const rect = subpage.getBoundingClientRect();
+          if (rect.top <= 140 && rect.bottom >= 140) {
+            currentId = subpage.getAttribute('id');
+          }
+        });
+
+        if (currentId) {
+          navPills.forEach(pill => {
+            if (pill.getAttribute('href') === '#' + currentId) {
+              pill.classList.add('active');
+            } else {
+              pill.classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+  <!-- Lightbox Modal for Full Image Inspection -->
+  <div class="image-lightbox-overlay" id="imageLightbox" onclick="closeLightbox(event)">
+    <div class="image-lightbox-content">
+      <button class="image-lightbox-close" onclick="closeLightbox(event)" aria-label="Close full view">&times;</button>
+      <img src="" alt="" class="image-lightbox-img" id="lightboxImg">
+      <div class="image-lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      const overlay = document.getElementById('imageLightbox');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      if (overlay && img) {
+        img.src = src;
+        img.alt = caption || '';
+        cap.textContent = caption || '';
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox(e) {
+      if (e.target.classList.contains('image-lightbox-overlay') || e.target.classList.contains('image-lightbox-close')) {
+        const overlay = document.getElementById('imageLightbox');
+        if (overlay) {
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const overlay = document.getElementById('imageLightbox');
+        if (overlay && overlay.classList.contains('active')) {
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.quadrant-media-preview, .hub-defect-thumb').forEach(el => {
+        el.addEventListener('click', () => {
+          const img = el.querySelector('img');
+          const caption = el.getAttribute('title') || (img ? img.alt : '');
+          if (img) openLightbox(img.src, caption);
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Components — Dr Lilia Potseluyko</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Showcase specific page layout styles */
+    .ds-showcase-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+    }
+
+    .ds-showcase-header {
+      border-bottom: 1px solid #262626;
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+    }
+
+    .ds-showcase-header h1 {
+      font-size: 2.4rem;
+      color: #ffffff;
+      margin: 0 0 10px;
+    }
+
+    .ds-showcase-header p {
+      color: #999999;
+      font-size: 1.05rem;
+      max-width: 800px;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .ds-component-section {
+      background: #111111;
+      border: 1px solid #222222;
+      border-radius: 12px;
+      padding: 32px 28px;
+      margin-bottom: 50px;
+    }
+
+    .ds-component-meta {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #1f1f1f;
+      padding-bottom: 16px;
+    }
+
+    .ds-component-meta h2 {
+      font-size: 1.5rem;
+      color: #1DCD9F;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ds-component-meta p {
+      color: #aaaaaa;
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .ds-preview-canvas {
+      background: #000000;
+      border: 1px dashed #333333;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .ds-code-block {
+      background: #0d0d0d;
+      border: 1px solid #222;
+      border-radius: 6px;
+      padding: 16px;
+      font-family: 'SFMono-Regular', Consolas, Monaco, monospace;
+      font-size: 0.85rem;
+      color: #7dd3fc;
+      overflow-x: auto;
+      white-space: pre;
+      line-height: 1.5;
+    }
+
+    .ds-grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 30px;
+      align-items: start;
+    }
+
+    .ds-legend-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      margin-right: 15px;
+      color: #ccc;
+    }
+
+    .ds-legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="Logo" class="logo">
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">All Projects</a></li>
+      <li><a href="academic.html">Academic</a></li>
+      <li><a href="ask-portfolio.html">Ask Portfolio AI ✨</a></li>
+      <li><a href="design-system-components.html" class="active">Design System</a></li>
+    </ul>
+  </nav>
+
+  <div class="ds-showcase-container">
+    <header class="ds-showcase-header">
+      <h1>Design System Components</h1>
+      <p>
+        Standardized UI components built by <strong>Agent UI &amp; Interaction Designer</strong> for Dr Lilia Potseluyko's UX case studies and portfolio pages. Copy the HTML code blocks below directly into any project template.
+      </p>
+    </header>
+
+    <!-- 1. TIMELINE COMPONENT -->
+    <section class="ds-component-section" id="timeline">
+      <div class="ds-component-meta">
+        <h2>1. Timeline Component</h2>
+        <p>
+          Horizontal alternating timeline (top/bottom stems) with custom state dots: 
+          <span class="ds-legend-badge"><span class="ds-legend-dot" style="background:#1DCD9F;"></span> Green = Past</span>
+          <span class="ds-legend-badge"><span class="ds-legend-dot" style="background:#e9008c;"></span> Pink (Pulsing) = Now</span>
+          <span class="ds-legend-badge"><span class="ds-legend-dot" style="background:#f5b838;"></span> Yellow = Future</span>
+          Automatically adapts to a vertical stack on mobile screens (&le; 820px).
+        </p>
+      </div>
+
+      <div class="ds-preview-canvas">
+        <div class="ds-timeline-wrapper">
+          <h3 class="ds-timeline-title">Next Steps</h3>
+          <div class="ds-timeline-track">
+            
+            <!-- Step 1: Top (Past - Green Dot) -->
+            <div class="ds-timeline-item top">
+              <div class="ds-timeline-content">
+                <h4>Testing Low-Fidelity</h4>
+                <p>Constrains</p>
+              </div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-dot past" title="Past Step"></div>
+            </div>
+
+            <!-- Step 2: Bottom (Past - Green Dot) -->
+            <div class="ds-timeline-item bottom">
+              <div class="ds-timeline-dot past" title="Past Step"></div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-content">
+                <h4>Improving Design System</h4>
+                <p>Repetitive components and variants design</p>
+              </div>
+            </div>
+
+            <!-- Step 3: Top (Now - Pink Glowing Dot) -->
+            <div class="ds-timeline-item top">
+              <div class="ds-timeline-content">
+                <h4>High Fidelity UX Prototype</h4>
+                <p>Development of framework for designing digital twin system</p>
+              </div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-dot now" title="Current Step (Now)"></div>
+            </div>
+
+            <!-- Step 4: Bottom (Future - Yellow Dot) -->
+            <div class="ds-timeline-item bottom">
+              <div class="ds-timeline-dot future" title="Future Step"></div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-content">
+                <h4>Testing / Documentation</h4>
+                <p>Documenting test results</p>
+              </div>
+            </div>
+
+            <!-- Step 5: Top (Future - Yellow Dot) -->
+            <div class="ds-timeline-item top">
+              <div class="ds-timeline-content">
+                <h4>Front-End Prototype</h4>
+                <p>Create publicly available prototype with test dataset</p>
+              </div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-dot future" title="Future Step"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-code-block">&lt;!-- Timeline Component HTML --&gt;
+&lt;div class="ds-timeline-wrapper"&gt;
+  &lt;h3 class="ds-timeline-title"&gt;Next Steps&lt;/h3&gt;
+  &lt;div class="ds-timeline-track"&gt;
+    
+    &lt;!-- Top item (Past = Green) --&gt;
+    &lt;div class="ds-timeline-item top"&gt;
+      &lt;div class="ds-timeline-content"&gt;
+        &lt;h4&gt;Testing Low-Fidelity&lt;/h4&gt;
+        &lt;p&gt;Constrains&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="ds-timeline-stem"&gt;&lt;/div&gt;
+      &lt;div class="ds-timeline-dot past"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bottom item (Past = Green) --&gt;
+    &lt;div class="ds-timeline-item bottom"&gt;
+      &lt;div class="ds-timeline-dot past"&gt;&lt;/div&gt;
+      &lt;div class="ds-timeline-stem"&gt;&lt;/div&gt;
+      &lt;div class="ds-timeline-content"&gt;
+        &lt;h4&gt;Improving Design System&lt;/h4&gt;
+        &lt;p&gt;Repetitive components and variants design&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Top item (Now = Pink with pulse) --&gt;
+    &lt;div class="ds-timeline-item top"&gt;
+      &lt;div class="ds-timeline-content"&gt;
+        &lt;h4&gt;High Fidelity UX Prototype&lt;/h4&gt;
+        &lt;p&gt;Development of framework for designing digital twin system&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="ds-timeline-stem"&gt;&lt;/div&gt;
+      &lt;div class="ds-timeline-dot now"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bottom item (Future = Yellow) --&gt;
+    &lt;div class="ds-timeline-item bottom"&gt;
+      &lt;div class="ds-timeline-dot future"&gt;&lt;/div&gt;
+      &lt;div class="ds-timeline-stem"&gt;&lt;/div&gt;
+      &lt;div class="ds-timeline-content"&gt;
+        &lt;h4&gt;Testing / Documentation&lt;/h4&gt;
+        &lt;p&gt;Documenting test results&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</div>
+    </section>
+
+    <!-- 2. SHORT NOTES COMPONENT -->
+    <section class="ds-component-section" id="short-notes">
+      <div class="ds-component-meta">
+        <h2>2. Short Notes Component</h2>
+        <p>
+          Oval pill boundary with 2.5px stroke, lighter translucent background, crisp white typography, and hover lift. Color strokes match screenshot 2: <strong>Yellow</strong>, <strong>Purple</strong>, <strong>Blue</strong>, <strong>Pink</strong>, <strong>Orange</strong>, and <strong>Emerald Green</strong>.
+        </p>
+      </div>
+
+      <div class="ds-preview-canvas">
+        <h4 style="color:#888; font-size:0.85rem; text-transform:uppercase; margin-top:0; margin-bottom:14px; letter-spacing:0.05em;">Yellow Notes:</h4>
+        <div class="ds-short-notes-group">
+          <span class="ds-short-note yellow">Understanding Complex User Needs</span>
+          <span class="ds-short-note yellow">Mental Model</span>
+          <span class="ds-short-note yellow">Cohesive Solutions</span>
+        </div>
+
+        <h4 style="color:#888; font-size:0.85rem; text-transform:uppercase; margin-top:24px; margin-bottom:14px; letter-spacing:0.05em;">Purple Notes:</h4>
+        <div class="ds-short-notes-group">
+          <span class="ds-short-note purple">Experience Measuring Design Impact</span>
+          <span class="ds-short-note purple">Edge Computing</span>
+          <span class="ds-short-note purple">Collaborate Closely With Product Managers And Technical Teams</span>
+          <span class="ds-short-note purple">Progressive Disclosure</span>
+          <span class="ds-short-note purple">SaaS Product Design</span>
+          <span class="ds-short-note purple">Implementing Personalised User Experiences</span>
+        </div>
+
+        <h4 style="color:#888; font-size:0.85rem; text-transform:uppercase; margin-top:24px; margin-bottom:14px; letter-spacing:0.05em;">Blue Notes:</h4>
+        <div class="ds-short-notes-group">
+          <span class="ds-short-note blue">Explore Emerging Frameworks</span>
+          <span class="ds-short-note blue">Industry Knowledge</span>
+        </div>
+
+        <h4 style="color:#888; font-size:0.85rem; text-transform:uppercase; margin-top:24px; margin-bottom:14px; letter-spacing:0.05em;">Pink &amp; Emerald Notes:</h4>
+        <div class="ds-short-notes-group">
+          <span class="ds-short-note pink">Leading Change Management</span>
+          <span class="ds-short-note pink">Leading Presentations</span>
+          <span class="ds-short-note pink">Fostering Adoption</span>
+          <span class="ds-short-note green">Forward Deployed Engineering</span>
+          <span class="ds-short-note orange">Formal Education</span>
+        </div>
+      </div>
+
+      <div class="ds-code-block">&lt;!-- Short Notes Group HTML --&gt;
+&lt;div class="ds-short-notes-group"&gt;
+  &lt;!-- Yellow Stroke --&gt;
+  &lt;span class="ds-short-note yellow"&gt;Understanding Complex User Needs&lt;/span&gt;
+
+  &lt;!-- Purple Stroke --&gt;
+  &lt;span class="ds-short-note purple"&gt;Edge Computing&lt;/span&gt;
+
+  &lt;!-- Blue Stroke --&gt;
+  &lt;span class="ds-short-note blue"&gt;Explore Emerging Frameworks&lt;/span&gt;
+
+  &lt;!-- Pink Stroke --&gt;
+  &lt;span class="ds-short-note pink"&gt;Leading Change Management&lt;/span&gt;
+
+  &lt;!-- Brand Emerald Stroke --&gt;
+  &lt;span class="ds-short-note green"&gt;Forward Deployed Engineering&lt;/span&gt;
+&lt;/div&gt;</div>
+    </section>
+
+    <!-- 3 & 4. LIST COMPONENT & LONG DESCRIPTION COMPONENT -->
+    <div class="ds-grid-2col">
+      
+      <!-- 3. LIST COMPONENT -->
+      <section class="ds-component-section" id="list-component">
+        <div class="ds-component-meta">
+          <h2>3. List Component</h2>
+          <p>
+            Card with dark container, solid top banner, rounded corners, and bullet items with crisp white bullets.
+          </p>
+        </div>
+
+        <div class="ds-preview-canvas" style="display:flex; flex-direction:column; gap:20px; align-items:center;">
+          <!-- Default Blue List Card -->
+          <div class="ds-list-card">
+            <div class="ds-list-header blue">System Architecture</div>
+            <div class="ds-list-body">
+              <ul class="ds-list-items">
+                <li>Backend architecture</li>
+                <li>C4 Architecture</li>
+                <li>Concept , Containers,</li>
+                <li>Microservices</li>
+                <li>decision support tools</li>
+                <li>AI driven tools</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Magenta Variant -->
+          <div class="ds-list-card">
+            <div class="ds-list-header magenta">Publications</div>
+            <div class="ds-list-body">
+              <ul class="ds-list-items">
+                <li>Published multiple papers</li>
+                <li>Book Publication</li>
+                <li>Interviews for media</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-code-block">&lt;!-- List Component HTML --&gt;
+&lt;div class="ds-list-card"&gt;
+  &lt;div class="ds-list-header blue"&gt;System Architecture&lt;/div&gt;
+  &lt;div class="ds-list-body"&gt;
+    &lt;ul class="ds-list-items"&gt;
+      &lt;li&gt;Backend architecture&lt;/li&gt;
+      &lt;li&gt;C4 Architecture&lt;/li&gt;
+      &lt;li&gt;Concept , Containers,&lt;/li&gt;
+      &lt;li&gt;Microservices&lt;/li&gt;
+      &lt;li&gt;decision support tools&lt;/li&gt;
+      &lt;li&gt;AI driven tools&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Color header options: .blue, .magenta, .pink, .yellow, .green, .purple --&gt;</div>
+      </section>
+
+      <!-- 4. LONG DESCRIPTION COMPONENT -->
+      <section class="ds-component-section" id="long-description">
+        <div class="ds-component-meta">
+          <h2>4. Long Description</h2>
+          <p>
+            Card with yellow/amber header, crisp white container, and typewriter/monospace typography for structured UX specifications.
+          </p>
+        </div>
+
+        <div class="ds-preview-canvas" style="display:flex; justify-content:center;">
+          <div class="ds-long-description">
+            <div class="ds-long-desc-header">Business Goal</div>
+            <div class="ds-long-desc-body">
+              
+              <!-- Section 1 -->
+              <div class="ds-long-desc-section">
+                <div class="ds-long-desc-title">Business Goal</div>
+                <p class="ds-long-desc-text">
+                  After Brexit, the company needed to stay competitive as the client began exploring equivalent tunnel-management solutions within Sweden and the EU.
+                </p>
+              </div>
+
+              <div class="ds-long-desc-divider"></div>
+
+              <!-- Section 2 -->
+              <div class="ds-long-desc-section">
+                <div class="ds-long-desc-title">User Story:</div>
+                <p class="ds-long-desc-text">
+                  Olof is a traffic officer he has to constantly zoom in and out of a geographic map–finding one icon and back in to another. When multiple devices along the same road section need updating at once, this process becomes slow, stressful, and error-prone. Olof needs a schematic view that lets him understand and control equipment logically, not geographically
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="ds-code-block">&lt;!-- Long Description Component HTML --&gt;
+&lt;div class="ds-long-description"&gt;
+  &lt;div class="ds-long-desc-header"&gt;Business Goal&lt;/div&gt;
+  &lt;div class="ds-long-desc-body"&gt;
+    
+    &lt;div class="ds-long-desc-section"&gt;
+      &lt;div class="ds-long-desc-title"&gt;Business Goal&lt;/div&gt;
+      &lt;p class="ds-long-desc-text"&gt;
+        After Brexit, the company needed to stay competitive as the client began exploring equivalent tunnel-management solutions within Sweden and the EU.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="ds-long-desc-divider"&gt;&lt;/div&gt;
+
+    &lt;div class="ds-long-desc-section"&gt;
+      &lt;div class="ds-long-desc-title"&gt;User Story:&lt;/div&gt;
+      &lt;p class="ds-long-desc-text"&gt;
+        Olof is a traffic officer he has to constantly zoom in and out of a geographic map–finding one icon and back in to another...
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</div>
+      </section>
+
+    </div>
+
+    <!-- 5. PERSONA COMPONENT -->
+    <section class="ds-component-section" id="persona">
+      <div class="ds-component-meta">
+        <h2>5. Persona Component</h2>
+        <p>
+          Circular headshot with 2-3pt (2.5px) solid stroke, subtle elevation shadow, person's bold name, and assigned knowledge area/role. Color-coded by domain: <strong>Blue</strong> (Data Science), <strong>Pink</strong> (Robotics), <strong>Orange</strong> (Smart Materials), and <strong>Emerald Green</strong> (Digital Twin &amp; UX).
+        </p>
+      </div>
+
+      <div class="ds-preview-canvas">
+        <div class="ds-persona-group">
+          <!-- Stephen (Data Science) -->
+          <div class="ds-persona blue">
+            <div class="ds-persona-avatar">
+              <img src="images/RoadGP/Problems/Stephen.png" alt="Stephen">
+            </div>
+            <div class="ds-persona-name">Stephen</div>
+            <div class="ds-persona-role">Data Scientist</div>
+          </div>
+
+          <!-- Alix (Data Science) -->
+          <div class="ds-persona blue">
+            <div class="ds-persona-avatar">
+              <img src="images/RoadGP/Problems/Alix.png" alt="Alix">
+            </div>
+            <div class="ds-persona-name">Alix</div>
+            <div class="ds-persona-role">Data Scientist</div>
+          </div>
+
+          <!-- Damian (Smart Materials) -->
+          <div class="ds-persona orange">
+            <div class="ds-persona-avatar">
+              <img src="images/RoadGP/Problems/Damian.png" alt="Damian">
+            </div>
+            <div class="ds-persona-name">Damian</div>
+            <div class="ds-persona-role">Smart Materials Scientist</div>
+          </div>
+
+          <!-- Richard (Robotics) -->
+          <div class="ds-persona pink">
+            <div class="ds-persona-avatar">
+              <img src="images/RoadGP/Problems/Richard.png" alt="Richard">
+            </div>
+            <div class="ds-persona-name">Richard</div>
+            <div class="ds-persona-role">Robotics Scientist</div>
+          </div>
+
+          <!-- Jerry Xu (Robotics) -->
+          <div class="ds-persona pink">
+            <div class="ds-persona-avatar">
+              <img src="images/RoadGP/Problems/Jerry.png" alt="Jerry Xu">
+            </div>
+            <div class="ds-persona-name">Jerry Xu</div>
+            <div class="ds-persona-role">Robotics Scientist</div>
+          </div>
+
+          <!-- Dr Lilia Potseluyko (Digital Twin & UX) -->
+          <div class="ds-persona green">
+            <div class="ds-persona-avatar">
+              <img src="images/RoadGP/Problems/Lilia.png" alt="Dr Lilia Potseluyko">
+            </div>
+            <div class="ds-persona-name">Dr Lilia Potseluyko</div>
+            <div class="ds-persona-role">Digital Twin &amp; UX Lead</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ds-code-block">&lt;!-- Persona Component HTML --&gt;
+&lt;div class="ds-persona-group"&gt;
+  &lt;!-- Domain: Data Science (Blue) --&gt;
+  &lt;div class="ds-persona blue"&gt;
+    &lt;div class="ds-persona-avatar"&gt;
+      &lt;img src="images/RoadGP/Problems/Stephen.png" alt="Stephen"&gt;
+    &lt;/div&gt;
+    &lt;div class="ds-persona-name"&gt;Stephen&lt;/div&gt;
+    &lt;div class="ds-persona-role"&gt;Data Scientist&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Domain: Digital Twin &amp; UX (Emerald Green) --&gt;
+  &lt;div class="ds-persona green"&gt;
+    &lt;div class="ds-persona-avatar"&gt;
+      &lt;img src="images/RoadGP/Problems/Lilia.png" alt="Dr Lilia Potseluyko"&gt;
+    &lt;/div&gt;
+    &lt;div class="ds-persona-name"&gt;Dr Lilia Potseluyko&lt;/div&gt;
+    &lt;div class="ds-persona-role"&gt;Digital Twin &amp;amp; UX Lead&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</div>
+    </section>
+
+  </div>
+
+</body>
+</html>

@@ -1516,4 +1516,1592 @@ header {
   font-size: 0.92rem;
   line-height: 1.5;
   margin: 0;
-}
+}
+
+/* ==========================================================================
+   DESIGN SYSTEM COMPONENTS
+   Created by Agent UI & Interaction Designer
+   1. Timeline Component (.ds-timeline)
+   2. Short Notes Component (.ds-short-note)
+   3. List Component (.ds-list-card)
+   4. Long Description Component (.ds-long-description)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TIMELINE COMPONENT
+   Horizontal alternating timeline on desktop, responsive vertical on mobile.
+   Dots: Green (Past), Pink (Now), Yellow (Future)
+   -------------------------------------------------------------------------- */
+.ds-timeline-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px 10px;
+}
+
+.ds-timeline-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 70px;
+  letter-spacing: 0.02em;
+}
+
+/* Timeline Desktop Horizontal Grid/Track */
+.ds-timeline-track {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 320px;
+  padding: 0 20px;
+}
+
+/* Horizontal Axis Line */
+.ds-timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background-color: #383838;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Individual Timeline Step Item */
+.ds-timeline-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Center Dot */
+.ds-timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Dot States: Past (Green), Now (Pink), Future (Yellow) */
+.ds-timeline-dot.past,
+.ds-timeline-dot.green {
+  background-color: #1DCD9F;
+  box-shadow: 0 0 0 4px rgba(29, 205, 159, 0.2);
+}
+
+.ds-timeline-dot.now,
+.ds-timeline-dot.pink {
+  background-color: #e9008c;
+  box-shadow: 0 0 0 5px rgba(233, 0, 140, 0.35), 0 0 12px rgba(233, 0, 140, 0.7);
+  animation: ds-pulse-pink 2s infinite ease-in-out;
+}
+
+.ds-timeline-dot.future,
+.ds-timeline-dot.yellow {
+  background-color: #f5b838;
+  box-shadow: 0 0 0 4px rgba(245, 184, 56, 0.2);
+}
+
+@keyframes ds-pulse-pink {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(233, 0, 140, 0.35), 0 0 10px rgba(233, 0, 140, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(233, 0, 140, 0.15), 0 0 18px rgba(233, 0, 140, 0.85);
+  }
+}
+
+/* Connecting Stem Line */
+.ds-timeline-stem {
+  position: absolute;
+  width: 1px;
+  background-color: #4a4a4a;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Content Box */
+.ds-timeline-content {
+  width: 180px;
+  max-width: 90%;
+  transition: transform 0.25s ease;
+}
+
+.ds-timeline-content h4 {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+.ds-timeline-content p {
+  font-size: 0.82rem;
+  color: #aaaaaa;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Top Node Orientation */
+.ds-timeline-item.top .ds-timeline-content {
+  position: absolute;
+  bottom: calc(50% + 22px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ds-timeline-item.top .ds-timeline-stem {
+  bottom: 50%;
+  height: 65px;
+}
+
+/* Bottom Node Orientation */
+.ds-timeline-item.bottom .ds-timeline-content {
+  position: absolute;
+  top: calc(50% + 22px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ds-timeline-item.bottom .ds-timeline-stem {
+  top: 50%;
+  height: 65px;
+}
+
+.ds-timeline-item:hover .ds-timeline-content {
+  filter: brightness(1.15);
+}
+
+/* Mobile Responsive Fallback for Timeline (Vertical) */
+@media (max-width: 820px) {
+  .ds-timeline-track {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+    min-height: auto;
+    gap: 36px;
+  }
+
+  .ds-timeline-track::before {
+    left: 20px;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: none;
+  }
+
+  .ds-timeline-item {
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .ds-timeline-dot {
+    left: -10px;
+    top: 12px;
+    transform: none;
+  }
+
+  .ds-timeline-stem {
+    display: none;
+  }
+
+  .ds-timeline-item.top .ds-timeline-content,
+  .ds-timeline-item.bottom .ds-timeline-content {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. SHORT NOTES COMPONENT (.ds-short-note)
+   Oval boundary, 2-3pt stroke, lighter translucent background, white text.
+   Color options: yellow, purple, blue, pink, orange, green (brand)
+   -------------------------------------------------------------------------- */
+.ds-short-notes-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.ds-short-note {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
+  border-radius: 9999px; /* oval boundary */
+  border: 2.5px solid #8b5cf6; /* 2-3pt default stroke */
+  background: rgba(255, 255, 255, 0.06); /* slightly lighter background */
+  color: #ffffff; /* crisp white text as in screenshot */
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.ds-short-note:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Screenshot 2 Stroke Color Variants */
+.ds-short-note.yellow {
+  border-color: #f5b838;
+  background: rgba(245, 184, 56, 0.08);
+}
+.ds-short-note.yellow:hover {
+  background: rgba(245, 184, 56, 0.18);
+  box-shadow: 0 4px 14px rgba(245, 184, 56, 0.25);
+}
+
+.ds-short-note.purple {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.08);
+}
+.ds-short-note.purple:hover {
+  background: rgba(139, 92, 246, 0.18);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);
+}
+
+.ds-short-note.blue {
+  border-color: #0099ff;
+  background: rgba(0, 153, 255, 0.08);
+}
+.ds-short-note.blue:hover {
+  background: rgba(0, 153, 255, 0.18);
+  box-shadow: 0 4px 14px rgba(0, 153, 255, 0.25);
+}
+
+.ds-short-note.pink {
+  border-color: #e9008c;
+  background: rgba(233, 0, 140, 0.08);
+}
+.ds-short-note.pink:hover {
+  background: rgba(233, 0, 140, 0.18);
+  box-shadow: 0 4px 14px rgba(233, 0, 140, 0.25);
+}
+
+.ds-short-note.orange {
+  border-color: #f97316;
+  background: rgba(249, 115, 22, 0.08);
+}
+.ds-short-note.orange:hover {
+  background: rgba(249, 115, 22, 0.18);
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.25);
+}
+
+.ds-short-note.green,
+.ds-short-note.emerald {
+  border-color: #1DCD9F;
+  background: rgba(29, 205, 159, 0.08);
+}
+.ds-short-note.green:hover,
+.ds-short-note.emerald:hover {
+  background: rgba(29, 205, 159, 0.18);
+  box-shadow: 0 4px 14px rgba(29, 205, 159, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   3. LIST COMPONENT (.ds-list-card)
+   Card with dark background, rounded corners, solid top header banner, bullet list
+   -------------------------------------------------------------------------- */
+.ds-list-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  margin: 15px 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ds-list-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* List Card Header Banner */
+.ds-list-header {
+  background-color: #0088cc; /* Default Cyan/Blue matching screenshot 3 */
+  color: #ffffff;
+  padding: 12px 18px;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+/* Header Banner Color Variants */
+.ds-list-header.blue {
+  background-color: #0088cc;
+}
+.ds-list-header.pink,
+.ds-list-header.magenta {
+  background-color: #e9008c;
+}
+.ds-list-header.yellow {
+  background-color: #f5b838;
+  color: #111111;
+}
+.ds-list-header.emerald,
+.ds-list-header.green {
+  background-color: #1DCD9F;
+  color: #111111;
+}
+.ds-list-header.purple {
+  background-color: #8b5cf6;
+}
+
+/* List Card Body */
+.ds-list-body {
+  padding: 20px 22px;
+}
+
+.ds-list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.ds-list-items li {
+  display: flex;
+  align-items: flex-start;
+  color: #ffffff;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Clean circular white bullet matching screenshot 3 */
+.ds-list-items li::before {
+  content: '•';
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-right: 12px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. LONG DESCRIPTION COMPONENT (.ds-long-description)
+   Card with yellow header, crisp white body, monospace/typewriter text style
+   -------------------------------------------------------------------------- */
+.ds-long-description {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 460px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin: 20px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Solid Yellow Top Banner Header */
+.ds-long-desc-header {
+  background-color: #f5b838; /* Amber / Yellow as in Screenshot 4 */
+  color: #111111;
+  padding: 12px 20px;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+/* Header Color Variants */
+.ds-long-desc-header.blue {
+  background-color: #0088cc;
+  color: #ffffff;
+}
+.ds-long-desc-header.pink {
+  background-color: #e9008c;
+  color: #ffffff;
+}
+.ds-long-desc-header.emerald {
+  background-color: #1DCD9F;
+  color: #111111;
+}
+
+/* White Body with Monospace / Typewriter Typography */
+.ds-long-desc-body {
+  padding: 22px 24px;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ds-long-desc-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Title in bold monospace */
+.ds-long-desc-title {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.01em;
+}
+
+/* Section Text in typewriter monospace */
+.ds-long-desc-text {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'Courier New', monospace;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #1f2937;
+  margin: 0;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Divider between sections */
+.ds-long-desc-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 0;
+  border: none;
+}
+
+/* ==========================================================================
+   HOMEPAGE REDESIGN (index.html)
+   Created by Agent UI & UX Designer
+   - Top Section: Career Timeline (Left/Center) + 4 Cropped Image Tiles (Right)
+   - Middle Section: Bio Card (Long Description Component)
+   - Lower Section: Featured Projects with Short Description / Label Pills
+   ========================================================================== */
+
+.home-main-content {
+  padding: 24px 32px 60px;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.home-section-title {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1DCD9F;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- Top Section: Timeline (Left/Center) + Photo Grid (Right) --- */
+.home-top-section {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1400px) {
+  .home-top-section {
+    grid-template-columns: 1fr 380px;
+    gap: 36px;
+  }
+}
+
+/* Timeline Left/Center Container */
+.home-timeline-container {
+  background: #111111;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 20px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-timeline-track {
+  min-height: 250px;
+  padding: 0 10px;
+}
+
+.timeline-year-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(29, 205, 159, 0.15);
+  color: #1DCD9F;
+  margin-bottom: 4px;
+}
+
+.timeline-year-badge.now {
+  background: rgba(233, 0, 140, 0.18);
+  color: #ff66b2;
+}
+
+.timeline-year-badge.future {
+  background: rgba(245, 184, 56, 0.18);
+  color: #f5b838;
+}
+
+/* Compact tweaks for timeline items on home page */
+.home-timeline-container .ds-timeline-content {
+  width: 160px;
+}
+
+.home-timeline-container .ds-timeline-content h4 {
+  font-size: 0.82rem;
+  margin-bottom: 4px;
+}
+
+.home-timeline-container .ds-timeline-content p {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: #999999;
+}
+
+.home-timeline-container .ds-timeline-item.top .ds-timeline-content {
+  bottom: calc(50% + 18px);
+}
+.home-timeline-container .ds-timeline-item.top .ds-timeline-stem {
+  height: 52px;
+}
+.home-timeline-container .ds-timeline-item.bottom .ds-timeline-content {
+  top: calc(50% + 18px);
+}
+.home-timeline-container .ds-timeline-item.bottom .ds-timeline-stem {
+  height: 52px;
+}
+
+/* --- Right Column: 4 Image Tiles --- */
+.home-photo-showcase {
+  background: #111111;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 12px;
+  flex: 1;
+}
+
+.photo-tile {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  background: #18181b;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.photo-tile:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: #1DCD9F;
+  box-shadow: 0 8px 22px rgba(29, 205, 159, 0.4);
+}
+
+.photo-tile img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-tile:hover img {
+  transform: scale(1.04);
+}
+
+/* Precise cropping per image */
+/* BBC Tile: Anchor top-left to keep BBC logo and headset clearly visible */
+.photo-tile.tile-bbc img {
+  object-fit: cover;
+  object-position: top left;
+}
+
+/* Tunnel Digital Twin: Showcase presentation and 3D screen */
+.photo-tile.tile-tunnel img {
+  object-fit: cover;
+  object-position: 45% center;
+}
+
+/* VR Homes: Showcase VR user testing */
+.photo-tile.tile-vr-homes img {
+  object-fit: cover;
+  object-position: 80% center;
+}
+
+/* Cambridge Portrait: Frame portrait in front of Cambridge entrance */
+.photo-tile.tile-cambridge img {
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.photo-tile-tag {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+  color: #eeeeee;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 3px 7px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Zoom indicator icon on thumbnail hover */
+.photo-zoom-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #1DCD9F;
+  font-size: 0.72rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(29, 205, 159, 0.4);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.photo-tile:hover .photo-zoom-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Floating Zoom Popover: Shows full uncropped bigger version on hover */
+.photo-zoom-popover {
+  position: fixed;
+  width: 520px;
+  max-width: 90vw;
+  background: #131316;
+  border: 2px solid #1DCD9F;
+  border-radius: 12px;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95), 0 0 30px rgba(29, 205, 159, 0.35);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Prevents cursor jitter */
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s ease;
+  z-index: 999999;
+}
+
+.photo-zoom-popover.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.photo-zoom-img-wrapper {
+  width: 100%;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 380px;
+  overflow: hidden;
+}
+
+.photo-zoom-img-wrapper img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+}
+
+.photo-zoom-info {
+  padding: 12px 18px;
+  background: #18181d;
+  border-top: 1px solid #282830;
+}
+
+.photo-zoom-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.photo-zoom-title {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Segoe UI', -apple-system, sans-serif;
+}
+
+.photo-zoom-tag {
+  background: rgba(29, 205, 159, 0.15);
+  color: #1DCD9F;
+  border: 1px solid #1DCD9F;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.photo-zoom-desc {
+  color: #aaaaaa;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  margin: 0;
+  font-family: 'Segoe UI', -apple-system, sans-serif;
+}
+
+
+
+/* --- Middle Section: Bio Card (Long Description Component - Dark Themed) --- */
+.home-bio-wrapper {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-bio-wrapper .ds-long-description {
+  max-width: 980px; /* Narrower, perfectly centered to avoid giant billboard feel */
+  width: 100%;
+  margin: 0 auto;
+  background: #131316; /* Dark background to eliminate white glare */
+  border: 1px solid #27272d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.home-bio-wrapper .ds-long-desc-header {
+  background-color: #f5b838; /* Signature warm amber/gold banner */
+  color: #111111;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.home-bio-wrapper .ds-long-desc-body {
+  background-color: #131316;
+  padding: 20px 26px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-bio-wrapper .ds-long-desc-title {
+  color: #f5b838; /* Gold section subtitle matching header */
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+/* Explicit high-contrast text color overriding .content p */
+.content .home-bio-wrapper p.ds-long-desc-text,
+.home-bio-wrapper .ds-long-desc-text {
+  color: #e2e8f0 !important; /* Crisp light gray/white text, solving white-on-white bug */
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 100% !important;
+  margin: 0;
+}
+
+.content .home-bio-wrapper p.ds-long-desc-text strong {
+  color: #ffffff !important;
+}
+
+.home-bio-wrapper .ds-long-desc-divider {
+  background-color: #27272f;
+  height: 1px;
+  border: none;
+  margin: 4px 0;
+}
+
+/* Color Legend for Featured Project Labels */
+.featured-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.featured-header-row .home-section-title {
+  margin: 0;
+}
+
+.ds-skill-legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.8rem;
+  color: #999999;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.blue { background-color: #0099ff; box-shadow: 0 0 6px rgba(0, 153, 255, 0.6); }
+.legend-dot.pink { background-color: #e9008c; box-shadow: 0 0 6px rgba(233, 0, 140, 0.6); }
+.legend-dot.yellow { background-color: #f5b838; box-shadow: 0 0 6px rgba(245, 184, 56, 0.6); }
+
+
+/* --- Lower Section: Featured Projects with Short Description Labels --- */
+.home-featured-section {
+  margin-bottom: 20px;
+}
+
+.home-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.featured-tile {
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-tile:hover {
+  transform: translateY(-3px);
+  border-color: #1DCD9F;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.featured-tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 16px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.featured-tile-header {
+  border-bottom: 1px solid #222222;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.featured-tile-header h3 {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featured-tile-header h3::after {
+  content: '→';
+  font-size: 0.95rem;
+  color: #1DCD9F;
+  transition: transform 0.2s ease;
+}
+
+.featured-tile:hover .featured-tile-header h3::after {
+  transform: translateX(3px);
+}
+
+.featured-role-meta {
+  display: block;
+  font-size: 0.78rem;
+  color: #888888;
+  font-weight: 500;
+}
+
+/* Compact pills inside featured project tiles */
+.featured-tile-pills {
+  margin: 0;
+  gap: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.featured-tile-pills .ds-short-note {
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border-width: 2px;
+  border-radius: 9999px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* --- Responsive Adaptations for Medium & Small Screens --- */
+@media (max-width: 1120px) {
+  .home-top-section {
+    grid-template-columns: 1fr;
+  }
+  .home-photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .home-featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-main-content {
+    padding: 16px 14px 40px;
+  }
+  .home-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .home-featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   5. PERSONA COMPONENT (.ds-persona)
+   Created by Agent UI & UX Designer
+   Circular headshot with 2-3pt stroke, person name and assigned knowledge area
+   ========================================================================== */
+.ds-persona-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px 24px;
+  margin: 25px 0 35px;
+}
+
+.ds-persona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 130px;
+  transition: transform 0.25s ease;
+}
+
+.ds-persona:hover {
+  transform: translateY(-4px);
+}
+
+.ds-persona-avatar {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 2.5px solid #1DCD9F; /* 2-3pt stroke */
+  overflow: hidden;
+  background: #18181b;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  margin-bottom: 10px;
+  position: relative;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ds-persona-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Domain Stroke Color Variants */
+.ds-persona.blue .ds-persona-avatar {
+  border-color: #0099ff;
+  box-shadow: 0 0 16px rgba(0, 153, 255, 0.35);
+}
+.ds-persona.pink .ds-persona-avatar {
+  border-color: #e9008c;
+  box-shadow: 0 0 16px rgba(233, 0, 140, 0.35);
+}
+.ds-persona.orange .ds-persona-avatar {
+  border-color: #f97316;
+  box-shadow: 0 0 16px rgba(249, 115, 22, 0.35);
+}
+.ds-persona.green .ds-persona-avatar,
+.ds-persona.emerald .ds-persona-avatar {
+  border-color: #1DCD9F;
+  box-shadow: 0 0 16px rgba(29, 205, 159, 0.35);
+}
+.ds-persona.yellow .ds-persona-avatar {
+  border-color: #f5b838;
+  box-shadow: 0 0 16px rgba(245, 184, 56, 0.35);
+}
+
+.ds-persona-name {
+  color: #ffffff;
+  font-family: 'Segoe UI', -apple-system, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin: 0 0 3px 0;
+  letter-spacing: 0.01em;
+}
+
+.ds-persona-role {
+  font-family: 'Segoe UI', -apple-system, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.ds-persona.blue .ds-persona-role { color: #60a5fa; }
+.ds-persona.pink .ds-persona-role { color: #f472b6; }
+.ds-persona.orange .ds-persona-role { color: #fb923c; }
+.ds-persona.green .ds-persona-role { color: #1DCD9F; }
+.ds-persona.yellow .ds-persona-role { color: #facc15; }
+
+/* ==========================================================================
+   ROADGP A4 LANDSCAPE SUB-PAGES & MULTIDISCIPLINARY DIAGRAM
+   ========================================================================== */
+.roadgp-case-study-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 30px 100px;
+}
+
+/* Sticky Sub-Page Navigation Index */
+.roadgp-subpage-nav {
+  position: sticky;
+  top: 55px;
+  z-index: 900;
+  background: rgba(14, 14, 17, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid #27272f;
+  border-radius: 10px;
+  padding: 10px 16px;
+  margin: 20px 0 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.roadgp-nav-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1DCD9F;
+  flex-shrink: 0;
+  margin-right: 6px;
+}
+
+.roadgp-nav-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.roadgp-nav-pill {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #999999;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: #18181c;
+  border: 1px solid #2b2b34;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.roadgp-nav-pill:hover,
+.roadgp-nav-pill.active {
+  color: #ffffff;
+  background: rgba(29, 205, 159, 0.15);
+  border-color: #1DCD9F;
+}
+
+/* A4 Landscape Sub-Page Card Container */
+.roadgp-subpage {
+  background: #0f0f13;
+  border: 1px solid #23232b;
+  border-radius: 14px;
+  padding: 40px 45px 50px;
+  margin-bottom: 55px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+  position: relative;
+}
+
+/* Subtitle and Green Line Underneath */
+.roadgp-subpage-header {
+  margin-bottom: 28px;
+}
+
+.roadgp-subpage-number {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1DCD9F;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.roadgp-subpage-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.01em;
+}
+
+.roadgp-subpage-divider {
+  height: 2px;
+  background-color: #1DCD9F; /* Green line underneath subtitle */
+  width: 100%;
+  margin: 12px 0 28px 0;
+  border: none;
+}
+
+/* --- Multidisciplinary Problem Ecosystem Diagram --- */
+.roadgp-diagram-board {
+  display: grid;
+  grid-template-columns: 1fr 340px 1fr;
+  grid-template-rows: auto auto;
+  gap: 22px;
+  align-items: stretch;
+  margin: 30px 0;
+  position: relative;
+}
+
+/* Central Problem Node */
+.diagram-hub-center {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  background: #141418;
+  border: 2px solid #33333e;
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  align-self: center;
+}
+
+.hub-core-pill {
+  display: inline-block;
+  background: rgba(239, 68, 68, 0.15);
+  border: 2px solid #ef4444;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+}
+
+.hub-defects-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+  margin: 12px 0 16px;
+}
+
+.hub-defect-thumb {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333;
+  background: #000;
+}
+
+.hub-defect-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hub-defect-label {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ddd;
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 2px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.hub-dilemma-box {
+  background: #1a1a20;
+  border-left: 3px solid #f5b838;
+  padding: 10px 12px;
+  border-radius: 0 6px 6px 0;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hub-dilemma-title {
+  color: #f5b838;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.hub-dilemma-box p {
+  color: #bbb;
+  font-size: 0.74rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.hub-tradeoffs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.hub-tradeoff-tag {
+  background: #1f1f26;
+  border: 1px solid #333;
+  color: #ccc;
+  font-size: 0.68rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Four Domain Quadrants */
+.diagram-quadrant {
+  background: #121216;
+  border: 1.5px solid #272732;
+  border-radius: 12px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.diagram-quadrant:hover {
+  transform: translateY(-2px);
+}
+
+/* Domain 1: Digital Twin & UX (Emerald Green) */
+.diagram-quadrant.digital-twin {
+  grid-column: 1;
+  grid-row: 1;
+  border-color: rgba(29, 205, 159, 0.4);
+}
+.diagram-quadrant.digital-twin:hover {
+  border-color: #1DCD9F;
+}
+
+/* Domain 2: Data Science (Blue) */
+.diagram-quadrant.data-science {
+  grid-column: 3;
+  grid-row: 1;
+  border-color: rgba(0, 153, 255, 0.4);
+}
+.diagram-quadrant.data-science:hover {
+  border-color: #0099ff;
+}
+
+/* Domain 3: Robotics (Pink) */
+.diagram-quadrant.robotics {
+  grid-column: 1;
+  grid-row: 2;
+  border-color: rgba(233, 0, 140, 0.4);
+}
+.diagram-quadrant.robotics:hover {
+  border-color: #e9008c;
+}
+
+/* Domain 4: Smart Materials (Orange) */
+.diagram-quadrant.smart-materials {
+  grid-column: 3;
+  grid-row: 2;
+  border-color: rgba(249, 115, 22, 0.4);
+}
+.diagram-quadrant.smart-materials:hover {
+  border-color: #f97316;
+}
+
+.quadrant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #202028;
+  padding-bottom: 10px;
+}
+
+.quadrant-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.diagram-quadrant.digital-twin .quadrant-title { color: #1DCD9F; }
+.diagram-quadrant.data-science .quadrant-title { color: #60a5fa; }
+.diagram-quadrant.robotics .quadrant-title { color: #f472b6; }
+.diagram-quadrant.smart-materials .quadrant-title { color: #fb923c; }
+
+.quadrant-owner {
+  font-size: 0.76rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.quadrant-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quadrant-media-preview {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #33333e;
+  background: #09090d;
+  margin: 6px 0 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  cursor: zoom-in;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quadrant-media-preview:hover {
+  border-color: #555566;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.quadrant-media-preview img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.25s ease;
+}
+
+.quadrant-media-preview:hover img {
+  transform: scale(1.015);
+}
+
+.quadrant-tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.quadrant-task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #ccc;
+  line-height: 1.35;
+}
+
+.quadrant-task-item i {
+  margin-top: 3px;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+}
+
+.diagram-quadrant.digital-twin .quadrant-task-item i { color: #1DCD9F; }
+.diagram-quadrant.data-science .quadrant-task-item i { color: #60a5fa; }
+.diagram-quadrant.robotics .quadrant-task-item i { color: #f472b6; }
+.diagram-quadrant.smart-materials .quadrant-task-item i { color: #fb923c; }
+
+/* Responsive adjustments for the diagram board */
+@media (max-width: 1080px) {
+  .roadgp-diagram-board {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .diagram-hub-center {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 10px;
+  }
+  .diagram-quadrant.digital-twin,
+  .diagram-quadrant.data-science,
+  .diagram-quadrant.robotics,
+  .diagram-quadrant.smart-materials {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* ==========================================================================
+   Image Lightbox Modal (For inspecting technical diagrams & photos in full size)
+   ========================================================================== */
+.image-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.image-lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-lightbox-content {
+  position: relative;
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: lightboxPop 0.25s ease forwards;
+}
+
+@keyframes lightboxPop {
+  from {
+    transform: scale(0.96);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.image-lightbox-img {
+  max-width: 90vw;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+  border: 1.5px solid #33333e;
+  background: #0d0d12;
+}
+
+.image-lightbox-caption {
+  color: #e2e8f0;
+  font-size: 0.92rem;
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 4px 10px;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.image-lightbox-close:hover {
+  color: #1DCD9F;
+  transform: scale(1.1);
+}
+
+
+

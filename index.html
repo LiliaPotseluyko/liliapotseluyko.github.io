@@ -84,84 +84,263 @@
       </section>
     </aside>
 
-    <main class="content">
+    <main class="content home-main-content">
 
-      <section class="portfolio-hero">
-        <div class="portfolio-hero-image">
-          <img src="images/hero3.png" alt="Digital twins, immersive environments, road infrastructure research and UX projects">
-        </div>
-        <div class="portfolio-hero-text">
-          <h1>Hi, I’m Lilia.</h1>
-          <p class="portfolio-tagline">I transform complex spatial data into intuitive digital experiences.</p>
-        </div>
-      </section>
-
-      <section id="about" class="portfolio-about">
+      <!-- TOP SECTION: Career Timeline (Left/Center) + 4 Cropped Image Tiles (Right) -->
+      <section class="home-top-section">
         
-        <p>
-          I’m Dr Lilia Potseluyko, a Cambridge-based researcher and digital engineer working at the intersection of spatial data, digital twins, computer graphics, AI and user experience. I turn complex technical information into practical, interactive tools that help people understand real-world systems, explore evidence and make better decisions.
-        </p>
-      </section>
+        <!-- Left & Center: Career Timeline -->
+        <div class="home-timeline-container">
+          <h2 class="home-section-title">
+            <i class="fas fa-timeline pink-icon" style="font-size: 1rem;"></i>
+            Career Milestones &amp; Trajectory
+          </h2>
+          
+          <div class="ds-timeline-track home-timeline-track">
+            
+            <!-- Milestone 1: 2017-2020 (Top, Past - Green) -->
+            <div class="ds-timeline-item top">
+              <div class="ds-timeline-content">
+                <span class="timeline-year-badge">2017 – 2020</span>
+                <h4>KTP Lead &amp; Assoc.</h4>
+                <p>Norscot &amp; Strathclyde • VR Configurator &amp; BIM</p>
+              </div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-dot past" title="Completed Milestone"></div>
+            </div>
 
-      <section id="featured-projects" class="featured-projects">
-        <div class="featured-projects-heading">
-          <h2>Featured Projects</h2>
-          <div class="carousel-controls">
-            <button type="button" class="carousel-button" id="featured-projects-prev" aria-label="Show previous featured project">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button type="button" class="carousel-button" id="featured-projects-next" aria-label="Show next featured project">
-              <i class="fas fa-chevron-right"></i>
-            </button>
+            <!-- Milestone 2: 2020-2022 (Bottom, Past - Green) -->
+            <div class="ds-timeline-item bottom">
+              <div class="ds-timeline-dot past" title="Completed Milestone"></div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-content">
+                <span class="timeline-year-badge">2020 – 2022</span>
+                <h4>Senior Consultant</h4>
+                <p>Nicander &amp; Teesside • Tunnel DT &amp; 20k IoT Assets</p>
+              </div>
+            </div>
+
+            <!-- Milestone 3: 2022-Present (Top, Now - Pink Pulsing) -->
+            <div class="ds-timeline-item top">
+              <div class="ds-timeline-content">
+                <span class="timeline-year-badge now">2022 – PRESENT</span>
+                <h4>Sr Industrial Researcher</h4>
+                <p>Cambridge &amp; Costain • RoadGP UI, Service Design &amp; Mapping</p>
+              </div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-dot now" title="Active Role"></div>
+            </div>
+
+            <!-- Milestone 4: Future Desired Roles (Bottom, Future - Yellow) -->
+            <div class="ds-timeline-item bottom">
+              <div class="ds-timeline-dot future" title="Desired Future Roles"></div>
+              <div class="ds-timeline-stem"></div>
+              <div class="ds-timeline-content">
+                <span class="timeline-year-badge future">FUTURE</span>
+                <h4>Desired Roles</h4>
+                <p>FDE • Product Owner • Service Design</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="featured-projects-carousel" id="featured-projects-carousel">
+        <!-- Right Column: 4 Cropped Image Tiles with Hover Zoom -->
+        <div class="home-photo-showcase">
+          
+          <!-- Floating Zoom Popover: Shows full uncropped bigger version on hover -->
+          <div class="photo-zoom-popover" id="photo-zoom-popover" aria-hidden="true">
+            <div class="photo-zoom-img-wrapper">
+              <img src="" alt="Enlarged view" id="photo-zoom-img">
+            </div>
+            <div class="photo-zoom-info">
+              <div class="photo-zoom-title-row">
+                <h4 class="photo-zoom-title" id="photo-zoom-title">Image Preview</h4>
+                <span class="photo-zoom-tag" id="photo-zoom-tag">Project</span>
+              </div>
+              <p class="photo-zoom-desc" id="photo-zoom-desc">Full high-resolution project view</p>
+            </div>
+          </div>
 
-          <!-- REUSABLE PROJECT TILE COMPONENT -->
-            <article class="featured-project-card">
-              <a href="projects/roadgp-interface.html" class="featured-project-card-link">
-                <div class="featured-project-image">
-                  <img src="images/RoadGP.png" alt="RoadGP product and user experience project">
-                </div>
-                <div class="featured-project-content">
-                  <h3>RoadGP — FDE &amp; Product Owner</h3>
-                </div>
-              </a>
-            </article>
+          <div class="home-photo-grid">
+            
+            <!-- Tile 1: BBC VR Broadcast (BBC Logo visible at top) -->
+            <div class="photo-tile tile-bbc" 
+                 data-zoom-src="images/me/bbc.png"
+                 data-zoom-title="BBC iPlayer Feature"
+                 data-zoom-tag="National Media"
+                 data-zoom-desc="Dr Lilia Potseluyko demonstrating the VR Road Digital Twin &amp; Pothole Simulation on BBC News."
+                 title="Hover to view larger">
+              <img src="images/me/bbc.png" alt="Dr Digital Roads featured on BBC iPlayer Breakfast with VR Road Digital Twin">
+              <span class="photo-tile-tag">BBC Feature</span>
+              <span class="photo-zoom-badge"><i class="fas fa-search-plus"></i></span>
+            </div>
 
-            <article class="featured-project-card">
-              <a href="projects/road-digital-twin.html" class="featured-project-card-link">
-                <div class="featured-project-image">
-                  <img src="images/MappingEngineering.png" alt="Mapping engineering project">
-                </div>
-                <div class="featured-project-content">
-                  <h3>Road Digital Twin &amp; CV Pipelines</h3>
-                </div>
-              </a>
-            </article>
+            <!-- Tile 2: Tunnel Digital Twin (Nicander Showcase) -->
+            <div class="photo-tile tile-tunnel" 
+                 data-zoom-src="images/me/Conference_Teesside Projects Showecasing.jpg"
+                 data-zoom-title="Tunnel Digital Twin Showcase"
+                 data-zoom-tag="Industry Innovation"
+                 data-zoom-desc="Presenting the 3D tunnel simulator, SCADA monitoring to industry partners and transport authorities."
+                 title="Hover to view larger">
+              <img src="images/me/Conference_Teesside Projects Showecasing.jpg" alt="Presenting Nicander Tunnel Digital Twin to industry stakeholders">
+              <span class="photo-tile-tag">Tunnel Digital Twin</span>
+              <span class="photo-zoom-badge"><i class="fas fa-search-plus"></i></span>
+            </div>
 
-            <article class="featured-project-card">
-              <a href="projects/road-digital-twin.html#cyclists" class="featured-project-card-link">
-                <div class="featured-project-image">
-                  <img src="images/Cyclist_Icon.png" alt="Immersive cycling safety project">
-                </div>
-                <div class="featured-project-content">
-                  <h3>Immersive Cycling Safety VR</h3>
-                </div>
-              </a>
-            </article>
+            <!-- Tile 3: VR Homes Simulation Testing (Norscot) -->
+            <div class="photo-tile tile-vr-homes" 
+                 data-zoom-src="images/me/Conference_2019.jpg"
+                 data-zoom-title="VR Homes Simulation &amp; Usability"
+                 data-zoom-tag="KTP Award Finalist"
+                 data-zoom-desc="1:1 architectural VR configurator and ergonomics testing with timber kit homes at Norscot Joinery."
+                 title="Hover to view larger">
+              <img src="images/me/Conference_2019.jpg" alt="Conducting immersive VR architectural testing at Norscot">
+              <span class="photo-tile-tag">VR Homes Simulation</span>
+              <span class="photo-zoom-badge"><i class="fas fa-search-plus"></i></span>
+            </div>
 
-            <article class="featured-project-card">
-              <a href="projects/tunnel-digital-twin.html" class="featured-project-card-link">
-                <div class="featured-project-image">
-                  <img src="images/Strategy3.png" alt="National Highways digital twin prototyping project">
-                </div>
-                <div class="featured-project-content">
-                  <h3>Tunnel DT &amp; UX Automation</h3>
-                </div>
-              </a>
-            </article>
+            <!-- Tile 4: Cambridge Research Portrait -->
+            <div class="photo-tile tile-cambridge" 
+                 data-zoom-src="images/me/Screenshot 2026-10-06 130002.png"
+                 data-zoom-title="University of Cambridge"
+                 data-zoom-tag="Academic Leadership"
+                 data-zoom-desc="Senior Industrial Researcher leading the Mobile Mapping Research Cluster at Cambridge Department of Engineering."
+                 title="Hover to view larger">
+              <img src="images/me/Screenshot 2026-10-06 1300021.png" alt="Dr Lilia Potseluyko at University of Cambridge Department of Engineering">
+              <span class="photo-tile-tag">Univ. of Cambridge</span>
+              <span class="photo-zoom-badge"><i class="fas fa-search-plus"></i></span>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- MIDDLE SECTION: Bio using Long Description Component -->
+      <section class="home-bio-wrapper">
+        <div class="ds-long-description">
+          <div class="ds-long-desc-header">Professional Profile &amp; Value Proposition</div>
+          <div class="ds-long-desc-body">
+            
+            <!-- Section 1: Executive Summary -->
+            <div class="ds-long-desc-section">
+              <div class="ds-long-desc-title">Executive Summary</div>
+              <p class="ds-long-desc-text">
+                Senior Industrial Researcher &amp; Digital Engineer at the University of Cambridge with 8+ years translating spatial data into pipelines, into intuitive products and measurable business outcomes.
+              </p>
+            </div>
+
+            <div class="ds-long-desc-divider"></div>
+
+            <!-- Section 2: Role Applicability -->
+            <div class="ds-long-desc-section">
+              <div class="ds-long-desc-title">Target Role Applicability:</div>
+              <p class="ds-long-desc-text">
+                • <strong>Forward Deployed Engineer (FDE):</strong> Client-embedded technical discovery, system architecture.<br>
+                • <strong>Product Owner / PM:</strong> User research, multidisciplinary collaboration, product strategy.<br>
+                • <strong>Service Designer:</strong> Automated infrastructure decision support.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- LOWER SECTION: Featured Projects with Short Description / Label Badges -->
+      <section class="home-featured-section">
+        <div class="featured-header-row">
+          <h2 class="home-section-title">
+            <i class="fas fa-layer-group pink-icon" style="font-size: 1rem;"></i>
+            Featured Projects
+          </h2>
+          <div class="ds-skill-legend">
+            <span class="legend-item"><span class="legend-dot blue"></span> Technical Skills</span>
+            <span class="legend-item"><span class="legend-dot pink"></span> Leadership</span>
+            <span class="legend-item"><span class="legend-dot yellow"></span> Product &amp; UX</span>
+          </div>
+        </div>
+        
+        <div class="home-featured-grid">
+
+          <!-- Card 1: RoadGP -->
+          <article class="featured-tile">
+            <a href="projects/roadgp-interface.html" class="featured-tile-link">
+              <div class="featured-tile-header">
+                <h3>RoadGP</h3>
+                <span class="featured-role-meta">Decision Support Platform</span>
+              </div>
+              <div class="ds-short-notes-group featured-tile-pills">
+                <!-- Yellow: Product & UX -->
+                <span class="ds-short-note yellow">Product Owner</span>
+                <span class="ds-short-note yellow">Service Design</span>
+                
+                <span class="ds-short-note yellow">UX &amp; Usability</span>
+                <!-- Blue: Technical Skills -->
+                <span class="ds-short-note blue">Forward Deployed Eng</span>
+                <span class="ds-short-note blue">System Architecture</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 2: CAMHighways -->
+          <article class="featured-tile">
+            <a href="projects/road-digital-twin.html" class="featured-tile-link">
+              <div class="featured-tile-header">
+                <h3>CAMHighways</h3>
+                <span class="featured-role-meta">National Road Infrastructure</span>
+              </div>
+              <div class="ds-short-notes-group featured-tile-pills">
+                <!-- Blue: Technical Skills -->
+                <span class="ds-short-note blue">Computer Vision</span>
+                <span class="ds-short-note blue">3D Reconstruction</span>
+                <span class="ds-short-note blue">Multimodal Datasets</span>
+                <span class="ds-short-note blue">Semantic Information</span>
+                <!-- Pink: Leadership -->
+                <span class="ds-short-note pink">Research Supervision</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 3: Tunnel Digital Twin -->
+          <article class="featured-tile">
+            <a href="projects/tunnel-digital-twin.html" class="featured-tile-link">
+              <div class="featured-tile-header">
+                <h3>Tunnel Digital Twin</h3>
+                <span class="featured-role-meta">Control Room &amp; IoT Operations</span>
+              </div>
+              <div class="ds-short-notes-group featured-tile-pills">
+                <!-- Yellow: Product & UX -->
+                <span class="ds-short-note yellow">Service Design</span>
+                <span class="ds-short-note yellow">UX Automation</span>
+                <!-- Blue: Technical Skills -->
+                <span class="ds-short-note blue">BIM, IoT, Data Integration</span>
+                <!-- Pink: Leadership -->
+                <span class="ds-short-note pink">Industry-Ready Delivery</span>
+                <span class="ds-short-note pink">Agile Planning</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 4: VR Homes -->
+          <article class="featured-tile">
+            <a href="projects/bim-immersive-simulation.html" class="featured-tile-link">
+              <div class="featured-tile-header">
+                <h3>VR Homes</h3>
+                <span class="featured-role-meta">Interactive BIM Configurator</span>
+              </div>
+              <div class="ds-short-notes-group featured-tile-pills">
+                <!-- Yellow: Product & UX -->
+                <span class="ds-short-note yellow">Product Discovery</span>
+                <!-- Blue: Technical Skills -->
+                <span class="ds-short-note blue">BIM Automation</span>
+                <span class="ds-short-note blue">VR Simulation</span>
+                <!-- Pink: Leadership -->
+                <span class="ds-short-note pink">Change Management</span>
+                <span class="ds-short-note pink">Supervision</span>
+              </div>
+            </a>
+          </article>
 
         </div>
       </section>
@@ -169,26 +348,97 @@
     </main>
   </div>
 
+  <!-- Interactive Hover Zoom Script -->
   <script>
-    const featuredCarousel = document.getElementById("featured-projects-carousel");
-    const featuredPreviousButton = document.getElementById("featured-projects-prev");
-    const featuredNextButton = document.getElementById("featured-projects-next");
+    (function() {
+      function initPhotoZoom() {
+        const zoomPopover = document.getElementById('photo-zoom-popover');
+        const zoomImg = document.getElementById('photo-zoom-img');
+        const zoomTitle = document.getElementById('photo-zoom-title');
+        const zoomDesc = document.getElementById('photo-zoom-desc');
+        const zoomTag = document.getElementById('photo-zoom-tag');
+        const photoTiles = document.querySelectorAll('.photo-tile');
 
-    function scrollFeaturedProjects(direction) {
-      const firstCard = featuredCarousel.querySelector(".featured-project-card");
-      if (!firstCard) return;
+        if (!zoomPopover || !photoTiles.length) return;
 
-      const cardWidth = firstCard.getBoundingClientRect().width;
-      const gap = 24;
+        function updatePosition(tile) {
+          const rect = tile.getBoundingClientRect();
+          const popoverWidth = Math.min(520, window.innerWidth * 0.9);
 
-      featuredCarousel.scrollBy({
-        left: direction * (cardWidth + gap),
-        behavior: "smooth"
-      });
-    }
+          if (window.innerWidth <= 1024) {
+            zoomPopover.style.left = '50%';
+            zoomPopover.style.top = '50%';
+            zoomPopover.style.transform = 'translate(-50%, -50%)';
+          } else {
+            // Position to the left of the hovered tile
+            let left = rect.left - popoverWidth - 20;
+            if (left < 15) {
+              // If not enough room on the left, position to the right or center
+              left = Math.max(15, rect.right + 20);
+              if (left + popoverWidth > window.innerWidth) {
+                left = Math.max(15, (window.innerWidth - popoverWidth) / 2);
+              }
+            }
 
-    featuredPreviousButton.addEventListener("click", () => scrollFeaturedProjects(-1));
-    featuredNextButton.addEventListener("click", () => scrollFeaturedProjects(1));
+            let top = rect.top + (rect.height / 2) - 180;
+            if (top < 20) top = 20;
+            if (top + 420 > window.innerHeight) top = Math.max(20, window.innerHeight - 440);
+
+            zoomPopover.style.left = left + 'px';
+            zoomPopover.style.top = top + 'px';
+            zoomPopover.style.transform = 'none';
+          }
+        }
+
+        photoTiles.forEach(tile => {
+          const showZoom = () => {
+            const src = tile.getAttribute('data-zoom-src');
+            const title = tile.getAttribute('data-zoom-title');
+            const desc = tile.getAttribute('data-zoom-desc');
+            const tag = tile.getAttribute('data-zoom-tag');
+
+            if (src && zoomImg) zoomImg.src = src;
+            if (title && zoomTitle) zoomTitle.textContent = title;
+            if (desc && zoomDesc) zoomDesc.textContent = desc;
+            if (tag && zoomTag) zoomTag.textContent = tag;
+
+            updatePosition(tile);
+            zoomPopover.classList.add('active');
+          };
+
+          const hideZoom = () => {
+            zoomPopover.classList.remove('active');
+          };
+
+          // Mouse Hover (Desktop)
+          tile.addEventListener('mouseenter', showZoom);
+          tile.addEventListener('mouseleave', hideZoom);
+
+          // Click / Tap (Mobile & Desktop toggle)
+          tile.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (zoomPopover.classList.contains('active')) {
+              hideZoom();
+            } else {
+              showZoom();
+            }
+          });
+        });
+
+        // Close on tap / click outside
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.photo-tile') && !e.target.closest('.photo-zoom-popover')) {
+            zoomPopover.classList.remove('active');
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPhotoZoom);
+      } else {
+        initPhotoZoom();
+      }
+    })();
   </script>
 
 </body>

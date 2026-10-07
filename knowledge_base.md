@@ -1,22 +1,31 @@
 # Dr Lilia Potseluyko — Comprehensive Knowledge Base & Grounding Corpus
 
-> **Purpose:** This document is the verified single source of truth (SSOT) covering Dr Lilia Potseluyko's professional background, project achievements, technical competencies, academic publications, and leadership credentials. It is specifically structured for semantic retrieval by Google Cloud Vertex AI Search and RAG agents.
+> **Purpose:** This document is the verified single source of truth (SSOT) covering Dr Lilia Potseluyko's professional background, project achievements, technical competencies, academic publications, and leadership credentials. It is synthesized directly from her primary portfolio evidence matrix and structured for semantic retrieval by Google Cloud Vertex AI Search, Cloud Run LLMs, and RAG agents.
 
 ---
 
-## 1. Professional Overview & Target Roles
+## 1. Professional Overview & Core Value Proposition
 
 ### Executive Summary
-Dr Lilia Potseluyko is a Cambridge-based digital engineer, product strategist, and researcher operating at the convergence of **spatial computing, digital twins, artificial intelligence (computer vision), and human-centered user experience (UX)**. She specializes in translating dense, high-friction engineering data (LiDAR point clouds, SCADA telemetry, BIM models, and computer vision defect classifications) into intuitive digital products, service architectures, and decision-support tools.
+Dr Lilia Potseluyko is a Cambridge-based Senior Industrial Researcher, Digital Engineer, and Product Strategist with **8+ years of hands-on experience** operating at the convergence of **spatial data, digital twins, computer graphics, artificial intelligence (computer vision), and human-centered user experience (UX)**. 
 
-### Target Roles & Core Value Alignment
-1. **Product Owner (PO):** Proven record owning end-to-end product lifecycles for complex spatial interfaces (e.g., RoadGP), translating user friction into prioritized sprint backlogs, leading Agile ceremonies, and steering cross-functional teams of civil engineers, data scientists, and developers.
-2. **Product Manager (PM / Technical PM):** Deep experience commercializing deep-tech research into deployable enterprise products. Generated £70k/yr recurring labor cost savings for industrial partners, secured £53k commercial contracts, and delivered an Innovate UK "Outstanding" graded initiative.
-3. **Service Designer:** Holistic systems thinker adept at mapping end-to-end user journeys and service blueprints across complex public and private infrastructure ecosystems (National Highways, UK Department for Transport, regional maintenance contractors).
-4. **Forward Deployed Engineer (FDE):** Technical operator embedded directly with clients and stakeholders to architect, prototype, and deploy custom pipelines combining Unreal Engine 5, Python Dash/Flask, GIS/LiDAR point clouds, and real-time sensor streams.
+She specializes in translating dense, high-friction engineering data (LiDAR point clouds, SCADA sensor telemetry, BIM datasets, and computer vision defect classifications) into intuitive digital products, service architectures, and decision-support tools.
+
+### Target Roles & Core Competency Alignment
+1. **Product Owner (PO) & Product Manager (PM):** 
+   - Proven record leading end-to-end product discovery and delivery for enterprise spatial platforms (RoadGP, Norscot VR configurator).
+   - Translates complex stakeholder needs into user personas, opportunity solution trees, and prioritized backlogs.
+   - Proven commercial impact: reduced visualization turnaround from 80h to 4.5h, generated £70,000/year in labor savings, and secured £53,000 commercial contracts.
+2. **Service Designer & UX Lead:**
+   - Holistic systems thinker mapping end-to-end user journeys and service blueprints across complex public infrastructure (National Highways, Trafikverket, UK Department for Transport).
+   - Expert in qualitative user research (Dovetail), structured usability testing, think-aloud protocols, and control room operator cognitive ergonomics.
+3. **Forward Deployed Engineer (FDE) & Technical Solutions Architect:**
+   - Technical practitioner embedded directly with enterprise clients to architect, prototype, and deploy custom pipelines combining Unreal Engine 5, Python Dash/Flask, GIS/LiDAR point clouds, and REST API microservices.
+4. **Core Software Engineering & Computer Vision Lead:**
+   - Mathematical coordinate transformation algorithms, procedural geometry generation (Houdini, Unreal C++), point cloud segmentation, and multimodal sensor integration (LiDAR, 360° imagery, GPR).
 
 ### Key Contact & Affiliations
-- **Current Affiliation:** Research Associate, Digital Roads of the Future (DRF), Department of Engineering, University of Cambridge
+- **Current Role:** Senior Industrial Researcher – Digital Twins, University of Cambridge (in collaboration with Costain, National Highways, and UK Department for Transport)
 - **Location:** Cambridge, United Kingdom
 - **Email (University):** lp625@cam.ac.uk
 - **Email (Personal):** lilia.potseluyko@gmail.com
@@ -29,132 +38,205 @@ Dr Lilia Potseluyko is a Cambridge-based digital engineer, product strategist, a
 
 ---
 
-## 2. Professional Experience & Leadership History
+## 2. Professional Employment History
 
-### Research Associate & Digital Engineer — University of Cambridge
-**Department of Engineering & Digital Roads of the Future (DRF)** | *2022 – Present* | Cambridge, UK
-- **Product & UX Leadership (RoadGP):** Served as Product Owner for RoadGP, leading user research and dashboard design linking automated ML pavement defect detections with road maintenance contractor workflows. Reduced verification turnaround from 15 days to under 4 days.
-- **National Highways Digital Twin Collaboration:** Technical lead on procedural 3D corridor reconstruction and dynamic asset updating from mobile mapping surveys across 40+ km of UK motorways.
-- **Department for Transport (DfT) Simulation:** Spearheaded development of 24 dynamic virtual reality London cycling environments in Unreal Engine 5, collecting behavioral data across 3,000+ nationwide participants.
-- **Research Cluster Leadership:** Led the Cambridge Mobile Mapping research cluster, chairing weekly technical knowledge exchange clinics and mentoring researchers on reality data processing and Unreal Engine C++ pipelines.
-
-### Solutions Architect & KTP Researcher — Nicander Ltd & Teesside University
-**Intelligent Transport Systems & SCADA Integration** | *2020 – 2021* | UK
-- **Tunnel Digital Twin:** Spearheaded conversion of architectural BIM datasets and industrial SCADA telemetry into a real-time 3D spatial dashboard for tunnel operators.
-- **Operator Ergonomics:** Replaced legacy tabular alarm lists with spatial alert markers, enabling sub-second emergency hazard pinpointing during simulated fire and blockage incidents.
-- **Automation Tools:** Engineered automated 2D linear schematic map generators directly from vector alignment coordinates.
-
-### Lead Researcher & Product Manager (PhD / KTP Associate) — Norscot Joinery Ltd
-**Innovate UK Knowledge Transfer Partnership & Teesside University** | *2017 – 2020* | Inverness & Middlesbrough, UK
-- **Mass-Customization Platform:** Conceived, designed, and deployed an interactive VR configurator in Unreal Engine 4 allowing prospective home buyers to customize sustainable timber-frame houses at 1:1 scale.
-- **Commercial Impact:** Saved Norscot approximately £70,000 annually by replacing outsourced CGI with an automated in-house BIM-to-VR pipeline; won a £53,000 commercial contract directly from client VR immersion.
-- **Honors & Recognition:** Awarded "Innovator of the Future" Commendation at the Scottish Knowledge Exchange Awards 2020; project received an "Outstanding KTP Grade" from Innovate UK.
+| # | Period | Employer / Institution | Role | Summary of Responsibilities |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | **2022 – Present** | **University of Cambridge** / Costain / National Highways / DfT | **Senior Industrial Researcher – Digital Twins** | Led the design and development of the RoadGP digital twin, AI-assisted decision-support platform, CAMHighways dataset, and DfT cycling simulation. Lead of Mobile Mapping Research Cluster. |
+| **2** | **2020 – 2022** | **Nicander Ltd** / Teesside University | **Senior Consultant – Digital Twins & Schematic Mapping** | Led innovation projects for Trafikverket (Swedish Transport Administration). Developed mathematical coordinate transformations for ~20,000 IoT tunnel assets and interactive 3D digital twins. Managed multidisciplinary team (CAD, game dev, data science). |
+| **3** | **2017 – 2020** | **Norscot Joinery Ltd** / University of Strathclyde | **Knowledge Transfer Associate – Immersive Construction Data** | Led company transition from AutoCAD to BIM-enabled VR workflows. Developed interactive 1:1 house configurator in Unreal Engine. Awarded Outstanding KTP grade; Scottish Innovator of the Future finalist. |
+| **4** | **2017** | **Bensons for Beds** | **Sales Consultant** | Advised customers using digital comfort assessment tools, negotiated sales, processed finance agreements, and consistently achieved sales targets. |
+| **5** | **2016** | **British Gas – Hive** | **Technical Advisor** | Provided technical support for connected-home IoT products, troubleshooting app and device issues while translating technical concepts into clear customer guidance. |
 
 ---
 
-## 3. Core Project Pillars
+## 3. Detailed Evidence Matrix & Key Accomplishments
 
-### Pillar 1: RoadGP Interface — Product & UX
-- **Focus:** Forward Deployed Engineering, Product Ownership, Human-in-the-Loop AI
-- **Problem Solved:** Civil engineering inspectors were overwhelmed by raw computer vision bounding boxes and manual spreadsheets.
-- **Solution:** An interactive Python Dash/Flask operational dashboard providing synchronized GIS mapping, high-speed pavement video, 3D surface elevation meshes, and one-click feedback loops to retrain defect ML models.
-- **Key Outcome:** 70% reduction in inspection cycle time; zero-training onboarding for civil engineering staff.
+### Item 1: Leading Technical Discovery with Customers (Road Safety Grant & Innovation Strategy)
+- **Context:** UK research fellowship proposal in collaboration with National Highways and iRAP (International Road Assessment Programme).
+- **Activities:** Planned and coordinated stakeholder engagement schedules across senior technical leaders. Designed structured discovery interviews and workshop questions to elicit operational challenges, future requirements, and evidence gaps.
+- **Architectural Contribution:** Synthesized findings into a conceptual system architecture integrating multimodal data, 3D computer vision, AI-assisted decision support, and dynamic digital twins to rapidly evaluate road safety countermeasures and evidence-based investment decisions.
+- **Outputs:** Successfully submitted grant application, innovation roadmap, and work package coordination across academic and industry partners.
 
-### Pillar 2: Road Digital Twin 3D Reconstructions & Synthetic Simulation
-- **Focus:** Transferable Core Engineering: Computer Vision Pipelines, Procedural Geometry & Multidisciplinary Research Collaboration
-- **Problem Solved:** CAD tools fail to handle dense point cloud scale, leaving engineers without real-time spatial updating.
-- **Solution:** Automated procedural pipelines in Houdini and Unreal Engine 5 converting mobile LiDAR into continuous textured road meshes and dynamic synthetic environments.
-- **Key Outcome:** CAMHighways open benchmark dataset (40+ km); 3,000+ participant behavioral study for UK Department for Transport.
+### Item 2: Information Delivery Manual (IDM) for Infrastructure Workflows
+- **Context:** Research on National Highways road maintenance operational workflows.
+- **Activities:** Led development and coordination of the official Information Delivery Manual (IDM), consolidating contributions from multiple researchers into a coherent description of maintenance processes, information exchanges, and data handoffs.
+- **Outputs:** Standardized process specification document for National Highways.
 
-### Pillar 3: Nicander Work — Tunnel Digital Twin & Control Room Operator UI
-- **Focus:** Service Design, UX Automation, SCADA/BIM Integration
-- **Problem Solved:** Cognitive overload for tunnel operators navigating hundreds of disconnected CCTV feeds and tabular alarm lists during emergencies.
-- **Solution:** Lightweight 60 FPS real-time 3D spatial twin linking live camera cones, ventilation airflow, and fire barrier states.
-- **Key Outcome:** Operators located incident epicenters over 50% faster than traditional tabular lists.
+### Item 3: System Architecture Design for Digital Twin Microservices
+- **Context:** Digital twin platform integration at Cambridge.
+- **Activities:** Designed the microservices system architecture bringing together research outputs from computer vision, robotics, geospatial analysis, and data science into a modular, scalable platform.
+- **Outputs:** Integrated prototype and academic publications.
 
-### Pillar 4: Norscot Work — BIM & Immersive VR Mass-Customization Configurator
-- **Focus:** Product Management, Technical Discovery, Change Management & Digital Transformation (DfMA)
-- **Problem Solved:** Protracted sales cycles and costly architectural redraws due to client misinterpretation of 2D house plans.
-- **Solution:** 1:1 scale VR configurator in Unreal Engine exposing Revit BIM metadata and enforcing structural timber manufacturing rules in real time.
-- **Key Outcome:** £70,000/yr labor savings, direct £53,000 contract win, published in *Automation in Construction*.
+### Item 4: Road Asset Mapping & CAMHighways Dataset Preparation
+- **Context:** CAMHighways dataset surveying over 40 km of UK motorways.
+- **Activities:** Processed multimodal data captured at traffic speed using Trimble MX9 scanners (LiDAR point clouds, 360° high-speed imagery, integrated ground-penetrating radar / GPR). Applied computer vision algorithms to segment point cloud clusters and classify road assets and surface defects.
+- **Outputs:** Published open-access benchmark dataset on ScienceDirect and peer-reviewed paper (2024).
 
-### Pillar 5: Creative Spatial Systems & 3D Engineering Portfolio
-- **Focus:** Deep Technical 3D Craft, Hard-Surface Modeling, Environmental Lighting
-- **Domains:** Subsea ROV robotics (articulated rigging & caustics), aerial UAV pipeline surveillance payloads, marine mooring simulations, and architectural CGI (V-Ray/3ds Max).
+### Item 5: Hybrid 3D Reconstruction & Procedural Asset Modeling
+- **Context:** Road surface and asset geometry generation from mobile mapping.
+- **Activities:** Developed hybrid 3D reconstruction workflows for road surfaces and traffic signs using parameters derived from computer vision outputs. Built parametric and procedural models based on extracted geometric and semantic features in Houdini and Unreal Engine.
+- **Outputs:** ScienceDirect publication, public GitHub repository ([github.com/LiliaPotseluyko/Traffic_Sign_Script](https://github.com/LiliaPotseluyko/Traffic_Sign_Script)), and online tutorials.
+
+### Item 6: Immersive Digital Twins & Spatial Data Visualization
+- **Context:** Cambridge Digital Roads prototyping.
+- **Activities:** Integrated reconstructed multimodal datasets into Unreal Engine 5 for VR and desktop inspection. Built walking, driving, and flying navigation modes visualizing LiDAR, 360° imagery, GPR, and subsurface road layers. Exported models to construction software for downstream civil engineering use.
+- **Outputs:** Interactive stakeholder prototypes demonstrated to National Highways; featured on **BBC News** (International Pothole Day 2023).
+
+### Item 7: Mapping & Geospatial Engineering (QGIS)
+- **Context:** Spatial data prep for road asset and defect reconstruction.
+- **Activities:** Extensively utilized QGIS to process, analyze, and visualize geospatial road alignments. Combined LiDAR, aerial imagery, and asset databases into tiled road sections to manage massive datasets, supporting point cloud segmentation and high-resolution 3D asset generation.
+- **Outputs:** Scalable geospatial tiling framework and pipeline.
+
+### Item 8: Digital Twin Architecture & Web Systems (Spatial Streaming)
+- **Context:** Real-time web and game engine connectivity.
+- **Activities:** Connected Unreal Engine digital twin prototypes with geospatial databases and mapping services via REST APIs. Designed workflows enabling location-based streaming of 3D road tiles, dynamically loading reconstructed segments based on the user's viewport coordinates.
+- **Outputs:** Dynamic geospatial web-streaming framework.
+
+### Item 9: Low-Cost Sensor Reconstruction (Local Authority Project)
+- **Context:** Department for Transport Local Authority Dataset project.
+- **Activities:** Investigated computer vision and photogrammetry workflows to achieve high-accuracy 3D reconstruction from low-cost camera and IMU sensors deployed by local councils. Applied OpenCV, PyTorch, and AI-based image enhancement techniques prior to RealityCapture reconstruction, evaluating camera localization, feature matching, and mesh fidelity.
+- **Outputs:** Reproducible low-cost spatial reconstruction framework.
+
+### Item 10: Cyclist Safety Research & London Simulation (DfT)
+- **Context:** Department for Transport transport planning research.
+- **Activities:** Designed and developed an immersive cyclist safety simulation platform in Unreal Engine. Deployed across a nationwide stated-preference study with **over 4,000 UK participants** to evaluate behavioral responses to alternative road and cycle lane infrastructure designs.
+- **Outputs:** Peer-reviewed journal paper (2026), official DfT research report, and direct transport policy guidance for London cycling infrastructure.
+
+### Item 11: RoadGP AI-Assisted Decision Support Platform
+- **Context:** National Highways road maintenance decision platform.
+- **Role:** Forward Deployed Engineer & Product Owner (Lead UX Researcher & Product Designer).
+- **Activities:** RoadGP combines machine learning defect detection, historical maintenance records, and national maintenance standards to recommend diagnoses, repair treatments, costs, and intervention priorities. Designed the sequential decision-support workflow, information architecture, interaction flows, and UI components.
+- **Outputs:** Interactive Python Dash / React prototypes, user evaluation reports, and policy-influencing demonstration.
+
+### Item 12: Interface Design Tools & AI-Assisted UX Methodology
+- **Certifications:** Google UX Design Professional Certificate & Advanced Figma training (Udemy).
+- **Novel Methodology:** Pioneered an AI-assisted end-to-end UX workflow combining research, design, and front-end engineering:
+  1. Organizes and analyzes user interview transcripts in **Dovetail**, creating a searchable knowledge base.
+  2. Extracts personas, user journeys, information architecture, and workflow requirements.
+  3. Translates insights into paper sketches and Figma design systems.
+  4. Leverages AI coding tools (Figma Make, Codex, GitHub Copilot, coding agents) to rapidly generate React front-end prototypes.
+  5. Manually refines code for interaction ergonomics, visual hierarchy, responsiveness, and performance.
+
+### Item 13: Structured Usability Testing & Think-Aloud Protocols
+- **Activities:** Designed and conducted structured usability evaluations for digital twins and decision-support systems. Developed test plans, interview guides, and task-based scripts. Facilitated qualitative interviews, think-aloud sessions, and prototype walk-throughs with highway engineers, inspectors, and contractors.
+- **Outputs:** Prioritized design recommendations directly driving sprint iterations.
+
+### Item 14: Research Leadership & Project Delivery
+- **Context:** Local Authority Dataset project for the UK Department for Transport.
+- **Activities:** Defined project scope, aligned expectations between researchers, senior university leadership, and government stakeholders. Coordinated survey planning, equipment needs, team contributions, and logistics into an organized delivery schedule.
+
+### Item 15: Academic Publications & Scientific Contributions
+1. **CAMHighways: The Cambridge Highways Dataset (2024)** — *Data in Brief, Elsevier*. [DOI: 10.1016/j.dib.2024.110687](https://www.sciencedirect.com/science/article/pii/S1474034624006876)
+2. **Review of Multimodal Data for Road Maintenance (2024)** — *University of Cambridge Repository*. [Link](https://www.repository.cam.ac.uk/items/f6e068b1-71c0-4530-a682-e82e19b01b09)
+3. **Game-Like Interactive Environment Using BIM-Based Virtual Reality for the Timber Frame Self-Build Housing Sector (2022)** — *Automation in Construction, Elsevier*. [DOI: 10.1016/j.autcon.2022.104369](https://www.sciencedirect.com/science/article/pii/S0926580522003697)
+4. **RoadGP Decision Support Platform for Highways (2026)** — *TRA Conference Paper (Transport Research Arena)*.
+5. **A Digital-Twin Video Experiment for Modelling Perceived Cycling Experience: An England-Based Case (2026)** — *Peer-reviewed journal paper (under review)*.
+6. **Adaptive 3D Pavement Model (ASCE, in preparation)** — Semi-automatic procedural pipeline for dynamically adaptive textured meshes.
+7. **High-Fidelity 3D Traffic Sign Reconstruction (submitted)** — Hybrid mobile mapping and vision pipeline.
+
+### Item 16: Research Leadership, Mentoring & Supervisions
+- **Lead, Mobile Mapping Research Group (since 2023):** Coordinated technical outputs, held weekly knowledge clinics.
+- **PhD Co-Supervision:** Supervised doctoral students on adaptive pavement mesh algorithms and point cloud segmentation.
+- **Project Governance:** Oversaw dataset preparation and Information Delivery Manual contributions.
+
+### Item 17: Scientific Communication, Keynotes & Public Engagement
+- **Keynote Speaker:** DFBI (Design for Building Information), Delft (2025).
+- **Workshop Leader:** CONVR 2023 (Florence, Italy) — Game engines for BIM and digital twins.
+- **National Media Feature:** BBC News broadcast for International Pothole Day (2023).
+- **Podcasts:** Featured guest on *The Naked Scientists* podcast discussing road digital twins and infrastructure AI.
+- **Industry Demonstrations:** Highways UK, National Highways stakeholder clinics, Digital Twin Hub (DT Hub).
+- **STEM Outreach:** Demonstrated VR prototypes at Caithness science fairs engaging 200+ school students.
+
+### Item 18: Nicander Ltd & Trafikverket Swedish Tunnel Infrastructure (2020–2022)
+- **The Challenge:** A new 12 km Swedish highway tunnel containing ~20,000 IoT-enabled sensors (cameras, ventilation, air quality, barriers) required operational schematic monitoring. Transferring asset locations from geographic maps into the schematic interface was slow and manual.
+- **Algorithmic Solution:** Developed a mathematical coordinate transformation formula and dynamic mapping approach that automated the conversion of GIS coordinates into linear 2D schematic layouts.
+- **Business Impact:** Trafikverket adopted Lilia's automated solution over their in-house alternative. Nicander expanded its engineering team and secured ongoing investment in their digital twin product line.
+- **Multidisciplinary Leadership:** Managed a team comprising a CAD specialist, game developer, and data scientist using Agile planning and DevOps.
+
+### Item 19: Norscot Joinery KTP & Offsite Construction Mass-Customization (2017–2020)
+- **The Challenge:** Timber frame self-build housing sales were slowed by customer confusion over 2D drawings and lengthy bespoke architectural redraws (taking ~80 hours per project).
+- **The Solution:** Developed interoperable BIM-to-VR workflows and an interactive 1:1 scale house configurator in Unreal Engine 4 and WebVR.
+- **Measurable Impact:** Reduced visualization preparation turnaround from **80 hours to 4.5 hours**; increased sales conversion rates; generated **£70,000/year** in labor savings; won a **£53,000 commercial contract** directly from VR immersion.
+- **Recognition:** Outstanding KTP Grade from Innovate UK; Finalist for **Scottish Innovator of the Future Award 2020**. Led company-wide transition from AutoCAD to BIM.
+
+### Item 20: Metadata & Requirements from Confirm Asset Management System
+- **Activities:** Mined and structured massive historical defect records and maintenance standards from **Confirm** (the enterprise asset management system holding National Highways' defect history).
+- **Outputs:** Extracted the core knowledge base, defect taxonomy, and information architecture that formed the foundational requirements for the RoadGP decision-support platform.
+
+### Item 21: Requirements Engineering from Operator Troubleshooting Logs
+- **Activities:** Analyzed user troubleshooting logs and operational incident reports at Nicander to derive functional requirements for the 3D tunnel digital twin.
+- **Outputs:** Validated feature requirements directly addressing operator pain points during critical tunnel alarms.
 
 ---
 
-## 4. Academic Publications & Thought Leadership
+## 4. Comprehensive Skill Taxonomy & Tag Index
 
-### Peer-Reviewed Publications
-1. **CAMHighways: The Cambridge Highways Dataset (2024)**  
-   *Data in Brief, Elsevier.* (Open access benchmark surveying 40+ km of UK motorways for digital twin automation).  
-   [DOI: 10.1016/j.dib.2024.110687](https://www.sciencedirect.com/science/article/pii/S1474034624006876)
-2. **Game-Like Interactive Environment Using BIM-Based Virtual Reality for the Timber Frame Self-Build Housing Sector (2022)**  
-   *Automation in Construction, Elsevier (Q1 Journal).*  
-   [DOI: 10.1016/j.autcon.2022.104369](https://www.sciencedirect.com/science/article/pii/S0926580522003697)
-3. **Review of Multimodal Data and Their Applications for Road Maintenance (2023)**  
-   *University of Cambridge Repository.* Comprehensive synthesis of LiDAR, thermography, GPR, and computer vision.  
-   [Cambridge Repository](https://www.repository.cam.ac.uk/items/f6e068b1-71c0-4530-a682-e82e19b01b09)
-4. **Enhancing Road Digital Twins with Adaptive 3D Pavement Model (Under Preparation)**  
-   *Cambridge Digital Roads.* Semi-automatic procedural pipeline generating dynamically adaptive textured road meshes.  
-   *Co-authors:* Leonardo Binni, Varun Kumar Reja, Tom Kelly, Hamidreza Alavi.
-5. **Enhancing Road Digital Twins with High-Fidelity 3D Traffic Sign Reconstruction (Under Review)**  
-   Hybrid computer vision and mobile mapping approach for asset geometry.  
-   *Code:* [GitHub Repository](https://github.com/LiliaPotseluyko/Traffic_Sign_Script)
-
-### Keynote Presentations & Industry Features
-- **BBC Broadcast Feature (National Pothole Day 2024):** Live televised demonstration of road digital twin defect simulation.
-- **ConVR 2024 (Florence, Italy):** Session Chair & Workshop Lead on Game Engines for BIM & Digital Twins.
-- **DRF Clinic (Cambridge, Dec 2024):** Presentation of UK Department for Transport London cycling VR study.
-- **Digital Construction Week (London ExCeL):** Keynote on VR configurators for offsite construction product customization.
-- **KTP National Showcase (Inverness):** Innovate UK industrial transformation showcase.
-- **Teesside University Industry Showcase:** Demonstration of Nicander tunnel operations twin.
+```
+Academic, Research, Innovation, Technology Strategy, AI Strategy, Digital Transformation, Leadership, 
+Project Management, Stakeholder Engagement, Workshop Facilitation, Change Management, Business Development, 
+Sales, Consultancy, Multidisciplinary, Public Speaking, Teaching, Mentoring, Grant Writing, 
+Transport, Roads, Road Asset Management, Infrastructure, Construction, Civil Engineering, Built Environment, 
+Digital Twins, Decision Support, Asset Management, Maintenance, Inspection, Road Safety, 
+GIS, Geospatial, LiDAR, Photogrammetry, Computer Vision, 3D Reconstruction, Point Clouds, Mapping, 
+Spatial Data, Remote Sensing, Mobile Mapping, Reality Capture, Trimble MX9, 
+AI, Machine Learning, Data Science, Data Analysis, Data Visualisation, Predictive Analytics, 
+Optimisation, Automation, Algorithms, Coordinate Transformations, Information Architecture, 
+System Architecture, Microservices, REST API, Confirm Asset Management, 
+UX, User Research, Dovetail, User Experience, Product Design, Service Design, Interaction Design, 
+Information Design, Human-Centred Design, Usability Testing, Prototyping, Figma, Adobe Creative Cloud, 
+Python, C++, JavaScript, TypeScript, HTML, CSS, SQL, PostgreSQL, Web Development, Git, Docker, 
+Unreal Engine, Game Engines, Virtual Reality, Mixed Reality, Simulation, 3D Modelling, 
+Procedural Modelling, BIM, Revit, Navisworks, Civil 3D, QGIS, CloudCompare, RealityCapture, 
+OpenCV, PyTorch, Agile, Scrum, DevOps, Requirements Engineering, Metadata, Knowledge Base, Log Analysis
+```
 
 ---
 
 ## 5. Education & Professional Credentials
 
-### Degrees
-- **PhD in Construction Data Science & Digital Twins** | *Teesside University (in collaboration with Norscot & Innovate UK)*  
+### Academic Degrees
+- **PhD in Construction and Data Science** | *Teesside University (in collaboration with Norscot Joinery & Innovate UK)*  
   *Thesis:* Platform-Based Design and Immersive Technologies for Offsite Construction using XR and Game Engines.
-- **MA in 3D Design & Virtual Environments** | *Glasgow Caledonian University*  
+- **MA in 3D Design for Virtual Environments** | *Glasgow Caledonian University*  
   Focus on 3D pipelines, real-time lighting, interactive media, and spatial simulation.
-- **Bachelors in Economics & Organizational Management** | *Khabarovsk State Academy*  
-  Foundational training in economic systems, financial analysis, resource allocation, and management strategy.
+- **BA in Economics and Organizational Management** | *Khabarovsk State Academy of Economics and Law*  
+  Foundations in economic systems, analytical modeling, business strategy, and resource allocation.
 
-### Specialized Certifications & Continuous Upskilling
-- **Google UX Design Professional Certificate (Coursera):** User research, wireframing, empathy maps, accessibility (WCAG), usability testing, Figma.
-- **Full-Stack Web Development & Python (App Brewery):** Flask, Dash, REST APIs, database design, backend integration.
-- **Mathematics for Machine Learning:** Multivariate calculus, linear algebra, and probability for computer vision and spatial algorithms.
-- **Unreal Engine & C++ Engineering:** Native C++ scripting, gameplay framework, Datasmith, and Blueprints for real-time simulation.
-
----
-
-## 6. Comprehensive Technical Competencies
-
-| Competency Area | Tools & Frameworks | Practical Application |
-| :--- | :--- | :--- |
-| **Product & UX** | Figma, User Story Mapping, Service Blueprints, Miro, Agile/Scrum | RoadGP defect dashboard, Norscot VR configurator, operator consoles. |
-| **Game Engines & XR** | Unreal Engine 5/4, C++, Blueprints, Datasmith, OpenXR | High-fidelity digital twins, cycling safety VRE, interactive house walk-throughs. |
-| **Web & Data Systems** | Python, Dash, Flask, OpenCV, Segment Anything (SAM), REST APIs | Web-based operational twins, human-in-the-loop ML annotation tools. |
-| **BIM & CAD** | Autodesk Revit, Navisworks, Civil 3D, Dynamo, IFC Standards | BIM family optimization, manufacturing rule extraction, CAD-to-mesh automation. |
-| **Reality & Geospatial** | Mobile LiDAR, RealityCapture, CloudCompare, QGIS, Photogrammetry | 40+ km CAMHighways survey processing, point cloud segmentation, DEM surfaces. |
-| **3D Modeling & CGI** | Autodesk 3ds Max, Blender, V-Ray, Substance, Cloth Simulation | Articulated subsea ROV modeling, UAV surveillance payloads, PBR materials. |
-| **Research & Strategy** | Grant Writing, Process Mapping (IDM), Literature Synthesis, IP | Successful Innovate UK grant delivery, peer-reviewed journal papers. |
+### Professional Training & Certifications
+- **Google UX Design Professional Certificate:** User research, wireframing, empathy mapping, usability testing, accessibility (WCAG), and responsive interface design.
+- **Product Design & Discovery:** Continuous Discovery Habits / Opportunity Solution Trees, user journey mapping.
+- **Advanced Figma Design Systems (Udemy):** Component variants, auto-layout, interactive prototypes, design tokens.
+- **Full-Stack Web Development & Python (App Brewery):** Flask, Dash, REST APIs, React integrations.
+- **Mathematics for Machine Learning:** Linear algebra, multivariate calculus, and probability for computer vision.
+- **Unreal Engine & C++ Engineering:** Native C++ scripting, Blueprints, Datasmith, and procedural geometry tools.
 
 ---
 
-## 7. Recruiter FAQs & Retrieval Anchors
+## 6. Grounded Recruiter FAQs (Optimized for GCP / Vertex AI Search)
 
-### Q: Does Lilia have experience managing cross-functional technical teams?
-**A:** Yes. Lilia has led cross-functional initiatives spanning civil engineers, machine learning scientists, and software developers at the University of Cambridge (Digital Roads of the Future), Nicander Ltd, and Norscot Joinery. She has run Agile sprints, facilitated backlog grooming, and organized weekly technical knowledge exchange clinics.
+### Q: What experience does Dr Lilia Potseluyko have as a Product Owner or Product Manager?
+**A:** Dr Lilia Potseluyko has owned end-to-end product lifecycles across deep-tech platforms:
+1. **RoadGP (National Highways):** Defined user journeys, information architecture, and requirements from National Highways' *Confirm* defect database, building an interactive decision-support tool tested with maintenance contractors.
+2. **Norscot BIM/VR Platform:** Product managed the development of an interactive 1:1 house configurator, reducing client turnaround from 80 hours to 4.5 hours, saving £70k/year in labor, and winning £53,000 in direct commercial contracts (Outstanding KTP Grade).
+3. **Discovery & Innovation Leadership:** Led customer discovery for a UK fellowship proposal with National Highways and iRAP, mapping future human-in-the-loop AI workflows.
 
-### Q: How does Lilia bridge technical complexity and non-technical stakeholders?
-**A:** This is her core differentiator. In RoadGP, she translated raw computer vision bounding box tensors into intuitive color-coded risk maps for non-technical highway contractors. In her PhD with Norscot, she translated complex Revit architectural BIM parameters into a simple VR walkthrough that home buyers could explore without instruction.
+### Q: What is Lilia's experience with Forward Deployed Engineering (FDE)?
+**A:** In her work with Cambridge, Costain, and Nicander, Lilia has operated directly on client frontlines:
+- Embedded with civil engineers and operators to convert complex raw data (Trimble MX9 LiDAR, SCADA feeds, BIM models) into deployable prototypes running at 60 FPS.
+- Created mathematical coordinate transformation algorithms for Trafikverket's 12 km tunnel to automate monitoring for 20,000 IoT assets.
+- Rapidly builds functional, high-fidelity prototypes using Python Dash, Flask, and Unreal Engine rather than static slide decks.
 
-### Q: Is Lilia qualified for a Forward Deployed Engineer (FDE) role?
-**A:** Absolutely. She possesses the rare combination of deep client empathy and hands-on technical execution—proficient in writing Python data pipelines, Unreal Engine C++ scripting, LiDAR point cloud manipulation, and integrating enterprise SCADA/BIM formats into production environments.
+### Q: How does Lilia conduct User Research and UX Design?
+**A:** Lilia holds the Google UX Design Professional Certificate and has built a structured, AI-assisted research workflow:
+- Analyzes stakeholder interviews in **Dovetail** to extract personas and opportunity solution trees.
+- Builds design systems and interactive prototypes in **Figma**.
+- Conducts task-based think-aloud usability evaluations with civil engineers, inspectors, and contractors.
+- Prototypes front-ends using React and Python Dash, combining AI coding agents with manual refinement.
 
-### Q: What commercial business impact has Lilia demonstrated?
-**A:** In her Innovate UK KTP partnership, she saved Norscot approximately £70,000 per year in labor costs by automating VR/BIM pipelines in-house, secured an immediate £53,000 home construction contract, and received the "Innovator of the Future" commendation. In RoadGP, she reduced defect verification cycles by over 70%.
+### Q: What is Lilia's background in Digital Twins and Computer Vision?
+**A:** Lilia is Lead of the Mobile Mapping Research Cluster at the University of Cambridge:
+- Created the **CAMHighways** open benchmark (40+ km of UK motorways surveyed via Trimble MX9 LiDAR, 360° imagery, and GPR).
+- Developed hybrid computer vision and photogrammetry workflows for 3D road surface and traffic sign reconstruction.
+- Built interactive VR/desktop digital twins in Unreal Engine featured on **BBC News**.
+- Developed the London cycling safety VR simulation tested across **4,000+ UK participants** for the Department for Transport.

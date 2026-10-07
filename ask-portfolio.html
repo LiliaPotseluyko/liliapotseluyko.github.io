@@ -364,7 +364,52 @@
           text: portfolioFallbackKB.productUX,
           followups: ["What experience does Lilia have with digital twins?", "What are her key technical skills?", "Tell me about her research at Cambridge."]
         };
-      } else if (q.includes("project") || q.includes("work") || q.includes("experience") || q.includes("research") || q.includes("cambridge")) {
+      } else if (q.includes("confirm") || q.includes("metadata") || q.includes("asset management system")) {
+        return {
+          text: `**Confirm Asset Management System & Metadata Extraction (RoadGP):**
+Dr Lilia Potseluyko worked extensively with massive historical defect datasets and metadata from **Confirm**—the asset management platform holding the history of road defects for National Highways. 
+- Mined and structured maintenance records and national standards into an operational defect taxonomy.
+- Extracted the foundational knowledge base and information architecture for **RoadGP**, directly driving the requirements for automated defect diagnosis and treatment recommendation workflows.`,
+          followups: ["Tell me about the RoadGP project.", "What is Lilia's UX research methodology?", "What software engineering skills does she have?"]
+        };
+      } else if (q.includes("discovery") || q.includes("irap") || q.includes("fellowship") || q.includes("strategy") || q.includes("grant")) {
+        return {
+          text: `**Technical Customer Discovery & Road Safety Strategy (National Highways & iRAP):**
+Lilia led technical discovery and innovation strategy for a UK research fellowship proposal in collaboration with **National Highways** and **iRAP (International Road Assessment Programme)**:
+- Coordinated stakeholder discovery interviews and interactive workshops with senior technical leaders across partner organizations.
+- Elicited operational challenges, evidence gaps, and user requirements.
+- Synthesized findings into a conceptual system architecture integrating multimodal data, 3D computer vision, AI-assisted decision support, and dynamic digital twins to evaluate road safety countermeasures and evidence-based investment decisions.
+- Successfully submitted grant application with an integrated multi-work-package innovation roadmap.`,
+          followups: ["What experience does Lilia have as a Product Owner?", "Tell me about the RoadGP project.", "What are her key leadership experiences?"]
+        };
+      } else if (q.includes("idm") || q.includes("information delivery manual") || q.includes("process mapping")) {
+        return {
+          text: `**Information Delivery Manual (IDM) & Infrastructure Process Mapping:**
+Dr Lilia Potseluyko led the development and coordination of the official **Information Delivery Manual (IDM)** for National Highways:
+- Consolidated research contributions from across multidisciplinary teams into a coherent specification of National Highways' operational maintenance workflows and information exchanges.
+- Defined data handoffs between field inspection, defect classification, and maintenance contractor dispatch.`,
+          followups: ["Tell me about the RoadGP project.", "What digital twin architecture skills does Lilia have?", "What publications has she authored?"]
+        };
+      } else if (q.includes("trafikverket") || q.includes("swedish") || q.includes("tunnel") || q.includes("coordinate")) {
+        return {
+          text: `**Trafikverket 12km Tunnel Digital Twin & Coordinate Automation (Nicander):**
+Between 2020 and 2022, Lilia led innovation projects for **Trafikverket** (the Swedish Transport Administration) at Nicander:
+- **Mathematical Coordinate Algorithm:** Formulated a coordinate transformation algorithm that automated the conversion of GIS positions into 2D linear schematic operational maps for ~20,000 IoT tunnel assets (Trafikverket adopted this over their in-house alternative).
+- **3D Spatial Digital Twin:** Built interactive Unreal Engine digital twins visualizing real-time CCTV coverage cones, ventilation velocity, and fire barriers.
+- **Multidisciplinary Leadership:** Managed a team including a CAD specialist, game developer, and data scientist using Agile planning and DevOps.`,
+          followups: ["What experience does Lilia have with service design?", "What digital twin tools does she use?", "How can I contact Dr Lilia Potseluyko?"]
+        };
+      } else if (q.includes("dovetail") || q.includes("interview") || q.includes("usability") || q.includes("research")) {
+        return {
+          text: `**AI-Assisted UX Research & Usability Testing Workflow:**
+Lilia pioneered an end-to-end qualitative research methodology combining user research and rapid front-end prototyping:
+- **Dovetail Knowledge Base:** Organizes and codes user interviews with inspectors and contractors into searchable themes, extracting personas, opportunity solution trees, and user journeys.
+- **Figma Design Systems:** Creates component-driven interactive mockups and paper storyboards.
+- **AI Coding Integration:** Leverages AI coding tools (Figma Make, Codex, Copilot) to generate React/Python Dash front-ends, followed by rigorous manual refinement for ergonomics, responsiveness, and performance.
+- **Structured Usability Evaluations:** Conducts task-based think-aloud sessions and prototype walk-throughs to iteratively refine information architecture.`,
+          followups: ["Which projects demonstrate user research?", "What experience does Lilia have as a Product Owner?", "What are her key technical skills?"]
+        };
+      } else if (q.includes("project") || q.includes("work") || q.includes("experience") || q.includes("cambridge")) {
         return {
           text: portfolioFallbackKB.projectsOverview,
           followups: ["Tell me more about digital twins.", "What software skills does she use?", "How can I contact her?"]
