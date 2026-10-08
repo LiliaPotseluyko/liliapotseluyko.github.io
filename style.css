@@ -2726,7 +2726,8 @@ body > header {
 .ds-persona.pink .ds-persona-role { color: #f472b6; }
 .ds-persona.purple .ds-persona-role { color: #c084fc; }
 .ds-persona.orange .ds-persona-role { color: #fb923c; }
-.ds-persona.green .ds-persona-role { color: #1DCD9F; }
+.ds-persona.green .ds-persona-role,
+.ds-persona.emerald .ds-persona-role { color: #1DCD9F; }
 .ds-persona.yellow .ds-persona-role { color: #facc15; }
 
 /* ==========================================================================
