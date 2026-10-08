@@ -3998,7 +3998,7 @@ body > header {
   border: 1px solid rgba(29, 205, 159, 0.2);
   border-radius: 8px;
   padding: 14px;
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .arch-experience-title {
