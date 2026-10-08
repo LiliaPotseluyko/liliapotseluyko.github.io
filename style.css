@@ -1456,6 +1456,59 @@ body > header {
   margin-bottom: 35px;
 }
 
+.hero-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.hero-title-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-title-group .case-study-kicker {
+  margin-bottom: 8px;
+}
+
+.hero-title-group h1 {
+  margin: 0;
+}
+
+.hero-partners-badge {
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-partners-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.hero-partners-logo {
+  height: 46px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
 .case-study-kicker {
   color: #e9008c;
   font-size: 0.85rem;

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RoadGP: AI Defect Triage &amp; Decision Support Platform | Dr Lilia Potseluyko</title>
-  <link rel="stylesheet" href="../style.css?v=20261008c">
+  <link rel="stylesheet" href="../style.css?v=20261008e">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="home">
@@ -54,9 +54,15 @@
 
       <!-- CASE STUDY HERO -->
       <section class="case-study-hero" style="margin-top: 20px; margin-bottom: 30px;">
-        <p class="case-study-kicker">University of Cambridge &bull; Costain Group &bull; National Highways</p>
-        <h1>RoadGP Interface and Decision Support</h1>
-
+        <div class="hero-header-row">
+          <div class="hero-title-group">
+            <p class="case-study-kicker">University of Cambridge &bull; Costain Group &bull; National Highways</p>
+            <h1>RoadGP Interface and Decision Support</h1>
+          </div>
+          <div class="hero-partners-badge" title="Project Partners: University of Cambridge, Highways England, Costain Group">
+            <img src="../images/PartnersLogo.svg.png" alt="University of Cambridge, Highways England, Costain Group" class="hero-partners-logo">
+          </div>
+        </div>
 
         <div class="case-study-meta-grid">
           <div class="meta-box">
@@ -666,8 +672,8 @@
         <div class="storyboard-carousel-container">
           <div class="carousel-stage-header">
             <div>
-              <span class="carousel-stage-badge" id="carouselStageBadge">Version 1 of 3 &bull; Paper Prototype</span>
-              <h4 class="carousel-stage-title" id="carouselStageTitle">Initial Paper Storyboard</h4>
+              <span class="carousel-stage-badge" id="carouselStageBadge">Final Deliverable &bull; Digital Twin Workflows</span>
+              <h4 class="carousel-stage-title" id="carouselStageTitle">Final Storyboard: Digital Twin Integration</h4>
             </div>
             <div class="carousel-arrow-controls">
               <button type="button" class="carousel-nav-btn prev" id="storyboardPrevBtn" aria-label="Previous Storyboard Version">
@@ -682,26 +688,26 @@
           <!-- Carousel Slides Viewport -->
           <div class="storyboard-slides-viewport">
             <div class="storyboard-slides-track" id="storyboardTrack">
-              <!-- SLIDE 1: PAPER VERSION -->
-              <div class="storyboard-slide zoomable-image-card" title="Version 1: Initial Paper Storyboard &bull; Rapid hand-drawn concept sketches exploring inspector field triage">
+              <!-- SLIDE 1: FINAL DIGITAL TWIN VERSION (DEFAULT START) -->
+              <div class="storyboard-slide zoomable-image-card" title="Final Storyboard &bull; Complete integration with digital twin elements for construction workflows">
                 <div class="storyboard-img-wrapper">
-                  <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Paper_Storyboard.png" alt="Paper Storyboard Prototype">
+                  <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Final_Soryboard.png" alt="Final Storyboard with Digital Twin Construction Elements">
                   <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
                 </div>
               </div>
 
               <!-- SLIDE 2: DRAW.IO VERSION -->
-              <div class="storyboard-slide zoomable-image-card" title="Version 2: Draw.io Wireframe Storyboard &bull; Structured digital process flows and multi-role user journeys">
+              <div class="storyboard-slide zoomable-image-card" title="Iteration 2: Draw.io Wireframe Storyboard &bull; Structured digital process flows and multi-role user journeys">
                 <div class="storyboard-img-wrapper">
                   <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Draw_IO_StoryBoard.png" alt="Draw.io Storyboard Wireframes">
                   <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
                 </div>
               </div>
 
-              <!-- SLIDE 3: FINAL DIGITAL TWIN VERSION -->
-              <div class="storyboard-slide zoomable-image-card" title="Version 3: Final Digital Twin Storyboard &bull; Complete integration with digital twin elements for construction workflows">
+              <!-- SLIDE 3: PAPER VERSION -->
+              <div class="storyboard-slide zoomable-image-card" title="Iteration 1: Initial Paper Storyboard &bull; Rapid hand-drawn concept sketches exploring inspector field triage">
                 <div class="storyboard-img-wrapper">
-                  <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Final_Soryboard.png" alt="Final Storyboard with Digital Twin Construction Elements">
+                  <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Paper_Storyboard.png" alt="Paper Storyboard Prototype">
                   <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
                 </div>
               </div>
@@ -711,9 +717,9 @@
           <!-- Carousel Footer: 3 Dots and Note -->
           <div class="storyboard-carousel-footer">
             <div class="carousel-dots-group" id="storyboardDots">
-              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1: Paper Version"></button>
-              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2: Draw.io Version"></button>
-              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3: Final Digital Twin Version"></button>
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1: Final Digital Twin Version"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2: Draw.io Wireframe Version"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3: Initial Paper Version"></button>
             </div>
             <span class="carousel-footnote">
               <i class="fas fa-hand-pointer" style="color: #1DCD9F;"></i> Click image to inspect high-resolution
@@ -953,9 +959,9 @@
 
       if (track && prevBtn && nextBtn && dots.length > 0) {
         const slidesData = [
-          { badge: "Version 1 of 3 \u2022 Paper Prototype", title: "Initial Paper Storyboard" },
-          { badge: "Version 2 of 3 \u2022 Digital Wireframes", title: "Draw.io Wireframe Storyboard" },
-          { badge: "Version 3 of 3 \u2022 Construction Workflows", title: "Final Digital Twin Storyboard" }
+          { badge: "Final Deliverable \u2022 Digital Twin Workflows", title: "Final Storyboard: Digital Twin Integration" },
+          { badge: "Iteration 2 \u2022 Digital Process Mapping", title: "Draw.io Wireframe Storyboard" },
+          { badge: "Iteration 1 \u2022 Early Concept Ideation", title: "Initial Paper Storyboard" }
         ];
 
         let currentIndex = 0;
