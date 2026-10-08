@@ -1,31 +1,31 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-UX MOOD BOARD GENERATOR (FIGMA / MONDRIAN STYLE)
+UX MOOD BOARD GENERATOR
 ================================================================================
-Recursively partitions a canvas into aesthetic, cohesive rectangular frames 
-(using recursive Binary Space Partitioning inspired by Figma mood board templates),
-center-crops source images of any dimensions to seamlessly fill each frame without 
-distortion, and outputs a single high-resolution PNG moodboard.
-
-Default Input:  Folder with source images (e.g. 'moodboard_input' or any folder)
-Default Output: 'images/artefacts/moodboard.png'
+Features:
+  1. Justified Sequence Layout (DEFAULT for timelines/progressions):
+     - ZERO cropping: 100% native aspect ratio preserved for every image.
+     - Preserves high resolution (~700-850px per screenshot).
+     - Strictly preserves chronological / iteration sequence (01 to N).
+     - Optimal row balancing (Knuth-Plass dynamic programming).
+     - Optional iteration badges (#01 · Jun 2025) on each frame.
+  2. Mondrian / BSP Grid Layout:
+     - Recursively partitions a single 16:9 canvas into cohesive tiles.
 
 Quick Run:
     py data_prep/generate_moodboard.py
-    
-Custom Options:
-    py data_prep/generate_moodboard.py --input "path/to/my_images" --output "images/artefacts/moodboard.png"
-    py data_prep/generate_moodboard.py --aspect-ratio 1.777 --gap 14 --bg-color FFFFFF
 ================================================================================
 """
 
 import os
+import re
 import sys
 import random
 import argparse
+from datetime import datetime
 from pathlib import Path
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageDraw, ImageFont
 
 # Ensure UTF-8 output on Windows consoles
 if hasattr(sys.stdout, 'reconfigure'):
@@ -37,51 +37,36 @@ if hasattr(sys.stdout, 'reconfigure'):
 
 # ==============================================================================
 # 🎨 USER-EDITABLE CONFIGURATION VARIABLES
-# You can tweak these values directly in this file or override them via CLI flags!
 # ==============================================================================
 
-# 1. CANVAS DIMENSIONS & ASPECT RATIO
-# ------------------------------------------------------------------------------
-# Change this ratio to change the overall shape of the mood board:
-#   16 / 9  (= 1.778) -> Standard widescreen / presentation slide (Figma standard)
-#   4  / 3  (= 1.333) -> Classic tablet / portfolio sheet
-#   3  / 2  (= 1.500) -> Standard 35mm photo print ratio
-#   1  / 1  (= 1.000) -> Square grid (Instagram / social)
-#   21 / 9  (= 2.333) -> Ultra-wide panoramic showcase
+# 1. LAYOUT MODE
+# Options: 'justified' (zero cropping, preserved resolution & sequence)
+#      or  'bsp'       (fixed 16:9 canvas with randomized mosaic frames)
+DEFAULT_LAYOUT = 'justified'
+
+# 2. CANVAS & ROW DIMENSIONS (For Justified mode)
+CANVAS_WIDTH = 4600                # Total canvas width in pixels
+TARGET_ROW_HEIGHT = 750            # Approximate height per row (preserves resolution)
+GAP_WIDTH = 18                     # Gap / divider line between images (in pixels)
+OUTER_MARGIN = 24                  # Canvas outer margin (in pixels)
+BACKGROUND_COLOR = (15, 18, 24)    # Canvas / gap background RGB (Dark slate)
+
+# 3. SEQUENCE BADGES
+# Options: 'both' (e.g. "#01 · Jun 2025"), 'number' ("#01"), 'none' (no text overlay)
+DEFAULT_BADGES = 'both'
+
+# 4. BSP / MONDRIAN MODE DEFAULTS (When --layout bsp is selected)
 CANVAS_ASPECT_RATIO = 16 / 9
-
-# Width of the output image in pixels (High-DPI 2560px default)
-CANVAS_WIDTH = 2560
-
-# 2. FRAME SPACING & BORDER STYLING
-# ------------------------------------------------------------------------------
-GAP_WIDTH = 12                     # Gap / divider line between frames (e.g. 0, 8, 12, 16, 24 px)
-OUTER_MARGIN = 12                  # Outer canvas margin (set 0 for edge-to-edge borderless)
-
-# Background color for dividers & canvas borders:
-# Options: (18, 18, 18) for Dark Slate, (0, 0, 0) for Pure Black, (255, 255, 255) for Pure White
-BACKGROUND_COLOR = (18, 18, 18)
-
-# 3. INDIVIDUAL CELL ASPECT RATIO CONSTRAINTS
-# ------------------------------------------------------------------------------
-# Keeps randomly generated frames cohesive and prevents awkward needle-thin shapes:
-#   MIN_CELL_ASPECT_RATIO = 0.50 allows portrait cards (up to 1:2 height)
-#   MAX_CELL_ASPECT_RATIO = 2.20 allows landscape banners (up to 2.2:1 width)
 MIN_CELL_ASPECT_RATIO = 0.50
 MAX_CELL_ASPECT_RATIO = 2.20
-
-# Minimum pixel dimensions for any individual cell:
 MIN_CELL_WIDTH = 180
 MIN_CELL_HEIGHT = 160
 
-# 4. DEFAULT DIRECTORIES (Can be relative to project root or absolute paths)
-# ------------------------------------------------------------------------------
-# In Visual Studio, you can change this to any folder name or full path:
-# e.g., "moodboard_input", "images", or r"C:\Users\Admin\Pictures\MyImages"
+# 5. DEFAULT DIRECTORIES
 DEFAULT_INPUT_DIR = "moodboard_input"
 DEFAULT_OUTPUT_PATH = "images/artefacts/moodboard.png"
 
-# Script and Project directories (automatically detects root regardless of where VS runs it from)
+# Script and Project directories
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 # ==============================================================================
@@ -96,27 +81,244 @@ def resolve_path(p: str, prefer_output_dir: bool = False) -> Path:
     if path_obj.is_absolute():
         return path_obj
     
-    # Check if path exists relative to current working directory
     cwd_path = Path.cwd() / path_obj
     if cwd_path.exists() and not prefer_output_dir:
         return cwd_path.resolve()
         
-    # Check if path exists relative to project root
     root_path = PROJECT_ROOT / path_obj
     if root_path.exists() and not prefer_output_dir:
         return root_path.resolve()
         
-    # Check if path exists relative to script directory
     script_path = SCRIPT_DIR / path_obj
     if script_path.exists() and not prefer_output_dir:
         return script_path.resolve()
 
-    # For output files that don't exist yet, default to project root
     return (PROJECT_ROOT / path_obj).resolve()
 
 
+def find_images(folder_path: Path):
+    """Recursively finds all valid image files in the target directory in sorted order."""
+    valid_exts = {'.png', '.jpg', '.jpeg', '.webp', '.bmp', '.tiff'}
+    images = []
+    for f in folder_path.iterdir():
+        if f.is_file() and f.suffix.lower() in valid_exts:
+            images.append(f)
+    return sorted(images, key=lambda x: x.name.lower())
+
+
+def parse_date_from_filename(filename: str):
+    """Attempts to extract a date from filenames like 'Screenshot 2025-06-02 180110.png'."""
+    m = re.search(r'(\d{4})[-_](\d{2})[-_](\d{2})', filename)
+    if m:
+        try:
+            dt = datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+            return dt.strftime('%b %Y')
+        except Exception:
+            pass
+    return None
+
+
+def get_font(size: int = 24):
+    """Loads clean system font for badges."""
+    font_names = ['segoeuib.ttf', 'arialbd.ttf', 'HelveticaBold.ttf', 'calibrib.ttf']
+    for fn in font_names:
+        try:
+            return ImageFont.truetype(fn, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+def draw_iteration_badge(image: Image.Image, number_str: str, date_str: str = None, mode: str = 'both'):
+    """Draws a modern, semi-transparent designer sequence badge on top-left of image."""
+    if mode == 'none':
+        return image
+
+    text = number_str
+    if mode == 'both' and date_str:
+        text = f"{number_str} · {date_str}"
+
+    font = get_font(size=26)
+    draw = ImageDraw.Draw(image, "RGBA")
+
+    # Measure text bounds
+    bbox = font.getbbox(text)
+    text_w = bbox[2] - bbox[0]
+    text_h = bbox[3] - bbox[1]
+
+    pad_x = 16
+    pad_y = 10
+    badge_w = text_w + 2 * pad_x
+    badge_h = text_h + 2 * pad_y
+
+    x0 = 16
+    y0 = 16
+    x1 = x0 + badge_w
+    y1 = y0 + badge_h
+
+    # Draw rounded pill badge with semi-transparency
+    draw.rounded_rectangle([x0, y0, x1, y1], radius=10, fill=(10, 14, 22, 220), outline=(255, 255, 255, 55), width=1)
+    # Draw text
+    draw.text((x0 + pad_x, y0 + pad_y - 2), text, font=font, fill=(245, 248, 252, 255))
+    return image
+
+
+# ==============================================================================
+# JUSTIFIED SEQUENCE LAYOUT (0% Cropping, High Resolution, Sequential Order)
+# ==============================================================================
+
+def create_justified_moodboard(
+    image_files: list,
+    out_file: Path,
+    canvas_width: int = CANVAS_WIDTH,
+    target_row_height: int = TARGET_ROW_HEIGHT,
+    gap: int = GAP_WIDTH,
+    margin: int = OUTER_MARGIN,
+    bg_color: tuple = BACKGROUND_COLOR,
+    badge_mode: str = DEFAULT_BADGES
+):
+    """
+    Lays out images in strict chronological / numbered order across justified rows.
+    Zero cropping is applied, and high resolution is preserved.
+    """
+    n = len(image_files)
+    print(f"[INFO] Running Justified Timeline Layout for {n} images...")
+    print(f"[INFO] Mode: ZERO cropping | Sequential Order (1..{n}) | Target row height: {target_row_height}px")
+
+    # Read image sizes & aspect ratios
+    images_meta = []
+    for f in image_files:
+        with Image.open(f) as im:
+            w, h = im.size
+            images_meta.append({
+                'path': f,
+                'orig_w': w,
+                'orig_h': h,
+                'ar': w / max(1, h)
+            })
+
+    available_w = canvas_width - (2 * margin)
+
+    # Dynamic Programming to find mathematically optimal row partitions
+    def get_row_cost(i, j, is_last):
+        count = j - i + 1
+        sum_ar = sum(images_meta[k]['ar'] for k in range(i, j + 1))
+        gaps_total = (count - 1) * gap
+        avail = available_w - gaps_total
+        h = avail / max(0.001, sum_ar)
+        if is_last:
+            if h > target_row_height * 1.35:
+                return (h - target_row_height) ** 2 * 2.5
+            return abs(h - target_row_height) * 15
+        return (h - target_row_height) ** 2
+
+    dp = [float('inf')] * (n + 1)
+    parent = [-1] * (n + 1)
+    dp[0] = 0
+
+    max_per_row = 8
+    min_per_row = 1
+
+    for j in range(1, n + 1):
+        for i in range(max(0, j - max_per_row), j - min_per_row + 1):
+            is_last = (j == n)
+            cost = dp[i] + get_row_cost(i, j - 1, is_last)
+            if cost < dp[j]:
+                dp[j] = cost
+                parent[j] = i
+
+    # Reconstruct optimal rows
+    curr = n
+    row_spans = []
+    while curr > 0:
+        prev = parent[curr]
+        row_spans.append((prev, curr - 1))
+        curr = prev
+    row_spans.reverse()
+
+    # Compute row heights and exact image placements
+    row_plans = []
+    total_canvas_height = margin * 2 + (len(row_spans) - 1) * gap
+
+    for r_idx, (start_idx, end_idx) in enumerate(row_spans):
+        count = end_idx - start_idx + 1
+        items = images_meta[start_idx : end_idx + 1]
+        sum_ar = sum(it['ar'] for it in items)
+        gaps_total = (count - 1) * gap
+
+        # Row height to fill width exactly
+        is_last_row = (r_idx == len(row_spans) - 1)
+        h_row = int(round((available_w - gaps_total) / sum_ar))
+        
+        # If last row has very few images, cap height to target_row_height
+        if is_last_row and count <= 2 and h_row > target_row_height * 1.2:
+            h_row = target_row_height
+
+        row_plans.append({
+            'items': items,
+            'start_idx': start_idx,
+            'height': h_row,
+            'count': count
+        })
+        total_canvas_height += h_row
+
+    print(f"[INFO] Partitioned into {len(row_plans)} balanced rows. Canvas: {canvas_width}x{total_canvas_height} px.")
+
+    # Create master canvas
+    canvas = Image.new("RGB", (canvas_width, total_canvas_height), bg_color)
+
+    # Render each row
+    current_y = margin
+
+    for r_idx, rplan in enumerate(row_plans):
+        h_row = rplan['height']
+        items = rplan['items']
+        start_num = rplan['start_idx'] + 1
+
+        # Calculate widths
+        widths = [int(round(h_row * it['ar'])) for it in items]
+        
+        # Adjust rounding drift so row width matches available_w exactly
+        diff = available_w - (sum(widths) + (len(items) - 1) * gap)
+        if diff != 0 and len(widths) > 0 and not (r_idx == len(row_plans) - 1 and len(items) <= 2):
+            widths[-1] += diff
+
+        current_x = margin
+        for idx_in_row, (it, w_img) in enumerate(zip(items, widths)):
+            img_path = it['path']
+            global_idx = start_num + idx_in_row
+            num_str = f"#{global_idx:02d}"
+            date_str = parse_date_from_filename(img_path.name)
+
+            try:
+                with Image.open(img_path) as img:
+                    img = img.convert("RGBA")
+                    # High quality resize (NO CROPPING)
+                    resized = img.resize((w_img, h_row), Image.Resampling.LANCZOS)
+                    # Add subtle sequence badge
+                    badged = draw_iteration_badge(resized, num_str, date_str, mode=badge_mode)
+                    # Paste onto canvas
+                    canvas.paste(badged, (current_x, current_y), badged)
+            except Exception as e:
+                print(f"[WARN] Error placing {img_path.name}: {e}")
+
+            current_x += w_img + gap
+
+        current_y += h_row + gap
+
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+    canvas.save(str(out_file), format="PNG", quality=95, optimize=True)
+
+    print(f"\n[SUCCESS] Redone mood board exported with ZERO cropping & sequence badges:")
+    print(f"👉 {out_file} ({canvas_width}x{total_canvas_height})")
+    return out_file
+
+
+# ==============================================================================
+# BSP RECURSIVE MOSAIC LAYOUT (Single Fixed Ratio Canvas)
+# ==============================================================================
+
 class Rect:
-    """Represents a rectangular frame on the canvas."""
     def __init__(self, x: int, y: int, w: int, h: int):
         self.x = int(x)
         self.y = int(y)
@@ -131,33 +333,22 @@ class Rect:
     def area(self) -> int:
         return self.w * self.h
 
-    def __repr__(self):
-        return f"Rect({self.x}, {self.y}, {self.w}x{self.h})"
-
 
 def split_rect(rect: Rect, gap: int, min_w: int, min_h: int, min_ar: float, max_ar: float):
-    """
-    Subdivides a rectangle either vertically or horizontally using aesthetic modular
-    ratios (halves, thirds, two-fifths) while adhering strictly to min/max aspect ratios.
-    """
     can_split_v = (rect.w - gap) >= (2 * min_w)
     can_split_h = (rect.h - gap) >= (2 * min_h)
-
     if not can_split_v and not can_split_h:
         return None
 
-    # Determine preferred orientation based on current cell proportions
     ar = rect.aspect_ratio
     if ar > max_ar * 0.85 and can_split_v:
         orientations = [True, False] if can_split_h else [True]
     elif ar < min_ar * 1.15 and can_split_h:
         orientations = [False, True] if can_split_v else [False]
     else:
-        # Bias towards splitting the longer dimension
         first_is_v = (rect.w >= rect.h)
         orientations = [first_is_v, not first_is_v]
 
-    # Modular split ratios inspired by Figma layout grids
     ratios = [0.333, 0.40, 0.50, 0.60, 0.667]
     random.shuffle(ratios)
 
@@ -171,10 +362,7 @@ def split_rect(rect: Rect, gap: int, min_w: int, min_h: int, min_ar: float, max_
                     ar1 = w1 / rect.h
                     ar2 = w2 / rect.h
                     if min_ar <= ar1 <= max_ar and min_ar <= ar2 <= max_ar:
-                        return (
-                            Rect(rect.x, rect.y, w1, rect.h),
-                            Rect(rect.x + w1 + gap, rect.y, w2, rect.h)
-                        )
+                        return (Rect(rect.x, rect.y, w1, rect.h), Rect(rect.x + w1 + gap, rect.y, w2, rect.h))
         elif not split_v and can_split_h:
             avail_h = rect.h - gap
             for r in ratios:
@@ -184,172 +372,74 @@ def split_rect(rect: Rect, gap: int, min_w: int, min_h: int, min_ar: float, max_
                     ar1 = rect.w / h1
                     ar2 = rect.w / h2
                     if min_ar <= ar1 <= max_ar and min_ar <= ar2 <= max_ar:
-                        return (
-                            Rect(rect.x, rect.y, rect.w, h1),
-                            Rect(rect.x, rect.y + h1 + gap, rect.w, h2)
-                        )
-
+                        return (Rect(rect.x, rect.y, rect.w, h1), Rect(rect.x, rect.y + h1 + gap, rect.w, h2))
     return None
 
 
-def generate_cohesive_frames(
-    canvas_w: int,
-    canvas_h: int,
-    target_count: int,
+def create_bsp_moodboard(
+    image_files: list,
+    out_file: Path,
+    canvas_width: int,
+    canvas_aspect_ratio: float,
     gap: int,
     margin: int,
-    min_w: int = MIN_CELL_WIDTH,
-    min_h: int = MIN_CELL_HEIGHT,
-    min_ar: float = MIN_CELL_ASPECT_RATIO,
-    max_ar: float = MAX_CELL_ASPECT_RATIO
-):
-    """
-    Recursively partitions the canvas area into cohesive rectangular frames.
-    """
-    initial_w = canvas_w - (2 * margin)
-    initial_h = canvas_h - (2 * margin)
-    root = Rect(margin, margin, initial_w, initial_h)
-
-    rects = [root]
-    attempts = 0
-    max_attempts = 400
-
-    while len(rects) < target_count and attempts < max_attempts:
-        attempts += 1
-        
-        # Filter rects that can still be split
-        splittable = [
-            r for r in rects 
-            if (r.w - gap >= 2 * min_w) or (r.h - gap >= 2 * min_h)
-        ]
-        if not splittable:
-            break
-
-        # Sort by area descending so largest rectangles are prioritized for division
-        splittable.sort(key=lambda r: r.area, reverse=True)
-        # Select randomly from top 3 largest boxes for organic variety
-        pick_pool = splittable[:min(len(splittable), 3)]
-        chosen_rect = random.choice(pick_pool)
-
-        res = split_rect(chosen_rect, gap, min_w, min_h, min_ar, max_ar)
-        if res:
-            rects.remove(chosen_rect)
-            rects.extend(res)
-
-    return rects
-
-
-def find_images(folder_path: Path):
-    """Recursively finds all valid image files in the target directory."""
-    valid_exts = {'.png', '.jpg', '.jpeg', '.webp', '.bmp', '.tiff'}
-    images = []
-    for f in folder_path.iterdir():
-        if f.is_file() and f.suffix.lower() in valid_exts:
-            images.append(f)
-    return sorted(images)
-
-
-def create_moodboard(
-    input_dir: str,
-    output_path: str,
-    canvas_width: int = CANVAS_WIDTH,
-    canvas_aspect_ratio: float = CANVAS_ASPECT_RATIO,
-    gap: int = GAP_WIDTH,
-    margin: int = OUTER_MARGIN,
-    bg_color: tuple = BACKGROUND_COLOR,
-    min_cell_ar: float = MIN_CELL_ASPECT_RATIO,
-    max_cell_ar: float = MAX_CELL_ASPECT_RATIO,
-    frame_count: int = None,
+    bg_color: tuple,
     seed: int = None
 ):
-    """
-    Orchestrates the entire mood board generation pipeline.
-    """
     if seed is not None:
         random.seed(seed)
 
-    input_path = resolve_path(input_dir)
-    out_file = resolve_path(output_path, prefer_output_dir=True)
-
-    if not input_path.exists():
-        raise FileNotFoundError(f"Input directory not found: {input_path}")
-
-    image_files = find_images(input_path)
-    if not image_files:
-        raise ValueError(f"No image files found in directory: {input_path}")
-
-    print(f"[INFO] Found {len(image_files)} source images in: {input_path}")
-
-    # Determine frame count (defaults to number of images found, or custom count)
-    if frame_count is not None and frame_count > 0:
-        target_frames = frame_count
-    else:
-        target_frames = max(4, len(image_files))
-
-    # Calculate canvas height from width and aspect ratio
+    target_frames = max(4, len(image_files))
     canvas_height = int(round(canvas_width / canvas_aspect_ratio))
+    root = Rect(margin, margin, canvas_width - 2 * margin, canvas_height - 2 * margin)
+    rects = [root]
+    attempts = 0
 
-    print(f"[INFO] Canvas size: {canvas_width}x{canvas_height} px (Aspect Ratio: {canvas_aspect_ratio:.3f})")
-    print(f"[INFO] Partitioning into {target_frames} cohesive frames (gap={gap}px, margin={margin}px)...")
+    while len(rects) < target_frames and attempts < 400:
+        attempts += 1
+        splittable = [r for r in rects if (r.w - gap >= 2 * MIN_CELL_WIDTH) or (r.h - gap >= 2 * MIN_CELL_HEIGHT)]
+        if not splittable:
+            break
+        splittable.sort(key=lambda r: r.area, reverse=True)
+        chosen = random.choice(splittable[:min(len(splittable), 3)])
+        res = split_rect(chosen, gap, MIN_CELL_WIDTH, MIN_CELL_HEIGHT, MIN_CELL_ASPECT_RATIO, MAX_CELL_ASPECT_RATIO)
+        if res:
+            rects.remove(chosen)
+            rects.extend(res)
 
-    frames = generate_cohesive_frames(
-        canvas_w=canvas_width,
-        canvas_h=canvas_height,
-        target_count=target_frames,
-        gap=gap,
-        margin=margin,
-        min_w=MIN_CELL_WIDTH,
-        min_h=MIN_CELL_HEIGHT,
-        min_ar=min_cell_ar,
-        max_ar=max_cell_ar
-    )
-
-    print(f"[INFO] Successfully created {len(frames)} frames. Center-cropping images...")
-
-    # Create canvas
     canvas = Image.new("RGB", (canvas_width, canvas_height), bg_color)
+    shuffled = list(image_files)
+    random.shuffle(shuffled)
+    while len(shuffled) < len(rects):
+        shuffled.extend(image_files)
 
-    # Randomly assign images to frames (cycle if more frames than images)
-    selected_images = list(image_files)
-    random.shuffle(selected_images)
-    while len(selected_images) < len(frames):
-        selected_images.extend(image_files)
-    selected_images = selected_images[:len(frames)]
-
-    # Crop and paste each image
-    for idx, (frame, img_path) in enumerate(zip(frames, selected_images)):
+    for frame, img_path in zip(rects, shuffled[:len(rects)]):
         try:
             with Image.open(img_path) as img:
                 img = img.convert("RGB")
-                # Center-crop to exact frame dimensions without distortion
-                cropped_img = ImageOps.fit(
-                    img,
-                    (frame.w, frame.h),
-                    method=Image.Resampling.LANCZOS,
-                    centering=(0.5, 0.5)
-                )
-                canvas.paste(cropped_img, (frame.x, frame.y))
+                cropped = ImageOps.fit(img, (frame.w, frame.h), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
+                canvas.paste(cropped, (frame.x, frame.y))
         except Exception as e:
-            print(f"[WARN] Could not process {img_path.name}: {e}")
+            print(f"[WARN] Error in {img_path.name}: {e}")
 
-    # Ensure output destination directory exists
     out_file.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(str(out_file), format="PNG", quality=95, optimize=True)
-
-    print(f"\n[SUCCESS] UX Mood Board generated successfully!")
-    print(f"👉 Output saved to: {out_file} ({canvas_width}x{canvas_height})")
+    print(f"\n[SUCCESS] BSP Mood board saved to: {out_file}")
     return out_file
 
 
+# ==============================================================================
+# MAIN ROUTING
+# ==============================================================================
+
 def parse_color(color_str: str) -> tuple:
-    """Parses hex code (e.g. '000000', '#FFFFFF') or preset color name."""
     clean = color_str.strip().lstrip('#')
     if len(clean) == 6:
         return tuple(int(clean[i:i+2], 16) for i in (0, 2, 4))
     presets = {
         'white': (255, 255, 255),
         'black': (0, 0, 0),
-        'dark': (18, 18, 18),
+        'dark': (15, 18, 24),
         'light': (245, 245, 245),
         'gray': (40, 40, 40)
     }
@@ -358,89 +448,58 @@ def parse_color(color_str: str) -> tuple:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate a cohesive, borderless UX Mood Board from a folder of images."
+        description="Generate high-resolution UX Mood Boards with zero-crop progression or random mosaic."
     )
-    parser.add_argument(
-        "--input", "-i",
-        default=DEFAULT_INPUT_DIR,
-        help=f"Folder containing source images (default: {DEFAULT_INPUT_DIR})"
-    )
-    parser.add_argument(
-        "--output", "-o",
-        default=DEFAULT_OUTPUT_PATH,
-        help=f"Output PNG path (default: {DEFAULT_OUTPUT_PATH})"
-    )
-    parser.add_argument(
-        "--width", "-w",
-        type=int,
-        default=CANVAS_WIDTH,
-        help=f"Canvas width in pixels (default: {CANVAS_WIDTH})"
-    )
-    parser.add_argument(
-        "--aspect-ratio", "-ar",
-        type=float,
-        default=CANVAS_ASPECT_RATIO,
-        help=f"Canvas aspect ratio (e.g. 1.778 for 16:9, 1.333 for 4:3, 1.0 for square; default: {CANVAS_ASPECT_RATIO:.3f})"
-    )
-    parser.add_argument(
-        "--gap", "-g",
-        type=int,
-        default=GAP_WIDTH,
-        help=f"Gap / divider width in pixels between frames (default: {GAP_WIDTH})"
-    )
-    parser.add_argument(
-        "--margin", "-m",
-        type=int,
-        default=OUTER_MARGIN,
-        help=f"Outer margin around the canvas (default: {OUTER_MARGIN})"
-    )
-    parser.add_argument(
-        "--bg-color", "-bg",
-        type=str,
-        default="121212",
-        help="Background / border color in hex or name (e.g. '000000', 'FFFFFF', '121212', 'white', 'black')"
-    )
-    parser.add_argument(
-        "--min-cell-ar",
-        type=float,
-        default=MIN_CELL_ASPECT_RATIO,
-        help=f"Minimum cell aspect ratio (default: {MIN_CELL_ASPECT_RATIO})"
-    )
-    parser.add_argument(
-        "--max-cell-ar",
-        type=float,
-        default=MAX_CELL_ASPECT_RATIO,
-        help=f"Maximum cell aspect ratio (default: {MAX_CELL_ASPECT_RATIO})"
-    )
-    parser.add_argument(
-        "--frames", "-f",
-        type=int,
-        default=None,
-        help="Number of frames to generate (default: matches number of source images)"
-    )
-    parser.add_argument(
-        "--seed", "-s",
-        type=int,
-        default=None,
-        help="Random seed for reproducible layout generation (default: None)"
-    )
+    parser.add_argument("--input", "-i", default=DEFAULT_INPUT_DIR, help="Source images directory")
+    parser.add_argument("--output", "-o", default=DEFAULT_OUTPUT_PATH, help="Output PNG path")
+    parser.add_argument("--layout", "-l", choices=['justified', 'bsp'], default=DEFAULT_LAYOUT,
+                        help="Layout mode: 'justified' (zero cropping, preserved progression) or 'bsp' (random mosaic)")
+    parser.add_argument("--width", "-w", type=int, default=CANVAS_WIDTH, help="Canvas width in pixels")
+    parser.add_argument("--row-height", "-rh", type=int, default=TARGET_ROW_HEIGHT, help="Target row height (justified mode)")
+    parser.add_argument("--badges", "-b", choices=['both', 'number', 'none'], default=DEFAULT_BADGES,
+                        help="Sequence badge overlay: 'both' (#01 · Jun 2025), 'number' (#01), or 'none'")
+    parser.add_argument("--gap", "-g", type=int, default=GAP_WIDTH, help="Divider gap in pixels")
+    parser.add_argument("--margin", "-m", type=int, default=OUTER_MARGIN, help="Outer canvas margin in pixels")
+    parser.add_argument("--bg-color", "-bg", default="0f1218", help="Canvas background color in hex or name")
+    parser.add_argument("--aspect-ratio", "-ar", type=float, default=CANVAS_ASPECT_RATIO, help="Canvas aspect ratio for BSP mode")
+    parser.add_argument("--seed", "-s", type=int, default=None, help="Random seed for BSP mode")
 
     args = parser.parse_args()
+
+    input_path = resolve_path(args.input)
+    out_file = resolve_path(args.output, prefer_output_dir=True)
+
+    if not input_path.exists():
+        raise FileNotFoundError(f"Input directory not found: {input_path}")
+
+    images = find_images(input_path)
+    if not images:
+        raise ValueError(f"No image files found in {input_path}")
+
     bg_tuple = parse_color(args.bg_color)
 
-    create_moodboard(
-        input_dir=args.input,
-        output_path=args.output,
-        canvas_width=args.width,
-        canvas_aspect_ratio=args.aspect_ratio,
-        gap=args.gap,
-        margin=args.margin,
-        bg_color=bg_tuple,
-        min_cell_ar=args.min_cell_ar,
-        max_cell_ar=args.max_cell_ar,
-        frame_count=args.frames,
-        seed=args.seed
-    )
+    if args.layout == 'justified':
+        create_justified_moodboard(
+            image_files=images,
+            out_file=out_file,
+            canvas_width=args.width,
+            target_row_height=args.row_height,
+            gap=args.gap,
+            margin=args.margin,
+            bg_color=bg_tuple,
+            badge_mode=args.badges
+        )
+    else:
+        create_bsp_moodboard(
+            image_files=images,
+            out_file=out_file,
+            canvas_width=args.width,
+            canvas_aspect_ratio=args.aspect_ratio,
+            gap=args.gap,
+            margin=args.margin,
+            bg_color=bg_tuple,
+            seed=args.seed
+        )
 
 
 if __name__ == "__main__":
