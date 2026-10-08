@@ -3545,5 +3545,286 @@ body > header {
   margin: 0;
 }
 
+/* ==========================================================================
+   SUB-PAGE 3: STORYBOARD & ASSUMPTIONS CAROUSEL
+   ========================================================================== */
+.storyboard-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 26px;
+  align-items: stretch;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .storyboard-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.storyboard-assumptions-card {
+  background: #141418;
+  border: 1px solid #282834;
+  border-radius: 12px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.assumptions-header {
+  margin-bottom: 12px;
+}
+
+.assumptions-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #f5b838;
+  background: rgba(245, 184, 56, 0.12);
+  border: 1px solid rgba(245, 184, 56, 0.3);
+  padding: 3px 9px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.assumptions-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.assumptions-intro {
+  color: #94a3b8;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #23232c;
+}
+
+.assumption-block {
+  background: #17171f;
+  border: 1px solid #23232c;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-left: 3.5px solid #1DCD9F;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.assumption-block:last-child {
+  margin-bottom: 0;
+  border-left-color: #3b82f6;
+}
+
+.assumption-block:hover {
+  transform: translateY(-2px);
+  border-color: #383848;
+}
+
+.assumption-badge-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.assumption-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1DCD9F;
+  font-family: monospace;
+}
+
+.assumption-block:last-child .assumption-num {
+  color: #60a5fa;
+}
+
+.assumption-heading {
+  color: #ffffff;
+  font-size: 0.94rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.assumption-text {
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.assumption-desc {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Carousel Container */
+.storyboard-carousel-container {
+  background: #141418;
+  border: 1px solid #282834;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.carousel-stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #23232c;
+}
+
+.carousel-stage-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1DCD9F;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.carousel-stage-title {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.carousel-arrow-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-nav-btn {
+  background: #202028;
+  color: #e2e8f0;
+  border: 1px solid #333342;
+  border-radius: 6px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.carousel-nav-btn:hover {
+  background: #1DCD9F;
+  color: #0b0c10;
+  border-color: #1DCD9F;
+  transform: translateY(-1px);
+}
+
+/* Viewport and track */
+.storyboard-slides-viewport {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #0d0d12;
+  border: 1px solid #22222c;
+  position: relative;
+  width: 100%;
+}
+
+.storyboard-slides-track {
+  display: flex;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.storyboard-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.storyboard-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0d12;
+  overflow: hidden;
+}
+
+.storyboard-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.storyboard-slide:hover .storyboard-img-wrapper img {
+  transform: scale(1.02);
+}
+
+/* Carousel Footer & Dots */
+.storyboard-carousel-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 10px;
+}
+
+.carousel-dots-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333342;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.carousel-dot:hover {
+  background: #94a3b8;
+  transform: scale(1.15);
+}
+
+.carousel-dot.active {
+  background: #1DCD9F;
+  width: 24px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(29, 205, 159, 0.45);
+}
+
+.carousel-footnote {
+  color: #64748b;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 
 

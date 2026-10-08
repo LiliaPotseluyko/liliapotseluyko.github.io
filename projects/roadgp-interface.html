@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RoadGP: AI Defect Triage &amp; Decision Support Platform | Dr Lilia Potseluyko</title>
-  <link rel="stylesheet" href="../style.css?v=20261008b">
+  <link rel="stylesheet" href="../style.css?v=20261008c">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="home">
@@ -612,19 +612,114 @@
       </section>
     </article>
 
-    <!-- SUB-PAGE 3 -->
+    <!-- ======================================================================
+         SUB-PAGE 3: STORYBOARD & CORE ASSUMPTIONS
+         ====================================================================== -->
     <article class="roadgp-subpage" id="subpage-3">
       <header class="roadgp-subpage-header">
         <span class="roadgp-subpage-number">Sub-Page 3</span>
-        <h2 class="roadgp-subpage-title">Understanding Complex User Needs &amp; Mental Models</h2>
+        <h2 class="roadgp-subpage-title">Storyboard &amp; Core Assumptions</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
-      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
-        <i class="fas fa-brain" style="font-size: 2rem; color: #f5b838; margin-bottom: 12px; display: inline-block;"></i>
-        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 3 Staged &bull; Ready for Content</h4>
-        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
-          Inspector mental models, cognitive triage friction, user journeys, and pain point mapping.
-        </p>
+
+      <div class="storyboard-layout-grid">
+        <!-- LEFT COLUMN: ASSUMPTIONS -->
+        <div class="storyboard-assumptions-card">
+          <div class="assumptions-header">
+            <span class="assumptions-tag"><i class="fas fa-lightbulb"></i> Foundation</span>
+            <h3 class="assumptions-title">Assumptions</h3>
+          </div>
+          <p class="assumptions-intro">
+            Core design assumptions and hypotheses guiding our rapid prototyping trajectory:
+          </p>
+
+          <!-- ASSUMPTION 1: MOBILE-FRIENDLY & PROGRESSIVE COMPLEXITY -->
+          <div class="assumption-block">
+            <div class="assumption-badge-row">
+              <span class="assumption-num">01</span>
+              <h4 class="assumption-heading">Mobile-Friendly Interface &bull; Progressive Complexity</h4>
+            </div>
+            <p class="assumption-text">
+              <strong>Assumption:</strong> A mobile-friendly interface is possible and optimal for field operations.
+            </p>
+            <p class="assumption-desc">
+              Leveraging the UX framework of <em>progressive complexity</em>: we began with mobile-first constraints to prioritize core actions and facilitate fast prototyping in the field, before expanding functionality outward to full desktop control centers.
+            </p>
+          </div>
+
+          <!-- ASSUMPTION 2: INDUSTRY READINESS FOR UNIFIED AUTOMATION -->
+          <div class="assumption-block">
+            <div class="assumption-badge-row">
+              <span class="assumption-num">02</span>
+              <h4 class="assumption-heading">Industry Readiness for Unified Automation</h4>
+            </div>
+            <p class="assumption-text">
+              <strong>Assumption:</strong> The highways maintenance industry is ready for automated vehicle repairs.
+            </p>
+            <p class="assumption-desc">
+              Assuming that disparate multi-domain services—smart self-healing materials, autonomous robotic crack sealers, and predictive AI data science—can be unified into a single, cohesive product ecosystem.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: 3-STAGE STORYBOARD CAROUSEL -->
+        <div class="storyboard-carousel-container">
+          <div class="carousel-stage-header">
+            <div>
+              <span class="carousel-stage-badge" id="carouselStageBadge">Version 1 of 3 &bull; Paper Prototype</span>
+              <h4 class="carousel-stage-title" id="carouselStageTitle">Initial Paper Storyboard</h4>
+            </div>
+            <div class="carousel-arrow-controls">
+              <button type="button" class="carousel-nav-btn prev" id="storyboardPrevBtn" aria-label="Previous Storyboard Version">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button type="button" class="carousel-nav-btn next" id="storyboardNextBtn" aria-label="Next Storyboard Version">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Slides Viewport -->
+          <div class="storyboard-slides-viewport">
+            <div class="storyboard-slides-track" id="storyboardTrack">
+              <!-- SLIDE 1: PAPER VERSION -->
+              <div class="storyboard-slide zoomable-image-card" title="Version 1: Initial Paper Storyboard &bull; Rapid hand-drawn concept sketches exploring inspector field triage">
+                <div class="storyboard-img-wrapper">
+                  <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Paper_Storyboard.png" alt="Paper Storyboard Prototype">
+                  <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
+                </div>
+              </div>
+
+              <!-- SLIDE 2: DRAW.IO VERSION -->
+              <div class="storyboard-slide zoomable-image-card" title="Version 2: Draw.io Wireframe Storyboard &bull; Structured digital process flows and multi-role user journeys">
+                <div class="storyboard-img-wrapper">
+                  <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Draw_IO_StoryBoard.png" alt="Draw.io Storyboard Wireframes">
+                  <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
+                </div>
+              </div>
+
+              <!-- SLIDE 3: FINAL DIGITAL TWIN VERSION -->
+              <div class="storyboard-slide zoomable-image-card" title="Version 3: Final Digital Twin Storyboard &bull; Complete integration with digital twin elements for construction workflows">
+                <div class="storyboard-img-wrapper">
+                  <img src="../images/RoadGP/SUB-PAPAGE3_Storyboard/Final_Soryboard.png" alt="Final Storyboard with Digital Twin Construction Elements">
+                  <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Footer: 3 Dots and Note -->
+          <div class="storyboard-carousel-footer">
+            <div class="carousel-dots-group" id="storyboardDots">
+              <button type="button" class="carousel-dot active" data-slide="0" aria-label="Slide 1: Paper Version"></button>
+              <button type="button" class="carousel-dot" data-slide="1" aria-label="Slide 2: Draw.io Version"></button>
+              <button type="button" class="carousel-dot" data-slide="2" aria-label="Slide 3: Final Digital Twin Version"></button>
+            </div>
+            <span class="carousel-footnote">
+              <i class="fas fa-hand-pointer" style="color: #1DCD9F;"></i> Click image to inspect high-resolution
+            </span>
+          </div>
+        </div>
       </div>
     </article>
 
@@ -847,6 +942,76 @@
           if (img) openLightbox(img.src, caption);
         });
       });
+
+      // Sub-Page 3: Storyboard Carousel Controller
+      const track = document.getElementById('storyboardTrack');
+      const prevBtn = document.getElementById('storyboardPrevBtn');
+      const nextBtn = document.getElementById('storyboardNextBtn');
+      const dots = document.querySelectorAll('#storyboardDots .carousel-dot');
+      const stageBadge = document.getElementById('carouselStageBadge');
+      const stageTitle = document.getElementById('carouselStageTitle');
+
+      if (track && prevBtn && nextBtn && dots.length > 0) {
+        const slidesData = [
+          { badge: "Version 1 of 3 \u2022 Paper Prototype", title: "Initial Paper Storyboard" },
+          { badge: "Version 2 of 3 \u2022 Digital Wireframes", title: "Draw.io Wireframe Storyboard" },
+          { badge: "Version 3 of 3 \u2022 Construction Workflows", title: "Final Digital Twin Storyboard" }
+        ];
+
+        let currentIndex = 0;
+        const totalSlides = slidesData.length;
+
+        function updateCarousel(index) {
+          currentIndex = (index + totalSlides) % totalSlides;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+          });
+
+          if (stageBadge && stageTitle && slidesData[currentIndex]) {
+            stageBadge.textContent = slidesData[currentIndex].badge;
+            stageTitle.textContent = slidesData[currentIndex].title;
+          }
+        }
+
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          updateCarousel(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          updateCarousel(currentIndex + 1);
+        });
+
+        dots.forEach((dot) => {
+          dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const targetIndex = parseInt(dot.getAttribute('data-slide'), 10);
+            if (!isNaN(targetIndex)) {
+              updateCarousel(targetIndex);
+            }
+          });
+        });
+
+        // Swipe support for touch screens
+        let touchStartX = 0;
+        track.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', (e) => {
+          const touchDiff = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(touchDiff) > 40) {
+            if (touchDiff > 0) updateCarousel(currentIndex + 1);
+            else updateCarousel(currentIndex - 1);
+          }
+        }, { passive: true });
+      }
     });
   </script>
 
