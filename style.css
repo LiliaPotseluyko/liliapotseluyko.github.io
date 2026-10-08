@@ -3879,5 +3879,236 @@ body > header {
   gap: 5px;
 }
 
+/* ==========================================================================
+   Sub-Page 4: Conceptual Architecture & System Integration (3-Column Layout)
+   ========================================================================== */
+.concept-arch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.concept-arch-col {
+  display: flex;
+  flex-direction: column;
+  background: #111116;
+  border: 1px solid #23232c;
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.concept-arch-col:hover {
+  border-color: #3b3b48;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.arch-col-header {
+  margin-bottom: 14px;
+}
+
+.arch-step-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 9px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.arch-step-badge.blue {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+}
+
+.arch-step-badge.amber {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.28);
+}
+
+.arch-step-badge.magenta {
+  color: #ec4899;
+  background: rgba(236, 72, 153, 0.12);
+  border: 1px solid rgba(236, 72, 153, 0.28);
+}
+
+.arch-step-badge.emerald {
+  color: #1DCD9F;
+  background: rgba(29, 205, 159, 0.12);
+  border: 1px solid rgba(29, 205, 159, 0.28);
+}
+
+.arch-col-title {
+  color: #ffffff;
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.arch-col-desc {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.arch-image-card {
+  position: relative;
+  background: #09090d;
+  border: 1px solid #242430;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.arch-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #000000;
+}
+
+.arch-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.arch-image-card:hover .arch-img-wrapper img {
+  transform: scale(1.025);
+}
+
+.arch-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Experience Learned Box inside Column 1 */
+.arch-experience-box {
+  background: rgba(29, 205, 159, 0.04);
+  border: 1px solid rgba(29, 205, 159, 0.2);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: auto;
+}
+
+.arch-experience-title {
+  color: #1DCD9F;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.c4-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.c4-item {
+  background: #14141c;
+  border: 1px solid #262636;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.c4-item-lvl {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  margin-bottom: 2px;
+}
+
+.c4-item-desc {
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  line-height: 1.35;
+}
+
+.arch-takeaway-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.arch-takeaway-list li {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.arch-takeaway-list li:last-child {
+  margin-bottom: 0;
+}
+
+.arch-takeaway-list li i {
+  margin-top: 3px;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+/* Column 2 & 3 Detail Sections */
+.arch-pill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.arch-pill-row {
+  background: #15151e;
+  border: 1px solid #232332;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.arch-pill-row-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.arch-pill-row-label.amber { color: #fbbf24; }
+.arch-pill-row-label.magenta { color: #ec4899; }
+.arch-pill-row-label.blue { color: #38bdf8; }
+
+.arch-pill-row-text {
+  font-size: 0.74rem;
+  color: #cbd5e1;
+  line-height: 1.35;
+}
+
+@media (max-width: 980px) {
+  .concept-arch-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
 
 
