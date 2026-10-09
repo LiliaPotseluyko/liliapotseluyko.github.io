@@ -13,6 +13,7 @@ sequenceDiagram
     participant Orchestrator as Antigravity Orchestrator
     participant Curator as Agent Asset Curator
     participant IA as Agent Info Architect
+    participant Canvas as Agent Canvas
     participant Recruiter as Agent Recruiter
     participant UI as Agent UI Designer
     participant RAG as Agent RAG Manager
@@ -24,6 +25,11 @@ sequenceDiagram
     
     Orchestrator->>IA: Draft case study structure
     IA->>IA: Write 6-section case study (projects/[slug].html)
+    
+    Orchestrator->>Canvas: Generate editable text canvas (canvas/*.md)
+    Canvas-->>Lilia: Lilia reviews & refines copy in pure text
+    Lilia->>Canvas: Submits copy revisions
+    Canvas->>Canvas: Synchronize edits back to projects/[slug].html
     
     Orchestrator->>Recruiter: Role & metric screening
     Recruiter->>IA: Refine action verbs, PO/PM/FDE rubrics & KPIs
@@ -57,6 +63,11 @@ sequenceDiagram
    - 4. Interactive Media & Demos (Video / Gallery)
    - 5. Measurable Outcomes & Learnings (KPI cards)
    - Next / Previous Project navigation footer.
+
+### Step 2b: Text Canvas Generation & Editorial Review (`agent_canvas`)
+1. Extract pure editorial copy from `projects/[slug].html` into a distraction-free Markdown Canvas (`canvas/[slug]-canvas.md`), stripping out all HTML tags, styles, scripts, and image links.
+2. Provide the canvas to Lilia for copy editing and narrative tuning.
+3. Synchronize approved text changes back into `projects/[slug].html` using `node scripts/canvas_sync.cjs update`, keeping 100% of the HTML structure, classes, and styles intact.
 
 ### Step 3: Recruiter Quality Gate (`agent_recruiter`)
 1. Verify role alignment: Is this framed for Product Owner, Product Manager, Service Designer, or Forward Deployed Engineer?
