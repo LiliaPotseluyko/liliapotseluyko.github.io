@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RoadGP: AI Defect Triage &amp; Decision Support Platform | Dr Lilia Potseluyko</title>
-  <link rel="stylesheet" href="../style.css?v=20261008k">
+  <link rel="stylesheet" href="../style.css?v=20261009c">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="home">
@@ -1003,19 +1003,207 @@
       </div>
     </article>
 
-    <!-- SUB-PAGE 6 -->
+    <!-- SUB-PAGE 6: OPPORTUNITY SOLUTION TREE DECISIONS -->
     <article class="roadgp-subpage" id="subpage-6">
       <header class="roadgp-subpage-header">
         <span class="roadgp-subpage-number">Sub-Page 6</span>
-        <h2 class="roadgp-subpage-title">High-Fidelity UI &amp; Working Interactive Prototypes</h2>
+        <h2 class="roadgp-subpage-title">Opportunity Solution Tree Decisions</h2>
+        <p class="roadgp-subpage-intro">User and stakeholder priority results</p>
         <hr class="roadgp-subpage-divider" />
       </header>
-      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
-        <i class="fas fa-desktop" style="font-size: 2rem; color: #1DCD9F; margin-bottom: 12px; display: inline-block;"></i>
-        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 6 Staged &bull; Ready for Content</h4>
-        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
-          Python Dash/Flask live triage dashboard, dual-view map sync, and bounding box validation.
-        </p>
+
+      <div class="ost-tiles-grid">
+
+        <!-- TILE 1: FEATURES -->
+        <div class="ost-tile-card features-tile" id="featuresTile" role="button" tabindex="0" aria-label="Open Full Features Specification Modal">
+          <div class="ost-tile-header">
+            <span class="ost-tile-badge green">Core Strategy &bull; Continuous Discovery</span>
+            <h3 class="ost-tile-title">Features</h3>
+          </div>
+
+          <!-- Feature Short Note Badges with generous empty space -->
+          <div class="ost-pills-container">
+            <span class="ds-short-note orange">Repair prioritisation</span>
+            <span class="ds-short-note orange">Deterioration prediction</span>
+            <span class="ds-short-note orange">Reactive and proactive coordination</span>
+            <span class="ds-short-note purple">Defect map view</span>
+            <span class="ds-short-note purple">360&deg; location context</span>
+            <span class="ds-short-note purple">Repair history view</span>
+            <span class="ds-short-note pink">RoadGP integration</span>
+            <span class="ds-short-note pink">Cluster treatment advice</span>
+            <span class="ds-short-note pink">Automated defect clustering</span>
+          </div>
+
+          <!-- Click Action Prompt Bar -->
+          <div class="ost-expand-action">
+            <span class="action-label"><i class="fas fa-up-right-from-square" style="margin-right: 8px;"></i> Click to View Full Specifications</span>
+            <i class="fas fa-chevron-right chevron-icon"></i>
+          </div>
+        </div>
+
+        <!-- TILE 2: DIGITAL ROADS OUTPUTS - RICE MODEL SCORING -->
+        <div class="ost-tile-card rice-tile" id="riceTile" role="button" tabindex="0" aria-label="Open Full RICE Model Scoring Matrix Modal">
+          <div class="ost-tile-header">
+            <span class="ost-tile-badge blue">Strategic Prioritisation &bull; RICE Framework</span>
+            <h3 class="ost-tile-title">DR Outputs: RICE Model Scoring</h3>
+          </div>
+
+          <!-- Product Name and Score with Lots of Empty Space -->
+          <div class="rice-cards-container">
+            <div class="rice-candidate-card primary-candidate">
+              <span class="rice-candidate-name">RoadGP <span class="rice-badge-status mvp">Selected MVP</span></span>
+              <div class="rice-score-badge emerald">
+                <span class="score-val">32.0</span>
+              </div>
+            </div>
+
+            <div class="rice-candidate-card">
+              <span class="rice-candidate-name">AMP &bull; Autonomous Maintenance Plant</span>
+              <div class="rice-score-badge blue">
+                <span class="score-val">4.0</span>
+              </div>
+            </div>
+
+            <div class="rice-candidate-card">
+              <span class="rice-candidate-name">3D Updatable Digital Twin</span>
+              <div class="rice-score-badge purple">
+                <span class="score-val">3.0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Click Action Prompt Bar -->
+          <div class="ost-expand-action">
+            <span class="action-label"><i class="fas fa-calculator" style="margin-right: 8px;"></i> See the calculations</span>
+            <i class="fas fa-chevron-right chevron-icon"></i>
+          </div>
+        </div>
+
+        <!-- TILE 3: FEASIBILITY VS IMPACT MATRIX -->
+        <div class="ost-tile-card matrix-tile" id="matrix2x2Tile" role="button" tabindex="0" aria-label="Open Full 2x2 Feature Prioritisation Matrix Modal">
+          <div class="ost-tile-header">
+            <span class="ost-tile-badge purple">Prioritisation &bull; 2&times;2 Matrix</span>
+            <h3 class="ost-tile-title">Feasibility vs Impact Matrix</h3>
+          </div>
+
+          <!-- Small Grid with Labels Outside & Numbered Legend on Right -->
+          <div class="matrix-split-container">
+            <div class="matrix-canvas-wrapper">
+              <span class="matrix-outer-label-y">Impact &uarr;</span>
+              <div class="matrix-small-grid">
+                <div class="matrix-axis-x"></div>
+                <div class="matrix-axis-y"></div>
+
+                <span class="matrix-num-dot purple" style="left: 72%; top: 22%;" title="1. Defect Map View">1</span>
+                <span class="matrix-num-dot pink" style="left: 82%; top: 32%;" title="2. Automated Defect Clustering">2</span>
+                <span class="matrix-num-dot orange" style="left: 64%; top: 40%;" title="3. Repair Prioritisation">3</span>
+                <span class="matrix-num-dot orange" style="left: 28%; top: 26%;" title="4. Deterioration Prediction">4</span>
+                <span class="matrix-num-dot pink" style="left: 76%; top: 46%;" title="5. ML Data Input Forms">5</span>
+                <span class="matrix-num-dot slate" style="left: 78%; top: 80%;" title="6. Invoicing Systems">6</span>
+              </div>
+              <span class="matrix-outer-label-x">Feasibility &rarr;</span>
+            </div>
+
+            <div class="matrix-numbers-legend">
+              <div class="matrix-legend-row highlight">
+                <span class="matrix-legend-num purple">1</span>
+                <span class="matrix-legend-text">Visualisation Clarity</span>
+              </div>
+              <div class="matrix-legend-row highlight">
+                <span class="matrix-legend-num pink">2</span>
+                <span class="matrix-legend-text">RoadGP Clustering</span>
+              </div>
+              <div class="matrix-legend-row highlight">
+                <span class="matrix-legend-num orange">3</span>
+                <span class="matrix-legend-text">Repair Prioritisation</span>
+              </div>
+              <div class="matrix-legend-row">
+                <span class="matrix-legend-num orange">4</span>
+                <span class="matrix-legend-text">Deterioration Prediction</span>
+              </div>
+              <div class="matrix-legend-row">
+                <span class="matrix-legend-num pink">5</span>
+                <span class="matrix-legend-text">ML Data Input</span>
+              </div>
+              <div class="matrix-legend-row muted">
+                <span class="matrix-legend-num slate">6</span>
+                <span class="matrix-legend-text">Invoicing Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Click Action Prompt Bar -->
+          <div class="ost-expand-action">
+            <span class="action-label"><i class="fas fa-table-cells-large" style="margin-right: 8px;"></i> Inspect 2&times;2 Matrix Breakdown</span>
+            <i class="fas fa-chevron-right chevron-icon"></i>
+          </div>
+        </div>
+
+        <!-- TILE 4: MOSCOW MODEL ROADGP MVP -->
+        <div class="ost-tile-card moscow-tile" id="moscowTile" role="button" tabindex="0" aria-label="Open Full MoSCoW Model Scope Modal">
+          <div class="ost-tile-header">
+            <span class="ost-tile-badge amber">Scope Definition &bull; MoSCoW Model</span>
+            <h3 class="ost-tile-title">MoSCoW: RoadGP MVP Scope</h3>
+          </div>
+
+          <!-- Left: Definitions & Right: Just Short Description Labels Without Subheadings -->
+          <div class="moscow-split-grid">
+            <div class="moscow-definitions-box">
+              <div class="moscow-def-item">
+                <div class="moscow-def-badge-row">
+                  <span class="moscow-letter-tag must">M</span>
+                  <span class="moscow-def-name">Must Have</span>
+                </div>
+                <p class="moscow-def-desc">Non-negotiable core operational launch criteria.</p>
+              </div>
+
+              <div class="moscow-def-item">
+                <div class="moscow-def-badge-row">
+                  <span class="moscow-letter-tag should">S</span>
+                  <span class="moscow-def-name">Should Have</span>
+                </div>
+                <p class="moscow-def-desc">High-value capabilities with interim workarounds.</p>
+              </div>
+
+              <div class="moscow-def-item">
+                <div class="moscow-def-badge-row">
+                  <span class="moscow-letter-tag could">C</span>
+                  <span class="moscow-def-name">Could Have</span>
+                </div>
+                <p class="moscow-def-desc">Desirable enhancements if capacity allows.</p>
+              </div>
+
+              <div class="moscow-def-item">
+                <div class="moscow-def-badge-row">
+                  <span class="moscow-letter-tag wont">W</span>
+                  <span class="moscow-def-name">Won't Have</span>
+                </div>
+                <p class="moscow-def-desc">Explicitly deferred out of MVP release scope.</p>
+              </div>
+            </div>
+
+            <!-- Right: Just short description labels without subheadings, nothing else -->
+            <div class="moscow-labels-cloud">
+              <span class="ds-short-note pink">Cluster Treatment Advice</span>
+              <span class="ds-short-note purple">Defect Map &amp; 360&deg;</span>
+              <span class="ds-short-note pink">Defect Clustering</span>
+              <span class="ds-short-note orange">Repair Prioritisation</span>
+              <span class="ds-short-note orange">Deterioration Models</span>
+              <span class="ds-short-note purple">Repair History</span>
+              <span class="ds-short-note pink">ML Data Input</span>
+              <span class="ds-short-note orange">Route Optimisation</span>
+              <span class="ds-short-note slate">Invoicing Systems</span>
+              <span class="ds-short-note slate">Robotic Plant Control</span>
+            </div>
+          </div>
+
+          <!-- Click Action Prompt Bar -->
+          <div class="ost-expand-action">
+            <span class="action-label"><i class="fas fa-layer-group" style="margin-right: 8px;"></i> Inspect MoSCoW Release Scope</span>
+            <i class="fas fa-chevron-right chevron-icon"></i>
+          </div>
+        </div>
+
       </div>
     </article>
 
@@ -1148,6 +1336,282 @@
     </div>
   </div>
 
+  <!-- Modal for Sub-Page 6 Features Full Specifications -->
+  <div class="features-modal-overlay" id="featuresModal" onclick="closeFeaturesModal(event)">
+    <div class="features-modal-container">
+      <div class="features-modal-header">
+        <div>
+          <h3 class="features-modal-title">Opportunity Solution Tree: Full Feature Specifications</h3>
+          <p class="features-modal-subtitle">User and stakeholder priority results across continuous discovery categories</p>
+        </div>
+        <button class="features-modal-close" onclick="closeFeaturesModal(event)" aria-label="Close feature details">&times;</button>
+      </div>
+
+      <div class="features-categories-grid">
+
+        <!-- Category 1: Maintenance planning and prioritisation (Orange) -->
+        <div class="feature-category-card orange">
+          <h4 class="feature-category-title orange">Maintenance planning and prioritisation</h4>
+          <ul class="feature-specs-list">
+            <li>Improve the ability to prioritise repairs based on safety, urgency, operational constraints, available resources, and proactive lifecycle planning.</li>
+            <li>Use academic research findings to develop deterioration predictions that support repair planning.</li>
+            <li>Optimise service provider repair routes and resource allocation by integrating Rui’s PhD research.</li>
+            <li>Improve communication between reactive and proactive maintenance teams through a shared interface, helping reduce the cost of expensive reactive maintenance.</li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Visualisation and repair delivery (Purple) -->
+        <div class="feature-category-card purple">
+          <h4 class="feature-category-title purple">Visualisation and repair delivery</h4>
+          <ul class="feature-specs-list">
+            <li>Improve defect visualisation through maps, defect polygons, extracted imagery, and 360° images that provide location and surrounding-context information, road clousure arrangments</li>
+            <li>Provide transparent visualisation of repair history.</li>
+            <li>Integrate visualisation with job and invoicing systems to clarify repair tasks and support completion checks.</li>
+            <li>Collect information about failed repairs through the interface to improve future decision-making.</li>
+          </ul>
+        </div>
+
+        <!-- Category 3: RoadGP-specific features (Pink) -->
+        <div class="feature-category-card pink">
+          <h4 class="feature-category-title pink">RoadGP-specific features</h4>
+          <ul class="feature-specs-list">
+            <li>Integrate RoadGP with existing systems so repairs can be designed and planned using available resource information.</li>
+            <li>Provide clear data-input interfaces to improve RoadGP recommendations and decision support.</li>
+            <li>Enable users to request team opinions on decisions, helping to standardise decision-making and improve efficiency.</li>
+            <li>Automate defect clustering to create assessment segments for RoadGP treatment advice.</li>
+            <li>Connect RoadGP defect clusters at 15 m, National Highways network-model segments at 100 m, and repair job areas at 10 km through the interface.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Sub-Page 6 RICE Model Calculations Full Matrix -->
+  <div class="features-modal-overlay" id="riceModal" onclick="closeRiceModal(event)">
+    <div class="features-modal-container rice-modal-container">
+      <div class="features-modal-header">
+        <div>
+          <h3 class="features-modal-title">DR Outputs: RICE Model Scoring &amp; Mathematical Proof</h3>
+          <p class="features-modal-subtitle">Quantitative comparison matrix and strategic scoring rationale for Digital Roads candidate outputs</p>
+        </div>
+        <button class="features-modal-close" onclick="closeRiceModal(event)" aria-label="Close RICE matrix">&times;</button>
+      </div>
+
+      <!-- Formula Banner -->
+      <div class="rice-formula-banner">
+        <div class="formula-title"><i class="fas fa-calculator" style="margin-right: 6px;"></i> RICE Prioritisation Formula</div>
+        <div class="formula-math">RICE Score = (Reach &times; Impact &times; Confidence) / Effort</div>
+        <div class="formula-caption">Standardized 1&ndash;4 scale: Reach (1=Local &bull; 4=National Network), Impact (1=Minor &bull; 4=Transformative), Confidence (1=Low/Early &bull; 4=High/Tested Evidence), Effort (1=Rapid Build &bull; 4=Heavy Multi-Year R&amp;D).</div>
+      </div>
+
+      <!-- Full Scoring Matrix Table -->
+      <div class="rice-table-wrapper">
+        <table class="rice-scoring-table">
+          <thead>
+            <tr>
+              <th>Product Candidate</th>
+              <th style="text-align: center;">Reach (R)</th>
+              <th style="text-align: center;">Impact (I)</th>
+              <th style="text-align: center;">Confidence (C)</th>
+              <th style="text-align: center;">Effort (E)</th>
+              <th>Calculation</th>
+              <th style="text-align: center;">RICE Score</th>
+              <th>Strategic Decision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td>
+                <strong style="color: #ffffff;">RoadGP</strong>
+                <span class="table-sublabel">Operational Maintenance Decision Interface</span>
+              </td>
+              <td style="text-align: center;"><span class="score-cell-badge green">4</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge green">4</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge green">4</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge green">2</span></td>
+              <td class="calc-cell">(4 &times; 4 &times; 4) / 2 = 64 / 2</td>
+              <td style="text-align: center;"><span class="rice-final-score gold">32.0</span></td>
+              <td><span class="decision-pill mvp"><i class="fas fa-check-circle"></i> Selected MVP</span></td>
+            </tr>
+            <tr>
+              <td>
+                <strong style="color: #ffffff;">Autonomous Maintenance Plant (AMP)</strong>
+                <span class="table-sublabel">Automated Robotic Road Repair Plant</span>
+              </td>
+              <td style="text-align: center;"><span class="score-cell-badge">2</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge green">4</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge">2</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge orange">4</span></td>
+              <td class="calc-cell">(2 &times; 4 &times; 2) / 4 = 16 / 4</td>
+              <td style="text-align: center;"><span class="rice-final-score">4.0</span></td>
+              <td><span class="decision-pill horizon">Future Horizon</span></td>
+            </tr>
+            <tr>
+              <td>
+                <strong style="color: #ffffff;">3D Updatable Digital Twin</strong>
+                <span class="table-sublabel">Real-Time Spatial Network Twin &amp; Point Cloud</span>
+              </td>
+              <td style="text-align: center;"><span class="score-cell-badge">2</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge">3</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge">2</span></td>
+              <td style="text-align: center;"><span class="score-cell-badge orange">4</span></td>
+              <td class="calc-cell">(2 &times; 3 &times; 2) / 4 = 12 / 4</td>
+              <td style="text-align: center;"><span class="rice-final-score">3.0</span></td>
+              <td><span class="decision-pill rd">Exploratory R&amp;D</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal for Sub-Page 6 2x2 Matrix Full Specifications -->
+  <div class="features-modal-overlay" id="matrix2x2Modal" onclick="closeMatrix2x2Modal(event)">
+    <div class="features-modal-container rice-modal-container">
+      <div class="features-modal-header">
+        <div>
+          <h3 class="features-modal-title">2&times;2 Feature Matrix: Feasibility vs Impact Analysis</h3>
+          <p class="features-modal-subtitle">Strategic continuous discovery mapping balancing technical feasibility against operational maintenance impact</p>
+        </div>
+        <button class="features-modal-close" onclick="closeMatrix2x2Modal(event)" aria-label="Close 2x2 Matrix Modal">&times;</button>
+      </div>
+
+      <!-- Matrix Quadrants Breakdown Grid -->
+      <div class="matrix-quadrant-details-grid">
+        <!-- Quadrant 1: Quick Wins -->
+        <div class="matrix-quadrant-detail-card quick-wins">
+          <div class="quadrant-detail-title">
+            <span style="color: #1DCD9F;"><i class="fas fa-bolt" style="margin-right: 6px;"></i> Quick Wins (High Impact &bull; High Feasibility)</span>
+            <span class="moscow-modal-badge must">Priority 1</span>
+          </div>
+          <p class="quadrant-detail-desc">Immediate low-friction deliverables providing outsized clarity to inspectors and contractors.</p>
+          <ul class="quadrant-features-list">
+            <li><span class="cat-dot purple"></span> <strong>Visualisation Clarity:</strong> Defect map polygons, extracted imagery, and 360&deg; location context for instant road situation awareness.</li>
+            <li><span class="cat-dot pink"></span> <strong>RoadGP Clustering:</strong> Automated defect clustering to aggregate individual road defects into cohesive assessment segments (15 m).</li>
+            <li><span class="cat-dot orange"></span> <strong>Repair Prioritisation:</strong> Multi-factor ranking scoring repairs by urgency, safety criticality, and operational constraints.</li>
+            <li><span class="cat-dot pink"></span> <strong>ML Data Input Interfaces:</strong> Standardized UI forms to feed inspection parameters into RoadGP predictive engines.</li>
+          </ul>
+        </div>
+
+        <!-- Quadrant 2: Strategic Bets -->
+        <div class="matrix-quadrant-detail-card strategic">
+          <div class="quadrant-detail-title">
+            <span style="color: #38bdf8;"><i class="fas fa-chess-knight" style="margin-right: 6px;"></i> Strategic Bets (High Impact &bull; Lower Feasibility)</span>
+            <span class="moscow-modal-badge should">Priority 2</span>
+          </div>
+          <p class="quadrant-detail-desc">Transformative algorithmic capabilities requiring advanced data science model training and cross-system integration.</p>
+          <ul class="quadrant-features-list">
+            <li><span class="cat-dot orange"></span> <strong>Deterioration Prediction:</strong> Integrating PhD academic deterioration models to forecast pavement decay trajectories over time.</li>
+            <li><span class="cat-dot pink"></span> <strong>Cluster Treatment Advice:</strong> Context-aware algorithmic recommendation of optimal surface treatments per cluster.</li>
+            <li><span class="cat-dot pink"></span> <strong>Multi-Scale Network Bridging:</strong> Synchronizing 15 m defect clusters, 100 m NH network models, and 10 km maintenance contract parcels.</li>
+          </ul>
+        </div>
+
+        <!-- Quadrant 3: Fill-Ins -->
+        <div class="matrix-quadrant-detail-card fill-ins">
+          <div class="quadrant-detail-title">
+            <span style="color: #c084fc;"><i class="fas fa-clipboard-check" style="margin-right: 6px;"></i> Fill-Ins (Lower Impact &bull; High Feasibility)</span>
+            <span class="moscow-modal-badge could">Priority 3</span>
+          </div>
+          <p class="quadrant-detail-desc">Straightforward interface conveniences that streamline communication without core architectural dependencies.</p>
+          <ul class="quadrant-features-list">
+            <li><span class="cat-dot purple"></span> <strong>Repair History View:</strong> Auditable historical timeline of past road surface interventions and contractor notes.</li>
+            <li><span class="cat-dot orange"></span> <strong>Reactive &amp; Proactive Shared View:</strong> Unified status view bridging emergency repair gangs and scheduled maintenance planners.</li>
+          </ul>
+        </div>
+
+        <!-- Quadrant 4: Deprioritised -->
+        <div class="matrix-quadrant-detail-card deprioritize">
+          <div class="quadrant-detail-title">
+            <span style="color: #94a3b8;"><i class="fas fa-ban" style="margin-right: 6px;"></i> Deprioritised / Deferred (Lower Impact &bull; Lower Feasibility)</span>
+            <span class="moscow-modal-badge wont">Deferred</span>
+          </div>
+          <p class="quadrant-detail-desc">High complexity integrations with peripheral enterprise systems that do not advance core maintenance decisions.</p>
+          <ul class="quadrant-features-list">
+            <li><span class="cat-dot purple"></span> <strong>Invoicing Systems &amp; Billing Sync:</strong> Automated accounting and commercial invoicing integration (high external IT friction, non-core).</li>
+            <li><span class="cat-dot pink"></span> <strong>Ad-Hoc Team Opinion Polling:</strong> Unstandardized consensus polling queues that slow down decisive automated recommendations.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal for Sub-Page 6 MoSCoW Full Specifications -->
+  <div class="features-modal-overlay" id="moscowModal" onclick="closeMoscowModal(event)">
+    <div class="features-modal-container rice-modal-container">
+      <div class="features-modal-header">
+        <div>
+          <h3 class="features-modal-title">MoSCoW Prioritisation: RoadGP MVP Scope Boundaries</h3>
+          <p class="features-modal-subtitle">Release classification defining baseline MVP commitments versus phased product horizons</p>
+        </div>
+        <button class="features-modal-close" onclick="closeMoscowModal(event)" aria-label="Close MoSCoW Modal">&times;</button>
+      </div>
+
+      <!-- MoSCoW Scope Grid -->
+      <div class="moscow-modal-grid">
+        <!-- Must Have -->
+        <div class="moscow-modal-card must">
+          <div class="moscow-modal-header">
+            <h4 class="moscow-modal-title" style="color: #1DCD9F;"><i class="fas fa-check-double" style="margin-right: 6px;"></i> MUST HAVE</h4>
+            <span class="moscow-modal-badge must">Core MVP Non-Negotiables</span>
+          </div>
+          <p class="moscow-modal-desc">Essential for platform launch. Without these components, the maintenance triage and RoadGP calculation pipeline cannot operate.</p>
+          <ul class="moscow-modal-list">
+            <li><span class="cat-dot pink"></span> <strong>Cluster Treatment Advice:</strong> Context-aware algorithmic recommendation of optimal surface treatments per defect cluster.</li>
+            <li><span class="cat-dot purple"></span> <strong>Defect Map &amp; 360&deg; Context View:</strong> Interactive GIS defect polygons with surrounding environmental imagery for remote inspection.</li>
+            <li><span class="cat-dot pink"></span> <strong>Automated Defect Clustering:</strong> Clustering algorithm grouping spatial defects at 15 m intervals for actionable work packages.</li>
+            <li><span class="cat-dot orange"></span> <strong>Repair Prioritisation Engine:</strong> Algorithmic scoring ranking defects by safety hazard, depth, and traffic impact.</li>
+          </ul>
+        </div>
+
+        <!-- Should Have -->
+        <div class="moscow-modal-card should">
+          <div class="moscow-modal-header">
+            <h4 class="moscow-modal-title" style="color: #38bdf8;"><i class="fas fa-arrow-trend-up" style="margin-right: 6px;"></i> SHOULD HAVE</h4>
+            <span class="moscow-modal-badge should">High-Value Fast-Follow</span>
+          </div>
+          <p class="moscow-modal-desc">Important capabilities delivering high stakeholder value that can follow immediately once core data feeds stabilize.</p>
+          <ul class="moscow-modal-list">
+            <li><span class="cat-dot orange"></span> <strong>Deterioration Curves Prediction:</strong> Academic modeling forecasting when non-critical cracks will escalate into potholes.</li>
+            <li><span class="cat-dot purple"></span> <strong>Repair History Audit Trail:</strong> Track past surface treatments to avoid recurring premature road failures.</li>
+            <li><span class="cat-dot pink"></span> <strong>Standardized ML Data Input Forms:</strong> Explicit parameters inputs allowing engineers to tweak predictive variables.</li>
+          </ul>
+        </div>
+
+        <!-- Could Have -->
+        <div class="moscow-modal-card could">
+          <div class="moscow-modal-header">
+            <h4 class="moscow-modal-title" style="color: #c084fc;"><i class="fas fa-wand-magic-sparkles" style="margin-right: 6px;"></i> COULD HAVE</h4>
+            <span class="moscow-modal-badge could">Phase 2 Enhancements</span>
+          </div>
+          <p class="moscow-modal-desc">Desirable operational enhancements scoped for subsequent releases to enrich contractor delivery workflows.</p>
+          <ul class="moscow-modal-list">
+            <li><span class="cat-dot orange"></span> <strong>Route &amp; Resource Optimisation:</strong> Optimizing repair vehicle dispatch sequences and supply depot trips.</li>
+            <li><span class="cat-dot pink"></span> <strong>Team Decision Verification:</strong> Structured peer review and sign-off queues before treatment contract commitment.</li>
+          </ul>
+        </div>
+
+        <!-- Won't Have -->
+        <div class="moscow-modal-card wont">
+          <div class="moscow-modal-header">
+            <h4 class="moscow-modal-title" style="color: #fb7185;"><i class="fas fa-times-circle" style="margin-right: 6px;"></i> WON'T HAVE</h4>
+            <span class="moscow-modal-badge wont">Out of MVP Scope</span>
+          </div>
+          <p class="moscow-modal-desc">Explicitly excluded from the RoadGP software MVP to protect delivery focus and prevent boundary creep.</p>
+          <ul class="moscow-modal-list">
+            <li><span class="cat-dot purple"></span> <strong>ERP &amp; Invoicing Sync:</strong> Direct automated commercial billing and contractor payment reconciliation.</li>
+            <li><span class="cat-dot orange"></span> <strong>Direct Machine Control for AMP:</strong> Autonomous Maintenance Plant robotic guidance (hardware scope, Jerry's stream).</li>
+            <li><span class="cat-dot pink"></span> <strong>Heavy 3D Mesh Streaming:</strong> Real-time national volumetric point-cloud mesh streaming (Digital Twin scope).</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script>
     function openLightbox(src, caption) {
       const overlay = document.getElementById('imageLightbox');
@@ -1172,11 +1636,103 @@
       }
     }
 
+    function openFeaturesModal() {
+      const modal = document.getElementById('featuresModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeFeaturesModal(e) {
+      if (!e || e.target.classList.contains('features-modal-overlay') || e.target.classList.contains('features-modal-close')) {
+        const modal = document.getElementById('featuresModal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    function openRiceModal() {
+      const modal = document.getElementById('riceModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeRiceModal(e) {
+      if (!e || e.target.classList.contains('features-modal-overlay') || e.target.classList.contains('features-modal-close')) {
+        const modal = document.getElementById('riceModal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    function openMatrix2x2Modal() {
+      const modal = document.getElementById('matrix2x2Modal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMatrix2x2Modal(e) {
+      if (!e || e.target.classList.contains('features-modal-overlay') || e.target.classList.contains('features-modal-close')) {
+        const modal = document.getElementById('matrix2x2Modal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    function openMoscowModal() {
+      const modal = document.getElementById('moscowModal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMoscowModal(e) {
+      if (!e || e.target.classList.contains('features-modal-overlay') || e.target.classList.contains('features-modal-close')) {
+        const modal = document.getElementById('moscowModal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         const overlay = document.getElementById('imageLightbox');
         if (overlay && overlay.classList.contains('active')) {
           overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        const featModal = document.getElementById('featuresModal');
+        if (featModal && featModal.classList.contains('active')) {
+          featModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        const riceModal = document.getElementById('riceModal');
+        if (riceModal && riceModal.classList.contains('active')) {
+          riceModal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        const m2x2Modal = document.getElementById('matrix2x2Modal');
+        if (m2x2Modal && m2x2Modal.classList.contains('active')) {
+          m2x2Modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        const moscowModal = document.getElementById('moscowModal');
+        if (moscowModal && moscowModal.classList.contains('active')) {
+          moscowModal.classList.remove('active');
           document.body.style.overflow = '';
         }
       }
@@ -1260,6 +1816,66 @@
             else updateCarousel(currentIndex - 1);
           }
         }, { passive: true });
+      }
+
+      // Sub-Page 6: Features Tile Modal Opener
+      const featuresTile = document.getElementById('featuresTile');
+      if (featuresTile) {
+        featuresTile.addEventListener('click', (e) => {
+          e.preventDefault();
+          openFeaturesModal();
+        });
+        featuresTile.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openFeaturesModal();
+          }
+        });
+      }
+
+      // Sub-Page 6: RICE Tile Modal Opener
+      const riceTile = document.getElementById('riceTile');
+      if (riceTile) {
+        riceTile.addEventListener('click', (e) => {
+          e.preventDefault();
+          openRiceModal();
+        });
+        riceTile.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openRiceModal();
+          }
+        });
+      }
+
+      // Sub-Page 6: 2x2 Matrix Tile Modal Opener
+      const matrix2x2Tile = document.getElementById('matrix2x2Tile');
+      if (matrix2x2Tile) {
+        matrix2x2Tile.addEventListener('click', (e) => {
+          e.preventDefault();
+          openMatrix2x2Modal();
+        });
+        matrix2x2Tile.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openMatrix2x2Modal();
+          }
+        });
+      }
+
+      // Sub-Page 6: MoSCoW Tile Modal Opener
+      const moscowTile = document.getElementById('moscowTile');
+      if (moscowTile) {
+        moscowTile.addEventListener('click', (e) => {
+          e.preventDefault();
+          openMoscowModal();
+        });
+        moscowTile.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openMoscowModal();
+          }
+        });
       }
     });
   </script>

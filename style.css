@@ -4274,6 +4274,1052 @@ body > header {
   }
 }
 
+/* ==========================================================================
+   Sub-Page 6: Opportunity Solution Tree Decisions (Clean Dark Minimalist)
+   ========================================================================== */
+.ost-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.ost-tile-card {
+  background: #111116;
+  border: 1px solid #23232c;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  color: #e2e8f0;
+}
+
+.ost-tile-card:hover {
+  border-color: #38384a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.ost-tile-header {
+  margin-bottom: 12px;
+}
+
+.ost-tile-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 9px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+}
+
+.ost-tile-badge.green {
+  color: #1DCD9F;
+  background: rgba(29, 205, 159, 0.12);
+  border: 1px solid rgba(29, 205, 159, 0.28);
+}
+
+.ost-tile-badge.blue {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+}
+
+.ost-tile-badge.purple {
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.28);
+}
+
+.ost-tile-badge.amber {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.28);
+}
+
+.ost-tile-title {
+  color: #ffffff;
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Tile 1: Features */
+.ost-tile-card.features-tile {
+  cursor: pointer;
+}
+
+.ost-tile-card.features-tile:hover {
+  border-color: #1DCD9F;
+  box-shadow: 0 8px 24px rgba(29, 205, 159, 0.12);
+}
+
+.ost-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  margin: 16px 0 20px;
+  flex: 1;
+  align-content: flex-start;
+}
+
+.ost-pills-container .ds-short-note,
+.moscow-labels-cloud .ds-short-note {
+  font-size: 0.74rem;
+  padding: 5px 13px;
+  border-width: 2px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+/* Expand Action Button */
+.ost-expand-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #232330;
+  border-radius: 6px;
+  color: #94a3b8;
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.ost-tile-card:hover .ost-expand-action {
+  color: #ffffff;
+  border-color: #3a3a4c;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ost-expand-action .chevron-icon {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.ost-tile-card:hover .ost-expand-action .chevron-icon {
+  transform: translateX(3px);
+}
+
+/* Features Modal (Separate Window with Close Button) */
+.features-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.features-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.features-modal-container {
+  position: relative;
+  max-width: 1040px;
+  width: 100%;
+  max-height: 88vh;
+  background: #111117;
+  border: 1px solid #2b2b3a;
+  border-radius: 14px;
+  padding: 32px 36px 36px;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+  animation: lightboxPop 0.25s ease forwards;
+}
+
+.features-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #232330;
+}
+
+.features-modal-title {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.features-modal-subtitle {
+  color: #94a3b8;
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+.features-modal-close {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.features-modal-close:hover {
+  color: #1DCD9F;
+  transform: scale(1.15);
+}
+
+.features-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature-category-card {
+  background: #15151e;
+  border: 1px solid #262636;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.feature-category-card.orange { border-top: 3.5px solid #f97316; }
+.feature-category-card.purple { border-top: 3.5px solid #8b5cf6; }
+.feature-category-card.pink { border-top: 3.5px solid #e9008c; }
+
+.feature-category-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+.feature-category-title.orange { color: #f97316; }
+.feature-category-title.purple { color: #a78bfa; }
+.feature-category-title.pink { color: #f43f5e; }
+
+.feature-specs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.feature-specs-list li {
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 14px;
+}
+
+.feature-specs-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/* Staged Empty Tiles */
+.ost-staged-tile {
+  background: #111116;
+  border: 1px dashed #282836;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 240px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.ost-staged-tile:hover {
+  border-color: #3e3e52;
+  background: #13131a;
+}
+
+.ost-staged-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.ost-staged-title {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.ost-staged-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  max-width: 340px;
+  margin: 0 0 12px;
+  line-height: 1.45;
+}
+
+.ost-staged-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: rgba(100, 116, 139, 0.15);
+  color: #94a3b8;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+@media (max-width: 900px) {
+  .ost-tiles-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-modal-container {
+    padding: 22px 18px 24px;
+  }
+}
+
+/* ==========================================================================
+   SUB-PAGE 6 TILE 2: RICE MODEL SCORING & CALCULATION MODAL
+   ========================================================================== */
+
+/* Tile 2: RICE Scoring Tile */
+.ost-tile-card.rice-tile {
+  cursor: pointer;
+}
+
+.ost-tile-card.rice-tile:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.12);
+}
+
+.rice-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+.rice-candidate-card {
+  background: #14141d;
+  border: 1px solid #232330;
+  border-radius: 8px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.rice-candidate-card:hover {
+  background: #181824;
+  border-color: #343448;
+}
+
+.rice-candidate-card.primary-candidate {
+  background: rgba(29, 205, 159, 0.05);
+  border-color: rgba(29, 205, 159, 0.32);
+}
+
+.rice-candidate-card.primary-candidate:hover {
+  background: rgba(29, 205, 159, 0.09);
+  border-color: #1DCD9F;
+}
+
+.rice-candidate-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rice-badge-status.mvp {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #1DCD9F;
+  background: rgba(29, 205, 159, 0.14);
+  border: 1px solid rgba(29, 205, 159, 0.35);
+  padding: 1px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rice-score-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 11px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.rice-score-badge .score-val {
+  font-size: 0.96rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.rice-score-badge.emerald {
+  background: rgba(29, 205, 159, 0.12);
+  color: #1DCD9F;
+  border: 1px solid rgba(29, 205, 159, 0.4);
+}
+
+.rice-score-badge.blue {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.rice-score-badge.purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+/* RICE Modal Specifics (Larger Typography & Enhanced Readability) */
+.rice-modal-container {
+  max-width: 1100px;
+  padding: 36px 40px 40px;
+}
+
+.rice-modal-container .features-modal-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.rice-modal-container .features-modal-subtitle {
+  font-size: 0.98rem;
+  color: #94a3b8;
+}
+
+.rice-formula-banner {
+  background: #161622;
+  border: 1px solid #28283a;
+  border-left: 5px solid #38bdf8;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+}
+
+.rice-formula-banner .formula-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.rice-formula-banner .formula-math {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.rice-formula-banner .formula-caption {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.rice-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #262638;
+  border-radius: 12px;
+  background: #13131b;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.rice-scoring-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.96rem;
+}
+
+.rice-scoring-table th {
+  background: #181824;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 15px 18px;
+  border-bottom: 2px solid #262638;
+}
+
+.rice-scoring-table td {
+  padding: 18px 18px;
+  border-bottom: 1px solid #1f1f2e;
+  color: #e2e8f0;
+  vertical-align: middle;
+  font-size: 0.98rem;
+}
+
+.rice-scoring-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rice-scoring-table tr.highlight-row {
+  background: rgba(29, 205, 159, 0.07);
+}
+
+.rice-scoring-table tr.highlight-row:hover {
+  background: rgba(29, 205, 159, 0.12);
+}
+
+.rice-scoring-table tr:hover {
+  background: #161624;
+}
+
+.table-sublabel {
+  display: block;
+  font-size: 0.8rem;
+  color: #828a9b;
+  margin-top: 5px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.score-cell-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: #1c1c28;
+  color: #cbd5e1;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid #2c2c3e;
+}
+
+.score-cell-badge.green {
+  background: rgba(29, 205, 159, 0.16);
+  color: #1DCD9F;
+  border-color: rgba(29, 205, 159, 0.4);
+}
+
+.score-cell-badge.orange {
+  background: rgba(249, 115, 22, 0.16);
+  color: #fb923c;
+  border-color: rgba(249, 115, 22, 0.4);
+}
+
+.calc-cell {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.rice-final-score {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.rice-final-score.gold {
+  color: #1DCD9F;
+  text-shadow: 0 0 12px rgba(29, 205, 159, 0.45);
+}
+
+.decision-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.decision-pill.mvp {
+  color: #1DCD9F;
+  background: rgba(29, 205, 159, 0.15);
+  border: 1px solid rgba(29, 205, 159, 0.45);
+}
+
+.decision-pill.horizon {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.38);
+}
+
+.decision-pill.rd {
+  color: #c084fc;
+  background: rgba(192, 132, 252, 0.15);
+  border: 1px solid rgba(192, 132, 252, 0.38);
+}
+
+/* ==========================================================================
+   SUB-PAGE 6 TILE 3: 2x2 PRIORITISATION MATRIX (FEASIBILITY VS IMPACT)
+   ========================================================================== */
+
+.ost-tile-card.matrix-tile {
+  cursor: pointer;
+}
+
+.ost-tile-card.matrix-tile:hover {
+  border-color: #a855f7;
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.12);
+}
+
+.matrix-split-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 14px 0 18px;
+  flex: 1;
+}
+
+.matrix-canvas-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.matrix-outer-label-y {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  align-self: flex-start;
+  padding-left: 2px;
+}
+
+.matrix-outer-label-x {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  align-self: flex-end;
+  padding-right: 2px;
+}
+
+.matrix-small-grid {
+  width: 136px;
+  height: 136px;
+  background: #0d0d13;
+  border: 1px solid #232332;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle quadrant crosshairs */
+.matrix-axis-x {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: #252538;
+}
+
+.matrix-axis-y {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #252538;
+}
+
+/* Numbered dots */
+.matrix-num-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.63rem;
+  font-weight: 800;
+  color: #ffffff;
+  z-index: 2;
+  transition: transform 0.15s ease;
+}
+
+.matrix-num-dot:hover {
+  transform: translate(-50%, -50%) scale(1.18);
+}
+
+.matrix-num-dot.purple {
+  background: #8b5cf6;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.55);
+}
+
+.matrix-num-dot.pink {
+  background: #e9008c;
+  box-shadow: 0 0 8px rgba(233, 0, 140, 0.55);
+}
+
+.matrix-num-dot.orange {
+  background: #f97316;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.55);
+}
+
+.matrix-num-dot.slate {
+  background: #475569;
+  color: #cbd5e1;
+}
+
+/* Right-side legend */
+.matrix-numbers-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.matrix-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.74rem;
+  color: #94a3b8;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.matrix-legend-row.highlight {
+  background: rgba(29, 205, 159, 0.08);
+  border-left: 2.5px solid #1DCD9F;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.matrix-legend-row.muted {
+  opacity: 0.55;
+}
+
+.matrix-legend-num {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.matrix-legend-num.purple { background: #8b5cf6; }
+.matrix-legend-num.pink { background: #e9008c; }
+.matrix-legend-num.orange { background: #f97316; }
+.matrix-legend-num.slate { background: #475569; }
+
+.matrix-legend-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   SUB-PAGE 6 TILE 4: MOSCOW MODEL ROADGP MVP
+   ========================================================================== */
+
+.ost-tile-card.moscow-tile {
+  cursor: pointer;
+}
+
+.ost-tile-card.moscow-tile:hover {
+  border-color: #fbbf24;
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.12);
+}
+
+.moscow-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 14px;
+  margin: 14px 0 18px;
+  flex: 1;
+  align-items: center;
+}
+
+/* Left Panel: MoSCoW Definitions */
+.moscow-definitions-box {
+  background: #14141d;
+  border: 1px solid #232332;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.moscow-def-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.moscow-def-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.moscow-letter-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.moscow-letter-tag.must { background: rgba(29, 205, 159, 0.16); color: #1DCD9F; border: 1px solid rgba(29, 205, 159, 0.4); }
+.moscow-letter-tag.should { background: rgba(56, 189, 248, 0.16); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+.moscow-letter-tag.could { background: rgba(251, 191, 36, 0.16); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.4); }
+.moscow-letter-tag.wont { background: rgba(100, 116, 139, 0.16); color: #94a3b8; border: 1px solid rgba(100, 116, 139, 0.35); }
+
+.moscow-def-name {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.moscow-def-desc {
+  font-size: 0.67rem;
+  color: #94a3b8;
+  line-height: 1.35;
+  margin: 0;
+  padding-left: 23px;
+}
+
+/* Right Panel: Short Description Labels Cloud Without Subheadings */
+.moscow-labels-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 8px;
+  align-content: center;
+}
+
+/* ==========================================================================
+   MODALS: 2x2 MATRIX & MOSCOW DETAILS
+   ========================================================================== */
+
+.matrix-quadrant-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.matrix-quadrant-detail-card {
+  background: #14141d;
+  border: 1px solid #252535;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.matrix-quadrant-detail-card.quick-wins { border-top: 3.5px solid #1DCD9F; }
+.matrix-quadrant-detail-card.strategic { border-top: 3.5px solid #38bdf8; }
+.matrix-quadrant-detail-card.fill-ins { border-top: 3.5px solid #a855f7; }
+.matrix-quadrant-detail-card.deprioritize { border-top: 3.5px solid #64748b; }
+
+.quadrant-detail-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quadrant-detail-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
+.quadrant-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.quadrant-features-list li {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.quadrant-features-list li .cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.quadrant-features-list li .cat-dot.orange { background: #f97316; }
+.quadrant-features-list li .cat-dot.purple { background: #a855f7; }
+.quadrant-features-list li .cat-dot.pink { background: #f43f5e; }
+
+/* MoSCoW Modal Specifications */
+.moscow-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.moscow-modal-card {
+  background: #14141d;
+  border: 1px solid #252535;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.moscow-modal-card.must { border-top: 3.5px solid #1DCD9F; }
+.moscow-modal-card.should { border-top: 3.5px solid #38bdf8; }
+.moscow-modal-card.could { border-top: 3.5px solid #a855f7; }
+.moscow-modal-card.wont { border-top: 3.5px solid #f43f5e; }
+
+.moscow-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.moscow-modal-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.moscow-modal-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.moscow-modal-badge.must { color: #1DCD9F; background: rgba(29, 205, 159, 0.15); }
+.moscow-modal-badge.should { color: #38bdf8; background: rgba(56, 189, 248, 0.15); }
+.moscow-modal-badge.could { color: #c084fc; background: rgba(168, 85, 247, 0.15); }
+.moscow-modal-badge.wont { color: #fb7185; background: rgba(244, 63, 94, 0.15); }
+
+.moscow-modal-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
+.moscow-modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.moscow-modal-list li {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.moscow-modal-list li .cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.moscow-modal-list li .cat-dot.orange { background: #f97316; }
+.moscow-modal-list li .cat-dot.purple { background: #a855f7; }
+.moscow-modal-list li .cat-dot.pink { background: #f43f5e; }
+
+@media (max-width: 900px) {
+  .moscow-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .matrix-split-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .matrix-quadrant-details-grid,
+  .moscow-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 
 
