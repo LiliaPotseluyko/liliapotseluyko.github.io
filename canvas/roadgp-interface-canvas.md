@@ -26,7 +26,7 @@ Forward Deployed Engineer • Product Owner
 
 ### [ID: hero-meta-collaborators] — Hero Meta: Collaborators
 
-Costain, National Highways, Cambridge DRF Cluster
+Costain, National Highways, Cambridge Digital Roads
 
 ### [ID: hero-meta-methods] — Hero Meta: Methods
 
@@ -98,7 +98,7 @@ Data Science & AI Algorithms
 
 ### [ID: sp1-quadrant-ds-tasks] — Data Science Quadrant Objectives
 
-- Deterioration Curves
+- Deterioration curves research
 - Recommend cost effective treatment based on data
 
 ### [ID: sp1-hub-dilemma-title] — Core Maintenance Dilemma Title
@@ -130,7 +130,7 @@ Smart Materials & Self-Healing
 ### [ID: sp1-quadrant-materials-tasks] — Smart Materials Quadrant Objectives
 
 - Prevent micro-cracks from propagating into catastrophic potholes
-- Durable self-healing compounds to stop repeat maintenance visits
+- Crack sealing solution development
 
 ### [ID: sp1-goal-content] — Project Goal
 
@@ -188,23 +188,23 @@ An iterative service design progression—transitioning from understanding exist
 
 ### [ID: sp2-wf-nh-loop-desc] — National Highways Operational Loop Desc
 
-High-level systems mapping to understand the overarching National Highways road maintenance lifecycle, routine survey ingestion, and multi-tier agency communication channels.
+High-level systems mapping.
 
 ### [ID: sp2-wf-idm-desc] — Granular Process Mapping (IDM) Desc
 
-Representative example of multiple investigated maintenance processes: formal swimlanes detailing granular inputs, outputs, handoffs, and participants to diagnose operational bottlenecks.
+Example of multiple investigated maintenance processes.
 
 ### [ID: sp2-wf-proposed-desc] — Proposed Multi-Stakeholder Loop Desc
 
-First hypothesis of an automated future-state communication loop, defining how assessment, management review, order dispatch, and field delivery interact smoothly under proposed platform solutions.
+First hypothesis of an automated users communication loop.
 
 ### [ID: sp2-wf-swimlane-desc] — Automated Interaction Swimlane Desc
 
-Translating the service design loop into an actionable digital user journey—mapping end-to-end steps from automated AI defect triage through contractor bidding, work orders, and digital proof-of-completion.
+Translating the service design loop into an actionable digital user journey—mapping.
 
 ### [ID: sp2-wf-pipeline-desc] — Operational Defect Status Pipeline Desc
 
-The underlying triage state machine designed for RoadGP: formalizing the 5 core states (Urgent, To Assess, To Plan, Scheduled, Resolved) that govern platform permissions and notifications.
+Proposed workflow on high level.
 
 ## Sub-Page 3: Storyboard & Assumptions
 
@@ -222,7 +222,7 @@ A mobile-friendly interface is possible and optimal for field operations.
 
 ### [ID: sp3-assump1-desc] — Assumption 1 Rationale
 
-Leveraging the UX framework of progressive complexity: we began with mobile-first constraints to prioritize core actions and facilitate fast prototyping in the field, before expanding functionality outward to full desktop control centers.
+Leveraging the UX framework of progressive complexity: we began with mobile-first constraints to prioritize core actions and facilitate fast prototyping, before expanding functionality outward to full desktop control centers.
 
 ### [ID: sp3-assump2-statement] — Assumption 2 Statement
 
@@ -248,7 +248,7 @@ Early fragmented architecture diagrams capturing individual module explorations 
 
 ### [ID: sp4-col2-desc] — Data Science Treatment Engine Desc
 
-Algorithmic mapping between detected highway defects, root causality, and automated maintenance treatment recommendations.
+Algorithmic mapping between detected highway defects, root cause, and automated maintenance treatment recommendations.
 
 ### [ID: sp4-col3-desc] — Unified Conceptual Architecture Desc
 
@@ -282,7 +282,7 @@ Eliminated enterprise feature bloat to focus the MVP strictly on high-leverage w
 
 ### [ID: sp5-finding5-desc] — Finding 5: Interaction Benchmarking
 
-Leveraged proven interaction patterns from map navigation and enterprise logistics platforms, significantly reducing operator onboarding friction.
+Leveraged proven interaction patterns from map navigation and enterprise logistics platforms.
 
 ## Sub-Page 6: Interactive Prototypes
 
@@ -319,4 +319,3 @@ Triage cycle reduction from 15 days to under 4 days, Costain & National Highways
 ### [ID: sp11-desc] — Sub-Page 11 Scope Description
 
 Autonomous repair trucks, self-sealing materials integration, and live digital twin feedback loops.
-
