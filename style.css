@@ -3383,6 +3383,46 @@ body > header {
   line-height: 1.35;
 }
 
+/* Phase 2 MVP: two personas on top row, third centered below, extra breathing room */
+.personas-stacked-col.personas-mvp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-content: space-evenly;
+  gap: 36px 20px;
+  padding: 24px 6px 18px;
+}
+
+.personas-mvp-grid .ds-persona {
+  max-width: 150px;
+}
+
+.personas-mvp-grid .ds-persona:last-child {
+  grid-column: 1 / -1;
+  max-width: 200px;
+}
+
+.personas-mvp-grid .ds-persona-avatar {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 8px;
+}
+
+.personas-mvp-grid .ds-persona-name {
+  font-size: 0.84rem;
+}
+
+.personas-mvp-grid .ds-persona-role {
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 520px) {
+  .personas-stacked-col.personas-mvp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .funnel-card-header {
   display: flex;
   justify-content: space-between;
@@ -4200,6 +4240,45 @@ body > header {
   position: sticky;
   top: 90px;
   align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Users card: same structure as Findings, blue accent */
+.findings-card.users-card .findings-card-title,
+.findings-card.users-card .findings-item-icon {
+  color: #60a5fa;
+}
+
+.findings-card.users-card {
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.findings-card.users-card .findings-list-item {
+  align-items: center;
+  border-color: rgba(59, 130, 246, 0.22);
+}
+
+.findings-card.users-card .findings-item-content {
+  flex: 1;
+}
+
+.findings-card.users-card .findings-item-content h4 {
+  margin: 0;
+}
+
+.users-count-pill {
+  flex-shrink: 0;
+  min-width: 26px;
+  text-align: center;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .findings-card {
