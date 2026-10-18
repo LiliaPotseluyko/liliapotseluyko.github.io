@@ -1,0 +1,840 @@
+
+Loading older messages…
+add paragraph on usabiliuty testing a/b testing
+Usability testing: I plan and conduct task-based usability evaluations, using think-aloud sessions and prototype walkthroughs to understand how users navigate interfaces and complete key tasks. I translate findings into prioritised improvements to information architecture, terminology and interaction design, refining prototypes through iterative testing and stakeholder feedback.
+
+For A/B testing, have you run controlled comparisons between two versions, or compared alternative prototypes during interviews? Your existing CV supports usability testing, but I need that distinction before adding A/B testing as experience.
+
+what is User Access Management (UAM
+is this security thing?
+User Access Management (UAM) means managing who can access a system, what they can see, and what they’re allowed to do.
+
+It includes:
+
+Creating and deactivating user accounts.
+Assigning permissions according to someone’s role.
+Approving access requests.
+Updating access when someone changes jobs.
+Reviewing access and removing permissions no longer needed.
+A RoadGP example: an inspector could submit defect records, an asset manager could approve repairs, and a contractor could view assigned jobs.
+
+For a service designer, UAM involves designing the journeys for requesting, approving, changing and removing access—including what happens when access is denied.
+
+Yes—UAM is part of IT security. It ensures people have access only to the systems, data and actions appropriate to their role.
+
+A service designer works on how people request access, how it gets approved, and what happens when their role changes or access is removed. The security team defines the controls; you help make the process clear and usable.
+
+Company logo for, Transform.
+
+ (image)
+
+Transform
+
+Senior Service Designer 
+
+London Area, United Kingdom · 1 day ago · 17 people clicked apply
+
+Responses managed off LinkedIn
+
+Hybrid
+
+Full-time
+
+Apply
+
+Saved
+
+Use AI to assess how you fit
+Get AI-powered advice on this job and more exclusive features with Premium. Reactivate Premium
+
+Show match details
+Tailor my resume
+Help me stand out
+About the job
+
+About us
+
+We're Transform.
+
+
+Transform is a fresh alternative to Big Consulting. As an end-to-end transformation partner, we define, design, build and operate systems that solve our clients’ toughest challenges and seize their biggest opportunities. That often means combining strategy, data, AI, technology, and change management. Sometimes we manage and operate the systems we create; other times, we hand it over for the client to run – standing by to make improvements when things change. It all comes down to making an impact: improving lives, supporting citizens, streamlining workflows, and making the world a better place. We specialise in public sector and public-facing organisations—from government agencies and local authorities to energy, utilities, transportation and healthcare. We also work for some of the world’s most dynamic brands across automotive, retail, financial services, and consumer goods. We work closely (often on site) with our clients; to deliver impact you are keen to help us build the workforce of the future, we should talk.
+
+
+We’re all in! That's what gets us out of bed every day. We hope you feel the same.
+
+
+Our Research and Service Design practice
+
+We believe good design changes lives. We exist to help organisations solve complex problems through empathy, evidence and craft, working with our heads, hearts and hands.
+
+
+That means immersing ourselves in the worlds of those we're designing for. Our research goes beneath the surface, understanding the contexts, constraints and the systemic forces shaping people’s experiences. We make sense of complex systems, visualise service ecosystems, tell the stories that matter, using data to ground our decisions in reality, not assumption.
+
+
+We design with those who use, deliver, manage and commission services because we believe that's the best way to create change that lasts. We bring that same spirit to our client relationships – growing design-thinking communities, nurturing capability and leaving things better than we found them.
+
+
+Our work spans central government, local authorities, justice, health, trade, education and beyond. If that sounds like your kind of place, we'd love to hear from you.
+
+
+The Role: Senior Service Designer
+
+
+Key Responsibilities:
+
+Understanding the strategic context of clients and reconciling customer needs with strategic priorities
+Leading and/or playing a senior team role in service design projects, in a range of different sectors
+Building client accounts through outstanding and award-winning work
+Running client workshops
+Making complex product, service and operating systems easy to understand for clients and colleagues through simple and accessible visualisation.
+Developing new service propositions for clients
+Developing skills and mentoring colleagues in the service design practice
+
+Key Skills/Experiences:
+
+At least 5 years’ experience working in service, product and experience design projects, leading multi-discipline teams to deliver projects
+Expertise and deep knowledge of service design tools and methodologies, such as service blueprints, service mapping, systems thinking, journey mapping
+Ability to produce highly visual output for clients, documents, presentations, or workshop materials
+Demonstrable experience in user research techniques and analysis, e.g., interviews, contextual inquiry, customer journey analysis and mapping
+Excellent analytical and problem-solving skills, including data and thematic analysis
+Ability to quickly develop recommendations based on evidence
+Experience of stakeholder engagement and facilitation in complex programmes
+Conceptualisation and proposition development supported by research
+Strong communicator (e.g., through visual artefacts, design concepts, verbal and written)
+Agile methodology
+Confident in presenting explaining user needs to clients who may be unfamiliar with user-centred design
+Experience managing/mentoring more junior team members
+Ability to identify opportunities that create product or business value
+Experience across web content, tools, and transactional services, especially those with complex user journeys.
+Demonstrable knowledge, experience in and passion for web/application user-centred design practices
+A growth mindset
+AI curious and ready to embrace opportunities
+
+Desirable:
+
+Post-graduate degree or professional certification in Human-Computer Interaction (HCI)/Usability/Cognitive Psychology/Market Research or related field
+Experience working with government and the public sector
+Experience or knowledge of the Government Digital Service and government design principles
+Experience of the Government Digital Service design system
+Experience of delivering Discovery, Alpha, Beta, Live
+Retail, FS, government experience
+Experience in design sprints and rapid prototyping
+
+Our culture is built on:
+
+We raise the bar
+We look out for each other
+We embrace our differences
+We shape a changing world
+We’re all in
+
+Our benefits include: 
+
+Holiday entitlement, 28 days with the option to buy/sell up to 5 days (note that 3 days are held for Christmas holidays)
+Day off (on or in the week of) your birthday
+Pension eligibility, up to 5% matched contributions
+Private healthcare
+Life assurance
+Enhanced maternity and enhanced paternity and shared parental leave
+Cycle to work schemes
+Gym & retail discounts
+Regular social events/activities
+A range of other benefits from our flexible benefits package
+
+At Transform, you can expect meaningful work, with real impact and the space to grow as people as well as a professional.
+
+
+You’ll work alongside curious, authentic experts who care deeply about doing the right thing, for our clients and for each other with no egos, no blame, and no standing on the sidelines.
+
+
+We’re all in on creating an environment where people feel supported, included and trusted to do their best work. In return, we ask for curiosity, honesty and a willingness to lean into learning, quality, teamwork, and to making change that truly lasts.
+
+
+We’re committed to equality of opportunity for all, and we actively seek applications from all ethnicities, orientations, beliefs, gender identities + those with neurodiverse traits and disabilities. We want you to have the best opportunity to show us who you are and what you can do. Please do let us know if you need any adjustments now or at any point in the recruitment process.
+
+
+If this sounds like you, please get in touch to discuss in more detail.
+
+
+Use of AI in CV and Interviews
+
+We value authenticity and transparency in our hiring process. To ensure fairness and accuracy in assessing your skills and experience, we ask that you refrain from using AI-assisted tools to generate answers during the application process or within interviews.
+
+Transform looks like one of your strongest matches so far. Their requirement covers service, product and experience design, which accommodates your multidisciplinary background.
+
+Their emphasis	Your relevant evidence
+Systems thinking and making complexity understandable	National Highways process mapping, Information Delivery Manual and system architecture.
+Visual communication	Figma prototypes, digital twins, stakeholder demonstrations and workshop materials.
+Research and evidence-based recommendations	Interviews, Dovetail analysis, journey mapping and usability evaluations.
+Client relationships and proposition development	RoadGP deployment discussions, partner-supported fellowship proposal and Nicander product delivery.
+Mentoring and organisational change	Mobile Mapping Group, multidisciplinary leadership, staff training and BIM/VR adoption.
+AI curiosity	AI-assisted prototyping and your ongoing agentic AI learning.
+The main gap remains explicit service-blueprinting experience. Your portfolio should demonstrate how user journeys connect with staff activities, systems and organisational processes. Experience with transactional services would also need clearer evidence.
+
+A useful difference: GDS knowledge and delivery through Discovery, Alpha, Beta and Live are desirable here, rather than essential as in some previous adverts.
+
+Important application condition: Transform explicitly asks applicants to refrain from AI-generated application and interview answers. Write your submitted responses in your own words; clarify with their recruiter whether that restriction also includes AI-assisted CV editing.
+
+help me to improve last sentence:
+User research and product design: I plan interviews and task-based usability evaluations with inspectors, engineers and contractors, using think-aloud sessions and demonstrations. I test assumptions through interviews and analyse them in Dovetail and translate findings into personas, information architecture and service blueprints. I develop paper and Figma prototypes, reusable components and React prototypes, using regular stakeholder feedback to refine the design. Portfolio: https://liliapotseluyko.github.io. I use Figma, Figma Make for interface design and prototyping, and Google Antigravity (ChatGPT, Claude, Gemini) and Codex to support AI-assisted development of React prototypes. I refine interactions through stakeholder feedback and usability testing. I generate synthetic datasets and python scripts to integrate multimodal data, test service blueprint and demonstrate interface iterations to steakeholders.
+
+I generate synthetic datasets and develop Python scripts to integrate multimodal data, test workflows mapped in service blueprints and demonstrate interface iterations to stakeholders.
+
+Worked for 16s
+Client relationships and proposal development: I build relationships with public-sector and industry partners and communicate options to senior stakeholders. On my own initiative, I developed a road-safety grant proposal with support from National Highways and International Road Assessment Programme (iRAP) to improve road-safety assessment workflows. I led discovery with stakeholders, researched policies documents, coordinated work packages and aligned contributions, managed workload all the way to submission. This provides transferable experience for supporting service-design proposals and future bidding opportunities.
+
+Client relationships and proposal development: I build relationships with public-sector and industry partners and communicate options to senior stakeholders. On my own initiative, I developed a road-safety grant proposal with support from National Highways and the International Road Assessment Programme (iRAP) to improve road-safety assessment workflows. I led stakeholder discovery, reviewed policy documents and coordinated work packages, partner contributions and workloads through to submission. This experience is transferable to developing service propositions and supporting proposals and bids.
+
+
+
+
+⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮
+Senior Service Designer – Production Management
+London, England, United Kingdom · 2 weeks ago · 26 people clicked apply
+Responses managed off LinkedIn
+Hybrid
+Full-time
+Apply
+Save
+Did you finish applying?
+You'll find this job under In progress in your job tracker until you confirm.
+YesNo
+Your profile and resume match the required qualifications well
+-
+-
+- Show match details
+BETA • Is this information helpful?
+About the job
+The Opportunity
+
+JUXT is partnering with a Tier 1 investment bank within its Production Management organisation to appoint a Senior Service Designer who can put user-centred design at the heart of complex technology and production services.
+
+This is a hands-on service design role focused on understanding users, mapping end-to-end journeys and translating complex, ambiguous requirements into intuitive and effective experiences.
+
+You will lead design activities across the programme, work closely with engineering and business stakeholders, and help embed stronger service design practices into the organisation's technology delivery processes.
+
+About The Role
+
+As a Senior Service Designer, you will own and shape the overall user journey, ensuring that user needs remain central from discovery through to implementation.
+
+You will use service design techniques including journey mapping, service blueprints, personas, user research, prototyping and usability testing to understand problems and develop practical solutions.
+
+You will also play an important role in influencing the organisation's design culture, helping engineering teams adopt stronger user-centred design principles, frameworks and practices.
+
+Responsibilities
+
+Key Responsibilities
+
+- Lead service design activities across complex technology and Production Management initiatives.
+- Create detailed journey maps and service blueprints that connect business requirements to clear user experiences.
+- Develop personas and user journeys to establish a cohesive understanding of user needs.
+- Create intuitive wireframes, prototypes and mock-ups using Figma.
+- Facilitate design-thinking workshops with business, technology and engineering stakeholders.
+- Run both in-person and remote workshops, capturing outcomes and translating them into actionable design decisions.
+- Conduct user research and usability testing to validate designs and understand user behaviour.
+- Gather and incorporate feedback throughout the design and implementation lifecycle.
+- Collaborate closely with development and engineering teams to ensure technical implementation meets user needs.
+- Present design concepts, strategies, research findings and recommendations to stakeholders at all levels.
+- Communicate complex design concepts clearly to both technical audiences and senior leadership.
+- Manage stakeholder relationships across a complex enterprise environment.
+- Build networks across internal teams and leverage external resources where appropriate.
+- Champion user-centred design principles across engineering and delivery teams.
+- Help establish and embed service design frameworks and standards into engineering workflows.
+- Identify opportunities to improve the overall service and remove friction from user journeys.
+- Stay current with service design trends and introduce innovative approaches where they can create measurable value.
+  \
+
+Requirements
+
+Essential Experience
+
+Service Design
+
+- Proven experience working as a Service Designer within complex organisations.
+- Demonstrable experience delivering business outcomes through innovative, user-centred design.
+- Experience working closely with development teams, engineers and business stakeholders.
+- Strong experience creating:
+  - Journey maps
+  - Service blueprints
+  - Personas
+  - Wireframes
+  - Prototypes
+  - User journeys
+- Ability to take large, ambiguous requirements and translate them into a coherent persona and service narrative.\
+
+Figma
+
+Strong Practical Experience With Figma, Including
+
+- Clickable prototypes
+- Wireframes
+- Mock-ups
+- Collaborative design
+- Presenting design concepts
+- Supporting workshops and stakeholder engagement
+  \
+
+Research & Testing
+
+- Experience conducting user research and usability testing.
+- Ability to gather qualitative and quantitative feedback.
+- Experience using feedback to iterate and improve designs.
+- Ability to ensure that both design and technical implementation remain aligned with user needs.
+  \
+
+Stakeholder Management
+
+- Excellent stakeholder management and communication skills.
+- Comfortable presenting to audiences ranging from technical specialists to senior leadership.
+- Ability to explain complex design concepts in a clear and compelling way.
+- Proven ability to influence stakeholders and drive decisions.
+- Experience navigating complex enterprise structures and building relationships across multiple teams.
+  \
+
+Service Design Methodologies
+
+Strong knowledge of established service design approaches, including practical experience with frameworks such as the Double Diamond.
+
+You should be able to apply service design methodology pragmatically rather than treating frameworks as a rigid process.
+
+Nice to have
+
+Desirable Skills
+
+The Following Would Be Advantageous
+
+- HTML / CSS knowledge.
+- Figma Make.
+- Claude or other AI-assisted design/development tools.
+- Experience working in financial services or another highly regulated environment.
+- Experience with large-scale enterprise technology programmes.
+- Experience embedding service design practices into engineering teams.
+- Experience driving organisational or cultural change.
+  \
+
+Key Skills
+
+Service Design
+
+- Service Design
+- User-Centred Design
+- Design Thinking
+- Double Diamond
+- Journey Mapping
+- Service Blueprints
+- Personas
+- User Research
+- Usability Testing
+
+
+Senior Service DesignerLocation: London, UK| Discipline: Service Design
+About Designit & Wipro
+Designit, Wipro's experience, innovation, and design business, works at the intersection of creativity, technology, and strategy to help ambitious organisations grow and transform.We take a holistic view of how services work — connecting people, processes, and technology to create experiences that are not only meaningful for users, but operationally sound and commercially viable for the organisations behind them.
+
+The Opportunity
+We're looking for a Senior Service Designer to join our London studio and play a central role in shaping how services are designed and delivered for our clients.This is a hands-on, senior role that spans the full service design lifecycle — from understanding the problem space and mapping service ecosystems, through to designing future-state experiences and supporting implementation. You'll work across multidisciplinary teams and directly with client stakeholders to drive real, measurable outcomes.Services today are increasingly shaped by the interplay between human and automated touchpoints — including AI-enabled pathways. At this level, you'll be expected to design for that complexity, bringing systems thinking and a user-centred lens to services that span digital and physical channels.
+
+At this level, you'll move beyond execution to:
+Shape service strategy and define opportunities for transformation
+Drive quality and consistency across service design deliverables
+Influence client thinking and contribute to relationship and opportunity development
+
+
+Key Responsibilities
+Lead service design workstreams across discovery, definition, and delivery — ensuring rigour, clarity, and impact at every stage
+Map and analyse service ecosystems, identifying how users, processes, technology, and organisational structures interact to deliver (or hinder) value
+Translate research insights and identified opportunities into compelling service concepts, blueprints, and future-state journeys
+Apply systems thinking to design holistic, end-to-end services that balance user needs, business goals, and technical feasibility
+Design for services that blend human and automated interactions — including AI-assisted pathways — with clear escalation, quality, and governance considerations
+Facilitate workshops, co-creation sessions, and stakeholder alignment activities that build shared understanding and buy-in
+Collaborate closely with researchers, business designers, experience designers, and engineering teams to ensure seamless, integrated delivery
+Define and articulate design rationale, connecting service design decisions to measurable business and user outcomes
+Contribute to client relationships, presenting work with confidence and identifying opportunities to extend impact
+Support the development of more junior designers through mentoring, knowledge sharing, and leading by example
+
+
+Experience & Skills
+Approximately 5–8 years' experience in service design, ideally within a consultancy, agency, or complex product environment
+Strong expertise in core service design methods — including service blueprinting, journey mapping, ecosystem mapping, and stakeholder mapping
+Proven ability to synthesise research and complex information into clear, actionable insights and service concepts
+Experience designing across multi-channel services spanning digital, physical, and human touchpoints
+Comfortable facilitating workshops and co-creation sessions with diverse groups — from frontline teams to senior leadership
+Ability to connect service design decisions to business strategy and measurable outcomes
+Confident presenting to and influencing senior stakeholders, making the case for design-led approaches
+Strong understanding of accessibility and inclusive design as core service quality attributes, not afterthoughts
+Familiarity with modern design and collaboration tools (e.g., Figma, FigJam, Miro) and an openness to AI-augmented design workflows
+Experience working in agile, cross-functional delivery environments
+Excellent visual communication, storytelling, and facilitation skills
+
+
+Educational background in one or more of the following is valued but not essential:
+Service Design, Interaction Design, or a related design discipline
+Business, Strategy, or Management
+Psychology, Sociology, Anthropology, or Human-Computer Interaction
+
+
+Ways of Working
+A systems thinker — able to see the big picture while managing the details that makes services work
+Collaborative and generous — working across disciplines and helping teams build shared understanding
+Comfortable with ambiguity — bringing structure and direction to complex, open-ended challenges
+Proactive and accountable — taking ownership of quality and driving work forward with pace and purpose
+Curious about emerging practices — including designing for AI-enabled services, evolving accessibility standards, and new ways of measuring service performance
+
+
+
+What We Offer
+The opportunity to shape services for ambitious clients from our London studio
+A role within a collaborative, multidisciplinary team across Europe
+Meaningful responsibility and the chance to influence both client outcomes and Designit's service design practice
+Exposure to a range of sectors and project types
+A culture that values creativity, curiosity, and real-world impact
+
+
+
+How to ApplyPlease submit your CV and portfolio or case studies (PDF or web). We're particularly interested in seeing how you've designed end-to-end services and the impact your work has had on both users and organisations.Designit is committed to equal opportunity and fostering an inclusive environment. If you require reasonable accommodation during the application or interview process, please let us know.
+
+Requirements added by the job poster
+
+• 5+ years of experience in Design
+
+• 5+ years of work experience with Service Design
+
+• Authorized to work in United Kingdom
+
+About the job
+Join Kainos and Shape the Future
+
+At Kainos, we’re problem solvers, innovators, and collaborators - driven by a shared mission to create real impact. Whether we’re transforming digital services for millions, delivering cutting-edge Workday solutions, or pushing the boundaries of technology, we do it together.
+
+We believe in a people-first culture, where your ideas are valued, your growth is supported, and your contributions truly make a difference. Here, you’ll be part of a diverse, ambitious team that celebrates creativity and collaboration.
+
+Ready to make your mark? Join us and be part of something bigger.
+
+MAIN PURPOSE OF THE ROLE & RESPONSIBILITIES IN THE BUSINESS:
+
+As an experienced Service Designer (Consultant) at Kainos, you will be responsible for delivering end-to-end, efficient, and consistent service experiences. You will be an advocate for needs-based design, design research, design thinking and service design, and are passionate about guiding others in these principles. You may also manage, coach and develop a small number of staff, with a focus on managing employee performance and assisting in their career development.
+
+You will be part of our growing Experience Design capability creating exemplary digital services. We are supportive, collaborative, talented, and hugely passionate about user-centred design. We are not about marketing and dark patterns; we are all about making a positive, measurable impact on millions of people through quality products and services.
+
+Minimum (essential) Requirements
+
+ Provide clear visibility of the end-to-end service experience
+ Input to and influence the future of the service experience
+ Familiar with a range of strategic models and can apply them
+ Understanding of business analysis in order to form problem statements
+ Provide guidance in needs-based design, design research, design thinking and service design
+ Coach and support junior team members
+ Comfortable working with researchers and wider team to create experience maps and service blueprints
+ Understanding of a variety of research and design methodologies and approaches
+ Can design, lead and facilitate workshops using a variety of techniques to drive outcomes
+ Able to communicate effectively at all levels
+ Excellent commercial awareness
+ Understanding of stakeholder management and how to identify, facilitate and map landscape
+ We are passionate about developing people – a demonstrated ability in managing, coaching and developing senior members of your team and wider community
+
+DESIRABLE
+
+ Experience of working in a full-service digital agency environment
+ Experience working with Agile delivery methodologies
+
+
+About the job
+Job Title: Service Design Specialist
+
+Req ID: 63284
+
+Job Function: Service
+
+Posting Start Date: 07/10/2026
+
+Posting End Date: 19/10/2026
+
+Division: UK Business
+
+Job Location: GBR-London-BTHQ One Braham
+
+Advertised Salary: Competitive + Benefits
+
+Job Req ID: 63284
+
+Posting Date: 07/10/2026
+
+Function: Cyber Security
+
+Location: Birmingham, Bristol, Glasgow, London, Manchester
+
+Salary: Competitive Salary + Benefits (Internal grade D)
+
+PLEASE NOTE BEFORE APPLYING: Role requires SC (security clearance) Minimum 5 years UK working history
+
+About The Role
+
+Through the development and governance of Low Level Service Designs (LLSDs), operational processes and customer-facing service documentation, the role ensures contractual, business and technical requirements are translated into robust, scalable and supportable operational services.
+
+Working closely with project, operational, architectural and customer stakeholders, the Service Design Specialist drives the development of effective service solutions, provides service design leadership throughout mobilisation and transition activities, and ensures compliance with BT Security governance standards, policies and best practices.
+
+What You’ll Be Doing
+
+Lead the creation, governance and continuous improvement of Low Level Service Designs (LLSDs), ensuring alignment with contractual obligations, customer requirements, operational capabilities and BT Security standards.
+
+Provide service design leadership across technical, operational and customer stakeholder groups, driving collaboration, challenging assumptions where appropriate, and ensuring service design artefacts are accurate, complete and aligned to business objectives.
+
+Essential Skills / Experience
+
+Processes and Procedures: Expert ability to define, develop and govern operational processes, translating complex business and technical requirements into robust workflows, procedures, operating models and RACI frameworks that support effective, scalable and compliant service delivery.
+Business Awareness: Strong understanding of customer, commercial and operational objectives, with the ability to balance competing priorities and ensure service design decisions contribute to strategic business outcomes, customer satisfaction and operational efficiency.
+Continuous Improvement: Ability to lead and drive continuous improvement initiatives, identifying opportunities to enhance service design standards, operational processes and governance frameworks to improve service quality, consistency and business performance.
+Planning and Prioritisation: Ability to manage and coordinate multiple complex service design activities, balancing priorities across projects, customers and operational teams while ensuring delivery against business objectives and critical milestones.
+Service Delivery Knowledge: Advanced understanding of service management principles and operational delivery environments, with the ability to design, assure and optimise services that are practical, supportable, commercially viable and aligned with operational capabilities.
+
+Desirable Skills / Experience
+
+Our Package
+
+ Competitive salary and on-target bonus plan
+ Flexible and smart working
+ Training and development opportunities
+ Competitive share options and pension scheme
+ Access to discounts on BT & EE products
+ 25 days annual leave (not including bank holidays)
+ 3 days paid volunteering a year
+ Weekly Hours: 37.5
+ Salary: Level D
+ Position Type: Full-time
+ Contract: Permanent
+
+Join us at a pivotal moment for BT Business. We are executing a multi-year transformation to restore growth, modernise at scale and unlock new markets beyond connectivity. Our ambition is clear – return to sustainable revenue and EBITDA growth, strengthen our market position, and deliver meaningful shareholder value through disciplined execution and bold reinvention.
+
+We are fundamentally reshaping the business – simplifying our portfolio, digitising our customer experience and building market-leading capability across cyber, AI and managed services, all powered by the UK’s leading fixed and mobile networks. This is a shift from a legacy connectivity provider to a modern, solutions-led, AI-first business that can truly differentiate in a competitive and fast-moving market.
+
+With execution momentum building and a clear path to growth, the opportunity now is to scale what works, accelerate performance and fully realise our potential. This is about delivering against ambitious financial outcomes while transforming how we operate – creating a business that is simpler, faster, more innovative and easier to do business with.
+
+If you want to be part of the team shaping the turnaround of a multi-billion-pound business – and building a stronger, more competitive BT for the future – this is your moment.
+
+
+About the job
+Title: Senior Service DesignerContract Type: Permanent, Full-Time, 35 hoursSalary: Starting from £78,544 per annum (London weighted salary) or £68,571 per annum (Regional salary), dependant on experienceGrade: 12Reporting Office: London, Stratford or Manchester, TraffordPersona: Agile Worker: 20% - 40% of contractual hours to be worked from reporting office/working location (hybrid working)Closing Date: 21st October 2026Interview Dates: W/C 02/11/26 *Please note that in person interviews will be held for at least one of the interview stages for this role
+Benefits include: Excellent pension plan (up to 6% double contribution), 28 days Annual Leave rising to 31 days with length of service + Bank Holidays, Westfield Health Cash Plan, non-contributory life assurance, up to 21 hours volunteering paid days, lifestyle benefits, Employee Assistance Programme and many more…
+Early applications are encouraged as we reserve the right to close the advertisement and interview earlier than stated.
+L&Q reserves the right to not progress applications for candidates who have had one unsuccessful application/interview process with L&Q for the same or similar role in the previous 12 months.
+Join our Business Design and Architecture Team at L&Q: L&Q is one of the UK’s largest housing associations and providers of social and affordable homes. We house around 250,000 people primarily across Greater London and Greater Manchester. Our purpose is simple – to provide social homes and landlord services that everyone can be proud of. Our transformation and change portfolio is service design led. It spans full operating model change across the Group, covering ways of working, process, team structures, systems, data and reporting. This role sets the standard for how that design work is done, and shapes the journeys that 250,000 residents and thousands of colleagues experience.
+As Senior Service Designer, you will lead the experiential view of L&Q's Target Operating Model: the target end-to-end journeys and the services that enable them. You will hold this view alongside our Senior Business Architect, who holds the structural view. Together, the two disciplines give L&Q one coherent picture of how it works today and how it needs to work.
+L&Q is in a multi year, multi million pound programme of transformation. Getting the resident and colleague experience right, and consistent, across that programme needs a strong service design practice and a clear design standard that others can apply.
+You will report to the Head of Business Design and Architecture and lead a team of six: two direct and four indirect reports. You will also work with external service design partners. Business Design and Architecture brings together business architecture, service design and business analysis, and forms a core part of Group Transformation and Change.
+If this sounds like you, we would love for you to apply!
+Your impact in the role: 
+Leading the service design team. Leading and developing a team of service designers, including a Lead Service Designer, managing performance and building a high performing practice. Directing and quality assuring external service design partners alongside the permanent team.
+Holding the experiential view. Leading the design and continuous improvement of target journeys, service blueprints and service patterns, and the service design principles that guide change across the Group.
+Designing and assuring change. Leading service design on priority transformation work from discovery through to delivery. Representing service design in Design Assurance, making sure change meets our regulatory obligations and moves L&Q towards its target without breaking what works.
+Building capability. Growing user-centred and systems thinking capability across L&Q, including within our Business Analysis practice and among operational leaders.
+Key relationships. Working closely with the Senior Business Architect, Business Analysis leads, programme teams, technology and data experts, and resident involvement colleagues to deliver joined up change.
+
+What you'll bring: 
+Substantial experience leading end-to-end, multi-channel service design in complex organisations.
+Demonstrable user-centred research and inclusive design practice, including with people in vulnerable circumstances.
+Experience designing services as part of wider operating model or organisational change.
+Experience leading design professionals and building design capability in others.
+Demonstrable experience influencing senior leaders and working across disciplines to deliver change.
+Ideally but not essential, experience in social housing or another regulated, resident or citizen-facing sector.
+ About L&Q:We’re one of the UK’s leading housing associations and developers. We were founded on a simple belief: high quality housing is vital for people’s health, happiness and security. Our purpose is simple – to provide social homes and landlord services that everyone can be proud of.
+250,000 people call our properties ‘home’, and we’re proud to serve diverse communities across London, the South East and North West of England.
+People are at the heart of our business and our success depends on employing the best people and getting the best from them. The foundation of everything that we are is built on our corporate values, which outline our core expectations and should be demonstrated at all times, and all levels, when representing L&Q – click here to read more.
+At L&Q, we know that diversity and inclusion make us stronger – and they’re at the heart of everything we do.When we recruit, we look at what really matters: your skills, experience, and potential. We’re proud to be recognised for creating an inclusive workplace. We’re a Disability Confident Leader (Level 3) and we’ve introduced our own Recruitment Advocate scheme to make sure every step of our hiring process is fair, transparent, and consistent. It’s all part of our commitment to ending discrimination and making L&Q a place where everyone feels welcome. Find out more here.
+Sustainability is also at the heart of what we do. We recognise the responsibility we hold as one of the UK’s largest housing associations.
+Click here to find out more about L&Q and why you should join us!
+
+
+About the job
+About us:We’re an independent digital transformation consultancy with clients across public and private sectors. We help our clients solve complex technical problems and provide human-centred solutions that lead to positive outcomes. We do this with multidisciplinary teams of strategists, architects, developers, designers and analysts working closely alongside client stakeholders and end users.
+We operate as a flat organisation, and believe in trusting and supporting our team to operate independently, making the most of their expertise. We believe in giving everyone an opportunity to continually learn and grow in the direction they choose, and we actively help people to shape the career they want. We take work-life balance seriously, enabling people to work flexibly where possible and we strive to create a fun and relaxed working environment allowing our team to thrive.
+We believe diversity makes us a stronger company and we seek to employ people with different ideas, styles and skill sets, each able to contribute in unique ways. This diversity engenders a richer, more creative environment – one in which our people, clients and end-users can all benefit.
+The Role: We’re looking for a Service Designer to join our multidisciplinary team designing and delivering innovative digital products and services for our Government and Private Sector clients.
+You’ll be a great listener and communicator with a creative, structured and logical approach towards understanding problems and designing inclusive, human-centred experiences.
+We’re specifically looking for a pragmatic team player with an appreciation of both business and user needs, who’s keen to develop their ‘T-shaped’ skills and is not afraid to take on new challenges.
+About you: We are looking for people who have a background in critical thinking, enjoy tackling different problems in a structured way and are highly motivated self-starters. Our consultants should have great interpersonal and communication skills and a strong desire to deliver the best possible solutions for our clients.Our team is our strongest asset, you will be an excellent team player who recognises the strength of the team as a whole and can find their role within the Solirius team.The ideal candidates will share our values and be aligned with our ways of working and as your career progresses, you can expect to work across all areas of the development lifecycle, from strategy to implementation, and to take on assignments in different sectors. This will provide you with a broad base of experience from which to build an outstanding career.Candidates should be open to working in different locations for different clients. Although most of our work is in London, candidates should be happy to travel as client needs dictate.
+Skills and experience required:
+User-centred design
+You understand user-centred design activities at all levels, from the ‘big picture’ through to detailed interaction, visual, content and information architecture design.
+You’re able to understand, facilitate and communicate a vision of change from both business and user perspectives.
+You’re experienced in mapping service experiences and defining changes to meet user and business needs.
+You’re experienced at rapid prototyping to test, iterate and validate solution designs.
+You’re able to produce concise artefacts (e.g. personas, journey maps, blueprints, user stories) to help communicate user and business needs.
+You’re experienced at working with agile development teams and stakeholders to co-design products and services to meet user needs.
+You’re also able to support and coach teams and stakeholders in the use of user-centred design and agile methodologies.
+You advocate for and ensure high standards of usability, accessibility and inclusivity for products and services.
+You have a detailed understanding and experience of working to the Government Service Standard. (essential)
+
+Research and analysis
+You know how to map and engage with different stakeholder groups.
+You’re able to carry out user research across internal and external user groups, utilising different research methods as appropriate.
+You’re experienced in the analysis and synthesis of qualitative and quantitative research data and findings, and are able to communicate insights in an engaging and concise way to engage stakeholders in data-informed decisions.
+You can define key metrics and measurements used to evaluate the impact of products and services and inform ongoing enhancements.
+
+Communications and productivity
+You have excellent verbal/written, listening and facilitation skills and are confident in communicating with stakeholders at all levels.
+You have the technical literacy to understand (at a high-level) technical processes, concepts and constraints.
+You have the ability to recognise and work within project constraints, supporting colleagues to ensure delivery of value to the client and their users.
+You’re keen to support the development of Solirius’ internal culture, tools, processes and growth opportunities.
+
+The ideal candidate will share our values and be aligned with our ways of working and as your career progresses, you can expect to work across all areas of the development lifecycle, from strategy to implementation, and to take on assignments in different sectors. This will provide you with a broad base of experience from which to continue building an outstanding career.
+Candidates should be open to working in different locations for different clients. Although most of our work is remote, candidates should be happy to meet regularly in our London office and travel as client needs dictate.
+Package and Benefits: 
+Competitive salary, dependent on experience
+Flexible working / Work from home
+Generous annual discretionary bonus
+25 days annual leave + bank holidays
+5 days allocated development training per year
+Contributory pension
+Gym membership
+Annual away days and social events
+
+Equality & Diversity: 
+Solirius Consulting is an equal opportunities employer. We are committed to creating a work environment that supports, celebrates, encourages, and respects all individuals and in which all processes are based on merit, competence and business needs. We do not discriminate on the basis of race, religion, gender, sexuality, age, disability, ethnicity, marital status or any other protected characteristics.Should you require further assistance or require any reasonable adjustments be put in place to better support your application process, please do not hesitate to raise this with us.
+
+
+About the job
+About us:
+
+Make a difference and advance your career by helping deliver some of the UK's most important #tech4good projects, making the world a smarter, safer, greener, and healthier place.
+
+You'll join a talented team of dynamic and driven professional problem solvers; creative thinkers and solutions builders who thrive on helping clients meet the most exciting digital transformation challenges.
+
+At a certified Great Place to Work®, you'll experience a dynamic and nurturing environment that rewards initiative and flexibility and enjoy a career path tailored to your own aspirations.
+
+Founded in 1992, we are a successful, growing International digital transformation consultancy. We deliver multi-Queen's Award for innovation winning platforms and services that support large-scale digital transformation. Our digital, data and technology solutions are used by globally recognised public and private sector brands operating in a variety of sectors including Civil Defence, Healthcare, Sustainable Environment and Land Asset Management, and Digital Democracy.
+
+About the role:
+
+We are looking to expand our established User-Centred Design (UCD) team with a skilled Service Designer to help design and deliver complex, user-centred, and inclusive services that solve challenging public sector problems.
+
+As a Service Design Practitioner, you will work closely with more senior colleagues in our multi-disciplinary environment to create end-to-end services that prioritise user needs, accessibility, and client goals. Your work will contribute directly to delivering genuine value and impact daily.
+
+You will be an active part of our design community of practice, helping to share knowledge, contribute to improvements, and provide guidance to junior colleagues. You will also play a role in refining best practices internally, ensuring our service design work continues to be effective and high-quality.
+
+This role offers flexibility to be based from our Altrincham (Manchester) or Westminster (London) offices, where you'll be part of a collaborative, high-performing team environment, supported by our hybrid working approach.
+
+Role Responsibilities:
+
+Plan and undertake research, analysis, and design activities, working with senior colleagues to produce robust, evidence-based solutions that meet user needs and align with best practice (including accessibility, inclusion, and assisted digital)
+Collaborate with senior and lead designers to produce and maintain research, analysis, and design artefacts, using standard methods, tools, and templates, and presenting findings in forums such as Show and Tell sessions
+Work closely with technical colleagues (e.g., Engineers, Data Scientists, Business Analysts) to ensure designs are deliverable and specified in a format and level of detail that supports efficient development and build
+Support Delivery Managers in executing activities in line with agreed plans, escalating risks and issues when necessary, and contributing robust estimates for technical work
+Maintain up-to-date practitioner skills through training and accreditation, including domain-relevant certifications
+
+Requirements
+
+Essential Skills:
+
+User-Centred Design (UCD): Experience designing and delivering user-centred solutions in complex service environments
+ Collaboration: Ability to work effectively with senior designers, technical colleagues, and delivery teams to produce high-quality outputs
+Research & Analysis: Skilled at undertaking research and analysis to inform design decisions
+Communication: Strong visual and verbal communication skills to make complex information understandable and actionable
+Public Sector & Consultancy Experience: Familiarity with consultancy delivery in public sector contexts is desirable
+Mentoring & Knowledge Sharing: Ability to coach junior colleagues and contribute to an active practitioner community
+
+Senior colleagues, experts, and leaders at Informed Solutions are committed to supporting, coaching, upskilling, and enabling the success and career progression of each other.
+
+There are some foundation areas, however, which you need to possess to be able to successfully contribute to your team and work alongside others.
+
+Key abilities that are necessary for success:
+
+Able to work effectively in environments where you can adapt to innovative practices involving uncertainty, change, and agile working
+Ability to manage competing priorities and your time so you can deliver high-quality work within deadlines
+Good interpersonal skills, with the ability to respect and accept different perspectives and disagreement, work collaboratively in diverse teams, and maintain positive working relationships
+Good judgement and decision-making in complex environments where uncertainty, ambiguity, and risk must be collaboratively managed by working supportively alongside others
+Good communication skills, including clear, constructive written outputs and measured, respectful verbal delivery
+
+We work in a fast-paced, ever-evolving innovation and problem-solving workplace environment where no two days are the same. This requires you to have the foundations of personal resilience, professional adaptability, and flexibility in working alongside others with a positive mindset.
+
+We appreciate that this workplace culture and the level of variety won't suit everyone. However, after significant consultations with colleagues at all levels, we understand that these are the fundamentals of success in undertaking the complex, innovation work which is the DNA of Informed Solutions.
+
+These shared foundations are important to team cohesion, performance, and mutual personal support.
+
+As colleagues, we thrive in successfully problem solving together to deliver real-world impact; and value the variety of challenges and opportunities to learn, grow, and progress on a personal and professional level.
+
+About the job
+Job Description
+
+Your impact 
+
+Are you ready to lead the design of end‑to‑end services that support some of the UK’s most critical missions? At Leonardo UK, our Service Designers bring human‑centred, evidence‑based design leadership to multi‑disciplinary delivery teams, shaping services across the full lifecycle — from Discovery through to Live. You will provide expert professional advice, influence decision‑making, and lead complex design work that transforms how users interact with our services and how those services operate behind the scenes.
+
+Your work at Leonardo UK will see you take the lead in solving customer problems in an agile, innovative and team-centric manner. The role may involve a blended hybrid working model, with a mixture of working from home and working on site at our Bristol office to ensure close collaboration with the wider team and with our customers.
+
+What You Will Do As a Service Designer
+
+Lead service design activities across Discovery, Alpha, Beta and Live. 
+Produce service maps, journeys, blueprints, and end‑to‑end service models. 
+Work collaboratively across multi‑disciplinary teams to align user needs, business goals and technology constraints. 
+Provide professional advice on service design approaches, risks and opportunities. 
+Coordinate service design work to time, quality and business expectations. 
+Facilitate workshops, co‑design and decision‑making forums. 
+Support the development of service design practice and mentor junior team members. 
+
+What You’ll Bring
+
+Strong expertise across the DDaT service design lifecycle. 
+Ability to influence decisions with evidence, research and clear rationale. 
+Experience delivering complex service design in multi‑disciplinary teams. 
+Strong communication skills and confidence in simplifying complexity. 
+Ability to contribute to planning, strategy and roadmap discussions. 
+Experience coaching or supporting others in service design. 
+
+Core Areas (must Have)
+
+Proven experience in end‑to‑end service design (DDaT). 
+Ability to produce service artefacts at multiple levels (journeys → blueprints → ecosystems). 
+Skilled in evidence‑based design: insight synthesis, problem framing, prioritisation. 
+Ability to influence stakeholders across engineering, product and policy domains. 
+Experience coordinating service design delivery across phases and teams 
+
+Desirable
+
+Exposure to operational service management (ITIL, SLAs, support models). 
+Experience in defence, government or regulated environments. 
+Working knowledge of adjacent roles (UR, BA, Product, Interaction Design). 
+Experience in agile or SAFe delivery environments. 
+Professional training/accreditation in service design or human‑centred design. 
+Contribution to communities of practice or internal capability uplift. 
+
+This is not an exhaustive list, and we are keen to hear from you even if you might not have experience in all the above. The most important skill is a good attitude and willingness to learn.
+
+Security Clearance 
+
+This role is subject to pre-employment screening in line with the UK Government’s Baseline Personnel Security Standard (BPSS). An additional range of Personnel Security Controls referred to as National Security Vetting (NSV) may apply, this could include meeting the eligibility requirements for The Security Check (SC) or Developed Vetting (DV). For more information and guidance please visit: https://careers.uk.leonardo.com/gb/en/security-and-vetting
+
+Why join us 
+
+At Leonardo, our people are at the heart of everything we do. We offer a comprehensive, company-funded benefits package that supports your wellbeing, career development, and work–life balance. Whether you're looking to grow professionally, care for your health, or plan for the future, we’re here to help you thrive.
+
+Time to Recharge: Enjoy generous leave with the opportunity to accrue up to 12 additional flexi-days each year. 
+Secure your Future: Benefit from our award-winning pension scheme with up to 15% employer contribution. 
+Your Wellbeing Matters: Free access to mental health support, financial advice, and employee-led networks championing inclusion and diversity (Enable, Pride, Equalise, Armed Forces, Carers, Wellbeing and Ethnicity). 
+Rewarding Performance: All employees at management level and below are eligible for our bonus scheme. 
+Never Stop Learning: Free access to 4,000+ online courses via Coursera and LinkedIn Learning. 
+Refer a friend: Receive a financial reward through our referral programme. 
+Tailored Perks: Spend up to £500 annually on flexible benefits including private healthcare, dental, family cover, tech & lifestyle discounts, gym memberships and more. 
+Flexible working: Flexible hours with hybrid working options. For part time opportunities, please talk to us about what might be possible for this role. 
+
+For a full list of our company benefits please visit our website.
+
+Leonardo is a global leader in Aerospace, Defence, and Security. Headquartered in Italy, we employ over 53,000 people worldwide including 8,500 across 9 sites in the UK. Our employees are not just part of a team—they are key contributors to shaping innovation, advancing technology, and enhancing global safety.
+
+About the job
+About Accenture Song
+
+Accenture Song accelerates growth and value for our clients through sustained customer relevance. Our capabilities span ideation to execution: growth, product and experience design; technology and experience platforms; creative, media and marketing strategy; and campaign, content and channel orchestration. With strong client relationships and deep industry expertise, we help our clients operate at the speed of life through the unlimited potential of imagination, technology and intelligence. Visit us at: www.accenture.com/song
+
+
+Job Description
+
+
+Role summary
+
+As a Service Designer, you will help organisations understand and improve the end-to-end digital products and services they deliver. You will use human-centred design, research and systems thinking to make sense of complex problems, connect user and organisational needs, and turn insight into better service outcomes. You will use service design not only to improve existing experiences, but to reinvent new service models and reimagine better ways for people and organisations to interact.
+
+You will work as part of multidisciplinary teams alongside other designers, strategists, product, data, engineering colleagues and clients. You will also be open to exploring and using AI-enabled tools to enhance the design workflow and produce high-quality outputs.
+
+What you’ll be working on
+
+You will work on complex digital products and services within the Accenture Song Design Digital Products Creative team, from research and discovery through to design and delivery.
+
+Your work may span a range of industries, including Health & Public Services, financial services, telecommunications, retail, utilities and resources, automotive and life sciences, and involve understanding existing services, identifying opportunities for improvement, designing future service experiences and helping teams make confident, evidence-based design decisions.
+
+What you’ll do
+
+Understand and make sense of complexity
+
+
+Use service design, human-centred design and systems thinking methods to understand users, organisations and the wider systems around a service. 
+Translate research, data and other evidence into clear insights, themes and opportunity areas. 
+Contribute to shaping the vision and direction of products and services by connecting user needs, evidence and business objectives. 
+Navigate ambiguity and use service design as a way to create clarity and shared understanding. 
+
+
+Design and communicate services and craft
+
+
+Create high-quality service design artefacts, including journey maps, service blueprints, personas, systems maps and opportunity frameworks. 
+Use appropriate service design methods and frameworks, including the Double Diamond where relevant. 
+Develop and test service ideas and prototypes to explore opportunities and make confident, evidence-based design decisions. 
+Translate service design artefacts into meaningful recommendations that help teams explore opportunities, shape service direction and deliver outcomes aligned with user and business needs. 
+Tell clear and compelling stories that bring together evidence, empathy and design thinking, communicating complex service ideas visually and verbally to a range of stakeholders. 
+
+
+Facilitate and collaborate
+
+
+Plan and facilitate co-design, ideation and service design workshops with users, stakeholders and multidisciplinary teams. 
+Create inclusive environments that enable different perspectives to contribute. 
+Collaborate closely with user research, product, content, strategy, business design and other design disciplines. 
+Build shared understanding and alignment across teams and stakeholders. 
+
+
+Deliver with quality
+
+
+Take responsibility for your service design work and deliver it with quality and care. 
+Manage your own time and priorities effectively within project timelines. 
+Make confident design decisions based on evidence, user needs and service goals. 
+Contribute to the delivery of coherent end-to-end service experiences. 
+
+
+How you’ll contribute
+
+
+Bring curiosity and imagination to service design, challenging assumptions and exploring possibilities beyond incremental improvement. 
+Advocate for service design and user-centred ways of working within project teams. 
+Share your knowledge, methods and learning with other designers and colleagues. 
+Contribute to the growth of service design capability and the wider design community. 
+Support a collaborative culture where designers learn from and challenge one another. 
+
+
+What we’re looking for
+
+
+Strong grounding in service design, system thinking and human-centred design methods. 
+Ability to think beyond individual touchpoints and connect service design decisions to wider product, service and business goals. 
+Experience translating findings into design opportunities. 
+Ability to produce clear, high-quality service design artefacts. 
+Confidence planning and facilitating workshops. 
+Strong storytelling skills, with the ability to create clarity and connection through evidence, empathy and visual communication. 
+Ability to present design thinking and recommendations to a range of stakeholders. 
+Comfortable working with ambiguity and complexity. 
+Collaborative mindset and experience working in multidisciplinary teams. 
+Ability to connect user needs, organisational context and business objectives when making design decisions. 
+
+
+Experience
+
+
+Typically 3–5 years of relevant experience in service design, UX, research or a related field. 
+Experience applying service design methods within real-world projects or services. 
+Experience working collaboratively with stakeholders and multidisciplinary teams. 
+Degree in Service Design, Social Science or a related field, or equivalent professional experience. 
+
+About the job
+About the job you’re considering
+We’re building the next generation of design at Capgemini. As a Service Designer in our team, you’ll ensure that the voices, needs, and behaviours of users are at the heart of the services we design. You’ll work across complex ecosystems, running research that shapes strategy, informs design, and influences delivery. You will join the growing Digital Customer Experience (DCX) practice within Capgemini.
+As AI becomes more integrated into research, the job is shifting from a purely manual data collector to a strategic, human-centered analyst and storyteller. This is more than a research role—it’s a chance to shape how organizations research and design in the age of AI. You'll take on challenges, grow your craft, and join a community pushing the boundaries of design.
+Your role
+• Evaluate existing services for usability, accessibility, and effectiveness and partner with stakeholders to understand needs and co-create solutions.• Apply the right research methods to uncover insights and evidence.• Prototype and test ideas, working with specialists to make them real.• Facilitate workshops that align stakeholders around a shared vision.• Translate insights into tangible opportunities for business and user value.
+You can bring your whole self to work. At Capgemini building an inclusive future is part of everyday life and will be part of your working reality. We have built a representative and welcoming environment, for everyone.
+Your skills and experience
+• Solid experience in service design, with a portfolio demonstrating research, service mapping, prototyping, delivery, and impact (consulting or agency experience a plus).• Experience with government service standards and accessibility principles (experience in GDS assessments is a plus).• Strong skills in user-centred design methods, from research through to delivery. Confident in planning and conducting user research, prototyping, and synthesising insights into improvements.• Ability to work in agile, fast-paced environments, collaborating across multidisciplinary and multi-vendor teams.• Confidence in engaging with stakeholders — from facilitating workshops to influencing decisions with evidence.
+We are a Disability Confident Employer
+Capgemini is proud to be a Disability Confident Employer (Level 2) under the UK Government’s Disability Confident scheme.As part of our commitment to inclusive recruitment, we will offer an interview to all candidates who:- Declare they have a disability, and- Meet the minimum essential criteria for the role.Please opt in during the application process
+Your security clearance
+To be successfully appointed to this role, it is a requirement to obtain Security Check (SC) clearance.
+To obtain SC clearance, the successful applicant must have resided continuously within the United Kingdom for the last 5 years, along with other criteria and requirements.
+Throughout the recruitment process, you will be asked questions about your security clearance eligibility such as, but not limited to, country of residence and nationality. Some posts are restricted to sole UK Nationals for security reasons; therefore, you may be asked about your citizenship in the application process.
+Make it real – what does it mean for you
+You will be encouraged to have a positive work-life balance. Our hybrid-first way of working means we embed hybrid working in all that we do and make flexible working arrangements the day-to-day reality for our people. All UK employees are eligible to request flexible working arrangements
+You will be empowered to explore, innovate, and progress. You will benefit from Capgemini’s ‘learning for life’ mindset, meaning you will have countless training and development opportunities from thinktanks to hackathons, and access to 250,000 courses with numerous external certifications from AWS, Microsoft, Harvard ManageMentor, Cybersecurity qualifications and much more
+You will reimagine what’s possible: creating value for the world’s leading organisations through technology to build a sustainable, more inclusive future. You will work with a range of clients all with a unique set of business, technological and societal ambitions, which will make a real impact across the UK.
+Why you should consider Capgemini
+Growing clients’ businesses while building a more sustainable, more inclusive future is a tough ask. When you join Capgemini, you’ll join a thriving company and become part of a collective of freethinkers, entrepreneurs and industry experts. We find new ways technology can help us reimagine what’s possible. It’s why, together, we seek out opportunities that will transform the world’s leading businesses, and it’s how you’ll gain the experiences and connections you need to shape your future. By learning from each other every day, sharing knowledge, and always pushing yourself to do better, you’ll build the skills you want. You’ll use your skills to help our clients leverage technology to innovate and grow their business. So, it might not always be easy, but making the world a better place rarely is.
+About Capgemini
+Capgemini is an AI-powered global business and technology transformation partner, delivering tangible business value. We imagine the future of organisations and make it real with AI, technology and people. With our strong heritage of nearly 60 years, we are a responsible and diverse group of 420,000 team members in more than 50 countries. We deliver end-to-end services and solutions with our deep industry expertise and strong partner ecosystem, leveraging our capabilities across strategy, technology, design, engineering and business operations. The Group reported 2024 global revenues of €22.1 billion.Make it real | www.capgemini.com
+
+

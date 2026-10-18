@@ -1,0 +1,519 @@
+About the job
+NTT DATA is a trusted global innovator of business and technology services, helping clients innovate, optimize, and transform for success. We strive to hire exceptional, innovative, and passionate individuals who want to grow with us. If you want to be part of an inclusive, adaptable, and forward-thinking organization, apply now.
+The team you'll be working with:The Forward-Deployed Engineer is a client-facing builder within the AI GTM organization responsible for rapidly creating demos, prototypes, proofs of concept, and MVPs that make AI opportunities tangible for clients and account teams.
+This role combines hands-on engineering, AI fluency, product thinking, and field presence to translate client problems into working technical concepts using models, agents, data, workflows, integrations, and user experiences.
+What you'll be doing:- Rapidly build demos, prototypes, proofs of concept, and MVPs that bring AI use cases to life for clients and account teams.- Translate client problems into working technical concepts using models, agents, data, workflows, APIs, integrations, and user experience patterns.- Support discovery workshops, executive demos, technical deep dives, proof-of-value sessions, and partner enablement activities.- Partner with Solution Architects to ensure prototypes align to scalable architecture, delivery paths, security expectations, and operational requirements.- Work with ecosystem partners to showcase differentiated capabilities across OpenAI, Anthropic, Mistral, Google/Gemini, cloud, data, and enterprise platforms.- Package prototypes into reusable assets, demo scripts, technical collateral, setup guides, reference architectures, and handoff materials.- Validate technical feasibility, data dependencies, integration complexity, user experience assumptions, and implementation risks early in the sales cycle.- Help accelerate opportunity conversion by making AI solutions concrete, credible, and client-specific.- Contribute lessons learned, reusable code, prompts, agent patterns, and implementation guidance back into the global FDE knowledge base.
+Success Measures:- Pursuit deal volume, measured as total TCV value of AI deals where the FDE supported.- Pursuit win rate for AI deals where the FDE supported.- Prototype-to-pipeline conversion, measured by demos, prototypes, or POCs that convert into qualified pipeline, funded POCs, or downstream implementation work.- Utilization, reuse of technical assets, demo quality, and stakeholder feedback.
+What experience you'll bring:- 5+ years of experience in software engineering, AI engineering, data engineering, ML engineering, solution engineering, technical consulting, or related hands-on technical roles.- 2+ years of experience building or deploying AI, ML, GenAI, LLM, RAG, agentic AI, data science, or automation solutions.- Hands-on experience with programming languages and frameworks such as Python, JavaScript/TypeScript, FastAPI, Flask, React, LangChain, LlamaIndex, PyTorch, TensorFlow, or similar technologies.- Experience integrating APIs, data sources, model providers, workflow tools, and cloud services into working demos or prototypes.- Working knowledge of responsible AI, security, data handling, privacy, and enterprise deployment considerations.- Bachelor's degree or equivalent work experience.
+Preferred Skills:- Experience with OpenAI, Anthropic, Mistral, Google/Gemini, Azure, AWS, GCP, Databricks, Snowflake, vector databases, model registries, and MLOps/LLMOps tooling.- Experience working directly with clients, sales teams, or product teams to rapidly prototype solutions under ambiguous conditions.- AI/ML, cloud, data engineering, or software engineering certifications.- Strong technical curiosity, client empathy, communication, bias for action, collaboration, and ability to explain complex technical concepts clearly.- Ability to travel as required for client and internal engagements.
+
+About the job
+We're working with two exciting, fast-growing AI technology startups that are looking for talented Forward Deployed Engineers to join their teams.
+These are fantastic opportunities for people who enjoy building things, solving complex problems and using the latest AI technologies to deliver real solutions for businesses.
+Both companies are developing innovative AI platforms and are looking for individuals who can take customer requirements, understand the problem and turn ideas into working products and AI-powered solutions.
+The RoleYou'll work at the intersection of technology, AI and customer delivery, taking ownership of projects from initial requirements through to implementation and deployment.Depending on your background, you'll have the opportunity to work across software development, AI agents, automation and technical solution delivery.
+What You'll Be Doing
+Working directly with customers to understand their challenges and requirements.
+Building and deploying AI-powered applications, agents and automation solutions.
+Translating sometimes vague business requirements into practical technical solutions.
+Using modern AI development tools and platforms to accelerate delivery.
+Integrating systems using APIs, webhooks and other technologies.
+Testing, troubleshooting and improving solutions running in production.
+Taking ownership of technical delivery and helping shape future product development.
+
+What We're Looking For
+A strong technical background, whether that's software engineering, solutions engineering, technical implementation or AI automation.
+Hands-on experience building with AI tools, agents or modern development platforms.
+An understanding of APIs, integrations and how software systems work together.
+Someone comfortable taking ownership of problems and finding solutions independently.
+Strong communication skills and confidence working with customers and stakeholders.
+A genuine interest in AI and how it can be used to solve real-world business problems.
+Experience in a startup, scale-up or fast-moving technical environment would be particularly beneficial.
+
+You don't need to tick every box.We're open to candidates from different technical backgrounds. You might be an experienced Software Engineer who enjoys building complete products, a Solutions Engineer who loves hands-on delivery, or someone who has developed strong expertise building AI agents and automation solutions.What matters most is your ability to understand problems, build solutions and deliver something that works.
+
+
+About the job
+Be at the Forefront of the Agentic AI Revolution
+At Skan AI, we are pioneering the context engine for human and agentic execution, bringing context from enterprise operators, systems, and processes to power how the world's largest organizations execute their most complex, mission-critical work.
+Why Skan AI
+We're in hyper-growth mode at exactly the right moment in history. As enterprises race to adopt agentic AI, we're uniquely positioned to deliver the clear signal they desperately need: a platform that trains and grounds AI Agents in trillions of real execution signals, enabling reliable, compliant automation of their most complex processes.
+Backed by Dell Technologies Capital and other leading investors, we're the only company that can bridge the gap between AI's promise and enterprise reality, making us perfectly positioned to define the agentic era for modern enterprises.
+Our diverse, collaborative team of 250+ innovators is solving category-defining challenges at the intersection of AI, process intelligence, and enterprise work. Diverse perspectives fuel breakthrough thinking, cross-functional collaboration is the norm, and our work directly transforms how Fortune 500 companies operate. We are shaping the future of work itself.
+The roleAs a Forward Deployed Engineer, you embed directly with our customers and take an agent from idea grounded in real work to running in production. You'll sit at the intersection of engineering, AI, and hands-on customer delivery: understanding a messy real-world process, capturing how it truly works, authoring the agent's operating logic, building and integrating it, and standing it up under strong governance and human oversight. This is a build-and-deploy role for engineers who like being close to the customer and the impact.What you'll do
+Embed with a customer team to understand a target workflow — including the exceptions and rework that never make it onto a slide.
+Deploy our lightweight observation software and turn real, observed work into a clear specification for what the agent should do.
+Author and validate the agent's operating procedure — its decision logic, rules, and escalation paths — and prove it against real cases before any build.
+Build, integrate, and configure the agent, wiring it into enterprise systems with guardrails and human-in-the-loop checkpoints.
+Drive calibration, user acceptance testing, and shadow-mode validation through to a clean production go-live.
+Instrument monitoring and quantify the business lift the agent delivers.
+What we're looking for
+7+ years in software, data, or ML engineering, solutions engineering, or technical consulting.
+Strong Python and SQL; hands-on experience with at least one cloud platform.
+Experience building with LLMs / AI agents, or delivering data/ML products — in production or as serious prototypes.
+Excellent communication and a genuine appetite for working directly with enterprise customers.
+A pragmatic, outcome-driven mindset: you ground decisions in evidence and keep scope honest.
+Bonus points
+Process intelligence / process mining, RPA, or workflow-automation experience.
+Delivery in regulated environments (financial services, insurance, healthcare).
+Familiarity with agent frameworks, evaluation/observability tooling, Kubernetes, or VDI/mainframe environments.
+Why Skan
+Ship AI that does real work inside some of the world's largest enterprises — and see the impact directly.
+Work across the whole stack of a deployment, not a narrow slice.
+
+Skan AI is an equal opportunity employer committed to building a diverse, inclusive, and respectful workplace around the world. We do not discriminate based on race, color, religion or belief, sex (including pregnancy, sexual orientation, gender identity, or gender expression), national origin, ancestry, age, disability, medical condition, genetic information, marital or family status, military or veteran status, or any other characteristic protected by applicable laws in the locations where we operate.We welcome people from all backgrounds and provide reasonable accommodations throughout the hiring process.
+
+About the job
+Job Description
+
+Your Impact
+
+Leonardo UK Engineering is building internal AI Engineering Capability with engineers who deploy into Integrated Project Teams for short, scoped engagements. The role uses AI-enabled tooling to improve how a programme handles requirements, architecture, modelling, design, implementation and related engineering work. You will work within a small multi-disciplinary team in deep collaboration with our AI platform development team.
+
+Where this vacancy is being recruited across more than one grade, the successful candidate will be appointed to a specific assessed grade, and the applicable salary range will be that associated with the grade of appointment.
+
+What You’ll Do
+
+Deploy into a project – help to discover, scope and solve high value engineering problems with the platform’s tooling.
+Collaborate with the AI platform team to make architecture and design decisions and with company process owners to change how we engineer
+Build custom applications, workflows and templates to enable development, improvement of engineering products – from specifications to product implementation to supporting engineering modelling & simulation tooling.
+Become an expert user: know the tooling’s opportunities and failure modes better than anyone else in the company.
+Skill up the IPT’s engineers as you go — the team should be more capable after you leave than it was while you were there.
+
+What We’re Looking For
+
+High agency. You are curious, purposeful and proactive – you learn quickly and find ways to navigate complex organisational structures.
+Outcome oriented and data driven – you care about effecting real change for our engineers and our end customers.
+Write well enough that anything you leave behind is usable by a stranger six months later.
+Comfortable being measured on whether other people adopted something.
+Able to enter an unfamiliar programme, earn trust with a variety of stakeholders quickly, and leave without having become indispensable.
+
+What You’ll Bring
+
+Familiarity with LLMs, SLMs and Agentic AI as a user
+Programming and scripting, such as MATLAB, Simulink, Python, Bash
+Product and systems thinking
+
+Why this is interesting
+
+You work across several programmes a year instead of one, and see how the business really engineers.
+You become the company’s expert user of tooling that will be everywhere in three years.
+The process change your project exposes becomes the new company standard — you change the method, not just the output.
+Your output is measured in other people’s capability, which is a rarer and more portable thing to have done.
+
+Security Clearance
+
+You must be eligible for full security clearance. For more information and guidance please visit: https://www.gov.uk/government/publications/united-kingdom-security-vettingclearance-levels
+
+Why join us
+
+At Leonardo, our people are at the heart of everything we do. We offer a comprehensive, company-funded benefits package that supports your wellbeing, career development, and work–life balance. Whether you're looking to grow professionally, care for your health, or plan for the future, we’re here to help you thrive.
+
+Time to Recharge: Enjoy generous leave with the opportunity to accrue up to 12 additional flexi-days each year.
+Secure your Future: Benefit from our award-winning pension scheme with up to 15% employer contribution.
+Your Wellbeing Matters: Free access to mental health support, financial advice, and employee-led networks championing inclusion and diversity (Enable, Pride, Equalise, Armed Forces, Carers, Wellbeing and Ethnicity).
+Rewarding Performance: All employees at management level and below are eligible for our bonus scheme.
+Never Stop Learning: Free access to 4,000+ online courses via Coursera and LinkedIn Learning.
+Refer a friend: Receive a financial reward through our referral programme.
+Tailored Perks: Spend up to £500 annually on flexible benefits including private healthcare, dental, family cover, tech & lifestyle discounts, gym memberships and more.
+Flexible working: Flexible hours with hybrid working options. For part time opportunities, please talk to us about what might be possible for this role.
+
+About the job
+Orbital Industries is an AI Industrial company, with frontier AI embedded at every step in the production of critical physical products - from creating advanced materials to engineering and manufacturing.
+
+Every Orbital Industries product is developed using CurieOS, our AI operating system, uniting AI-automated hardware engineering with AI-designed material science to achieve breakthrough real-world performance. We also offer CurieOS to our customers and partners, extending the same platform and workflows that power Orbital Industries to their own teams and products.
+
+We have an ambitious mission and need excellent people in all our teams - AI research, operations, advanced materials, mechanical engineering, chemical engineering and manufacturing.
+
+Working at Orbital Industries means working in vertically integrated teams across the full stack, from molecules to manufacturing. We're looking for people who have a love of physical technology, curiosity in AI and a desire to learn.
+
+Role Overview
+
+Orbital's AI software platform, CurieOS, is used by scientists and engineers to design and build products serving critical industries. Powering this software are our world leading AI models in advanced materials, hardware engineering and simulation.
+
+As a Forward Deployed Engineer at Orbital you will deliver CurieOS into customer environments hands-on, writing production code, designing architectures, building integrations and solving problems across the full breadth of industrial R&D. You will embed with customer teams, translate ambiguous high-value problems into working systems, and build solutions that become part of how their scientists and engineers work day-to-day.
+
+First and foremost, we want to work with someone with a love of craftsmanship, continual learning and building systems that scale.
+
+Key Responsibilities
+
+Deliver deployments hands-on, across the breadth of industrial R&D
+
+Deliver complex customer deployments hands-on, writing production code, designing architectures, building integrations and debugging issues across CurieOS and customer systems
+Design and build systems that connect heterogeneous software, data and physical infrastructure, from simulation campaigns and digital twins to lab instruments, test rigs and CAD/PLM systems
+Build solutions that become embedded in how customer scientists and engineers work day-to-day
+
+Build and deploy
+
+Embed with customer teams to understand ambiguous, high-value R&D problems, challenge assumptions and identify where CurieOS can deliver meaningful impact
+Translate those problems into a technical approach, milestones and acceptance criteria, making pragmatic architecture and scope trade-offs as you learn
+Build evaluation loops with customer scientists and engineers, defining workflow-specific benchmarks and acceptance criteria that prove the system works in their world
+Own your engagement from initial technical discovery through implementation, production deployment and adoption, including technical quality
+Track KPIs per engagement (screening throughput, design-cycle reduction, experiments avoided) and communicate progress and outcomes to customer stakeholders
+
+Learn and adapt
+
+Rapidly upskill across unfamiliar scientific and engineering domains by collaborating with domain experts, no prior chemistry, materials, or engineering experience required
+Codify successful approaches into reusable integration patterns, tooling and playbooks so every engagement makes the next one faster
+Feed field signal to the platform engineering team to shape the CurieOS roadmap
+
+What We’re Looking For
+
+Strong software engineering fundamentals and a track record of independently building, shipping and operating production software
+A track record of succeeding in ambiguous, fast-moving environments where requirements evolve through direct iteration with users
+The ability to move fluidly between conversations with customer scientists and engineers and deep technical implementation work
+Experience deploying software into complex production environments
+A genuine interest in building software that enables breakthrough scientific and industrial applications
+
+Orbital is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees.
+
+About the job
+Position Description
+
+At CGI, we’re building a Forward Deployed Engineering practice to turn complex customer challenges into working technology and measurable outcomes faster. As a Senior Forward Deployed Engineer, you’ll work directly with customers to uncover the problems that matter, shape the right response and remain hands-on as ideas move from concept to production. Spanning software, AI, data, cloud and platforms, you’ll have ownership of meaningful engineering challenges and the freedom to experiment intelligently, balancing innovation with security, governance and human judgement. Embedded within collaborative delivery pods, you’ll work alongside specialists who share expertise and support your growth, while helping CGI establish reusable approaches and a new engineering capability that strengthens how we deliver technology-led transformation.
+
+CGI was recognised in the Sunday Times Best Places to Work List 2025 and has been named a UK ‘Best Employer’ by the Financial Times. We offer a competitive salary, excellent pension, private healthcare, plus a share scheme (3.5% + 3.5% matching) which makes you a CGI Partner not just an employee. We are committed to inclusivity, building a genuinely diverse community of tech talent and inspiring everyone to pursue careers in our sector, including our Armed Forces, and are proud to hold a Gold Award in recognition of our support of the Armed Forces Corporate Covenant. Join us and you’ll be part of an open, friendly community of experts. We’ll train and support you in taking your career wherever you want it to go.
+
+Due to the secure nature of the programme, you will need to hold UK Security Clearance or be eligible to go through this clearance. This is a hybrid position.
+
+Your future duties and responsibilities
+
+In this role, you will work at the intersection of customer discovery and hands-on engineering. You’ll engage directly with users, sponsors and delivery teams to understand operational challenges, turn ambiguity into clear engineering hypotheses and prioritise opportunities according to business value. You’ll then take ownership of shaping, building, testing and improving solutions, staying close to the technology and its real-world impact rather than operating solely as an advisor.
+
+As part of a multidisciplinary customer-facing pod, you’ll combine engineering, architecture, DevSecOps and product thinking to move rapidly from problem discovery to measurable outcomes. You’ll explore how AI can improve services and productivity while applying sound judgement around security, data, governance and human oversight. Supported by specialists across CGI, you’ll share what you learn, coach colleagues and help establish reusable approaches that strengthen our emerging Forward Deployed Engineering practice.
+
+ Discover & Define: Work with customers to uncover operational problems, desired outcomes, constraints and risks before selecting technology solutions.
+ Build & Deliver: Design, develop, test and improve digital services, prototypes, integrations and accelerators across software, AI, data, cloud and platform technologies.
+ Experiment & Innovate: Rapidly test engineering hypotheses and turn promising concepts into practical solutions with measurable value.
+ Apply & Govern AI: Identify appropriate AI opportunities while addressing model limitations, data quality, security, governance and human oversight.
+ Shape & Prioritise: Translate ambiguous requirements into use cases and delivery backlogs focused on customer outcomes rather than technology novelty.
+ Engage & Influence: Lead workshops, demonstrations, playbacks and decision forums, communicating technical trade-offs clearly to customer and CGI stakeholders.
+ Collaborate & Lead: Work within multidisciplinary delivery pods and take ownership of work packages or smaller delivery threads.
+ Assure & Protect: Apply pragmatic engineering, security and assurance practices to create resilient, responsible and traceable solutions.
+ Coach & Share: Pair with colleagues, provide constructive reviews and feedback, and turn delivery learning into reusable patterns.
+ Build & Evolve: Help establish CGI’s Forward Deployed Engineering capability by contributing ideas, methods and engineering practices that can scale across customers.
+
+Required Qualifications To Be Successful In This Role
+
+You’ll bring strong hands-on engineering credibility combined with the communication and judgement needed to work directly with customers in complex, ambiguous environments. We’re interested in adjacent experience and learning agility rather than expecting every candidate to arrive with a traditional Forward Deployed Engineer background. You’ll be supported in developing across disciplines while bringing the curiosity, ownership and technical capability to turn customer problems into working solutions.
+
+ Strong hands-on engineering experience, with evidence of designing and shipping modern digital solutions in complex environments.
+ Technical breadth across software engineering, AI, data, cloud, platforms, solution architecture or DevSecOps, combined with deeper expertise in one or more areas.
+ Experience working directly with customers or users to understand problems and translate them into practical technology solutions.
+ Strong problem discovery and structured problem-solving skills, including the ability to operate effectively with ambiguity.
+ Experience applying AI or AI-enabled technologies, with an understanding of their opportunities, limitations and responsible use.
+ Strong stakeholder engagement and communication skills, with the ability to explain complex technical decisions and trade-offs clearly.
+ Product and outcome-oriented thinking, with a focus on adoption, measurable value and solving the right customer problem.
+ Good understanding of secure engineering, governance and assurance within modern technology delivery.
+ Proven ability to work effectively across multidisciplinary teams, bringing together engineering, architecture, product and delivery perspectives.
+ Strong learning agility and technical curiosity, with the ability to develop expertise quickly as customer challenges evolve.
+ Ability to coach and support colleagues, share knowledge and contribute reusable approaches to an emerging practice.
+ Commercial awareness, with an understanding of how engineering decisions influence customer value, delivery outcomes and value for money.
+
+Together, as owners, let’s turn meaningful insights into action.
+
+Life at CGI is rooted in ownership, teamwork, respect and belonging. Here, you’ll reach your full potential because…
+
+You are invited to be an owner from day 1 as we work together to bring our Dream to life. That’s why we call ourselves CGI Partners rather than employees. We benefit from our collective success and actively shape our company’s strategy and direction.
+
+Your work creates value. You’ll develop innovative solutions and build relationships with teammates and clients while accessing global capabilities to scale your ideas, embrace new opportunities, and benefit from expansive industry and technology expertise.
+
+You’ll shape your career by joining a company built to grow and last. You’ll be supported by leaders who care about your health and well-being and provide you with opportunities to deepen your skills and broaden your horizons.
+
+That same commitment to fairness extends to how we use technology. To support our recruitment team, AI tools may be used to help assess applications though they never replace human judgement. All hiring decisions remain entirely in the hands of our recruitment professionals.
+
+Come join our team—one of the largest IT and business consulting services firms in the world.
+
+About the job
+Forward Deployed Engineer | Remote | Up to £95,000
+I’m working with a fast-growing technology business that is looking for a Forward Deployed Engineer to work directly with customers and turn complex problems into practical technical solutions.
+This is a hands-on engineering role sitting between software engineering, product and customer delivery. You’ll work closely with users to understand how they operate, identify opportunities to improve their workflows, and build and deploy solutions that have a direct impact.
+What you’ll be doing:
+Working directly with customers to understand their technical and operational challenges
+Designing, building and deploying software solutions to solve real-world problems
+Working across the full development lifecycle, from initial discovery through to production
+Integrating APIs, data sources and third-party systems into customer environments
+Automating manual processes and improving existing workflows
+Feeding customer requirements and learnings back into the wider engineering and product teams
+Troubleshooting issues and iterating quickly based on customer feedback
+Balancing speed of delivery with good engineering practices and long-term maintainability
+
+What we’re looking for:
+Commercial software engineering experience with a strong hands-on development background
+Strong Python, TypeScript, JavaScript or similar programming experience
+Experience working with APIs, databases, cloud platforms and integrations
+Someone comfortable operating in ambiguous environments and figuring things out independently
+Strong communication skills and the ability to work directly with technical and non-technical stakeholders
+A genuine interest in understanding business problems, rather than simply building to a predefined specification
+Experience with AI/LLMs, automation or data-heavy products would be beneficial
+
+The role:
+Up to £95k
+High level of ownership and autonomy
+Opportunity to work directly with customers and see the impact of what you build
+Exposure to complex technical and commercial problems
+Strong opportunity to develop across engineering, product and customer-facing work
+
+If you’re an engineer who enjoys building things, solving unfamiliar problems and working closely with the people actually using what you create, this could be a really interesting opportunity.
+
+About the job
+At Hadean, we are building the next generation of defence technology. As a key player in the UK’s defence tech ecosystem, our world-leading software is trusted by defence organisations and militaries worldwide.We specialise in AI-powered digital training, wargaming and Command & Control systems that help users understand complexity, make better decisions, and operate at scale. Joining Hadean means working on technology with real-world impact, alongside a team that is driven to push the limits of what’s possible.
+The Role:As a Senior Field Engineer, you will lead complex defence customer engagements from solution design through integration, deployment and ongoing technical ownership.This is a senior, hands-on role for someone who can take ownership of challenging technical deliveries, work directly with customers and coordinate across Hadean to get things done. You will also help us scale how we deliver by developing reusable architectures and approaches, strengthening customer enablement, and turning lessons from the field into meaningful input for Product and Engineering.
+About You
+You are a seasoned engineer who enjoys being close to both the technology and the customer.
+You are proactive and outcome-oriented, able to understand what a customer is trying to achieve and work out what needs to happen to get them there.
+You communicate clearly and calmly, whether you are working with engineers or briefing military and government stakeholders.
+You are collaborative by default. You bring the right people together, share knowledge and build repeatable approaches rather than relying on individual heroics.
+You are comfortable operating with ambiguity and changing priorities, while bringing enough structure to keep complex work moving.
+You have strong judgement and know when to solve something yourself, when to involve others, and when a recurring customer problem needs a more scalable solution.
+
+Key Responsibilities:
+Lead complex customer engagements from technical discovery and solution design through integration, deployment and ongoing delivery.
+Design and own solution architectures, including integration points, data flows, infrastructure requirements and security considerations.
+Act as a senior technical point of contact for customers, developing a strong understanding of their technical and operational requirements.
+Lead Hadean’s technical delivery during customer deployments, military exercises and field experimentation.
+Coordinate delivery across Hadean and customer teams, identifying dependencies and risks and driving actions through to resolution.
+Work with Product and Engineering to translate field experience into actionable feedback and identify recurring requirements that should be productised.
+Lead and contribute to technical solutioning for bids, RFPs, ITTs and other defence procurement opportunities.
+Build reusable delivery assets, including reference architectures, integration patterns, deployment guides and customer training materials.
+Mentor other Field Engineers through technical reviews, knowledge sharing and hands-on guidance.
+Improve Field Engineering processes, standards and ways of working as the team and customer portfolio scale.
+Where required, undertake hands-on software engineering to solve customer problems and support successful delivery.
+
+Skills required:
+Strong software engineering fundamentals and hands-on experience working with complex technical systems.
+Experience designing, integrating and deploying software across multiple systems and environments.
+Strong knowledge of networking, infrastructure, systems integration, and software installation and configuration.
+Experience producing technical architecture and design documentation, such as HLDs, LLDs and interface specifications.
+Experience delivering technology directly with customers in Field Engineering, Solutions Engineering, Forward Deployed Engineering or a comparable role.
+Ability to take technical work from requirements and architecture through to integration and successful deployment.
+Experience working in defence, national security, intelligence or another complex and operationally constrained environment is highly desirable.
+Experience with military systems, geospatial technologies, secure or classified environments, simulation, Command & Control or distributed systems would be advantageous.
+
+Job Benefits
+We make Hadean an awesome place to work with competitive benefits…
+Hybrid working with 1 day per week in our fantastic office in Shoreditch, London
+Private Health Insurance
+Enhanced pension scheme
+Enhanced parental leave
+3 extra days off at Christmas (on top of our standard 25)
+L&D budget
+Regularly scheduled socials
+Share options
+
+A Place For EveryoneWe believe diversity drives innovation and for that reason we strongly encourage those from all backgrounds to apply for roles at Hadean. We are an equal opportunity employer and aim to build a workforce that is truly representative of the communities in which we operate and our clients.
+
+About the job
+About Ema
+
+Ema builds AI Employees for HR, IT and Finance. Our AI Employees take on the busy work across the employee experience, from recruiting, onboarding and benefits to IT support, invoice processing and payroll, so people can spend their time on work that needs them. Founded by former executives from Google, Coinbase, Flipkart, and Okta, our team includes engineers from premier tech companies and graduates of Stanford, MIT, UC Berkeley, CMU, and IITs.
+
+We are backed by industry leading investors including Accel, Naspers/Prosus, Creaegis, Section32, and angels like Sheryl Sandberg and Dustin Moskovitz. Headquartered in Silicon Valley and with offices in London, Bangalore and Vancouver, Ema is at the frontier of what Agentic AI can do in production. We ship real systems that run real business processes at scale.
+
+The role
+
+“The ideal forward deployed builder is a composite. Not a software engineer, not a product manager, not a solutions architect or a salesperson — but able to draw on any of these to solve the customer’s problems, in the customer’s building, on the customer’s timeline, against the customer’s data.”
+
+Ema is building the Universal Agentic Control Plane — the layer where enterprises turn messy, human-run business processes into AI Employees that actually do the work. The platform is powerful. The bottleneck is people who can walk into a customer’s world, see what should be automated, and make it real.
+
+That’s this role.
+
+We’re looking for a Forward Deployed Builder to embed inside our customers and partners, find the highest-value opportunities for agentic automation, solution them, build the demo, win the deal, and then stay to implement it in production. You go in alone, Rambo in the jungle, armed with your wits, your skills, and the most powerful agentic platform on the market. We’ll train you hard before you deploy. After that, the territory is yours.
+
+This is not a support role behind an account team. You are the account team, the solutions architect, and the builder, compressed into one person on the ground. Very few people in the world are doing this today. You’d be among the first.
+
+Where you’ll be
+
+Embedded, in-person, where the work is. You’d work in rotational deployments between your home office and the customers you’re embedded with across EMEA and North America. That could mean six months in London, followed by another six in Bangalore, with six more in New York. If the idea of a rotating tour across EMEA and North America lights you up, keep reading.
+
+What You’ll Actually Do
+
+Hunt for the work worth doing. Sit inside the customer’s operation, learn how they really run, and identify the processes where agentic automation creates outsized value — the ones everyone lives with but no one has fixed.
+Solution it. Take a tangled, real-world business process and design it into a clean, streamlined agentic flow on Ema. You’ll make the architecture calls: which agents, which integrations, where a human stays in the loop.
+Build the demo. Get your hands dirty and actually build a working demo — a proof that makes the value undeniable. For partner deployments, that demo becomes their showcase to their customers, so it has to be sharp.
+Win the technical conversation. Read the room in the moment that matters, own every technical objection, and prove the thing works. You’re the one who makes the solution undeniable — that’s how the deal gets won.
+Implement it. Turn the won deal into a live, production agentic workflow the customer trusts and adopts. You own the outcome from first conversation to real usage — not a slide, not a pilot that dies, but something running.
+
+Who You Are
+
+We don’t care about a rigid list of years and titles. We care that you’re:
+
+Technical enough to write some code and use our agentic platform to build a real demo - not just talk about one.
+Persuasive enough to read an audience and weave a captivating story that ties their pain points to Ema’s value proposition.
+Product-minded enough to look at a chaotic business process and see the beautiful, streamlined agentic flow hiding inside it.
+AI-first enough in your day-to-day to drive the impact of ten people — putting agents to work instead of grinding harder.
+
+Most people are strong in one of these. The rare ones are formidable in all four — or hungry enough to become so. That’s who we’re looking for.
+
+The Archetypes Who Would Thrive In This Role
+
+The Management Consultant who wrote code at some point in their life, misses building things, and wants to step into the agentic world for real.
+The Product Manager who’s tired of owning a sliver and wants to live the entire journey of solving a user’s problem - from the first sales conversation all the way to adoption.
+The Engineer who’s ready to leave the safety of a Jira backlog and learn to navigate the chaos of a live agentic transformation
+The Ex-Founder who’s shelved the startup for now and wants to keep their edge sharp - craving operational freedom in an entrepreneurial environment
+The Wildcard who fits none of the above, but has both the burning passion and the proven skill to deliver. If that’s you, make your case.
+
+Why this role, why now
+
+Agentic AI is the biggest shift in enterprise software in a generation, and the playbook for deploying it is being written right now — by a handful of people. This is your shot to be one of them: to build the muscle, own real outcomes at real companies across two continents, and come out the other side as one of the most capable operators in the agentic world.
+
+Forward Deployed Engineer 
+
+London, England, United Kingdom · 2 days ago · 30 people clicked apply
+
+Responses managed off LinkedIn
+
+Hybrid
+Full-time
+Apply
+
+Save
+Your profile and resume match some required qualifications
+
+
+
+Show match details
+
+BETA • Is this information helpful?
+
+
+People you can reach out to
+
+David Skaife 
+
+• 3rd
+
+Senior Consultant at Keyrus UK
+
+School alum from Teesside University
+
+Message
+Meet the hiring team
+
+
+Flavia Silva 
+
+• 3rd
+
+Talent Acquisition & Operations Lead | HR Business Partner | AI Recruiting Enablement | Global Recruitment
+
+Job poster
+
+Message
+About the job
+Why Keyrus, Why Now!
+
+Keyrus is an international group of 2,800 consultants and experts across 28 countries, built on a single conviction: AI does not transform businesses. Architected intelligence does.
+
+For more than 30 years, we have been building the data foundations that make intelligent systems work — designing the Operating System of the intelligent enterprise, where intelligence is embedded into the core of business processes to create sustainable value: we operationalise intelligence.
+
+AI does not replace humans. It repositions us to a place no system can follow: understanding, deciding, designing, and creating.
+
+At Keyrus, you will not just develop skills — you will develop judgment. Your expertise sharpens with every system you architect, every client challenge you solve, and every deployment that compounds on the last.
+
+Over time, you grow into one of the rarest professionals of the intelligence era: someone who bridges data, AI, and human decision-making at scale, across industries and geographies. This is not a role you fill. It is a discipline you master and a story you help write to become a Keyrus Architect of Intelligence.
+
+Technology amplifies. Keyrus culture differentiates. Industrial discipline connects the two.
+
+Role Details
+
+📍 Job location: Canary Wharf, London – UK (Hybrid 3 days per week)
+
+🕒 Contract type: Employee
+
+🗓 Target start date: ASAP
+
+⏰ Working hours: Full-time
+
+💵 Compensation: £72,000–£92,000 gross annual base salary (Senior) or £92,000–£122,000 (Principal), depending on experience and scope.
+
+📋 What You'll Architect
+
+At Keyrus, we help organisations transform complexity into measurable outcomes by combining technology, data, intelligence and human decision-making. We bring together data, AI and engineering expertise to move beyond experimentation and deliver solutions that work in real business environments.
+
+As a Forward Deployed Engineer, you'll work directly with clients to take AI use cases from discovery to production. You'll get close to users, understand how their work actually happens, build the technical solution yourself and stay involved until it delivers measurable results.
+
+This is a hands-on engineering role for someone who enjoys solving complex problems in real-world environments. You'll combine software development, AI engineering, data integration and technical problem-solving with direct client collaboration.
+
+What You'll Do
+
+Build end-to-end solutions: Develop and deploy AI-powered applications that connect source data, models, APIs and enterprise systems to real users.
+Stay hands-on: Write, test, review and maintain code using technologies such as Python, TypeScript, Java or .NET.
+Work directly with users: Understand operational challenges, observe how people work and translate their needs into practical technical solutions.
+Integrate with enterprise environments: Connect applications to APIs, identity systems, cloud platforms and existing business systems, addressing the realities of production deployment.
+Deliver production-ready AI: Build and integrate LLM, RAG or agentic capabilities, with appropriate evaluation, guardrails, reliability and cost controls.
+Own deployment and rollout: Take technical responsibility for bringing solutions into production, resolving integration issues and supporting adoption.
+Adapt as needs evolve: Respond to new information and changing priorities, iterating quickly while maintaining technical quality and clear communication.
+Measure outcomes: Work with clients to understand whether the solution is delivering the intended result and identify what needs to improve.
+Feed the next cycle: Document results, lessons learned and emerging requirements so the squad can make informed decisions about the next iteration or scaling the solution.
+
+👤 Who You Are
+
+You are curious, analytical, and motivated by solving meaningful business challenges.
+You enjoy turning complexity into clarity and action.
+You balance technical thinking with business understanding.
+You are comfortable working in collaborative and international environments.
+You take ownership of your work and follow through on commitments.
+You value continuous learning and are motivated by long-term professional growth.
+You communicate clearly and effectively with a variety of stakeholders.
+
+🛠️ What You Bring
+
+Qualifications & Experience
+
+Experience building and deploying software solutions in production within complex enterprise or client environments.
+Strong hands-on software engineering skills, with evidence of continuing to code in a language such as Python, TypeScript, Java or .NET.
+Experience delivering solutions end-to-end, from data sources and integrations to the application or experience used by end users.
+Direct client-facing experience, including the ability to work effectively with users, technical peers and senior stakeholders.
+Strong integration experience involving APIs, identity and access, enterprise systems and cloud environments.
+Professional fluency in English
+
+Technical & Professional Skills
+
+Practical software engineering, debugging, testing and production deployment skills.
+Experience integrating AI capabilities into applications, including LLMs, RAG or agentic workflows in production.
+Understanding of API design, authentication, authorisation, SSO/OAuth2 and enterprise integration patterns.
+Ability to work with imperfect requirements, investigate real business problems and adapt solutions as new information emerges.
+Strong communication and collaboration skills, with the confidence to challenge assumptions constructively.
+
+Nice to Have
+
+Experience across data engineering, data platforms or analytics, including working with complex source data.
+Experience evaluating AI output quality, implementing guardrails and measuring the cost of AI workloads.
+Experience in consulting, technology services or embedded client delivery.
+Experience working in iterative delivery environments where discovery, engineering and validation happen continuously.
+
+⭐ What Makes You Successful
+
+You focus on outcomes rather than activity.
+You approach challenges with curiosity and pragmatism.
+You communicate complex concepts in a clear and accessible way.
+You are comfortable navigating ambiguity and finding practical solutions.
+You contribute to collective intelligence by sharing knowledge and supporting others.
+You combine autonomy with collaboration.
+You continuously look for opportunities to improve systems, processes, and results.
+
+🎁 What We Offer at Keyrus UK
+
+Competitive holiday allowance
+Private Medical & Dental Insurance (Bupa)
+Group Life Insurance
+Gym & fitness discounts via Pluxee (Sodexo)
+On-site gym access at our London office
+Access to lifestyle discounts (travel, retail, entertainment & more) via Pluxee (Sodexo)
+Auto-enrolment pension scheme with Aegon.
+Training & Development via KLX (Keyrus Learning Experience)
+Strong focus on career development and internal mobility.
+Electric & hybrid car scheme via Tusker
+Annual discretionary bonus, based on individual and company performance
+Referral bonus for introducing new colleagues.
+
+💰 How Our Salary Ranges Work
+
+At Keyrus, salary ranges reflect different levels of mastery and impact within the same role — not different job titles.
+
+Bottom of the range You meet the core requirements and will need ramp-up time and support.
+Middle of the range You are fully autonomous from Day 1 and deliver consistently.
+Top of the range You are a reference for the role, mentor others, and raise the bar for the team.
+
+Final offers are based on experience, autonomy, scope, and market context, and are discussed transparently during the process.
