@@ -514,6 +514,103 @@ def create_justified_moodboard(
 
 
 # ==============================================================================
+# THEMATIC ROWS LAYOUT (0% Cropping, Explicit Semantic Clustering)
+# ==============================================================================
+
+def create_thematic_rows_moodboard(
+    row_groups: list,
+    out_file: Path,
+    canvas_width: int = CANVAS_WIDTH,
+    gap: int = GAP_WIDTH,
+    margin: int = OUTER_MARGIN,
+    bg_color: tuple = BACKGROUND_COLOR,
+    badge_mode: str = 'none',
+    sync_copy_path: Path = None
+):
+    """
+    Renders sketches grouped into semantic thematic rows (e.g. Mobile first,
+    then Defect Specs, AI Review, GIS Clustering, Highway Corridor).
+    Every single prototype is 100% UN増CROPPED with zero loss of content.
+    """
+    print(f"[INFO] Running Thematic Rows Layout with {len(row_groups)} semantic rows...")
+    avail_w = canvas_width - (2 * margin)
+
+    row_plans = []
+    total_canvas_height = margin * 2 + (len(row_groups) - 1) * gap
+    global_counter = 1
+
+    for r_idx, group in enumerate(row_groups):
+        items = []
+        for f in group:
+            with Image.open(f) as im:
+                w, h = im.size
+                items.append({
+                    'path': f,
+                    'orig_w': w,
+                    'orig_h': h,
+                    'ar': w / max(1, h),
+                    'num': global_counter
+                })
+                global_counter += 1
+
+        sum_ar = sum(it['ar'] for it in items)
+        gaps_total = (len(items) - 1) * gap
+        h_row = int(round((avail_w - gaps_total) / sum_ar))
+
+        row_plans.append({
+            'items': items,
+            'height': h_row,
+            'count': len(items)
+        })
+        total_canvas_height += h_row
+        print(f"   Row {r_idx + 1}: {len(items)} items | Row Height: {h_row}px | Total AR: {sum_ar:.2f}")
+
+    canvas = Image.new("RGB", (canvas_width, total_canvas_height), bg_color)
+    current_y = margin
+
+    for r_idx, rplan in enumerate(row_plans):
+        h_row = rplan['height']
+        items = rplan['items']
+
+        widths = [int(round(h_row * it['ar'])) for it in items]
+        diff = avail_w - (sum(widths) + (len(items) - 1) * gap)
+        if diff != 0 and len(widths) > 0:
+            widths[-1] += diff
+
+        current_x = margin
+        for idx_in_row, (it, w_img) in enumerate(zip(items, widths)):
+            img_path = it['path']
+            num_str = f"#{it['num']:02d}"
+            date_str = parse_date_from_filename(img_path.name)
+
+            try:
+                with Image.open(img_path) as img:
+                    img = img.convert("RGBA")
+                    resized = img.resize((w_img, h_row), Image.Resampling.LANCZOS)
+                    if badge_mode != 'none':
+                        resized = draw_iteration_badge(resized, num_str, date_str, mode=badge_mode)
+                    canvas.paste(resized, (current_x, current_y), resized)
+            except Exception as e:
+                print(f"[WARN] Error placing {img_path.name}: {e}")
+
+            current_x += w_img + gap
+
+        current_y += h_row + gap
+
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+    canvas.save(str(out_file), format="PNG", quality=95, optimize=True)
+    print(f"\n[SUCCESS] Thematic rows mood board exported with 0% cropping:")
+    print(f"👉 {out_file} ({canvas_width}x{total_canvas_height})")
+
+    if sync_copy_path:
+        sync_copy_path.parent.mkdir(parents=True, exist_ok=True)
+        canvas.save(str(sync_copy_path), format="PNG", quality=95, optimize=True)
+        print(f"👉 Synced copy saved to: {sync_copy_path}")
+
+    return out_file
+
+
+# ==============================================================================
 # BSP RECURSIVE MOSAIC LAYOUT
 # ==============================================================================
 
@@ -758,8 +855,10 @@ def main():
     )
     parser.add_argument("--input", "-i", nargs='+', default=[DEFAULT_INPUT_DIR], help="Source images directory or directories")
     parser.add_argument("--output", "-o", default=DEFAULT_OUTPUT_PATH, help="Output PNG path")
-    parser.add_argument("--layout", "-l", choices=['justified', 'bsp'], default=DEFAULT_LAYOUT,
-                        help="Layout mode: 'justified' or 'bsp'")
+    parser.add_argument("--layout", "-l", choices=['justified', 'bsp', 'thematic'], default=DEFAULT_LAYOUT,
+                        help="Layout mode: 'justified', 'bsp', or 'thematic'")
+    parser.add_argument("--preset", choices=['paper_prototypes'], help="Predefined thematic sequence preset")
+    parser.add_argument("--sync", help="Additional path to save a synchronized copy of the output")
     parser.add_argument("--hero", help="Filename of image to place uncropped in the center (activates Hero Center layout)")
     parser.add_argument("--zoom", type=float, default=1.25, help="Zoom factor into busy areas of sketches (default: 1.25)")
     parser.add_argument("--width", "-w", type=int, default=CANVAS_WIDTH, help="Canvas width in pixels")
@@ -777,6 +876,7 @@ def main():
 
     input_paths = [resolve_path(p) for p in args.input]
     out_file = resolve_path(args.output, prefer_output_dir=True)
+    sync_file = resolve_path(args.sync, prefer_output_dir=True) if args.sync else None
 
     images = find_images(input_paths)
     if not images:
@@ -785,6 +885,9 @@ def main():
     print(f"[INFO] Loaded {len(images)} total images from {len(input_paths)} source folder(s).")
 
     bg_tuple = parse_color(args.bg_color)
+
+    # Detect if paper prototypes thematic ordering applies
+    is_paper_preset = (args.preset == 'paper_prototypes') or (args.layout == 'thematic') or any('selected_ai_improved' in str(p).lower() for p in input_paths)
 
     if args.hero:
         create_hero_center_moodboard(
@@ -797,6 +900,48 @@ def main():
             bg_color=bg_tuple,
             badge_mode=args.badges,
             zoom=args.zoom
+        )
+    elif is_paper_preset and args.layout != 'bsp':
+        # 5 Semantic Rows: Mobile First -> Specs -> AI Review -> GIS Clustering -> Highway Corridor
+        semantic_patterns = [
+            # Row 1: Mobile Field Prototypes (2 images)
+            ['outsourcing prototype-1', 'mobile app prototype-5'],
+            # Row 2: Defect Prioritization & Card Specs (3 images)
+            ['defect priorities sketch-3', 'defect information paper prototype-4', 'hand-drawn paper prototype.png'],
+            # Row 3: Human in the loop AI review (3 images)
+            ['ai review prototype', 'human-in-the-loop data review sketch', 'prototype mood board-6'],
+            # Row 4: GIS Road Section & Clustering (3 images)
+            ['defect clustering', 'road inspection interface', 'road section prototype'],
+            # Row 5: A14 Highway Corridor & 3D Dashboards (3 images)
+            ['annotated defect dashboard-2', 'a14 junction mood board-2', 'prototype mood board-3'],
+        ]
+        row_groups = []
+        used = set()
+        for pat_row in semantic_patterns:
+            curr_row = []
+            for pat in pat_row:
+                for img in images:
+                    if img not in used and pat.lower() in img.name.lower():
+                        curr_row.append(img)
+                        used.add(img)
+                        break
+            if curr_row:
+                row_groups.append(curr_row)
+
+        # Append any leftover images
+        leftovers = [img for img in images if img not in used]
+        if leftovers:
+            row_groups.append(leftovers)
+
+        create_thematic_rows_moodboard(
+            row_groups=row_groups,
+            out_file=out_file,
+            canvas_width=args.width,
+            gap=args.gap,
+            margin=args.margin,
+            bg_color=bg_tuple,
+            badge_mode=args.badges,
+            sync_copy_path=sync_file
         )
     elif args.layout == 'bsp':
         create_bsp_moodboard(

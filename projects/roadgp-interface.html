@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RoadGP: AI Defect Triage &amp; Decision Support Platform | Dr Lilia Potseluyko</title>
-  <link rel="stylesheet" href="../style.css?v=20261014c">
+  <link rel="stylesheet" href="../style.css?v=20261018a">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="home">
@@ -44,6 +44,7 @@
           <li><a href="#subpage-9"><span class="subpage-num-badge">9</span> Timeline</a></li>
           <li><a href="#subpage-10"><span class="subpage-num-badge">10</span> Usability Test Results</a></li>
           <li><a href="#subpage-11"><span class="subpage-num-badge">11</span> Deployment</a></li>
+          <li><a href="#subpage-12"><span class="subpage-num-badge">12</span> Other Contributions</a></li>
         </ul>
       </section>
     </aside>
@@ -161,6 +162,16 @@
             <div class="ds-persona-name">Damian</div>
             <div class="ds-persona-role">Smart Materials</div>
           </div>
+
+          <!-- Others (Other Contributions) -->
+          <a class="ds-persona yellow contrib-team-card" href="#subpage-12" aria-label="Other Contributions: view details">
+            <div class="ds-persona-avatar">
+              <i class="fas fa-handshake"></i>
+              <span class="contrib-count" id="contribCount">1</span>
+            </div>
+            <div class="ds-persona-name">Others</div>
+            <div class="ds-persona-role">Other Contributions</div>
+          </a>
         </div>
       </section>
 
@@ -576,6 +587,7 @@
 
           <!-- TILE 2: BPMN -->
           <div class="workflow-volume-card zoomable-image-card" title="Step 2: Figure 3.2-1 Information Delivery Manual (IDM) &bull; Routine Pavement Inspection &amp; Maintenance Process [RPIMP2]">
+            <a class="contrib-marker" id="contrib-ref-1" href="#contrib-1" onclick="event.stopPropagation()" aria-label="Other contribution 1: view details" title="Other contribution 1"><i class="fas fa-handshake"></i>1</a>
             <div class="workflow-thumb-preview">
               <img src="../images/RoadGP/Users/Workflows/IDM1.png" alt="IDM BPMN Routine Pavement Inspection and Maintenance Process">
               <span class="workflow-zoom-badge"><i class="fas fa-expand"></i> Inspect</span>
@@ -909,7 +921,7 @@
               
             </div>
             <div class="moodboard-preview zoomable-image-card" data-full-img="../images/RoadGP/SUB-PAPAGE5/paper_prototypes moodboard.png" title="Paper Prototypes &amp; Wireframes &bull; 14 physical sketching cycles from initial layout concepts to master dashboard wireframes">
-              <img src="../images/RoadGP/SUB-PAPAGE5/tile_paper_wireframes.png" alt="Paper Prototypes and Wireframes Moodboard">
+              <img src="../images/RoadGP/SUB-PAPAGE5/tile_paper_wireframes_2.png" alt="Paper Prototypes and Wireframes Moodboard">
               <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect</span>
             </div>
           </div>
@@ -1460,6 +1472,30 @@
       </div>
     </article>
 
+    <!-- SUB-PAGE 12: OTHER CONTRIBUTIONS -->
+    <article class="roadgp-subpage" id="subpage-12">
+      <header class="roadgp-subpage-header">
+        <span class="roadgp-subpage-number">Sub-Page 12</span>
+        <h2 class="roadgp-subpage-title">Other Contributions</h2>
+        <hr class="roadgp-subpage-divider" />
+      </header>
+
+      <ol class="contributions-list">
+        <li class="contribution-item" id="contrib-1">
+          <span class="contribution-num">1</span>
+          <div class="contribution-body">
+            <h4 class="contribution-title">BPMN 2.0 Process Models</h4>
+            <p class="contribution-text">
+              The BPMN 2.0 process models were created by the Future Roads Fellows and Varun Kumar Reja. I delegated the collection of user requirements and the BPMN modelling across multiple researchers to deliver a complete document.
+            </p>
+            <a class="contribution-back" href="#contrib-ref-1">
+              <i class="fas fa-arrow-up"></i> See where this appears (Sub-Page 2)
+            </a>
+          </div>
+        </li>
+      </ol>
+    </article>
+
     <!-- BOTTOM CASE STUDY NAVIGATION -->
     <div style="margin-top: 50px; padding-top: 25px; border-top: 1px solid #2a2a2a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
       <a href="../projects.html" class="academic-action-link"><i class="fas fa-arrow-left"></i> All Projects</a>
@@ -1497,6 +1533,12 @@
 
       window.addEventListener('scroll', updateActiveSubpage, { passive: true });
       updateActiveSubpage();
+
+      // Other Contributions: team-card count mirrors the list on Sub-Page 12
+      const contribCount = document.getElementById('contribCount');
+      if (contribCount) {
+        contribCount.textContent = document.querySelectorAll('.contribution-item').length;
+      }
     });
   </script>
 
