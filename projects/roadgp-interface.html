@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RoadGP: AI Defect Triage &amp; Decision Support Platform | Dr Lilia Potseluyko</title>
-  <link rel="stylesheet" href="../style.css?v=20261018a">
+  <link rel="stylesheet" href="../style.css?v=20261026a">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="home">
@@ -38,11 +38,11 @@
           <li><a href="#subpage-3"><span class="subpage-num-badge">3</span> Storyboard</a></li>
           <li><a href="#subpage-4"><span class="subpage-num-badge">4</span> Concept Architecture</a></li>
           <li><a href="#subpage-5"><span class="subpage-num-badge">5</span> Iterative Interface Design</a></li>
-          <li><a href="#subpage-6"><span class="subpage-num-badge">6</span> Opportunity/Solution Tree</a></li>
-          <li><a href="#subpage-7"><span class="subpage-num-badge">7</span> Interface Current Design</a></li>
-          <li><a href="#subpage-8"><span class="subpage-num-badge">8</span> Backend Designing</a></li>
-          <li><a href="#subpage-9"><span class="subpage-num-badge">9</span> Timeline</a></li>
-          <li><a href="#subpage-10"><span class="subpage-num-badge">10</span> Usability Test Results</a></li>
+          <li><a href="#subpage-6"><span class="subpage-num-badge">6</span> Service Opportunity Framing</a></li>
+          <li><a href="#subpage-7"><span class="subpage-num-badge">7</span> Frontstage Interaction Design</a></li>
+          <li><a href="#subpage-8"><span class="subpage-num-badge">8</span> Backstage Systems Architecture</a></li>
+          <li><a href="#subpage-9"><span class="subpage-num-badge">9</span> Discovery to Alpha Roadmap</a></li>
+          <li><a href="#subpage-10"><span class="subpage-num-badge">10</span> Usability, Heuristics &amp; Metrics</a></li>
           <li><a href="#subpage-11"><span class="subpage-num-badge">11</span> Deployment</a></li>
           <li><a href="#subpage-12"><span class="subpage-num-badge">12</span> Other Contributions</a></li>
         </ul>
@@ -926,14 +926,14 @@
             </div>
           </div>
 
-          <!-- Tile 3: Information Architecture & Flow Logic -->
+          <!-- Tile 3: Taxonomy & Mental Model Mapping -->
           <div class="moodboard-card">
             <div class="moodboard-header">
-              <h3 class="moodboard-title">Information Architecture</h3>
+              <h3 class="moodboard-title">Taxonomy &amp; Mental Model Mapping</h3>
               
             </div>
-            <div class="moodboard-preview zoomable-image-card" data-full-img="../images/RoadGP/SUB-PAPAGE5/information Architecture iterations.png" title="Information Architecture Iterations &bull; Site maps, screen hierarchies, and decision-tree logic across user roles">
-              <img src="../images/RoadGP/SUB-PAPAGE5/tile_information_architecture.png" alt="Information Architecture Iterations Moodboard">
+            <div class="moodboard-preview zoomable-image-card" data-full-img="../images/RoadGP/SUB-PAPAGE5/information Architecture iterations.png" title="Taxonomy &amp; Mental Model Mapping &bull; Card sorting, defect classification hierarchies, and decision-tree logic across user roles">
+              <img src="../images/RoadGP/SUB-PAPAGE5/tile_information_architecture.png" alt="Taxonomy and Mental Model Mapping Moodboard">
               <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect</span>
             </div>
           </div>
@@ -1034,12 +1034,12 @@
       </div>
     </article>
 
-    <!-- SUB-PAGE 6: OPPORTUNITY SOLUTION TREE DECISIONS -->
+    <!-- SUB-PAGE 6: SERVICE OPPORTUNITY FRAMING -->
     <article class="roadgp-subpage" id="subpage-6">
       <header class="roadgp-subpage-header">
         <span class="roadgp-subpage-number">Sub-Page 6</span>
-        <h2 class="roadgp-subpage-title">Opportunity Solution Tree Decisions</h2>
-        <p class="roadgp-subpage-intro">User and stakeholder priority results</p>
+        <h2 class="roadgp-subpage-title">Service Opportunity Framing</h2>
+        <p class="roadgp-subpage-intro">User, operator and stakeholder priority pathways derived from Opportunity Solution Tree (OST) discovery.</p>
         <hr class="roadgp-subpage-divider" />
       </header>
 
@@ -1276,43 +1276,96 @@
       </div>
     </article>
 
-    <!-- SUB-PAGE 7: INTERFACE CURRENT DESIGN -->
+    <!-- SUB-PAGE 7: FRONTSTAGE INTERACTION DESIGN -->
     <article class="roadgp-subpage" id="subpage-7">
       <header class="roadgp-subpage-header">
         <span class="roadgp-subpage-number">Sub-Page 7</span>
-        <h2 class="roadgp-subpage-title">Interface Current Design</h2>
+        <h2 class="roadgp-subpage-title">Frontstage Interaction Design</h2>
+        <p class="roadgp-subpage-intro">Functional frontstage prototype mapping National Highways advisor feedback and Opportunity Solution Tree feature requests into interactive operational workflows.</p>
         <hr class="roadgp-subpage-divider" />
       </header>
-      <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
-        <i class="fas fa-desktop" style="font-size: 2rem; color: #1DCD9F; margin-bottom: 12px; display: inline-block;"></i>
-        <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 7 Staged &bull; Ready for Content</h4>
-        <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
-          High-fidelity interface design, defect triage workflows, and interactive prototype views.
-        </p>
+
+      <div class="interface-carousel-container">
+        <!-- Stage Header: Badge, Title & Navigation Arrows -->
+        <div class="carousel-stage-header">
+          <div>
+            <span class="carousel-stage-badge" id="interfaceStageBadge">National Highways Workflow Review &bull; Screen 1 of 2</span>
+            <h4 class="carousel-stage-title" id="interfaceStageTitle">Assess New Defects: Multimodal Triage Workflow</h4>
+          </div>
+          <div class="carousel-arrow-controls">
+            <button type="button" class="carousel-nav-btn prev" id="interfacePrevBtn" aria-label="Previous Interface Screen">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button type="button" class="carousel-nav-btn next" id="interfaceNextBtn" aria-label="Next Interface Screen">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Feature Request Pills Bar -->
+        <div class="interface-pills-bar" id="interfacePillsBar">
+          <span class="ds-short-note purple"><i class="fas fa-eye"></i> Defect View &amp; 360&deg; Context</span>
+          <span class="ds-short-note pink"><i class="fas fa-wrench"></i> Failed Repair History</span>
+          <span class="ds-short-note orange"><i class="fas fa-tag"></i> Failed Patch Input</span>
+          <span class="ds-short-note blue"><i class="fas fa-layer-group"></i> Multimodal Dataset Integration</span>
+          <span class="ds-short-note green"><i class="fas fa-user-check"></i> Human-in-the-Loop Triage</span>
+        </div>
+
+        <!-- Carousel Slides Viewport -->
+        <div class="interface-slides-viewport">
+          <div class="interface-slides-track" id="interfaceTrack">
+            <!-- SLIDE 1: ASSESS NEW DEFECTS -->
+            <div class="interface-slide zoomable-image-card" title="Assess New Defects: Multimodal Triage Workflow &bull; National Highways defect map, orthorectified imagery, 360&deg; context view, and failed patch capture">
+              <div class="interface-img-wrapper">
+                <img src="../images/RoadGP/SUB-PAGE7_Interface/assess_new_defects.png" alt="Assess New Defects Multimodal Triage Workflow Interface">
+                <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
+              </div>
+            </div>
+
+            <!-- SLIDE 2: DEFECT CLUSTERING -->
+            <div class="interface-slide zoomable-image-card" title="Defect Clustering Version 2 &bull; Automated Python clustering algorithm, 15m to 100m site labels, and RoadGP treatment advice gateway">
+              <div class="interface-img-wrapper">
+                <img src="../images/RoadGP/SUB-PAGE7_Interface/defect_clustering_v2.png" alt="Defect Clustering Version 2 Interface">
+                <span class="workflow-zoom-badge"><i class="fas fa-search-plus"></i> Inspect Full Res</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Footer: Dots & Lightbox Prompt -->
+        <div class="storyboard-carousel-footer">
+          <div class="carousel-dots-group" id="interfaceDots">
+            <button type="button" class="carousel-dot active" aria-label="Go to Screen 1"></button>
+            <button type="button" class="carousel-dot" aria-label="Go to Screen 2"></button>
+          </div>
+          <span style="color: #64748b; font-size: 0.75rem;">
+            <i class="fas fa-hand-pointer" style="color: #1DCD9F; margin-right: 4px;"></i> Click screen to inspect full resolution
+          </span>
+        </div>
       </div>
     </article>
 
-    <!-- SUB-PAGE 8: BACKEND DESIGNING -->
+    <!-- SUB-PAGE 8: BACKSTAGE SYSTEMS ARCHITECTURE -->
     <article class="roadgp-subpage" id="subpage-8">
       <header class="roadgp-subpage-header">
         <span class="roadgp-subpage-number">Sub-Page 8</span>
-        <h2 class="roadgp-subpage-title">Backend Designing</h2>
+        <h2 class="roadgp-subpage-title">Backstage Systems Architecture</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
         <i class="fas fa-server" style="font-size: 2rem; color: #e9008c; margin-bottom: 12px; display: inline-block;"></i>
         <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 8 Staged &bull; Ready for Content</h4>
         <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
-          Algorithmic clustering pipeline, API architecture, data schemas, and backend service integration.
+          Algorithmic clustering pipeline, API architecture, data schemas, and backstage service integration.
         </p>
       </div>
     </article>
 
-    <!-- SUB-PAGE 9: TIMELINE -->
+    <!-- SUB-PAGE 9: DISCOVERY TO ALPHA ROADMAP -->
     <article class="roadgp-subpage" id="subpage-9">
       <header class="roadgp-subpage-header">
         <span class="roadgp-subpage-number">Sub-Page 9</span>
-        <h2 class="roadgp-subpage-title">Timeline</h2>
+        <h2 class="roadgp-subpage-title">Discovery to Alpha Roadmap</h2>
         <p class="roadgp-subpage-intro">Product development trajectory: completed research milestones, active design &amp; engineering streams, and forward delivery horizons.</p>
         <hr class="roadgp-subpage-divider" />
       </header>
@@ -1440,18 +1493,18 @@
       </div>
     </article>
 
-    <!-- SUB-PAGE 10: USABILITY TEST RESULTS -->
+    <!-- SUB-PAGE 10: USABILITY, HEURISTICS & METRICS -->
     <article class="roadgp-subpage" id="subpage-10">
       <header class="roadgp-subpage-header">
         <span class="roadgp-subpage-number">Sub-Page 10</span>
-        <h2 class="roadgp-subpage-title">Usability Test Results</h2>
+        <h2 class="roadgp-subpage-title">Usability, Heuristics &amp; Metrics</h2>
         <hr class="roadgp-subpage-divider" />
       </header>
       <div style="background: #141418; border: 1px dashed #333; border-radius: 8px; padding: 35px; text-align: center;">
         <i class="fas fa-clipboard-check" style="font-size: 2rem; color: #f5b838; margin-bottom: 12px; display: inline-block;"></i>
         <h4 style="color: #ffffff; margin: 0 0 6px;">Sub-Page 10 Staged &bull; Ready for Content</h4>
         <p style="color: #888; font-size: 0.85rem; max-width: 600px; margin: 0 auto;">
-          Field usability testing findings, task success metrics, cognitive walkthroughs, and user feedback logs.
+          Task-based usability evaluations, cognitive walkthroughs, error rate heuristics, and user validation metrics.
         </p>
       </div>
     </article>
@@ -2167,6 +2220,96 @@
           if (Math.abs(touchDiff) > 40) {
             if (touchDiff > 0) updateCarousel(currentIndex + 1);
             else updateCarousel(currentIndex - 1);
+          }
+        }, { passive: true });
+      }
+
+      // Sub-Page 7: Frontstage Interface Carousel Controller
+      const ifaceTrack = document.getElementById('interfaceTrack');
+      const ifacePrevBtn = document.getElementById('interfacePrevBtn');
+      const ifaceNextBtn = document.getElementById('interfaceNextBtn');
+      const ifaceDots = document.querySelectorAll('#interfaceDots .carousel-dot');
+      const ifaceStageBadge = document.getElementById('interfaceStageBadge');
+      const ifaceStageTitle = document.getElementById('interfaceStageTitle');
+      const ifacePillsBar = document.getElementById('interfacePillsBar');
+
+      if (ifaceTrack && ifacePrevBtn && ifaceNextBtn && ifaceDots.length > 0) {
+        const ifaceSlidesData = [
+          {
+            badge: "National Highways Workflow Review &bull; Screen 1 of 2",
+            title: "Assess New Defects: Multimodal Triage Workflow",
+            pills: `
+              <span class="ds-short-note purple"><i class="fas fa-eye"></i> Defect View &amp; 360&deg; Context</span>
+              <span class="ds-short-note pink"><i class="fas fa-wrench"></i> Failed Repair History</span>
+              <span class="ds-short-note orange"><i class="fas fa-tag"></i> Failed Patch Input</span>
+              <span class="ds-short-note blue"><i class="fas fa-layer-group"></i> Multimodal Dataset Integration</span>
+              <span class="ds-short-note green"><i class="fas fa-user-check"></i> Human-in-the-Loop Triage</span>
+            `
+          },
+          {
+            badge: "Decision Support &amp; Machine Learning &bull; Screen 2 of 2",
+            title: "Defect Clustering &amp; Treatment Advice Gateway",
+            pills: `
+              <span class="ds-short-note pink"><i class="fas fa-code"></i> Clustering Automation (Python Script)</span>
+              <span class="ds-short-note purple"><i class="fas fa-ruler-combined"></i> Clusters &amp; Site Labels (15m &rarr; 100m)</span>
+              <span class="ds-short-note orange"><i class="fas fa-lightbulb"></i> Treatment Advice Gateway (RoadGP)</span>
+              <span class="ds-short-note blue"><i class="fas fa-filter"></i> Severity &amp; Density Filters</span>
+            `
+          }
+        ];
+
+        let ifaceCurrentIndex = 0;
+        const ifaceTotalSlides = ifaceSlidesData.length;
+
+        function updateInterfaceCarousel(index) {
+          ifaceCurrentIndex = (index + ifaceTotalSlides) % ifaceTotalSlides;
+          ifaceTrack.style.transform = `translateX(-${ifaceCurrentIndex * 100}%)`;
+
+          ifaceDots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === ifaceCurrentIndex);
+          });
+
+          if (ifaceStageBadge && ifaceStageTitle && ifaceSlidesData[ifaceCurrentIndex]) {
+            ifaceStageBadge.innerHTML = ifaceSlidesData[ifaceCurrentIndex].badge;
+            ifaceStageTitle.textContent = ifaceSlidesData[ifaceCurrentIndex].title;
+          }
+
+          if (ifacePillsBar && ifaceSlidesData[ifaceCurrentIndex]) {
+            ifacePillsBar.innerHTML = ifaceSlidesData[ifaceCurrentIndex].pills;
+          }
+        }
+
+        ifacePrevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          updateInterfaceCarousel(ifaceCurrentIndex - 1);
+        });
+
+        ifaceNextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          updateInterfaceCarousel(ifaceCurrentIndex + 1);
+        });
+
+        ifaceDots.forEach((dot, idx) => {
+          dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            updateInterfaceCarousel(idx);
+          });
+        });
+
+        // Touch swipe support
+        let ifaceTouchStartX = 0;
+        ifaceTrack.addEventListener('touchstart', (e) => {
+          ifaceTouchStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        ifaceTrack.addEventListener('touchend', (e) => {
+          const touchDiff = ifaceTouchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(touchDiff) > 40) {
+            if (touchDiff > 0) updateInterfaceCarousel(ifaceCurrentIndex + 1);
+            else updateInterfaceCarousel(ifaceCurrentIndex - 1);
           }
         }, { passive: true });
       }

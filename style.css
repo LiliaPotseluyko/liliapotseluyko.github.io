@@ -5854,3 +5854,94 @@ a.ds-persona.contrib-team-card {
 .contrib-marker:target {
   animation: contribFlash 1.4s ease 2;
 }
+
+/* ==========================================================================
+   Sub-Page 7: Frontstage Interaction Design (Feature Showcase Carousel)
+   ========================================================================== */
+.interface-carousel-container {
+  background: #141418;
+  border: 1px solid #282834;
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  position: relative;
+  margin-top: 18px;
+}
+
+.interface-pills-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  margin: 4px 0 16px;
+  min-height: 34px;
+}
+
+.interface-pills-bar .ds-short-note {
+  font-size: 0.76rem;
+  padding: 5px 13px;
+  border-width: 1.5px;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.interface-slides-viewport {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #09090d;
+  border: 1px solid #22222c;
+  position: relative;
+  width: 100%;
+}
+
+.interface-slides-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.interface-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.interface-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #08080c;
+  overflow: hidden;
+}
+
+.interface-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.interface-slide:hover .interface-img-wrapper img {
+  transform: scale(1.015);
+}
+
+@media (max-width: 900px) {
+  .interface-img-wrapper {
+    height: 380px;
+  }
+}
+
+@media (max-width: 580px) {
+  .interface-img-wrapper {
+    height: 250px;
+  }
+  .interface-carousel-container {
+    padding: 14px;
+  }
+}
